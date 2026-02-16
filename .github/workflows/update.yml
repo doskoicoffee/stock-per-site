@@ -21,7 +21,6 @@ jobs:
       - name: ライブラリインストール
         run: |
           pip install -r requirements.txt
-	  
 
       - name: スクリプト実行
         run: |
