@@ -1,5 +1,8 @@
 name: Weekly Update
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 21 * * 0'  # 毎週月曜6:00 JST（UTC基準）
