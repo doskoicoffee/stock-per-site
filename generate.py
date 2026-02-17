@@ -54,22 +54,22 @@ for t in tickers[:TOP_N]:
         <tbody>
         """
 
-for stock in stocks:
-    html += f"""
-<tr>
-<td>{stock['code']}</td>
-<td>{stock['name']}</td>
-<td>{stock['per']}</td>
-<td>{stock['eps']}</td>
-</tr>
-"""
+        for stock in stocks:
+            html += f"""
+            <tr>
+            <td>{stock['code']}</td>
+            <td>{stock['name']}</td>
+            <td>{stock['per']}</td>
+        <td>{stock['eps']}</td>
+            </tr>
+            """
 
-html += """
-</tbody>
-</table>
-</body>
-</html>
-"""
+        html += """
+        </tbody>
+        </table>
+        </body>
+        </html>
+        """
 
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
