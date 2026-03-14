@@ -1,0 +1,706 @@
+{
+  "updated_at": "2026-03-14 12:57",
+  "count": 20,
+  "stocks": [
+    {
+      "code": "1301",
+      "name": "極洋",
+      "market": "プライム（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 8.8,
+        "pbr": 0.8
+      },
+      "profitability": {
+        "roe": null,
+        "roa": null,
+        "operating_margin": 4.5,
+        "net_margin": 0.0
+      },
+      "dividend": {
+        "yield": 3.0,
+        "per_share": 150.0
+      },
+      "financial": {
+        "market_cap_oku": 604.6,
+        "equity_ratio": null,
+        "current_ratio": 1.6,
+        "revenue_oku": 3247.7,
+        "operating_income_oku": 145.1,
+        "net_income_oku": 63.0
+      },
+      "price": {
+        "current": 5100.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "130A",
+      "name": "Ｖｅｒｉｔａｓ　Ｉｎ　Ｓｉｌｉｃｏ",
+      "market": "グロース（内国株式）",
+      "industry": "医薬品",
+      "valuation": {
+        "per": null,
+        "pbr": 1.7
+      },
+      "profitability": {
+        "roe": -21.3,
+        "roa": -12.0,
+        "operating_margin": -432.0,
+        "net_margin": 0.0
+      },
+      "dividend": {
+        "yield": null,
+        "per_share": null
+      },
+      "financial": {
+        "market_cap_oku": 30.3,
+        "equity_ratio": null,
+        "current_ratio": 18.5,
+        "revenue_oku": 0.9,
+        "operating_income_oku": -3.9,
+        "net_income_oku": -4.3
+      },
+      "price": {
+        "current": 464.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "131A",
+      "name": "ＣＣＮグループ",
+      "market": "PRO Market",
+      "industry": "情報・通信業",
+      "valuation": {
+        "per": 9.2,
+        "pbr": 2.6
+      },
+      "profitability": {
+        "roe": null,
+        "roa": null,
+        "operating_margin": null,
+        "net_margin": null
+      },
+      "dividend": {
+        "yield": null,
+        "per_share": null
+      },
+      "financial": {
+        "market_cap_oku": 15.4,
+        "equity_ratio": null,
+        "current_ratio": null,
+        "revenue_oku": null,
+        "operating_income_oku": null,
+        "net_income_oku": null
+      },
+      "price": {
+        "current": null,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "132A",
+      "name": "アイエヌホールディングス",
+      "market": "PRO Market",
+      "industry": "陸運業",
+      "valuation": {
+        "per": 87.6,
+        "pbr": 1.5
+      },
+      "profitability": {
+        "roe": null,
+        "roa": null,
+        "operating_margin": null,
+        "net_margin": null
+      },
+      "dividend": {
+        "yield": null,
+        "per_share": null
+      },
+      "financial": {
+        "market_cap_oku": 17.4,
+        "equity_ratio": null,
+        "current_ratio": null,
+        "revenue_oku": null,
+        "operating_income_oku": null,
+        "net_income_oku": null
+      },
+      "price": {
+        "current": null,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1332",
+      "name": "ニッスイ",
+      "market": "プライム（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 15.4,
+        "pbr": 1.4
+      },
+      "profitability": {
+        "roe": 10.7,
+        "roa": 3.6,
+        "operating_margin": 4.9,
+        "net_margin": 3.1
+      },
+      "dividend": {
+        "yield": 2.7,
+        "per_share": 36.0
+      },
+      "financial": {
+        "market_cap_oku": 4106.3,
+        "equity_ratio": null,
+        "current_ratio": 1.6,
+        "revenue_oku": 9125.4,
+        "operating_income_oku": 448.0,
+        "net_income_oku": 281.5
+      },
+      "price": {
+        "current": 1350.0,
+        "target": 1502.0
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1333",
+      "name": "マルハニチロ",
+      "market": "プライム（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 9.9,
+        "pbr": 0.9
+      },
+      "profitability": {
+        "roe": 8.5,
+        "roa": 2.7,
+        "operating_margin": 3.5,
+        "net_margin": 1.6
+      },
+      "dividend": {
+        "yield": 2.8,
+        "per_share": 40.7
+      },
+      "financial": {
+        "market_cap_oku": 2177.7,
+        "equity_ratio": null,
+        "current_ratio": 1.6,
+        "revenue_oku": 10881.1,
+        "operating_income_oku": 384.8,
+        "net_income_oku": 175.3
+      },
+      "price": {
+        "current": 1444.5,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "134A",
+      "name": "アプライズ",
+      "market": "PRO Market",
+      "industry": "サービス業",
+      "valuation": {
+        "per": 14.0,
+        "pbr": 2.1
+      },
+      "profitability": {
+        "roe": null,
+        "roa": null,
+        "operating_margin": null,
+        "net_margin": null
+      },
+      "dividend": {
+        "yield": null,
+        "per_share": null
+      },
+      "financial": {
+        "market_cap_oku": 3.6,
+        "equity_ratio": null,
+        "current_ratio": null,
+        "revenue_oku": null,
+        "operating_income_oku": null,
+        "net_income_oku": null
+      },
+      "price": {
+        "current": null,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "135A",
+      "name": "ＶＲＡＩＮ　Ｓｏｌｕｔｉｏｎ",
+      "market": "グロース（内国株式）",
+      "industry": "情報・通信業",
+      "valuation": {
+        "per": 74.1,
+        "pbr": 18.0
+      },
+      "profitability": {
+        "roe": null,
+        "roa": null,
+        "operating_margin": -3.6,
+        "net_margin": 13.6
+      },
+      "dividend": {
+        "yield": null,
+        "per_share": null
+      },
+      "financial": {
+        "market_cap_oku": 265.6,
+        "equity_ratio": null,
+        "current_ratio": 2.4,
+        "revenue_oku": 25.7,
+        "operating_income_oku": -0.9,
+        "net_income_oku": 3.5
+      },
+      "price": {
+        "current": 2597.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "136A",
+      "name": "三興商事",
+      "market": "PRO Market",
+      "industry": "建設業",
+      "valuation": {
+        "per": 8.5,
+        "pbr": 1.1
+      },
+      "profitability": {
+        "roe": null,
+        "roa": null,
+        "operating_margin": null,
+        "net_margin": null
+      },
+      "dividend": {
+        "yield": null,
+        "per_share": null
+      },
+      "financial": {
+        "market_cap_oku": 10.4,
+        "equity_ratio": null,
+        "current_ratio": null,
+        "revenue_oku": null,
+        "operating_income_oku": null,
+        "net_income_oku": null
+      },
+      "price": {
+        "current": null,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1375",
+      "name": "ユキグニファクトリー",
+      "market": "プライム（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 50.8,
+        "pbr": 2.9
+      },
+      "profitability": {
+        "roe": 10.1,
+        "roa": 6.2,
+        "operating_margin": 51.0,
+        "net_margin": 3.8
+      },
+      "dividend": {
+        "yield": 1.5,
+        "per_share": 16.0
+      },
+      "financial": {
+        "market_cap_oku": 426.3,
+        "equity_ratio": null,
+        "current_ratio": 1.3,
+        "revenue_oku": 373.5,
+        "operating_income_oku": 190.5,
+        "net_income_oku": 14.3
+      },
+      "price": {
+        "current": 1066.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1376",
+      "name": "カネコ種苗",
+      "market": "スタンダード（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 12.3,
+        "pbr": 0.6
+      },
+      "profitability": {
+        "roe": 5.2,
+        "roa": 2.4,
+        "operating_margin": 0.7,
+        "net_margin": 2.0
+      },
+      "dividend": {
+        "yield": 2.7,
+        "per_share": 38.0
+      },
+      "financial": {
+        "market_cap_oku": 156.8,
+        "equity_ratio": null,
+        "current_ratio": 1.7,
+        "revenue_oku": 652.5,
+        "operating_income_oku": 4.8,
+        "net_income_oku": 13.0
+      },
+      "price": {
+        "current": 1436.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1377",
+      "name": "サカタのタネ",
+      "market": "プライム（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 15.8,
+        "pbr": 1.1
+      },
+      "profitability": {
+        "roe": 7.0,
+        "roa": 4.3,
+        "operating_margin": 10.0,
+        "net_margin": 11.8
+      },
+      "dividend": {
+        "yield": 1.9,
+        "per_share": 80.0
+      },
+      "financial": {
+        "market_cap_oku": 1787.6,
+        "equity_ratio": null,
+        "current_ratio": 5.3,
+        "revenue_oku": 983.4,
+        "operating_income_oku": 98.1,
+        "net_income_oku": 115.8
+      },
+      "price": {
+        "current": 4155.0,
+        "target": 6100.0
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1379",
+      "name": "ホクト",
+      "market": "プライム（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 10.9,
+        "pbr": 1.0
+      },
+      "profitability": {
+        "roe": 10.7,
+        "roa": 3.8,
+        "operating_margin": 16.9,
+        "net_margin": 7.4
+      },
+      "dividend": {
+        "yield": 2.9,
+        "per_share": 55.0
+      },
+      "financial": {
+        "market_cap_oku": 601.3,
+        "equity_ratio": null,
+        "current_ratio": 1.5,
+        "revenue_oku": 852.1,
+        "operating_income_oku": 143.7,
+        "net_income_oku": 63.0
+      },
+      "price": {
+        "current": 1928.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "137A",
+      "name": "Ｃｏｃｏｌｉｖｅ",
+      "market": "グロース（内国株式）",
+      "industry": "情報・通信業",
+      "valuation": {
+        "per": 11.1,
+        "pbr": 5.6
+      },
+      "profitability": {
+        "roe": null,
+        "roa": null,
+        "operating_margin": null,
+        "net_margin": null
+      },
+      "dividend": {
+        "yield": null,
+        "per_share": null
+      },
+      "financial": {
+        "market_cap_oku": 20.7,
+        "equity_ratio": null,
+        "current_ratio": null,
+        "revenue_oku": null,
+        "operating_income_oku": null,
+        "net_income_oku": null
+      },
+      "price": {
+        "current": 691.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1380",
+      "name": "秋川牧園",
+      "market": "スタンダード（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 46.3,
+        "pbr": 2.0
+      },
+      "profitability": {
+        "roe": 6.0,
+        "roa": 1.3,
+        "operating_margin": 3.3,
+        "net_margin": 1.6
+      },
+      "dividend": {
+        "yield": 94.0,
+        "per_share": 10.0
+      },
+      "financial": {
+        "market_cap_oku": 44.5,
+        "equity_ratio": null,
+        "current_ratio": 1.1,
+        "revenue_oku": 83.5,
+        "operating_income_oku": 2.7,
+        "net_income_oku": 1.3
+      },
+      "price": {
+        "current": 1061.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1381",
+      "name": "アクシーズ",
+      "market": "スタンダード（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 8.9,
+        "pbr": 0.9
+      },
+      "profitability": {
+        "roe": 10.4,
+        "roa": 7.8,
+        "operating_margin": 10.7,
+        "net_margin": 8.0
+      },
+      "dividend": {
+        "yield": 3.2,
+        "per_share": 112.5
+      },
+      "financial": {
+        "market_cap_oku": 199.6,
+        "equity_ratio": null,
+        "current_ratio": 4.3,
+        "revenue_oku": 280.4,
+        "operating_income_oku": 29.9,
+        "net_income_oku": 22.4
+      },
+      "price": {
+        "current": 3580.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1382",
+      "name": "ホーブ",
+      "market": "スタンダード（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": null,
+        "pbr": 1.9
+      },
+      "profitability": {
+        "roe": -1.0,
+        "roa": -0.2,
+        "operating_margin": 5.1,
+        "net_margin": -0.3
+      },
+      "dividend": {
+        "yield": 2.8,
+        "per_share": 50.0
+      },
+      "financial": {
+        "market_cap_oku": 13.6,
+        "equity_ratio": null,
+        "current_ratio": 2.1,
+        "revenue_oku": 24.0,
+        "operating_income_oku": 1.2,
+        "net_income_oku": -0.1
+      },
+      "price": {
+        "current": 1795.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1383",
+      "name": "ベルグアース",
+      "market": "スタンダード（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 106.4,
+        "pbr": 2.4
+      },
+      "profitability": {
+        "roe": 2.4,
+        "roa": -0.4,
+        "operating_margin": 7.5,
+        "net_margin": 0.7
+      },
+      "dividend": {
+        "yield": 31.0,
+        "per_share": 10.0
+      },
+      "financial": {
+        "market_cap_oku": 51.5,
+        "equity_ratio": null,
+        "current_ratio": 1.4,
+        "revenue_oku": 73.0,
+        "operating_income_oku": 5.5,
+        "net_income_oku": 0.5
+      },
+      "price": {
+        "current": 3245.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "1384",
+      "name": "ホクリヨウ",
+      "market": "スタンダード（内国株式）",
+      "industry": "水産・農林業",
+      "valuation": {
+        "per": 8.7,
+        "pbr": 2.6
+      },
+      "profitability": {
+        "roe": 11.2,
+        "roa": 5.7,
+        "operating_margin": 14.8,
+        "net_margin": 7.2
+      },
+      "dividend": {
+        "yield": 4.0,
+        "per_share": 120.0
+      },
+      "financial": {
+        "market_cap_oku": 256.7,
+        "equity_ratio": null,
+        "current_ratio": 1.2,
+        "revenue_oku": 146.8,
+        "operating_income_oku": 21.8,
+        "net_income_oku": 10.6
+      },
+      "price": {
+        "current": 3020.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    },
+    {
+      "code": "138A",
+      "name": "光フードサービス",
+      "market": "グロース（内国株式）",
+      "industry": "小売業",
+      "valuation": {
+        "per": 27.7,
+        "pbr": 2.2
+      },
+      "profitability": {
+        "roe": 8.0,
+        "roa": 5.6,
+        "operating_margin": 6.9,
+        "net_margin": 3.6
+      },
+      "dividend": {
+        "yield": 1.7,
+        "per_share": 48.0
+      },
+      "financial": {
+        "market_cap_oku": 28.4,
+        "equity_ratio": null,
+        "current_ratio": 2.5,
+        "revenue_oku": 28.6,
+        "operating_income_oku": 2.0,
+        "net_income_oku": 1.0
+      },
+      "price": {
+        "current": 2871.0,
+        "target": null
+      },
+      "schedule": {
+        "next_earnings": null
+      }
+    }
+  ]
+}
