@@ -1,25 +1,112 @@
 import yfinance as yf
+import json
+import csv
+import time
 
-TOP_N = 10
+TOP_N = 100
 
-tickers = [
-    "7203.T",  # トヨタ
-    "6758.T",  # ソニー
-    "8306.T",  # 三菱UFJ
-    "9432.T",  # NTT
-    "9984.T",  # ソフトバンク
-]
+start_time = time.time()
 
-html = "<h1>簡易PER一覧</h1>"
+# ---------------------------
+# ① CSV読み込み
+# ---------------------------
+with open("tickers.csv", encoding="utf-8-sig") as f:
+    reader = csv.DictReader(f)
+    tickers = list(reader)
 
+# 100銘柄に制限
+tickers = tickers[:TOP_N]
+print(f"{len(tickers)}銘柄を処理開始")
+
+stocks = []
+# ---------------------------
+# ② データ取得
+# ---------------------------
+for row in tickers:
+    print(row)
+    try:
+        ticker_code = row["code"] + ".T"
+        name = row["name"]
+        market = row["market"]
+        industry = row["industry33"]
+
+        stock = yf.Ticker(ticker_code)
+        info = stock.info
+
+        price = stock.history(period="1d")["Close"].iloc[-1]
+        eps = info.get("trailingEps")
+        pbr = info.get("priceToBook")
+        roe = info.get("returnOnEquity")
+        dividend = info.get("dividendYield")
+
+        per = price / eps if eps and eps != 0 else None
+
+        stocks.append({
+            "code": row["code"],
+            "name": name,
+            "market": market,
+            "industry33": industry,
+            "price": round(price, 2),
+            "eps": round(eps, 2) if eps else None,
+            "per": round(per, 2) if per else None,
+            "pbr": round(pbr, 2) if pbr else None,
+            "roe": round(roe * 100, 2) if roe else None,  # %
+            "dividendYield": round(dividend * 100, 2) if dividend else None  # %
+        })
+
+    except Exception as e:
+        print(f"{row['code']} 取得失敗: {e}")
+
+# ---------------------------
+# ③ JSON出力
+# ---------------------------
+with open("data.json", "w", encoding="utf-8") as f:
+    json.dump(stocks, f, ensure_ascii=False, indent=2)
+
+end_time = time.time()
+elapsed = round(end_time - start_time, 2)
+
+print("data.json を生成しました")
+print(f"処理時間: {elapsed}秒")
+
+
+
+"""
+stocks = []
+# ---------------------------
+# ① データ取得
+# ---------------------------
 for t in tickers[:TOP_N]:
-    stock = yf.Ticker(t)
-    price = stock.history(period="1d")["Close"].iloc[-1]
-    eps = stock.info.get("trailingEps")
+    try:
+        stock = yf.Ticker(t)
+        info = stock.info
+        price = stock.history(period="1d")["Close"].iloc[-1]
+        eps = info.get("trailingEps")
+        name = info.get("shortName", t)
 
-    if eps:
-        per = price / eps
-        html += f"<p>{t} 株価:{price:.2f} EPS:{eps:.2f} PER:{per:.2f}</p>"
+        if eps and eps != 0:
+            per = price / eps
+        else:
+            per = None
 
-with open("index.html", "w", encoding="utf-8") as f:
-    f.write(html)
+        stocks.append({
+            "code": t,
+            "name": name,
+            "price": round(price, 2),
+            "eps": round(eps, 2) if eps else "-",
+            "per": round(per, 2) if per else "-"
+        })
+
+    except Exception as e:
+        print(f"{t} 取得失敗: {e}")
+
+
+# ---------------------------
+# ②jsonL生成
+# ---------------------------
+with open("data.json", "w", encoding="utf-8") as f:
+    json.dump(stocks, f, ensure_ascii=False, indent=2)
+
+print("data.json を生成しました")
+
+"""

@@ -1,79 +1,352 @@
+<!DOCTYPE html>
 
 <html>
 <head>
 <meta charset="UTF-8">
-<title>日本株PER一覧</title>
+<title>日本株 指標一覧</title>
+
 <style>
-body { font-family: Arial, sans-serif; }
-table {
-    border-collapse: collapse;
-    width: 100%;
+
+body{
+font-family: Arial, sans-serif;
+margin:20px;
+background:#f7f9fc;
 }
-th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
+
+h1{
+margin-bottom:5px;
 }
-th {
-    background-color: #f2f2f2;
+
+.top-bar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
 }
+
+button{
+padding:8px 14px;
+border:none;
+background:#2d7ff9;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+table{
+border-collapse:collapse;
+width:100%;
+background:white;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:6px;
+text-align:center;
+font-size:14px;
+}
+
+th{
+background:#f1f3f8;
+}
+
+a{
+color:#2d7ff9;
+text-decoration:none;
+}
+
+/* モーダル */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+}
+
+.modal-content{
+background:white;
+width:420px;
+margin:80px auto;
+padding:25px;
+border-radius:10px;
+}
+
+.filter-grid{
+display:grid;
+grid-template-columns:120px 1fr 1fr;
+gap:8px;
+margin-bottom:10px;
+}
+
+.section-title{
+margin-top:15px;
+font-weight:bold;
+}
+
+.radio-group{
+margin-bottom:10px;
+}
+
 </style>
+
 </head>
+
 <body>
-<h1>日本株 PER一覧</h1>
+
+<div class="top-bar">
+
+<div>
+<h1>日本株 指標一覧</h1>
+<p>更新日時: <span id="updatedAt"></span></p>
+</div>
+
+<div>
+<button onclick="openFilter()">🔎 スクリーニング</button>
+<button onclick="resetFilter()">リセット</button>
+</div>
+
+</div>
+
 <table>
+
 <thead>
+
 <tr>
-<th>銘柄コード</th>
-<th>銘柄名</th>
+
+<th>Code</th>
+<th>Name</th>
+<th>市場</th>
+<th>業種</th>
+
+<th>次回決算</th>
+
 <th>株価</th>
-<th>EPS</th>
+<th>目標株価</th>
+
+<th>時価総額</th>
+<th>売上高</th>
+<th>営業利益</th>
+<th>純利益</th>
+
+<th>営業利益率</th>
+<th>純利益率</th>
+
 <th>PER</th>
+<th>PBR</th>
+<th>ROE</th>
+<th>ROA</th>
+
+<th>配当利回り</th>
+<th>1株配当</th>
+<th>自己資本比率</th>
+<th>流動比率</th>
+
 </tr>
+
 </thead>
-<tbody>
 
-<tr>
-<td>7203.T</td>
-<td>TOYOTA MOTOR CORP</td>
-<td>3515.0</td>
-<td>284.01</td>
-<td>12.38</td>
-</tr>
+<tbody id="stock-body"></tbody>
 
-<tr>
-<td>6758.T</td>
-<td>SONY GROUP CORPORATION</td>
-<td>3473.0</td>
-<td>206.64</td>
-<td>16.81</td>
-</tr>
-
-<tr>
-<td>8306.T</td>
-<td>MITSUBISHI UFJ FINANCIAL GROUP </td>
-<td>2759.5</td>
-<td>168.33</td>
-<td>16.39</td>
-</tr>
-
-<tr>
-<td>9432.T</td>
-<td>NTT INC</td>
-<td>151.1</td>
-<td>12.56</td>
-<td>12.03</td>
-</tr>
-
-<tr>
-<td>9984.T</td>
-<td>SOFTBANK GROUP CORP</td>
-<td>3926.0</td>
-<td>534.72</td>
-<td>7.34</td>
-</tr>
-
-</tbody>
 </table>
+
+<!-- モーダル -->
+
+<div id="filterModal" class="modal">
+
+<div class="modal-content">
+
+<h2>スクリーニング条件</h2>
+
+<div class="filter-grid">
+
+<div>PER</div>
+<input id="perMin" placeholder="min">
+<input id="perMax" placeholder="max">
+
+<div>PBR</div>
+<input id="pbrMin">
+<input id="pbrMax">
+
+<div>ROE</div>
+<input id="roeMin">
+<input>
+
+<div>配当利回り</div>
+<input id="divMin">
+<input>
+
+</div>
+
+<div class="section-title">市場</div>
+
+<div class="radio-group">
+
+<label><input type="radio" name="market" value="" checked>全て</label> <label><input type="radio" name="market" value="プライム">プライム</label> <label><input type="radio" name="market" value="スタンダード">スタンダード</label> <label><input type="radio" name="market" value="グロース">グロース</label>
+
+</div>
+
+<div class="section-title">業種</div>
+
+<div class="radio-group">
+
+<label><input type="radio" name="industry" value="" checked>全て</label> <label><input type="radio" name="industry" value="銀行業">銀行</label> <label><input type="radio" name="industry" value="電気機器">電気機器</label> <label><input type="radio" name="industry" value="輸送用機器">輸送機器</label>
+
+</div>
+
+<button onclick="applyFilter()">適用</button> <button onclick="closeFilter()">閉じる</button>
+
+</div>
+
+</div>
+
+<script>
+
+let originalData = []
+
+function displayData(data){
+
+const tbody=document.getElementById("stock-body")
+tbody.innerHTML=""
+
+data.forEach(stock=>{
+
+const row=document.createElement("tr")
+
+row.innerHTML=`
+
+<td>
+<a href="detail.html?code=${stock.code}">
+${stock.code}
+</a>
+</td>
+
+<td>${stock.name}</td>
+<td>${stock.market}</td>
+<td>${stock.industry}</td>
+
+<td>${stock.next_earnings ?? "-"}</td>
+
+<td>${stock.price?.current ?? "-"}</td>
+<td>${stock.price?.target ?? "-"}</td>
+
+<td>${stock.financial?.market_cap_oku ?? "-"}</td>
+<td>${stock.financial?.revenue_oku ?? "-"}</td>
+<td>${stock.financial?.operating_income_oku ?? "-"}</td>
+<td>${stock.financial?.net_income_oku ?? "-"}</td>
+
+<td>${stock.profitability?.operating_margin ?? "-"}</td>
+<td>${stock.profitability?.net_margin ?? "-"}</td>
+
+<td>${stock.valuation?.per ?? "-"}</td>
+<td>${stock.valuation?.pbr ?? "-"}</td>
+<td>${stock.profitability?.roe ?? "-"}</td>
+<td>${stock.profitability?.roa ?? "-"}</td>
+
+<td>${stock.dividend?.yield ?? "-"}</td>
+<td>${stock.dividend?.per_share ?? "-"}</td>
+<td>${stock.financial?.equity_ratio ?? "-"}</td>
+<td>${stock.financial?.current_ratio ?? "-"}</td>
+
+`
+
+tbody.appendChild(row)
+
+})
+
+}
+
+
+
+fetch("data.json?v="+new Date().getTime())
+.then(res=>res.json())
+.then(data=>{
+
+document.getElementById("updatedAt").innerText=data.updated_at
+originalData=data.stocks
+displayData(originalData)
+
+})
+
+
+
+function openFilter(){
+
+document.getElementById("filterModal").style.display="block"
+
+}
+
+
+function closeFilter(){
+
+document.getElementById("filterModal").style.display="none"
+
+}
+
+
+
+function applyFilter(){
+
+const perMin=parseFloat(document.getElementById("perMin").value)
+const perMax=parseFloat(document.getElementById("perMax").value)
+
+const pbrMin=parseFloat(document.getElementById("pbrMin").value)
+const pbrMax=parseFloat(document.getElementById("pbrMax").value)
+
+const roeMin=parseFloat(document.getElementById("roeMin").value)
+const divMin=parseFloat(document.getElementById("divMin").value)
+
+const market=document.querySelector('input[name="market"]:checked').value
+const industry=document.querySelector('input[name="industry"]:checked').value
+
+
+const filtered=originalData.filter(stock=>{
+
+const per=stock.valuation?.per
+const pbr=stock.valuation?.pbr
+const roe=stock.profitability?.roe
+const div=stock.dividend?.yield
+
+if(!isNaN(perMin) && (per==null || per<perMin)) return false
+if(!isNaN(perMax) && (per==null || per>perMax)) return false
+
+if(!isNaN(pbrMin) && (pbr==null || pbr<pbrMin)) return false
+if(!isNaN(pbrMax) && (pbr==null || pbr>pbrMax)) return false
+
+if(!isNaN(roeMin) && (roe==null || roe<roeMin)) return false
+
+if(!isNaN(divMin) && (div==null || div<divMin)) return false
+
+if(market && stock.market!==market) return false
+if(industry && stock.industry!==industry) return false
+
+return true
+
+})
+
+
+displayData(filtered)
+closeFilter()
+
+}
+
+
+
+function resetFilter(){
+
+displayData(originalData)
+
+}
+
+</script>
+
 </body>
 </html>
+
