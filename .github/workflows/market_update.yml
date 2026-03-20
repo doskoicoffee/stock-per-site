@@ -23,7 +23,9 @@ jobs:
 
       - name: ライブラリインストール
         run: |
-          pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          pip install "pandas<3"
+          pip install -r requirements.txt --upgrade --force-reinstall
 
       - name: 市況データ更新
         env:
