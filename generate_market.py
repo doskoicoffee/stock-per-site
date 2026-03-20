@@ -156,6 +156,100 @@ def series_payload(series_id, label, unit, df):
     }
 
 
+def fetch_gdelt_news(query, maxrecords=30, timespan="1day"):
+    url = "https://api.gdeltproject.org/api/v2/doc/doc"
+    params = {
+        "query": query,
+        "mode": "artlist",
+        "format": "json",
+        "maxrecords": maxrecords,
+        "timespan": timespan,
+        "sort": "datedesc"
+    }
+    res = requests.get(url, params=params, timeout=30)
+    res.raise_for_status()
+    payload = res.json()
+    articles = payload.get("articles") or payload.get("data") or []
+    news = []
+    seen = set()
+    for a in articles:
+        title = a.get("title") or a.get("seendate")
+        url = a.get("url") or a.get("link")
+        if not title or not url:
+            continue
+        if url in seen:
+            continue
+        seen.add(url)
+        published_raw = a.get("seendate") or a.get("date")
+        published_at = None
+        if published_raw:
+            try:
+                published_at = datetime.strptime(published_raw[:14], "%Y%m%d%H%M%S").isoformat()
+            except Exception:
+                published_at = published_raw
+        news.append({
+            "title": title,
+            "url": url,
+            "source": a.get("sourcecountry") or a.get("domain"),
+            "domain": a.get("domain"),
+            "language": a.get("language"),
+            "published_at": published_at
+        })
+    return news
+
+
+def generate_ai_summary(series_output, news):
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        return None, "missing OPENAI_API_KEY"
+
+    model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+    snapshot = [
+        {
+            "id": s["id"],
+            "label": s["label"],
+            "latest": s["summary"].get("latest"),
+            "change_pct": s["summary"].get("change_pct")
+        }
+        for s in series_output if s.get("summary")
+    ]
+
+    prompt = {
+        "role": "system",
+        "content": "あなたは金融ニュース編集者です。与えられた市場データとニュース見出しだけを根拠に、日本語で簡潔にまとめてください。投資助言はしないでください。出力は次の形式で、各項目は短く。\n【本日の市況】3-5行\n【主なニュース】3件（タイトルを引用）\n【注目点】1-2点"
+    }
+    user = {
+        "role": "user",
+        "content": "市場データ: " + json.dumps(snapshot, ensure_ascii=False) + "\nニュース: " + json.dumps(news[:10], ensure_ascii=False)
+    }
+
+    payload = {
+        "model": model,
+        "input": [prompt, user],
+        "max_output_tokens": 600
+    }
+
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+
+    res = requests.post("https://api.openai.com/v1/responses", headers=headers, json=payload, timeout=60)
+    res.raise_for_status()
+    data = res.json()
+
+    text = data.get("output_text")
+    if not text:
+        chunks = []
+        for item in data.get("output", []):
+            for c in item.get("content", []):
+                if c.get("type") == "output_text":
+                    chunks.append(c.get("text"))
+        text = "\n".join(chunks).strip() if chunks else None
+
+    return text, None
+
+
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     SERIES_DIR.mkdir(parents=True, exist_ok=True)
@@ -220,15 +314,45 @@ def main():
             series_output.append(series_payload(item["id"], item["label"], item["unit"], df))
             time.sleep(0.2)
 
+    # GDELT news
+    base_query = os.getenv(
+        "GDELT_QUERY",
+        '(日経 OR TOPIX OR 東証 OR 日本株 OR 株式 OR 円 OR 為替 OR 原油 OR 金 OR 銀 OR 米国株 OR ダウ OR ナスダック OR S&P500)'
+    )
+    news = []
+    try:
+        query = base_query + " sourcelang:japanese"
+        news = fetch_gdelt_news(query)
+        if not news:
+            news = fetch_gdelt_news(base_query)
+    except Exception as e:
+        unavailable.append({"id": "NEWS", "label": "ニュース", "reason": str(e)})
+
+    # AI summary
+    summary_text = None
+    summary_err = None
+    if news:
+        try:
+            summary_text, summary_err = generate_ai_summary(series_output, news)
+        except Exception as e:
+            summary_err = str(e)
+
     result = {
         "updated_at": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
         "days": DAYS,
         "series": series_output,
         "unavailable": unavailable,
+        "news": news[:10],
+        "summary": {
+            "text": summary_text,
+            "generated_at": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+            "error": summary_err
+        },
         "notes": {
             "topix_source": "stooq (^TPX) via pandas_datareader",
             "yfinance_source": "Yahoo Finance via yfinance",
-            "yfinance_tickers": {item["id"]: item["ticker"] for item in YF_SERIES}
+            "gdelt_source": "GDELT DOC 2.0 API",
+            "openai_model": os.getenv("OPENAI_MODEL", "gpt-4o-mini")
         }
     }
 
