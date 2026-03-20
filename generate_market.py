@@ -7,6 +7,7 @@ from pathlib import Path
 
 import pandas as pd
 import requests
+import yfinance as yf
 from pandas_datareader import data as web
 
 OUTPUT_DIR = Path("market_data")
@@ -18,16 +19,16 @@ FRED_SERIES = [
     {"id": "SP500", "label": "S&P500", "unit": "Index"},
     {"id": "DJIA", "label": "NYダウ", "unit": "Index"},
     {"id": "NASDAQCOM", "label": "NASDAQ", "unit": "Index"},
-    {"id": "VIXCLS", "label": "VIX", "unit": "Index"},
-    {"id": "DEXJPUS", "label": "ドル円", "unit": "JPY per USD"},
-    {"id": "DEXUSEU", "label": "ユーロ/米ドル", "unit": "USD per EUR"},
-    {"id": "DCOILWTICO", "label": "WTI原油", "unit": "USD/barrel"}
+    {"id": "VIXCLS", "label": "VIX", "unit": "Index"}
 ]
 
-EXTRA_SERIES = [
-    {"id": "FEAR_GREED", "label": "Fear & Greed", "unit": "Index"},
-    {"id": "GOLD", "label": "金", "unit": "USD/oz"},
-    {"id": "SILVER", "label": "銀", "unit": "USD/oz"}
+YF_SERIES = [
+    {"id": "USDJPY", "label": "米ドル/円", "unit": "JPY per USD", "ticker": "JPY=X"},
+    {"id": "EURJPY", "label": "ユーロ/円", "unit": "JPY per EUR", "ticker": "EURJPY=X"},
+    {"id": "EURUSD", "label": "ユーロ/米ドル", "unit": "USD per EUR", "ticker": "EURUSD=X"},
+    {"id": "WTI", "label": "WTI原油", "unit": "USD/barrel", "ticker": "CL=F"},
+    {"id": "GOLD", "label": "金", "unit": "USD/oz", "ticker": "GC=F", "fallback": "GLD"},
+    {"id": "SILVER", "label": "銀", "unit": "USD/oz", "ticker": "SI=F", "fallback": "SLV"}
 ]
 
 UNAVAILABLE = []
@@ -85,76 +86,40 @@ def fetch_topix_stooq():
     return df.sort_values("date"), None
 
 
-def fetch_fear_greed():
-    url = "https://api.alternative.me/fng/?limit=0&format=json"
-    res = requests.get(url, timeout=30)
-    res.raise_for_status()
-    payload = res.json()
-    data = payload.get("data", [])
-    if not data:
-        return pd.DataFrame(columns=["date", "value"])
-    rows = []
-    for item in data:
-        ts = item.get("timestamp")
-        val = item.get("value")
-        try:
-            dt = datetime.utcfromtimestamp(int(ts))
-        except Exception:
-            continue
-        try:
-            v = float(val)
-        except Exception:
-            continue
-        rows.append({"date": dt, "value": v})
-    df = pd.DataFrame(rows)
-    if df.empty:
-        return df
-    cutoff = datetime.utcnow().date() - timedelta(days=DAYS)
-    df = df[df["date"].dt.date >= cutoff]
-    return df.sort_values("date")
+def fetch_yfinance_series(ticker):
+    try:
+        df = yf.download(ticker, period=f"{DAYS}d", interval="1d", auto_adjust=False, progress=False)
+    except Exception as e:
+        return pd.DataFrame(columns=["date", "value"]), str(e)
+    if df is None or df.empty:
+        return pd.DataFrame(columns=["date", "value"]), "yfinance empty"
 
-
-def fetch_metals_latest():
-    key = os.getenv("METALPRICEAPI_KEY")
-    if not key:
-        return None, "missing METALPRICEAPI_KEY"
-    url = f"https://api.metalpriceapi.com/v1/latest?api_key={key}&base=USD&currencies=XAU,XAG"
-    res = requests.get(url, timeout=30)
-    res.raise_for_status()
-    payload = res.json()
-    rates = payload.get("rates", {})
-    gold = rates.get("USDXAU") or rates.get("XAU")
-    silver = rates.get("USDXAG") or rates.get("XAG")
-    if gold is None and silver is None:
-        return None, "no metal rates"
-    today = datetime.utcnow().date()
-    data = {}
-    if gold is not None:
-        data["GOLD"] = (today, float(gold))
-    if silver is not None:
-        data["SILVER"] = (today, float(silver))
-    return data, None
-
-
-def upsert_daily_csv(series_id, date_obj, value):
-    path = SERIES_DIR / f"{series_id}.csv"
-    if path.exists():
-        df = pd.read_csv(path)
-        if "date" in df.columns:
-            df["date"] = pd.to_datetime(df["date"], errors="coerce")
-        else:
-            df = pd.DataFrame(columns=["date", "value"])
+    df = df.reset_index()
+    if "Date" in df.columns:
+        date_col = "Date"
+    elif "Datetime" in df.columns:
+        date_col = "Datetime"
     else:
-        df = pd.DataFrame(columns=["date", "value"])
+        date_col = df.columns[0]
 
-    df = df.dropna(subset=["date"]) if not df.empty else df
-    df = df[df["date"].dt.date != date_obj] if not df.empty else df
-    df = pd.concat([df, pd.DataFrame([{"date": pd.to_datetime(date_obj), "value": value}])], ignore_index=True)
+    value_col = None
+    if "Close" in df.columns:
+        value_col = "Close"
+    elif "Adj Close" in df.columns:
+        value_col = "Adj Close"
+
+    if value_col is None:
+        return pd.DataFrame(columns=["date", "value"]), "yfinance columns missing"
+
+    df = df.rename(columns={date_col: "date", value_col: "value"})
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
+    df["value"] = pd.to_numeric(df["value"], errors="coerce")
+    df = df.dropna(subset=["date", "value"])
     cutoff = datetime.utcnow().date() - timedelta(days=DAYS)
     df = df[df["date"].dt.date >= cutoff]
-    df = df.sort_values("date")
-    df.to_csv(path, index=False)
-    return df
+    if df.empty:
+        return pd.DataFrame(columns=["date", "value"]), "yfinance no valid rows"
+    return df.sort_values("date"), None
 
 
 def load_cached_series(series_id):
@@ -226,6 +191,7 @@ def main():
         topix_df.to_csv(out_csv, index=False)
         series_output.append(series_payload("TOPIX", "TOPIX", "Index", topix_df))
 
+    # FRED series (indices/VIX)
     for item in FRED_SERIES:
         df = fetch_fred_series(item["id"])
         if not df.empty:
@@ -234,26 +200,31 @@ def main():
         series_output.append(series_payload(item["id"], item["label"], item["unit"], df))
         time.sleep(0.2)
 
-    # Fear & Greed (crypto)
-    try:
-        df_fng = fetch_fear_greed()
-        if not df_fng.empty:
-            out_csv = SERIES_DIR / "FEAR_GREED.csv"
-            df_fng.to_csv(out_csv, index=False)
-        series_output.append(series_payload("FEAR_GREED", "Fear & Greed", "Index", df_fng))
-    except Exception as e:
-        unavailable.append({"id": "FEAR_GREED", "label": "Fear & Greed", "reason": str(e)})
-
-    # Metals (gold/silver)
-    metals, err = fetch_metals_latest()
-    if err:
-        unavailable.append({"id": "GOLD", "label": "金", "reason": err})
-        unavailable.append({"id": "SILVER", "label": "銀", "reason": err})
-    else:
-        for sid, (d, v) in metals.items():
-            df = upsert_daily_csv(sid, d, v)
-            label = "金" if sid == "GOLD" else "銀"
-            series_output.append(series_payload(sid, label, "USD/oz", df))
+    # yfinance series (FX/commodities)
+    for item in YF_SERIES:
+        df, err = fetch_yfinance_series(item["ticker"])
+        if df.empty and item.get("fallback"):
+            df, err = fetch_yfinance_series(item["fallback"])
+        if df.empty:
+            cached = load_cached_series(item["id"])
+            if not cached.empty:
+                series_output.append(series_payload(item["id"], item["label"], item["unit"], cached))
+                unavailable.append({
+                    "id": item["id"],
+                    "label": item["label"],
+                    "reason": f"yfinance unavailable; using cached data ({err})"
+                })
+            else:
+                unavailable.append({
+                    "id": item["id"],
+                    "label": item["label"],
+                    "reason": err or "yfinance empty"
+                })
+        else:
+            out_csv = SERIES_DIR / f"{item['id']}.csv"
+            df.to_csv(out_csv, index=False)
+            series_output.append(series_payload(item["id"], item["label"], item["unit"], df))
+            time.sleep(0.2)
 
     result = {
         "updated_at": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
@@ -261,9 +232,9 @@ def main():
         "series": series_output,
         "unavailable": unavailable,
         "notes": {
-            "fear_greed_source": "alternative.me (crypto fear & greed index)",
             "topix_source": "stooq (^TPX) via pandas_datareader",
-            "topix_fallback": "use cached CSV when stooq unavailable"
+            "yfinance_source": "Yahoo Finance via yfinance",
+            "yfinance_tickers": {item["id"]: item["ticker"] for item in YF_SERIES}
         }
     }
 

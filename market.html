@@ -122,7 +122,6 @@
               <div class="kpi"><div class="label">NASDAQ</div><div class="value" id="kpi-nasdaq">--</div></div>
               <div class="kpi"><div class="label">S&P500</div><div class="value" id="kpi-sp500">--</div></div>
               <div class="kpi"><div class="label">VIX</div><div class="value" id="kpi-vix">--</div></div>
-              <div class="kpi"><div class="label">Fear & Greed</div><div class="value" id="kpi-feargreed">--</div></div>
             </div>
           </div>
 
@@ -172,14 +171,14 @@
     function buildChart(seriesMap) {
       const ctx = document.getElementById("marketChart");
       if (!ctx) return;
-      const ids = ["NIKKEI225", "SP500", "DJIA", "NASDAQCOM", "DEXJPUS", "DCOILWTICO"];
+      const ids = ["NIKKEI225", "SP500", "DJIA", "NASDAQCOM", "USDJPY", "WTI"];
       const colors = {
         NIKKEI225: "#1f77b4",
         SP500: "#ff7f0e",
         DJIA: "#2ca02c",
         NASDAQCOM: "#d62728",
-        DEXJPUS: "#9467bd",
-        DCOILWTICO: "#8c564b"
+        USDJPY: "#9467bd",
+        WTI: "#8c564b"
       };
 
       const first = seriesMap[ids[0]]?.data || [];
@@ -244,8 +243,8 @@
       const sp500 = seriesMap["SP500"]?.summary?.latest;
       const dow = seriesMap["DJIA"]?.summary?.latest;
       const nasdaq = seriesMap["NASDAQCOM"]?.summary?.latest;
-      const usdjpy = seriesMap["DEXJPUS"]?.summary?.latest;
-      const oil = seriesMap["DCOILWTICO"]?.summary?.latest;
+      const usdjpy = seriesMap["USDJPY"]?.summary?.latest;
+      const wti = seriesMap["WTI"]?.summary?.latest;
       const topix = seriesMap["TOPIX"]?.summary?.latest;
 
       setValue("kpi-nikkei", nikkei ?? "--");
@@ -253,20 +252,16 @@
       setValue("kpi-dow", dow ?? "--");
       setValue("kpi-nasdaq", nasdaq ?? "--");
       setValue("kpi-usdjpy", usdjpy ?? "--");
-      setValue("kpi-wti", oil ?? "--");
+      setValue("kpi-wti", wti ?? "--");
       setValue("kpi-topix", topix ?? "--");
 
       const vix = seriesMap["VIXCLS"]?.summary?.latest;
-      const fear = seriesMap["FEAR_GREED"]?.summary?.latest;
-      const wti = seriesMap["DCOILWTICO"]?.summary?.latest;
       const gold = seriesMap["GOLD"]?.summary?.latest;
       const silver = seriesMap["SILVER"]?.summary?.latest;
-      const eurusd = seriesMap["DEXUSEU"]?.summary?.latest;
-      const eurjpy = (usdjpy != null && eurusd != null) ? (usdjpy * eurusd) : null;
+      const eurusd = seriesMap["EURUSD"]?.summary?.latest;
+      const eurjpy = seriesMap["EURJPY"]?.summary?.latest ?? ((usdjpy != null && eurusd != null) ? (usdjpy * eurusd) : null);
 
       setValue("kpi-vix", vix ?? "--");
-      setValue("kpi-feargreed", fear ?? "--");
-      setValue("kpi-wti", wti ?? "--");
       setValue("kpi-gold", gold ?? "--");
       setValue("kpi-silver", silver ?? "--");
       setValue("kpi-eurjpy", eurjpy ?? "--");
