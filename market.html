@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>市況E��生成AI / 日次更新�E�E/title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .section-head {
+      margin: 0 0 8px 0;
+      font-size: 18px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      border: 1px solid #eef1f5;
+    }
+    .card h2 {
+      margin: 0 0 8px 0;
+      font-size: 18px;
+    }
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 16px;
+    }
+    .kpi-stack {
+      display: grid;
+      gap: 12px;
+    }
+    .kpi {
+      background: #f7f9fc;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #edf0f4;
+    }
+    .kpi .label {
+      color: #666;
+      font-size: 12px;
+    }
+    .kpi .value {
+      font-size: 16px;
+      margin-top: 4px;
+    }
+    .chart-box {
+      height: 220px;
+      background: #f7f9fc;
+      border: 1px dashed #c9d2dd;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7a8794;
+      font-size: 13px;
+    }
+    .chart-wrap {
+      height: 260px;
+    }
+    .chart-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .news-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .news-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eef1f5;
+    }
+    .news-list li:last-child {
+      border-bottom: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 12px;
+      text-decoration: none;
+      color: #2d7ff9;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+      .kpi-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="index.html">ↁEトップへ</a>
+    <h1>市況E��生成AI / 日次更新�E�E/h1>
+    <div class="subtitle">主要指数・為替・原油・ニュース要紁E��仮�E�E/div>
+    <div class="subtitle" id="market-updated">更新日晁E --</div>
+
+    <div class="grid">
+      <h2 class="section-head">主要指樁E/h2>
+      <div class="card">
+        <div class="kpi-grid">
+          <div class="kpi-section">
+            <h3>株価持E��</h3>
+            <div class="kpi-row">
+              <div class="kpi"><div class="label">日絁E25</div><div class="value" id="kpi-nikkei">--</div></div>
+              <div class="kpi"><div class="label">TOPIX</div><div class="value" id="kpi-topix">--</div></div>
+              <div class="kpi"><div class="label">NYダウ</div><div class="value" id="kpi-dow">--</div></div>
+              <div class="kpi"><div class="label">NASDAQ</div><div class="value" id="kpi-nasdaq">--</div></div>
+              <div class="kpi"><div class="label">S&P500</div><div class="value" id="kpi-sp500">--</div></div>
+              <div class="kpi"><div class="label">VIX</div><div class="value" id="kpi-vix">--</div></div>
+              <div class="kpi"><div class="label">Fear & Greed</div><div class="value" id="kpi-feargreed">--</div></div>
+            </div>
+          </div>
+
+          <div class="kpi-stack">
+            <div class="kpi-section">
+              <h3>啁E��先物</h3>
+              <div class="kpi-row">
+                <div class="kpi"><div class="label">WTI原油</div><div class="value" id="kpi-wti">--</div></div>
+                <div class="kpi"><div class="label">釁E/div><div class="value" id="kpi-gold">--</div></div>
+                <div class="kpi"><div class="label">銀</div><div class="value" id="kpi-silver">--</div></div>
+              </div>
+            </div>
+
+            <div class="kpi-section">
+              <h3>外国為替</h3>
+              <div class="kpi-row">
+                <div class="kpi"><div class="label">米ドル/冁E/div><div class="value" id="kpi-usdjpy">--</div></div>
+                <div class="kpi"><div class="label">ユーロ/冁E/div><div class="value" id="kpi-eurjpy">--</div></div>
+                <div class="kpi"><div class="label">ユーロ/米ドル</div><div class="value" id="kpi-eurusd">--</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>チャート（重ね合わせ！E/h2>
+        <div class="chart-wrap">
+          <canvas id="marketChart" class="chart-canvas"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>主要ニュース</h2>
+        <ul class="news-list">
+          <li>ニュース頁E���E�仮�E�E/li>
+          <li>ニュース頁E���E�仮�E�E/li>
+          <li>ニュース頁E���E�仮�E�E/li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let marketChart = null;
+
+    function buildChart(seriesMap) {
+      const ctx = document.getElementById("marketChart");
+      if (!ctx) return;
+      const ids = ["NIKKEI225", "SP500", "DJIA", "NASDAQCOM", "DEXJPUS", "DCOILWTICO"];
+      const colors = {
+        NIKKEI225: "#1f77b4",
+        SP500: "#ff7f0e",
+        DJIA: "#2ca02c",
+        NASDAQCOM: "#d62728",
+        DEXJPUS: "#9467bd",
+        DCOILWTICO: "#8c564b"
+      };
+
+      const first = seriesMap[ids[0]]?.data || [];
+      const labels = first.map(p => p.date);
+
+      const datasets = ids.map(id => {
+        const data = (seriesMap[id]?.data || []).map(p => p.value);
+        return {
+          label: seriesMap[id]?.label || id,
+          data,
+          borderColor: colors[id] || "#666",
+          backgroundColor: colors[id] || "#666",
+          borderWidth: 1.5,
+          pointRadius: 0,
+          tension: 0.15
+        };
+      });
+
+      if (marketChart) {
+        marketChart.destroy();
+      }
+
+      marketChart = new Chart(ctx, {
+        type: "line",
+        data: { labels, datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: "bottom" }
+          },
+          scales: {
+            x: { ticks: { maxTicksLimit: 6 } },
+            y: { ticks: { maxTicksLimit: 5 } }
+          }
+        }
+      });
+    }
+
+    async function loadMarket() {
+      const res = await fetch("market_data/market.json?v=" + new Date().getTime());
+      const data = await res.json();
+      const updated = document.getElementById("market-updated");
+      if (updated) {
+        updated.innerText = "更新日晁E " + (data.updated_at || "--");
+      }
+
+      const seriesMap = {};
+      (data.series || []).forEach(s => {
+        seriesMap[s.id] = s;
+      });
+      buildChart(seriesMap);
+
+      function setValue(id, value) {
+        const el = document.getElementById(id);
+        if (el) {
+          el.innerText = value;
+        }
+      }
+
+      const nikkei = seriesMap["NIKKEI225"]?.summary?.latest;
+      const sp500 = seriesMap["SP500"]?.summary?.latest;
+      const dow = seriesMap["DJIA"]?.summary?.latest;
+      const nasdaq = seriesMap["NASDAQCOM"]?.summary?.latest;
+      const usdjpy = seriesMap["DEXJPUS"]?.summary?.latest;
+      const oil = seriesMap["DCOILWTICO"]?.summary?.latest;
+
+      setValue("kpi-nikkei", nikkei ?? "--");
+      setValue("kpi-sp500", sp500 ?? "--");
+      setValue("kpi-dow", dow ?? "--");
+      setValue("kpi-nasdaq", nasdaq ?? "--");
+      setValue("kpi-usdjpy", usdjpy ?? "--");
+      setValue("kpi-wti", oil ?? "--");
+      const topix = seriesMap["TOPIX"]?.summary?.latest;
+      setValue("kpi-topix", topix ?? "--");
+
+      const vix = seriesMap["VIXCLS"]?.summary?.latest;
+      const fear = seriesMap["FEAR_GREED"]?.summary?.latest;
+      const wti = seriesMap["DCOILWTICO"]?.summary?.latest;
+      const gold = seriesMap["GOLD"]?.summary?.latest;
+      const silver = seriesMap["SILVER"]?.summary?.latest;
+      const eurusd = seriesMap["DEXUSEU"]?.summary?.latest;
+      const eurjpy = (usdjpy != null && eurusd != null) ? (usdjpy * eurusd) : null;
+
+      setValue("kpi-vix", vix ?? "--");
+      setValue("kpi-feargreed", fear ?? "--");
+      setValue("kpi-wti", wti ?? "--");
+      setValue("kpi-gold", gold ?? "--");
+      setValue("kpi-silver", silver ?? "--");
+      setValue("kpi-eurjpy", eurjpy ?? "--");
+      setValue("kpi-eurusd", eurusd ?? "--");
+                }
+
+    loadMarket();
+  </script>
+</body>
+</html>

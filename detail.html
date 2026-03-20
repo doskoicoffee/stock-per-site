@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>銘柄詳細</title>
+
+  <!-- ここに Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- ここにCSS -->
+  <style>
+    body {
+	font-family: Arial, sans-serif;
+	background: #f5f7fa;
+	margin: 20px;
+    }
+    
+    .container {
+	max-width: 1000px;
+	margin: auto;
+    }
+    
+    .card {
+	background: white;
+	padding: 20px;
+	margin-bottom: 20px;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    
+    .card h2 {
+	margin-top: 0;
+    }
+    
+    button {
+	padding: 8px 16px;
+	border: none;
+	background: #2d7ff9;
+	color: white;
+	border-radius: 6px;
+	cursor: pointer;
+    }
+    
+    button:hover {
+	opacity: 0.85;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <!-- ここにHTML本体 -->
+  <div class="container">
+    
+    <h1 id="stock-name"></h1>
+    
+    <div>
+      <button onclick="moveStock(-1)">← 前へ</button>
+      <button onclick="moveStock(1)">次へ →</button>
+    </div>
+    
+    <div class="card">
+      <h2>📊 株価チャート</h2>
+      <canvas id="priceChart"></canvas>
+    </div>
+    
+    <div class="card">
+      <h2>📈 主要指標</h2>
+      <div id="stock-detail"></div>
+    </div>
+    
+    <div class="card">
+      <h2>📊 財務グラフ</h2>
+      <canvas id="financeChart"></canvas>
+    </div>   
+  </div>
+
+  <script>
+let allStocks = [];
+let currentIndex = 0;
+let priceChart = null;
+let financeChart = null;
+
+async function loadDetail() {
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("code");
+
+  const response = await fetch("data.json");
+  const data = await response.json();
+  allStocks = data.stocks;
+
+  const stock = allStocks.find(s => s.code === code);
+  currentIndex = allStocks.findIndex(s => s.code === code);
+
+  if (!stock) return;
+
+  document.getElementById("stock-name").innerText =
+    stock.name + " (" + stock.code + ")";
+
+  document.getElementById("stock-detail").innerHTML = `
+    PER: ${stock.valuation.per ?? "-"}<br>
+    PBR: ${stock.valuation.pbr ?? "-"}<br>
+    ROE: ${stock.profitability.roe ?? "-"}%<br>
+    売上: ${stock.financial.revenue_oku ?? "-"} 億円<br>
+    営業利益: ${stock.financial.operating_income_oku ?? "-"} 億円<br>
+    純利益: ${stock.financial.net_income_oku ?? "-"} 億円<br>
+    自己資本比率: ${stock.financial.equity_ratio ?? "-"}%
+  `;
+
+  createPriceChart();
+  createFinanceChart(stock);
+}
+
+function createPriceChart() {
+  const ctx = document.getElementById('priceChart');
+
+  if (priceChart) {
+    priceChart.destroy();
+  }
+
+  priceChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: Array.from({length: 30}, (_, i) => i + 1),
+      datasets: [{
+        label: '株価（サンプル）',
+        data: Array.from({length: 30}, () => 5000 + Math.random()*200),
+      }]
+    }
+  });
+}
+
+function createFinanceChart(stock) {
+  const ctx = document.getElementById('financeChart');
+
+  if (financeChart) {
+    financeChart.destroy();
+  }
+
+  financeChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['売上', '営業利益', '純利益'],
+      datasets: [{
+        label: '億円',
+        data: [
+          stock.financial.revenue_oku ?? 0,
+          stock.financial.operating_income_oku ?? 0,
+          stock.financial.net_income_oku ?? 0
+        ]
+      }]
+    }
+  });
+}
+
+function moveStock(direction) {
+  let newIndex = currentIndex + direction;
+  if (newIndex < 0 || newIndex >= allStocks.length) return;
+  const nextCode = allStocks[newIndex].code;
+  window.location.href = "detail.html?code=" + nextCode;
+}
+
+loadDetail();
+</script>
+
+  
+</body>
+</html>

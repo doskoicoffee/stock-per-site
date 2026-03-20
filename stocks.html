@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>日本株 指標一覧</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:20px;
+background:#f7f9fc;
+}
+
+h1{
+margin-bottom:5px;
+}
+
+.top-bar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+button{
+padding:8px 14px;
+border:none;
+background:#2d7ff9;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+table{
+border-collapse:collapse;
+width:100%;
+background:white;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:5px;
+text-align:center;
+font-size:13px;
+}
+
+th{
+background:#f1f3f8;
+}
+
+a{
+color:#2d7ff9;
+text-decoration:none;
+}
+
+/* モーダル */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+}
+
+.modal-content{
+background:white;
+width:760px;
+max-width:90vw;
+margin:80px auto;
+padding:25px;
+border-radius:10px;
+font-size:13px;
+}
+
+.filter-grid{
+display:grid;
+grid-template-columns:120px 1fr 1fr 120px 1fr 1fr;
+gap:8px;
+margin-bottom:10px;
+}
+
+.filter-grid input{
+width:100%;
+box-sizing:border-box;
+}
+
+.section-title{
+margin-top:15px;
+font-weight:bold;
+}
+
+.radio-group{
+margin-bottom:10px;
+}
+
+.radio-group label{
+white-space:nowrap;
+display:inline-flex;
+align-items:center;
+}
+
+.radio-group.all-top label:first-child{
+grid-column:1 / -1;
+}
+
+.radio-group.market-group{
+display:grid;
+grid-template-columns:repeat(4, max-content);
+gap:6px 10px;
+align-items:center;
+}
+
+.radio-group.industry-group{
+display:grid;
+grid-template-columns:repeat(5, max-content);
+gap:6px 10px;
+align-items:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="top-bar">
+
+<div>
+<h1>日本株 指標一覧</h1>
+<p>更新日時: <span id="updatedAt"></span></p>
+</div>
+
+<div>
+<button onclick="openFilter()">🔎 スクリーニング</button>
+<button onclick="resetFilter()">リセット</button>
+</div>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>コード</th>
+<th>銘柄</th>
+<th>市場</th>
+<th>業種</th>
+
+<th>次回決算</th>
+
+<th>株価</th>
+<th>目標株価</th>
+
+<th>時価総額</th>
+<th>売上高</th>
+<th>営業利益</th>
+<th>純利益</th>
+
+<th>営業利益率</th>
+<th>純利益率</th>
+
+<th>PER</th>
+<th>PBR</th>
+<th>ROE</th>
+<th>ROA</th>
+
+<th>配当利回り</th>
+<th>1株配当</th>
+<th>自己資本比率</th>
+<th>流動比率</th>
+
+</tr>
+
+</thead>
+
+<tbody id="stock-body"></tbody>
+
+</table>
+
+<!-- モーダル -->
+
+<div id="filterModal" class="modal">
+
+<div class="modal-content">
+
+<h2>スクリーニング条件</h2>
+
+<div class="filter-grid">
+
+<div>PER</div>
+<input id="perMin" placeholder="min">
+<input id="perMax" placeholder="max">
+
+<div>PBR</div>
+<input id="pbrMin">
+<input id="pbrMax">
+
+<div>ROE</div>
+<input id="roeMin">
+<input id="roeMax">
+
+<div>ROA</div>
+<input id="roaMin">
+<input id="roaMax">
+
+<div>時価総額（億）</div>
+<input id="marketCapMin">
+<input id="marketCapMax">
+
+<div>売上高（億）</div>
+<input id="revenueMin">
+<input id="revenueMax">
+
+<div>営業利益（億）</div>
+<input id="operatingIncomeMin">
+<input id="operatingIncomeMax">
+
+<div>純利益（億）</div>
+<input id="netIncomeMin">
+<input id="netIncomeMax">
+
+<div>営業利益率（%）</div>
+<input id="operatingMarginMin">
+<input id="operatingMarginMax">
+
+<div>純利益率（%）</div>
+<input id="netMarginMin">
+<input id="netMarginMax">
+
+<div>配当利回り（%）</div>
+<input id="divMin">
+<input id="divMax">
+
+<div>1株配当</div>
+<input id="divPerShareMin">
+<input id="divPerShareMax">
+
+<div>自己資本比率（%）</div>
+<input id="equityRatioMin">
+<input id="equityRatioMax">
+
+<div>流動比率</div>
+<input id="currentRatioMin">
+<input id="currentRatioMax">
+
+</div>
+
+<div class="section-title">市場</div>
+
+<div class="radio-group market-group all-top">
+
+<label><input type="radio" name="market" value="" checked>全て</label> <label><input type="radio" name="market" value="プライム">プライム（内国・外国）</label> <label><input type="radio" name="market" value="スタンダード">スタンダード（内国・外国）</label> <label><input type="radio" name="market" value="グロース">グロース（内国・外国）</label> <label><input type="radio" name="market" value="PRO Market">PRO Market</label>
+
+</div>
+
+<div class="section-title">業種</div>
+
+<div class="radio-group industry-group all-top">
+
+<label><input type="radio" name="industry" value="" checked>全て</label>
+<label><input type="radio" name="industry" value="水産・農林業">水産・農林業</label>
+<label><input type="radio" name="industry" value="鉱業">鉱業</label>
+<label><input type="radio" name="industry" value="建設業">建設業</label>
+<label><input type="radio" name="industry" value="食料品">食料品</label>
+<label><input type="radio" name="industry" value="繊維製品">繊維製品</label>
+<label><input type="radio" name="industry" value="パルプ・紙">パルプ・紙</label>
+<label><input type="radio" name="industry" value="化学">化学</label>
+<label><input type="radio" name="industry" value="医薬品">医薬品</label>
+<label><input type="radio" name="industry" value="石油・石炭製品">石油・石炭製品</label>
+<label><input type="radio" name="industry" value="ゴム製品">ゴム製品</label>
+<label><input type="radio" name="industry" value="ガラス・土石製品">ガラス・土石製品</label>
+<label><input type="radio" name="industry" value="鉄鋼">鉄鋼</label>
+<label><input type="radio" name="industry" value="非鉄金属">非鉄金属</label>
+<label><input type="radio" name="industry" value="金属製品">金属製品</label>
+<label><input type="radio" name="industry" value="機械">機械</label>
+<label><input type="radio" name="industry" value="電気機器">電気機器</label>
+<label><input type="radio" name="industry" value="輸送用機器">輸送用機器</label>
+<label><input type="radio" name="industry" value="精密機器">精密機器</label>
+<label><input type="radio" name="industry" value="その他製品">その他製品</label>
+<label><input type="radio" name="industry" value="電気・ガス業">電気・ガス業</label>
+<label><input type="radio" name="industry" value="陸運業">陸運業</label>
+<label><input type="radio" name="industry" value="海運業">海運業</label>
+<label><input type="radio" name="industry" value="空運業">空運業</label>
+<label><input type="radio" name="industry" value="倉庫・運輸関連業">倉庫・運輸関連業</label>
+<label><input type="radio" name="industry" value="情報・通信業">情報・通信業</label>
+<label><input type="radio" name="industry" value="卸売業">卸売業</label>
+<label><input type="radio" name="industry" value="小売業">小売業</label>
+<label><input type="radio" name="industry" value="銀行業">銀行業</label>
+<label><input type="radio" name="industry" value="証券、商品先物取引業">証券、商品先物取引業</label>
+<label><input type="radio" name="industry" value="保険業">保険業</label>
+<label><input type="radio" name="industry" value="その他金融業">その他金融業</label>
+<label><input type="radio" name="industry" value="不動産業">不動産業</label>
+<label><input type="radio" name="industry" value="サービス業">サービス業</label>
+
+</div>
+
+<button onclick="applyFilter()">適用</button> <button onclick="closeFilter()">閉じる</button>
+
+</div>
+
+</div>
+
+<script>
+
+let originalData = []
+
+function displayData(data){
+
+const tbody=document.getElementById("stock-body")
+tbody.innerHTML=""
+
+data.forEach(stock=>{
+
+const row=document.createElement("tr")
+
+row.innerHTML=`
+
+<td>
+<a href="detail.html?code=${stock.code}">
+${stock.code}
+</a>
+</td>
+
+<td>${stock.name}</td>
+<td>${stock.market}</td>
+<td>${stock.industry}</td>
+
+<td>${stock.next_earnings ?? "-"}</td>
+
+<td>${stock.price?.current ?? "-"}</td>
+<td>${stock.price?.target ?? "-"}</td>
+
+<td>${stock.financial?.market_cap_oku ?? "-"}</td>
+<td>${stock.financial?.revenue_oku ?? "-"}</td>
+<td>${stock.financial?.operating_income_oku ?? "-"}</td>
+<td>${stock.financial?.net_income_oku ?? "-"}</td>
+
+<td>${stock.profitability?.operating_margin ?? "-"}</td>
+<td>${stock.profitability?.net_margin ?? "-"}</td>
+
+<td>${stock.valuation?.per ?? "-"}</td>
+<td>${stock.valuation?.pbr ?? "-"}</td>
+<td>${stock.profitability?.roe ?? "-"}</td>
+<td>${stock.profitability?.roa ?? "-"}</td>
+
+<td>${stock.dividend?.yield ?? "-"}</td>
+<td>${stock.dividend?.per_share ?? "-"}</td>
+<td>${stock.financial?.equity_ratio ?? "-"}</td>
+<td>${stock.financial?.current_ratio ?? "-"}</td>
+
+`
+
+tbody.appendChild(row)
+
+})
+
+}
+
+
+
+fetch("data.json?v="+new Date().getTime())
+.then(res=>res.json())
+.then(data=>{
+
+document.getElementById("updatedAt").innerText=data.updated_at
+originalData=data.stocks
+displayData(originalData)
+
+})
+
+
+
+function openFilter(){
+
+document.getElementById("filterModal").style.display="block"
+
+}
+
+
+function closeFilter(){
+
+document.getElementById("filterModal").style.display="none"
+
+}
+
+
+
+function applyFilter(){
+
+const perMin=parseFloat(document.getElementById("perMin").value)
+const perMax=parseFloat(document.getElementById("perMax").value)
+
+const pbrMin=parseFloat(document.getElementById("pbrMin").value)
+const pbrMax=parseFloat(document.getElementById("pbrMax").value)
+
+const roeMin=parseFloat(document.getElementById("roeMin").value)
+const roeMax=parseFloat(document.getElementById("roeMax").value)
+
+const roaMin=parseFloat(document.getElementById("roaMin").value)
+const roaMax=parseFloat(document.getElementById("roaMax").value)
+
+const marketCapMin=parseFloat(document.getElementById("marketCapMin").value)
+const marketCapMax=parseFloat(document.getElementById("marketCapMax").value)
+
+const revenueMin=parseFloat(document.getElementById("revenueMin").value)
+const revenueMax=parseFloat(document.getElementById("revenueMax").value)
+
+const operatingIncomeMin=parseFloat(document.getElementById("operatingIncomeMin").value)
+const operatingIncomeMax=parseFloat(document.getElementById("operatingIncomeMax").value)
+
+const netIncomeMin=parseFloat(document.getElementById("netIncomeMin").value)
+const netIncomeMax=parseFloat(document.getElementById("netIncomeMax").value)
+
+const operatingMarginMin=parseFloat(document.getElementById("operatingMarginMin").value)
+const operatingMarginMax=parseFloat(document.getElementById("operatingMarginMax").value)
+
+const netMarginMin=parseFloat(document.getElementById("netMarginMin").value)
+const netMarginMax=parseFloat(document.getElementById("netMarginMax").value)
+
+const divMin=parseFloat(document.getElementById("divMin").value)
+const divMax=parseFloat(document.getElementById("divMax").value)
+
+const divPerShareMin=parseFloat(document.getElementById("divPerShareMin").value)
+const divPerShareMax=parseFloat(document.getElementById("divPerShareMax").value)
+
+const equityRatioMin=parseFloat(document.getElementById("equityRatioMin").value)
+const equityRatioMax=parseFloat(document.getElementById("equityRatioMax").value)
+
+const currentRatioMin=parseFloat(document.getElementById("currentRatioMin").value)
+const currentRatioMax=parseFloat(document.getElementById("currentRatioMax").value)
+
+const market=document.querySelector('input[name="market"]:checked').value
+const industry=document.querySelector('input[name="industry"]:checked').value
+
+
+const filtered=originalData.filter(stock=>{
+
+const per=stock.valuation?.per
+const pbr=stock.valuation?.pbr
+const roe=stock.profitability?.roe
+const roa=stock.profitability?.roa
+const div=stock.dividend?.yield
+const divPerShare=stock.dividend?.per_share
+const marketCap=stock.financial?.market_cap_oku
+const revenue=stock.financial?.revenue_oku
+const operatingIncome=stock.financial?.operating_income_oku
+const netIncome=stock.financial?.net_income_oku
+const operatingMargin=stock.profitability?.operating_margin
+const netMargin=stock.profitability?.net_margin
+const equityRatio=stock.financial?.equity_ratio
+const currentRatio=stock.financial?.current_ratio
+
+if(!isNaN(perMin) && (per==null || per<perMin)) return false
+if(!isNaN(perMax) && (per==null || per>perMax)) return false
+
+if(!isNaN(pbrMin) && (pbr==null || pbr<pbrMin)) return false
+if(!isNaN(pbrMax) && (pbr==null || pbr>pbrMax)) return false
+
+if(!isNaN(roeMin) && (roe==null || roe<roeMin)) return false
+if(!isNaN(roeMax) && (roe==null || roe>roeMax)) return false
+
+if(!isNaN(roaMin) && (roa==null || roa<roaMin)) return false
+if(!isNaN(roaMax) && (roa==null || roa>roaMax)) return false
+
+if(!isNaN(marketCapMin) && (marketCap==null || marketCap<marketCapMin)) return false
+if(!isNaN(marketCapMax) && (marketCap==null || marketCap>marketCapMax)) return false
+
+if(!isNaN(revenueMin) && (revenue==null || revenue<revenueMin)) return false
+if(!isNaN(revenueMax) && (revenue==null || revenue>revenueMax)) return false
+
+if(!isNaN(operatingIncomeMin) && (operatingIncome==null || operatingIncome<operatingIncomeMin)) return false
+if(!isNaN(operatingIncomeMax) && (operatingIncome==null || operatingIncome>operatingIncomeMax)) return false
+
+if(!isNaN(netIncomeMin) && (netIncome==null || netIncome<netIncomeMin)) return false
+if(!isNaN(netIncomeMax) && (netIncome==null || netIncome>netIncomeMax)) return false
+
+if(!isNaN(operatingMarginMin) && (operatingMargin==null || operatingMargin<operatingMarginMin)) return false
+if(!isNaN(operatingMarginMax) && (operatingMargin==null || operatingMargin>operatingMarginMax)) return false
+
+if(!isNaN(netMarginMin) && (netMargin==null || netMargin<netMarginMin)) return false
+if(!isNaN(netMarginMax) && (netMargin==null || netMargin>netMarginMax)) return false
+
+if(!isNaN(divMin) && (div==null || div<divMin)) return false
+if(!isNaN(divMax) && (div==null || div>divMax)) return false
+
+if(!isNaN(divPerShareMin) && (divPerShare==null || divPerShare<divPerShareMin)) return false
+if(!isNaN(divPerShareMax) && (divPerShare==null || divPerShare>divPerShareMax)) return false
+
+if(!isNaN(equityRatioMin) && (equityRatio==null || equityRatio<equityRatioMin)) return false
+if(!isNaN(equityRatioMax) && (equityRatio==null || equityRatio>equityRatioMax)) return false
+
+if(!isNaN(currentRatioMin) && (currentRatio==null || currentRatio<currentRatioMin)) return false
+if(!isNaN(currentRatioMax) && (currentRatio==null || currentRatio>currentRatioMax)) return false
+
+if(market){
+    if(market === "PRO Market"){
+        if(stock.market !== "PRO Market") return false
+    }else{
+        if(!stock.market || !stock.market.includes(market)) return false
+    }
+}
+if(industry && stock.industry!==industry) return false
+
+return true
+
+})
+
+
+displayData(filtered)
+closeFilter()
+
+}
+
+
+
+function resetFilter(){
+
+displayData(originalData)
+
+}
+
+</script>
+
+</body>
+</html>
+
