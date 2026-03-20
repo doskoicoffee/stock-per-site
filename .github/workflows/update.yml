@@ -1,4 +1,4 @@
-name: Weekly Update
+﻿name: Weekly Update
 
 permissions:
   contents: write
@@ -28,6 +28,7 @@ jobs:
       - name: スクリプト実行
         run: |
           python generate.py
+          python generate_sector.py
 
       - name: 自動コミット
         run: |
@@ -36,4 +37,3 @@ jobs:
           git add .
           git commit -m "自動更新"
           git push
-

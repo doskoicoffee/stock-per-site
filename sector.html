@@ -10,38 +10,72 @@
       margin: 20px;
     }
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
     }
     h1 {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .subtitle {
       color: #555;
-      margin-bottom: 20px;
+      margin-bottom: 6px;
+    }
+    .updated {
+      color: #777;
+      font-size: 12px;
+      margin-bottom: 16px;
     }
     .toolbar {
       display: flex;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 16px;
+      align-items: center;
+    }
+    .toolbar label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #444;
     }
     .toolbar select {
       padding: 6px 10px;
       border-radius: 6px;
       border: 1px solid #d7dde5;
+      background: #fff;
     }
     .heatmap {
       background: white;
-      padding: 18px;
+      padding: 12px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.06);
       border: 1px solid #eef1f5;
-      min-height: 320px;
+      height: 620px;
+      position: relative;
+      overflow: hidden;
+    }
+    .tile {
+      position: absolute;
+      border: 1px solid rgba(255,255,255,0.8);
+      box-sizing: border-box;
+      padding: 6px;
+      cursor: pointer;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #7a8794;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #1b1b1b;
+      font-size: 12px;
+      overflow: hidden;
+    }
+    .tile-name {
+      font-weight: bold;
+      font-size: 12px;
+      margin-bottom: 4px;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+    }
+    .tile-change {
+      font-size: 12px;
     }
     .back-link {
       display: inline-block;
@@ -54,31 +88,421 @@
       font-size: 13px;
       margin-top: 10px;
     }
+    .empty {
+      color: #7a8794;
+      text-align: center;
+      padding-top: 120px;
+      font-size: 14px;
+    }
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+    .modal.show {
+      display: flex;
+    }
+    .modal-content {
+      background: #fff;
+      width: min(1100px, 92vw);
+      max-height: 85vh;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .modal-header {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e6e9ef;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .modal-body {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 12px;
+      padding: 12px 16px 16px 16px;
+      overflow: auto;
+    }
+    .stock-list {
+      border: 1px solid #e6e9ef;
+      border-radius: 8px;
+      overflow: auto;
+      max-height: 60vh;
+    }
+    .stock-row {
+      padding: 8px 10px;
+      border-bottom: 1px solid #f0f1f5;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+    .stock-row:hover {
+      background: #f6f8fb;
+    }
+    .stock-row.active {
+      background: #e8f1ff;
+    }
+    .stock-name {
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .stock-meta {
+      color: #666;
+      font-size: 12px;
+    }
+    .stock-returns {
+      font-size: 12px;
+      color: #333;
+      display: flex;
+      gap: 8px;
+    }
+    .stock-detail {
+      border: 1px solid #e6e9ef;
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-height: 300px;
+    }
+    .series-tabs {
+      display: flex;
+      gap: 6px;
+    }
+    .series-tab {
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #d7dde5;
+      background: #fff;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .series-tab.active {
+      background: #2d7ff9;
+      color: #fff;
+      border-color: #2d7ff9;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th, td {
+      border-bottom: 1px solid #edf0f5;
+      padding: 6px 4px;
+      text-align: left;
+    }
+    th {
+      color: #666;
+      font-weight: 600;
+    }
+    @media (max-width: 900px) {
+      .modal-body {
+        grid-template-columns: 1fr;
+      }
+      .heatmap {
+        height: 520px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <a class="back-link" href="index.html">← トップへ</a>
     <h1>業界別動向（週一更新）</h1>
-    <div class="subtitle">33業種ヒートマップ（仮）</div>
+    <div class="subtitle">33業種ヒートマップ</div>
+    <div class="updated" id="updatedAt">更新日時: --</div>
 
     <div class="toolbar">
-      <select>
-        <option>週次</option>
-        <option>月次</option>
-        <option>半年</option>
-      </select>
-      <select>
-        <option>プライム</option>
-        <option>スタンダード</option>
-        <option>グロース</option>
-        <option>PRO Market</option>
-        <option>全市場</option>
-      </select>
+      <label>期間
+        <select id="periodSelect">
+          <option value="1w">週次</option>
+          <option value="1m">月次</option>
+          <option value="6m">半年</option>
+        </select>
+      </label>
+      <label>市場
+        <select id="marketSelect">
+          <option value="all">全市場</option>
+          <option value="プライム">プライム</option>
+          <option value="スタンダード">スタンダード</option>
+          <option value="グロース">グロース</option>
+          <option value="PRO Market">PRO Market</option>
+        </select>
+      </label>
     </div>
 
-    <div class="heatmap">ヒートマップ表示エリア（仮）</div>
-    <div class="note">クリックで銘柄詳細・時系列のダイアログを表示する想定です。</div>
+    <div class="heatmap" id="heatmap"></div>
+    <div class="note">業界タイルをクリックすると銘柄一覧と時系列が表示されます。同じ銘柄をもう一度クリックすると詳細ページへ移動します。</div>
   </div>
+
+  <div class="modal" id="sectorModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div id="modalTitle">業界</div>
+        <button id="modalClose">閉じる</button>
+      </div>
+      <div class="modal-body">
+        <div class="stock-list" id="stockList"></div>
+        <div class="stock-detail">
+          <div id="stockInfo">銘柄を選択してください</div>
+          <div class="series-tabs" id="seriesTabs">
+            <button class="series-tab" data-period="1w">週次</button>
+            <button class="series-tab" data-period="1m">月次</button>
+            <button class="series-tab" data-period="6m">半年</button>
+          </div>
+          <table>
+            <thead>
+              <tr><th>日付</th><th>現値比(%)</th></tr>
+            </thead>
+            <tbody id="seriesTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let sectorData = null;
+    let currentPeriod = "1w";
+    let currentMarket = "all";
+    let currentSeries = "1w";
+    let selectedStock = null;
+
+    function clamp(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function colorForChange(value) {
+      if (value == null) return "#f0f2f5";
+      const v = clamp(value, -10, 10);
+      if (v >= 0) {
+        const light = 90 - v * 3;
+        return `hsl(120, 55%, ${light}%)`;
+      }
+      const light = 90 - Math.abs(v) * 3;
+      return `hsl(0, 65%, ${light}%)`;
+    }
+
+    function formatPct(value) {
+      if (value == null) return "--";
+      const sign = value > 0 ? "+" : "";
+      return sign + value.toFixed(2) + "%";
+    }
+
+    function buildItems() {
+      const items = [];
+      sectorData.industries.forEach(ind => {
+        const marketData = ind.markets[currentMarket];
+        if (!marketData || !marketData.market_cap || marketData.market_cap <= 0) return;
+        items.push({
+          name: ind.name,
+          size: marketData.market_cap,
+          change: marketData.returns?.[currentPeriod],
+          stocks: marketData.stocks || []
+        });
+      });
+      return items.sort((a, b) => b.size - a.size);
+    }
+
+    function layoutTreemap(items, x, y, w, h) {
+      if (items.length === 0) return;
+      if (items.length === 1) {
+        items[0].rect = { x, y, w, h };
+        return;
+      }
+      const total = items.reduce((sum, i) => sum + i.size, 0);
+      let acc = 0;
+      let idx = 0;
+      while (idx < items.length && acc + items[idx].size < total / 2) {
+        acc += items[idx].size;
+        idx += 1;
+      }
+      if (idx === 0) idx = 1;
+      const group1 = items.slice(0, idx);
+      const group2 = items.slice(idx);
+      const sum1 = group1.reduce((sum, i) => sum + i.size, 0);
+      if (w >= h) {
+        const w1 = w * (sum1 / total);
+        layoutTreemap(group1, x, y, w1, h);
+        layoutTreemap(group2, x + w1, y, w - w1, h);
+      } else {
+        const h1 = h * (sum1 / total);
+        layoutTreemap(group1, x, y, w, h1);
+        layoutTreemap(group2, x, y + h1, w, h - h1);
+      }
+    }
+
+    function renderHeatmap() {
+      const container = document.getElementById("heatmap");
+      container.innerHTML = "";
+      if (!sectorData) return;
+
+      const items = buildItems();
+      if (items.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.innerText = "データがありません";
+        container.appendChild(empty);
+        return;
+      }
+
+      const rect = container.getBoundingClientRect();
+      layoutTreemap(items, 0, 0, rect.width, rect.height);
+
+      items.forEach(item => {
+        const tile = document.createElement("div");
+        tile.className = "tile";
+        tile.style.left = item.rect.x + "px";
+        tile.style.top = item.rect.y + "px";
+        tile.style.width = item.rect.w + "px";
+        tile.style.height = item.rect.h + "px";
+        tile.style.background = colorForChange(item.change);
+        tile.innerHTML = `
+          <div class="tile-name">${item.name}</div>
+          <div class="tile-change">${formatPct(item.change)}</div>
+        `;
+        tile.addEventListener("click", () => openModal(item));
+        container.appendChild(tile);
+      });
+    }
+
+    function openModal(item) {
+      const modal = document.getElementById("sectorModal");
+      document.getElementById("modalTitle").innerText = item.name;
+      selectedStock = null;
+      currentSeries = currentPeriod;
+      renderStockList(item.stocks || []);
+      renderSeriesTabs();
+      renderStockDetail(null);
+      modal.classList.add("show");
+    }
+
+    function closeModal() {
+      document.getElementById("sectorModal").classList.remove("show");
+    }
+
+    function renderStockList(stocks) {
+      const list = document.getElementById("stockList");
+      list.innerHTML = "";
+      if (!stocks.length) {
+        list.innerHTML = "<div class=\"empty\">銘柄がありません</div>";
+        return;
+      }
+      stocks.forEach(stock => {
+        const row = document.createElement("div");
+        row.className = "stock-row";
+        row.innerHTML = `
+          <div>
+            <div class="stock-name">${stock.name} (${stock.code})</div>
+            <div class="stock-meta">現値: ${stock.current_close ?? "--"}</div>
+          </div>
+          <div class="stock-returns">
+            <span>週: ${formatPct(stock.returns?.["1w"])}</span>
+            <span>月: ${formatPct(stock.returns?.["1m"])}</span>
+            <span>半: ${formatPct(stock.returns?.["6m"])}</span>
+          </div>
+        `;
+        row.addEventListener("click", () => handleStockClick(stock, row));
+        list.appendChild(row);
+      });
+    }
+
+    function handleStockClick(stock, row) {
+      if (selectedStock && selectedStock.code === stock.code) {
+        window.location.href = `detail.html?code=${stock.code}`;
+        return;
+      }
+      selectedStock = stock;
+      document.querySelectorAll(".stock-row").forEach(el => el.classList.remove("active"));
+      row.classList.add("active");
+      renderStockDetail(stock);
+    }
+
+    function renderStockDetail(stock) {
+      const info = document.getElementById("stockInfo");
+      if (!stock) {
+        info.innerText = "銘柄を選択してください";
+        document.getElementById("seriesTable").innerHTML = "";
+        return;
+      }
+      info.innerHTML = `
+        <div><strong>${stock.name} (${stock.code})</strong></div>
+        <div>現値（金曜終値想定）: ${stock.current_close ?? "--"}</div>
+        <div>先週比: ${formatPct(stock.returns?.["1w"])}</div>
+        <div>先月比: ${formatPct(stock.returns?.["1m"])}</div>
+        <div>半年前比: ${formatPct(stock.returns?.["6m"])}</div>
+      `;
+      renderSeriesTable(stock);
+    }
+
+    function renderSeriesTabs() {
+      document.querySelectorAll(".series-tab").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.period === currentSeries);
+        btn.onclick = () => {
+          currentSeries = btn.dataset.period;
+          renderSeriesTabs();
+          renderSeriesTable(selectedStock);
+        };
+      });
+    }
+
+    function renderSeriesTable(stock) {
+      const body = document.getElementById("seriesTable");
+      body.innerHTML = "";
+      if (!stock) return;
+      const series = stock.series?.[currentSeries] || [];
+      if (!series.length) {
+        body.innerHTML = "<tr><td colspan=\"2\">データがありません</td></tr>";
+        return;
+      }
+      series.forEach(row => {
+        const tr = document.createElement("tr");
+        const pct = row.pct == null ? "--" : row.pct.toFixed(2) + "%";
+        tr.innerHTML = `<td>${row.date}</td><td>${pct}</td>`;
+        body.appendChild(tr);
+      });
+    }
+
+    async function loadSector() {
+      const res = await fetch("sector_data/sector.json?v=" + Date.now());
+      sectorData = await res.json();
+      document.getElementById("updatedAt").innerText = "更新日時: " + (sectorData.updated_at || "--");
+      renderHeatmap();
+    }
+
+    document.getElementById("periodSelect").addEventListener("change", (e) => {
+      currentPeriod = e.target.value;
+      currentSeries = currentPeriod;
+      renderHeatmap();
+    });
+
+    document.getElementById("marketSelect").addEventListener("change", (e) => {
+      currentMarket = e.target.value;
+      renderHeatmap();
+    });
+
+    document.getElementById("modalClose").addEventListener("click", closeModal);
+    document.getElementById("sectorModal").addEventListener("click", (e) => {
+      if (e.target.id === "sectorModal") closeModal();
+    });
+
+    window.addEventListener("resize", () => {
+      renderHeatmap();
+    });
+
+    loadSector();
+  </script>
 </body>
 </html>
