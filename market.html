@@ -96,9 +96,118 @@
       text-decoration: none;
       color: #2d7ff9;
     }
+
+    .chart-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .range-group {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .range-label {
+      font-size: 12px;
+      color: #555;
+    }
+    .range-btn {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #cfd6e4;
+      background: #fff;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .range-btn.active {
+      background: #2d7ff9;
+      color: #fff;
+      border-color: #2d7ff9;
+    }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .chart-panel {
+      background: #f9fbfe;
+      border: 1px solid #eef1f5;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .chart-panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .chart-title {
+      font-size: 13px;
+      font-weight: bold;
+      color: #333;
+    }
+    .btn {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #cfd6e4;
+      background: #fff;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+    .modal-content {
+      background: #fff;
+      width: 560px;
+      max-width: 92vw;
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid #e6e9ef;
+    }
+    .modal-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .indicator-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 12px;
+      max-height: 320px;
+      overflow: auto;
+      padding: 6px 0;
+      border-top: 1px solid #f0f2f6;
+      border-bottom: 1px solid #f0f2f6;
+      margin-bottom: 10px;
+    }
+    .indicator-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
     @media (max-width: 900px) {
       .grid { grid-template-columns: 1fr; }
       .kpi-row { grid-template-columns: 1fr; }
+      .chart-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -148,9 +257,36 @@
       </div>
 
       <div class="card">
-        <h2>チャート（重ね合わせ）</h2>
-        <div class="chart-wrap">
-          <canvas id="marketChart" class="chart-canvas"></canvas>
+        <div class="chart-controls">
+          <div class="range-group">
+            <span class="range-label">期間:</span>
+            <button class="range-btn" data-range="7">1週間</button>
+            <button class="range-btn active" data-range="30">1か月</button>
+            <button class="range-btn" data-range="90">3か月</button>
+            <button class="range-btn" data-range="183">半年</button>
+          </div>
+        </div>
+
+        <div class="chart-grid">
+          <div class="chart-panel">
+            <div class="chart-panel-head">
+              <div class="chart-title">指標チャート</div>
+              <button class="btn" id="btnSelectLeft">表示指標</button>
+            </div>
+            <div class="chart-wrap">
+              <canvas id="chartRaw" class="chart-canvas"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-panel">
+            <div class="chart-panel-head">
+              <div class="chart-title">変化率チャート（開始時=0%）</div>
+              <button class="btn" id="btnSelectRight">表示指標</button>
+            </div>
+            <div class="chart-wrap">
+              <canvas id="chartPct" class="chart-canvas"></canvas>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -165,56 +301,218 @@
     </div>
   </div>
 
+  <div class="modal" id="indicatorModal">
+    <div class="modal-content">
+      <div class="modal-title" id="modalTitle">表示指標</div>
+      <div class="indicator-list" id="indicatorList"></div>
+      <div class="modal-actions">
+        <button class="btn" id="modalCancel">閉じる</button>
+        <button class="btn" id="modalApply">表示する</button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    let marketChart = null;
+    const INDICATORS = [
+      { id: "NIKKEI225", label: "日経225" },
+      { id: "TOPIX", label: "TOPIX" },
+      { id: "DJIA", label: "NYダウ" },
+      { id: "NASDAQCOM", label: "NASDAQ" },
+      { id: "SP500", label: "S&P500" },
+      { id: "VIXCLS", label: "VIX" },
+      { id: "WTI", label: "WTI原油" },
+      { id: "GOLD", label: "金" },
+      { id: "SILVER", label: "銀" },
+      { id: "USDJPY", label: "米ドル/円" },
+      { id: "EURJPY", label: "ユーロ/円" },
+      { id: "EURUSD", label: "ユーロ/米ドル" }
+    ];
 
-    function buildChart(seriesMap) {
-      const ctx = document.getElementById("marketChart");
-      if (!ctx) return;
-      const ids = ["NIKKEI225", "SP500", "DJIA", "NASDAQCOM", "USDJPY", "WTI"];
-      const colors = {
-        NIKKEI225: "#1f77b4",
-        SP500: "#ff7f0e",
-        DJIA: "#2ca02c",
-        NASDAQCOM: "#d62728",
-        USDJPY: "#9467bd",
-        WTI: "#8c564b"
-      };
+    const leftPalette = ["#1f77b4", "#d62728"];
 
-      const first = seriesMap[ids[0]]?.data || [];
-      const labels = first.map(p => p.date);
+    let marketChartRaw = null;
+    let marketChartPct = null;
+    let rangeDays = 30;
+    let seriesMap = {};
+    let selectedLeft = ["NIKKEI225"];
+    let selectedRight = ["NIKKEI225", "TOPIX"];
+    let modalMode = "left";
 
-      const datasets = ids.map(id => {
-        const data = (seriesMap[id]?.data || []).map(p => p.value);
+    function filterByRange(data) {
+      if (!data || data.length === 0) return [];
+      const cutoff = new Date();
+      cutoff.setDate(cutoff.getDate() - rangeDays + 1);
+      return data.filter(p => {
+        const d = new Date(p.date + "T00:00:00");
+        return d >= cutoff;
+      });
+    }
+
+    function buildLabels(baseSeries) {
+      return baseSeries.map(p => p.date);
+    }
+
+    function mapSeriesValues(series, labels) {
+      const map = new Map(series.map(p => [p.date, p.value]));
+      return labels.map(d => map.has(d) ? map.get(d) : null);
+    }
+
+    function makeRawDatasets(ids, labels) {
+      return ids.map((id, idx) => {
+        const s = seriesMap[id];
+        const data = mapSeriesValues(filterByRange(s.data || []), labels);
         return {
-          label: seriesMap[id]?.label || id,
+          label: s.label || id,
           data,
-          borderColor: colors[id] || "#666",
-          backgroundColor: colors[id] || "#666",
+          borderColor: leftPalette[idx % leftPalette.length],
+          backgroundColor: leftPalette[idx % leftPalette.length],
+          borderWidth: 1.5,
+          pointRadius: 0,
+          tension: 0.15,
+          yAxisID: idx === 0 ? "y" : "y1"
+        };
+      });
+    }
+
+    function makePctDatasets(ids, labels) {
+      return ids.map(id => {
+        const s = seriesMap[id];
+        const values = mapSeriesValues(filterByRange(s.data || []), labels);
+        const base = values.find(v => v != null && v !== 0);
+        const pct = values.map(v => {
+          if (v == null || base == null || base === 0) return null;
+          return (v / base - 1) * 100;
+        });
+        return {
+          label: s.label || id,
+          data: pct,
           borderWidth: 1.5,
           pointRadius: 0,
           tension: 0.15
         };
       });
+    }
 
-      if (marketChart) {
-        marketChart.destroy();
-      }
+    function buildCharts() {
+      const leftIds = selectedLeft.filter(id => seriesMap[id]);
+      if (leftIds.length === 0) return;
+      const baseLeft = filterByRange(seriesMap[leftIds[0]].data || []);
+      const labels = buildLabels(baseLeft);
 
-      marketChart = new Chart(ctx, {
+      const rawDatasets = makeRawDatasets(leftIds, labels);
+      const pctIds = selectedRight.filter(id => seriesMap[id]);
+      const pctDatasets = makePctDatasets(pctIds, labels);
+
+      if (marketChartRaw) marketChartRaw.destroy();
+      if (marketChartPct) marketChartPct.destroy();
+
+      const ctxRaw = document.getElementById("chartRaw");
+      const ctxPct = document.getElementById("chartPct");
+      const showRightAxis = leftIds.length > 1;
+
+      marketChartRaw = new Chart(ctxRaw, {
         type: "line",
-        data: { labels, datasets },
+        data: { labels, datasets: rawDatasets },
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          plugins: {
-            legend: { position: "bottom" }
-          },
+          plugins: { legend: { position: "bottom" } },
           scales: {
             x: { ticks: { maxTicksLimit: 6 } },
-            y: { ticks: { maxTicksLimit: 5 } }
+            y: { ticks: { maxTicksLimit: 5 } },
+            y1: {
+              display: showRightAxis,
+              position: "right",
+              ticks: { maxTicksLimit: 5 },
+              grid: { drawOnChartArea: false }
+            }
           }
         }
+      });
+
+      marketChartPct = new Chart(ctxPct, {
+        type: "line",
+        data: { labels, datasets: pctDatasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: "bottom" } },
+          scales: {
+            x: { ticks: { maxTicksLimit: 6 } },
+            y: {
+              ticks: { maxTicksLimit: 5, callback: v => v + "%" }
+            }
+          }
+        }
+      });
+    }
+
+    function openModal(mode) {
+      modalMode = mode;
+      const modal = document.getElementById("indicatorModal");
+      const list = document.getElementById("indicatorList");
+      const title = document.getElementById("modalTitle");
+      list.innerHTML = "";
+      const isLeft = mode === "left";
+      title.innerText = isLeft ? "表示指標（左: 最大2つ）" : "表示指標（右: 複数選択可）";
+
+      INDICATORS.forEach(item => {
+        const label = document.createElement("label");
+        label.className = "indicator-item";
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.name = isLeft ? "indicatorLeft" : "indicatorRight";
+        input.value = item.id;
+        if (isLeft && selectedLeft.includes(item.id)) input.checked = true;
+        if (!isLeft && selectedRight.includes(item.id)) input.checked = true;
+        label.appendChild(input);
+        const span = document.createElement("span");
+        span.innerText = item.label;
+        label.appendChild(span);
+        list.appendChild(label);
+      });
+
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("indicatorModal");
+      modal.style.display = "none";
+    }
+
+    function applyModal() {
+      if (modalMode === "left") {
+        const checked = Array.from(document.querySelectorAll("input[name='indicatorLeft']:checked"))
+          .map(i => i.value);
+        if (checked.length === 0) {
+          alert("左チャートは1つ以上選択してください");
+          return;
+        }
+        if (checked.length > 2) {
+          alert("左チャートは2つまで選択できます");
+          return;
+        }
+        selectedLeft = checked;
+      } else {
+        const checked = Array.from(document.querySelectorAll("input[name='indicatorRight']:checked"))
+          .map(i => i.value);
+        if (checked.length > 0) {
+          selectedRight = checked;
+        }
+      }
+      closeModal();
+      buildCharts();
+    }
+
+    function bindRangeButtons() {
+      const buttons = document.querySelectorAll(".range-btn");
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          buttons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          rangeDays = Number(btn.dataset.range);
+          buildCharts();
+        });
       });
     }
 
@@ -226,11 +524,10 @@
         updated.innerText = "更新日時: " + (data.updated_at || "--");
       }
 
-      const seriesMap = {};
+      seriesMap = {};
       (data.series || []).forEach(s => {
         seriesMap[s.id] = s;
       });
-      buildChart(seriesMap);
 
       function setValue(id, value) {
         const el = document.getElementById(id);
@@ -239,34 +536,30 @@
         }
       }
 
-      const nikkei = seriesMap["NIKKEI225"]?.summary?.latest;
-      const sp500 = seriesMap["SP500"]?.summary?.latest;
-      const dow = seriesMap["DJIA"]?.summary?.latest;
-      const nasdaq = seriesMap["NASDAQCOM"]?.summary?.latest;
-      const usdjpy = seriesMap["USDJPY"]?.summary?.latest;
-      const wti = seriesMap["WTI"]?.summary?.latest;
-      const topix = seriesMap["TOPIX"]?.summary?.latest;
+      setValue("kpi-nikkei", seriesMap["NIKKEI225"]?.summary?.latest ?? "--");
+      setValue("kpi-topix", seriesMap["TOPIX"]?.summary?.latest ?? "--");
+      setValue("kpi-dow", seriesMap["DJIA"]?.summary?.latest ?? "--");
+      setValue("kpi-nasdaq", seriesMap["NASDAQCOM"]?.summary?.latest ?? "--");
+      setValue("kpi-sp500", seriesMap["SP500"]?.summary?.latest ?? "--");
+      setValue("kpi-vix", seriesMap["VIXCLS"]?.summary?.latest ?? "--");
+      setValue("kpi-wti", seriesMap["WTI"]?.summary?.latest ?? "--");
+      setValue("kpi-gold", seriesMap["GOLD"]?.summary?.latest ?? "--");
+      setValue("kpi-silver", seriesMap["SILVER"]?.summary?.latest ?? "--");
+      setValue("kpi-usdjpy", seriesMap["USDJPY"]?.summary?.latest ?? "--");
+      setValue("kpi-eurjpy", seriesMap["EURJPY"]?.summary?.latest ?? "--");
+      setValue("kpi-eurusd", seriesMap["EURUSD"]?.summary?.latest ?? "--");
 
-      setValue("kpi-nikkei", nikkei ?? "--");
-      setValue("kpi-sp500", sp500 ?? "--");
-      setValue("kpi-dow", dow ?? "--");
-      setValue("kpi-nasdaq", nasdaq ?? "--");
-      setValue("kpi-usdjpy", usdjpy ?? "--");
-      setValue("kpi-wti", wti ?? "--");
-      setValue("kpi-topix", topix ?? "--");
-
-      const vix = seriesMap["VIXCLS"]?.summary?.latest;
-      const gold = seriesMap["GOLD"]?.summary?.latest;
-      const silver = seriesMap["SILVER"]?.summary?.latest;
-      const eurusd = seriesMap["EURUSD"]?.summary?.latest;
-      const eurjpy = seriesMap["EURJPY"]?.summary?.latest ?? ((usdjpy != null && eurusd != null) ? (usdjpy * eurusd) : null);
-
-      setValue("kpi-vix", vix ?? "--");
-      setValue("kpi-gold", gold ?? "--");
-      setValue("kpi-silver", silver ?? "--");
-      setValue("kpi-eurjpy", eurjpy ?? "--");
-      setValue("kpi-eurusd", eurusd ?? "--");
+      buildCharts();
     }
+
+    bindRangeButtons();
+    document.getElementById("btnSelectLeft").addEventListener("click", () => openModal("left"));
+    document.getElementById("btnSelectRight").addEventListener("click", () => openModal("right"));
+    document.getElementById("modalCancel").addEventListener("click", closeModal);
+    document.getElementById("modalApply").addEventListener("click", applyModal);
+    document.getElementById("indicatorModal").addEventListener("click", (e) => {
+      if (e.target.id === "indicatorModal") closeModal();
+    });
 
     loadMarket();
   </script>
