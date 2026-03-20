@@ -88,13 +88,13 @@ def fetch_topix_stooq():
 
 def fetch_yfinance_series(ticker):
     try:
-        df = yf.download(ticker, period=f"{DAYS}d", interval="1d", auto_adjust=False, progress=False)
+        hist = yf.Ticker(ticker).history(period=f"{DAYS}d", interval="1d", auto_adjust=False)
     except Exception as e:
         return pd.DataFrame(columns=["date", "value"]), str(e)
-    if df is None or df.empty:
+    if hist is None or hist.empty:
         return pd.DataFrame(columns=["date", "value"]), "yfinance empty"
 
-    df = df.reset_index()
+    df = hist.reset_index()
     if "Date" in df.columns:
         date_col = "Date"
     elif "Datetime" in df.columns:
@@ -102,16 +102,10 @@ def fetch_yfinance_series(ticker):
     else:
         date_col = df.columns[0]
 
-    value_col = None
-    if "Close" in df.columns:
-        value_col = "Close"
-    elif "Adj Close" in df.columns:
-        value_col = "Adj Close"
-
-    if value_col is None:
+    if "Close" not in df.columns:
         return pd.DataFrame(columns=["date", "value"]), "yfinance columns missing"
 
-    df = df.rename(columns={date_col: "date", value_col: "value"})
+    df = df.rename(columns={date_col: "date", "Close": "value"})
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df["value"] = pd.to_numeric(df["value"], errors="coerce")
     df = df.dropna(subset=["date", "value"])
