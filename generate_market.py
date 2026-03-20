@@ -321,10 +321,23 @@ def main():
     )
     news = []
     try:
-        query = base_query + " sourcelang:japanese"
-        news = fetch_gdelt_news(query)
+        attempts = [
+            (base_query + " sourcelang:japanese", "1day"),
+            (base_query, "1day"),
+            (base_query, "3day"),
+            (base_query, "7day"),
+            ("(Japan OR Tokyo OR Nikkei OR TOPIX OR yen OR Japanese stocks)", "7day")
+        ]
+        for q, span in attempts:
+            news = fetch_gdelt_news(q, timespan=span)
+            if news:
+                break
         if not news:
-            news = fetch_gdelt_news(base_query)
+            unavailable.append({
+                "id": "NEWS",
+                "label": "ニュース",
+                "reason": "gdelt returned no articles"
+            })
     except Exception as e:
         unavailable.append({"id": "NEWS", "label": "ニュース", "reason": str(e)})
 
@@ -362,3 +375,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
