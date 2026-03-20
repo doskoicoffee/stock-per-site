@@ -1,4 +1,4 @@
 ﻿yfinance
 pandas<3
 requests
-pandas<3
+pandas_datareader
