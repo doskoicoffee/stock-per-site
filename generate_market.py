@@ -254,6 +254,15 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     SERIES_DIR.mkdir(parents=True, exist_ok=True)
 
+    cached_market = {}
+    cache_path = OUTPUT_DIR / "market.json"
+    if cache_path.exists():
+        try:
+            with open(cache_path, "r", encoding="utf-8") as f:
+                cached_market = json.load(f)
+        except Exception:
+            cached_market = {}
+
     series_output = []
     unavailable = list(UNAVAILABLE)
 
@@ -320,26 +329,37 @@ def main():
         '(日経 OR TOPIX OR 東証 OR 日本株 OR 株式 OR 円 OR 為替 OR 原油 OR 金 OR 銀 OR 米国株 OR ダウ OR ナスダック OR S&P500)'
     )
     news = []
-    try:
-        attempts = [
-            (base_query + " sourcelang:japanese", "1day"),
-            (base_query, "1day"),
-            (base_query, "3day"),
-            (base_query, "7day"),
-            ("(Japan OR Tokyo OR Nikkei OR TOPIX OR yen OR Japanese stocks)", "7day")
-        ]
-        for q, span in attempts:
-            news = fetch_gdelt_news(q, timespan=span)
+    news_reason = None
+    rate_limited = False
+    attempts = [
+        (base_query + " sourcelang:japanese", "1day"),
+        (base_query, "1day"),
+        (base_query, "3day"),
+        (base_query, "7day"),
+        ("(Japan OR Tokyo OR Nikkei OR TOPIX OR yen OR Japanese stocks)", "7day")
+    ]
+    for idx, (q, span) in enumerate(attempts):
+        if idx > 0:
+            time.sleep(5)
+        try:
+            news = fetch_gdelt_news(q, maxrecords=10, timespan=span)
             if news:
                 break
-        if not news:
-            unavailable.append({
-                "id": "NEWS",
-                "label": "ニュース",
-                "reason": "gdelt returned no articles"
-            })
-    except Exception as e:
-        unavailable.append({"id": "NEWS", "label": "ニュース", "reason": str(e)})
+        except Exception as e:
+            news_reason = str(e)
+            if "429" in news_reason or "Too Many Requests" in news_reason:
+                rate_limited = True
+                break
+
+    if not news:
+        if rate_limited:
+            cached_news = (cached_market.get("news") or []) if cached_market else []
+            if cached_news:
+                news = cached_news
+                news_reason = "gdelt rate limited; using cached news"
+        if not news_reason:
+            news_reason = "gdelt returned no articles"
+        unavailable.append({"id": "NEWS", "label": "ニュース", "reason": news_reason})
 
     # AI summary
     summary_text = None
@@ -375,4 +395,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
 
