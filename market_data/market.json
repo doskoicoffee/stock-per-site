@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-20 10:24 UTC",
+  "updated_at": "2026-03-20 15:36 UTC",
   "days": 183,
   "series": [
     {
@@ -2547,9 +2547,9 @@
       "label": "VIX",
       "unit": "Index",
       "summary": {
-        "latest": 25.09,
-        "change": 2.72,
-        "change_pct": 12.159
+        "latest": 24.06,
+        "change": -1.03,
+        "change_pct": -4.105
       },
       "data": [
         {
@@ -3063,6 +3063,10 @@
         {
           "date": "2026-03-18",
           "value": 25.09
+        },
+        {
+          "date": "2026-03-19",
+          "value": 24.06
         }
       ]
     },
@@ -3071,9 +3075,9 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 158.828,
-        "change": -0.967,
-        "change_pct": -0.605
+        "latest": 159.088,
+        "change": -0.707,
+        "change_pct": -0.442
       },
       "data": [
         {
@@ -3594,7 +3598,7 @@
         },
         {
           "date": "2026-03-20",
-          "value": 158.828
+          "value": 159.088
         }
       ]
     },
@@ -3603,9 +3607,9 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 183.359,
-        "change": 0.189,
-        "change_pct": 0.103
+        "latest": 183.727,
+        "change": 0.557,
+        "change_pct": 0.304
       },
       "data": [
         {
@@ -4126,7 +4130,7 @@
         },
         {
           "date": "2026-03-20",
-          "value": 183.359
+          "value": 183.727
         }
       ]
     },
@@ -4136,8 +4140,8 @@
       "unit": "USD per EUR",
       "summary": {
         "latest": 1.155,
-        "change": 0.008,
-        "change_pct": 0.723
+        "change": 0.009,
+        "change_pct": 0.758
       },
       "data": [
         {
@@ -4667,9 +4671,9 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 96.04,
-        "change": -0.1,
-        "change_pct": -0.104
+        "latest": 96.32,
+        "change": 0.18,
+        "change_pct": 0.187
       },
       "data": [
         {
@@ -5178,7 +5182,7 @@
         },
         {
           "date": "2026-03-20",
-          "value": 96.04
+          "value": 96.32
         }
       ]
     },
@@ -5187,9 +5191,9 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4662.4,
-        "change": 61.7,
-        "change_pct": 1.341
+        "latest": 4555.1,
+        "change": -45.6,
+        "change_pct": -0.991
       },
       "data": [
         {
@@ -5698,7 +5702,7 @@
         },
         {
           "date": "2026-03-20",
-          "value": 4662.4
+          "value": 4555.1
         }
       ]
     },
@@ -5707,9 +5711,9 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 71.71,
-        "change": 0.808,
-        "change_pct": 1.14
+        "latest": 69.795,
+        "change": -1.107,
+        "change_pct": -1.561
       },
       "data": [
         {
@@ -6218,7 +6222,7 @@
         },
         {
           "date": "2026-03-20",
-          "value": 71.71
+          "value": 69.795
         }
       ]
     }
@@ -6227,13 +6231,13 @@
     {
       "id": "NEWS",
       "label": "ニュース",
-      "reason": "429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=+sourcelang%3Ajapanese&mode=artlist&format=json&maxrecords=30&timespan=1day&sort=datedesc"
+      "reason": "429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=+sourcelang%3Ajapanese&mode=artlist&format=json&maxrecords=10&timespan=1day&sort=datedesc"
     }
   ],
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-03-20 10:24 UTC",
+    "generated_at": "2026-03-20 15:36 UTC",
     "error": null
   },
   "notes": {
