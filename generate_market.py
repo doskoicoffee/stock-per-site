@@ -203,7 +203,7 @@ def generate_ai_summary(series_output, news):
     if not api_key:
         return None, "missing OPENAI_API_KEY"
 
-    model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+    model = os.getenv("OPENAI_MODEL") or "gpt-4o-mini"
     snapshot = [
         {
             "id": s["id"],
@@ -322,12 +322,11 @@ def main():
             df.to_csv(out_csv, index=False)
             series_output.append(series_payload(item["id"], item["label"], item["unit"], df))
             time.sleep(0.2)
-
     # GDELT news
-    base_query = os.getenv(
-        "GDELT_QUERY",
-        '(日経 OR TOPIX OR 東証 OR 日本株 OR 株式 OR 円 OR 為替 OR 原油 OR 金 OR 銀 OR 米国株 OR ダウ OR ナスダック OR S&P500)'
-    )
+    env_query = os.getenv("GDELT_QUERY")
+    base_query = (env_query or "").strip()
+    if not base_query:
+        base_query = '(日経 OR TOPIX OR 東証 OR 日本株 OR 株式 OR 円 OR 為替 OR 原油 OR 金 OR 銀 OR 米国株 OR ダウ OR ナスダック OR S&P500)'
     news = []
     news_reason = None
     rate_limited = False
@@ -385,7 +384,7 @@ def main():
             "topix_source": "stooq (^TPX) via pandas_datareader",
             "yfinance_source": "Yahoo Finance via yfinance",
             "gdelt_source": "GDELT DOC 2.0 API",
-            "openai_model": os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+            "openai_model": os.getenv("OPENAI_MODEL") or "gpt-4o-mini"
         }
     }
 
@@ -395,7 +394,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
