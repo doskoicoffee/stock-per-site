@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-21 09:29 UTC",
+  "updated_at": "2026-03-22 09:30 UTC",
   "days": 183,
   "series": [
     {
@@ -12,10 +12,6 @@
         "change_pct": -2.906
       },
       "data": [
-        {
-          "date": "2025-09-19",
-          "value": 3147.68
-        },
         {
           "date": "2025-09-22",
           "value": 3163.17
@@ -505,10 +501,6 @@
       },
       "data": [
         {
-          "date": "2025-09-19",
-          "value": 45045.81
-        },
-        {
           "date": "2025-09-22",
           "value": 45493.66
         },
@@ -996,10 +988,6 @@
         "change_pct": -1.514
       },
       "data": [
-        {
-          "date": "2025-09-19",
-          "value": 6664.36
-        },
         {
           "date": "2025-09-22",
           "value": 6693.75
@@ -1513,10 +1501,6 @@
       },
       "data": [
         {
-          "date": "2025-09-19",
-          "value": 46315.27
-        },
-        {
           "date": "2025-09-22",
           "value": 46381.54
         },
@@ -2029,10 +2013,6 @@
       },
       "data": [
         {
-          "date": "2025-09-19",
-          "value": 22631.48
-        },
-        {
           "date": "2025-09-22",
           "value": 22788.98
         },
@@ -2544,10 +2524,6 @@
         "change_pct": -4.105
       },
       "data": [
-        {
-          "date": "2025-09-19",
-          "value": 15.45
-        },
         {
           "date": "2025-09-22",
           "value": 16.1
@@ -3069,10 +3045,6 @@
       },
       "data": [
         {
-          "date": "2025-09-19",
-          "value": 147.947
-        },
-        {
           "date": "2025-09-22",
           "value": 148.095
         },
@@ -3585,7 +3557,7 @@
           "value": 157.924
         },
         {
-          "date": "2026-03-21",
+          "date": "2026-03-22",
           "value": 159.22
         }
       ]
@@ -3600,10 +3572,6 @@
         "change_pct": 0.779
       },
       "data": [
-        {
-          "date": "2025-09-19",
-          "value": 174.432
-        },
         {
           "date": "2025-09-22",
           "value": 173.812
@@ -4117,7 +4085,7 @@
           "value": 182.823
         },
         {
-          "date": "2026-03-21",
+          "date": "2026-03-22",
           "value": 184.248
         }
       ]
@@ -4132,10 +4100,6 @@
         "change_pct": 0.968
       },
       "data": [
-        {
-          "date": "2025-09-19",
-          "value": 1.179
-        },
         {
           "date": "2025-09-22",
           "value": 1.174
@@ -4661,10 +4625,6 @@
       },
       "data": [
         {
-          "date": "2025-09-19",
-          "value": 62.68
-        },
-        {
           "date": "2025-09-22",
           "value": 62.64
         },
@@ -5176,10 +5136,6 @@
         "change_pct": -0.561
       },
       "data": [
-        {
-          "date": "2025-09-19",
-          "value": 3671.5
-        },
         {
           "date": "2025-09-22",
           "value": 3740.7
@@ -5693,10 +5649,6 @@
       },
       "data": [
         {
-          "date": "2025-09-19",
-          "value": 42.536
-        },
-        {
           "date": "2025-09-22",
           "value": 43.799
         },
@@ -6203,13 +6155,13 @@
     {
       "id": "NEWS",
       "label": "ニュース",
-      "reason": "429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E6%97%A5%E7%B5%8C+OR+TOPIX+OR+%E6%9D%B1%E8%A8%BC+OR+%E6%97%A5%E6%9C%AC%E6%A0%AA+OR+%E6%A0%AA%E5%BC%8F+OR+%E5%86%86+OR+%E7%82%BA%E6%9B%BF+OR+%E5%8E%9F%E6%B2%B9+OR+%E9%87%91+OR+%E9%8A%80+OR+%E7%B1%B3%E5%9B%BD%E6%A0%AA+OR+%E3%83%80%E3%82%A6+OR+%E3%83%8A%E3%82%B9%E3%83%80%E3%83%83%E3%82%AF+OR+S%26P500%29&mode=artlist&format=json&maxrecords=10&timespan=3day&sort=datedesc"
+      "reason": "429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E6%97%A5%E7%B5%8C+OR+TOPIX+OR+%E6%9D%B1%E8%A8%BC+OR+%E6%97%A5%E6%9C%AC%E6%A0%AA+OR+%E6%A0%AA%E5%BC%8F+OR+%E5%86%86+OR+%E7%82%BA%E6%9B%BF+OR+%E5%8E%9F%E6%B2%B9+OR+%E9%87%91+OR+%E9%8A%80+OR+%E7%B1%B3%E5%9B%BD%E6%A0%AA+OR+%E3%83%80%E3%82%A6+OR+%E3%83%8A%E3%82%B9%E3%83%80%E3%83%83%E3%82%AF+OR+S%26P500%29+sourcelang%3Ajapanese&mode=artlist&format=json&maxrecords=10&timespan=1day&sort=datedesc"
     }
   ],
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-03-21 09:29 UTC",
+    "generated_at": "2026-03-22 09:30 UTC",
     "error": null
   },
   "notes": {
