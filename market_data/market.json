@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-24 09:54 UTC",
+  "updated_at": "2026-03-25 09:53 UTC",
   "days": 183,
   "series": [
     {
@@ -7,15 +7,11 @@
       "label": "TOPIX",
       "unit": "Index",
       "summary": {
-        "latest": 3559.67,
-        "change": 73.23,
-        "change_pct": 2.1
+        "latest": 3650.99,
+        "change": 91.32,
+        "change_pct": 2.565
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 3163.17
-        },
         {
           "date": "2025-09-24",
           "value": 3170.45
@@ -495,6 +491,10 @@
         {
           "date": "2026-03-24",
           "value": 3559.67
+        },
+        {
+          "date": "2026-03-25",
+          "value": 3650.99
         }
       ]
     },
@@ -503,15 +503,11 @@
       "label": "日経225",
       "unit": "Index",
       "summary": {
-        "latest": 51515.49,
-        "change": -1857.04,
-        "change_pct": -3.479
+        "latest": 52252.28,
+        "change": 736.79,
+        "change_pct": 1.43
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 45493.66
-        },
         {
           "date": "2025-09-24",
           "value": 45630.31
@@ -987,6 +983,10 @@
         {
           "date": "2026-03-23",
           "value": 51515.49
+        },
+        {
+          "date": "2026-03-24",
+          "value": 52252.28
         }
       ]
     },
@@ -995,15 +995,11 @@
       "label": "S&P500",
       "unit": "Index",
       "summary": {
-        "latest": 6581.0,
-        "change": 74.52,
-        "change_pct": 1.145
+        "latest": 6556.37,
+        "change": -24.63,
+        "change_pct": -0.374
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 6693.75
-        },
         {
           "date": "2025-09-23",
           "value": 6656.92
@@ -1503,6 +1499,10 @@
         {
           "date": "2026-03-23",
           "value": 6581.0
+        },
+        {
+          "date": "2026-03-24",
+          "value": 6556.37
         }
       ]
     },
@@ -1511,15 +1511,11 @@
       "label": "NYダウ",
       "unit": "Index",
       "summary": {
-        "latest": 46208.47,
-        "change": 631.0,
-        "change_pct": 1.384
+        "latest": 46124.06,
+        "change": -84.41,
+        "change_pct": -0.183
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 46381.54
-        },
         {
           "date": "2025-09-23",
           "value": 46292.78
@@ -2019,6 +2015,10 @@
         {
           "date": "2026-03-23",
           "value": 46208.47
+        },
+        {
+          "date": "2026-03-24",
+          "value": 46124.06
         }
       ]
     },
@@ -2027,15 +2027,11 @@
       "label": "NASDAQ",
       "unit": "Index",
       "summary": {
-        "latest": 21946.76,
-        "change": 299.15,
-        "change_pct": 1.382
+        "latest": 21761.89,
+        "change": -184.87,
+        "change_pct": -0.842
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 22788.98
-        },
         {
           "date": "2025-09-23",
           "value": 22573.47
@@ -2535,6 +2531,10 @@
         {
           "date": "2026-03-23",
           "value": 21946.76
+        },
+        {
+          "date": "2026-03-24",
+          "value": 21761.89
         }
       ]
     },
@@ -2543,15 +2543,11 @@
       "label": "VIX",
       "unit": "Index",
       "summary": {
-        "latest": 26.78,
-        "change": 2.72,
-        "change_pct": 11.305
+        "latest": 26.15,
+        "change": -0.63,
+        "change_pct": -2.353
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 16.1
-        },
         {
           "date": "2025-09-23",
           "value": 16.64
@@ -3059,6 +3055,10 @@
         {
           "date": "2026-03-20",
           "value": 26.78
+        },
+        {
+          "date": "2026-03-23",
+          "value": 26.15
         }
       ]
     },
@@ -3067,15 +3067,11 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 158.651,
-        "change": -0.583,
-        "change_pct": -0.366
+        "latest": 158.917,
+        "change": 0.438,
+        "change_pct": 0.276
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 148.095
-        },
         {
           "date": "2025-09-23",
           "value": 147.725
@@ -3590,7 +3586,11 @@
         },
         {
           "date": "2026-03-24",
-          "value": 158.651
+          "value": 158.479
+        },
+        {
+          "date": "2026-03-25",
+          "value": 158.917
         }
       ]
     },
@@ -3599,15 +3599,11 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 183.914,
-        "change": -0.158,
-        "change_pct": -0.086
+        "latest": 183.93,
+        "change": -0.142,
+        "change_pct": -0.077
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 173.812
-        },
         {
           "date": "2025-09-23",
           "value": 174.329
@@ -4122,7 +4118,7 @@
         },
         {
           "date": "2026-03-24",
-          "value": 183.914
+          "value": 183.93
         }
       ]
     },
@@ -4132,14 +4128,10 @@
       "unit": "USD per EUR",
       "summary": {
         "latest": 1.16,
-        "change": 0.004,
-        "change_pct": 0.306
+        "change": -0.001,
+        "change_pct": -0.065
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 1.174
-        },
         {
           "date": "2025-09-23",
           "value": 1.18
@@ -4654,6 +4646,10 @@
         },
         {
           "date": "2026-03-24",
+          "value": 1.161
+        },
+        {
+          "date": "2026-03-25",
           "value": 1.16
         }
       ]
@@ -4663,15 +4659,11 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 90.64,
-        "change": 2.51,
-        "change_pct": 2.848
+        "latest": 88.34,
+        "change": -4.01,
+        "change_pct": -4.342
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 62.64
-        },
         {
           "date": "2025-09-23",
           "value": 63.41
@@ -5174,7 +5166,11 @@
         },
         {
           "date": "2026-03-24",
-          "value": 90.64
+          "value": 92.35
+        },
+        {
+          "date": "2026-03-25",
+          "value": 88.34
         }
       ]
     },
@@ -5183,15 +5179,11 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4419.0,
-        "change": 14.9,
-        "change_pct": 0.338
+        "latest": 4556.2,
+        "change": 156.9,
+        "change_pct": 3.566
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 3740.7
-        },
         {
           "date": "2025-09-23",
           "value": 3780.6
@@ -5694,7 +5686,11 @@
         },
         {
           "date": "2026-03-24",
-          "value": 4419.0
+          "value": 4399.3
+        },
+        {
+          "date": "2026-03-25",
+          "value": 4556.2
         }
       ]
     },
@@ -5703,15 +5699,11 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 70.045,
-        "change": 0.996,
-        "change_pct": 1.442
+        "latest": 72.935,
+        "change": 3.661,
+        "change_pct": 5.285
       },
       "data": [
-        {
-          "date": "2025-09-22",
-          "value": 43.799
-        },
         {
           "date": "2025-09-23",
           "value": 44.192
@@ -6214,7 +6206,11 @@
         },
         {
           "date": "2026-03-24",
-          "value": 70.045
+          "value": 69.274
+        },
+        {
+          "date": "2026-03-25",
+          "value": 72.935
         }
       ]
     }
@@ -6223,13 +6219,13 @@
     {
       "id": "NEWS",
       "label": "ニュース",
-      "reason": "429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E6%97%A5%E7%B5%8C+OR+TOPIX+OR+%E6%9D%B1%E8%A8%BC+OR+%E6%97%A5%E6%9C%AC%E6%A0%AA+OR+%E6%A0%AA%E5%BC%8F+OR+%E5%86%86+OR+%E7%82%BA%E6%9B%BF+OR+%E5%8E%9F%E6%B2%B9+OR+%E9%87%91+OR+%E9%8A%80+OR+%E7%B1%B3%E5%9B%BD%E6%A0%AA+OR+%E3%83%80%E3%82%A6+OR+%E3%83%8A%E3%82%B9%E3%83%80%E3%83%83%E3%82%AF+OR+S%26P500%29+sourcelang%3Ajapanese&mode=artlist&format=json&maxrecords=10&timespan=1day&sort=datedesc"
+      "reason": "429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E6%97%A5%E7%B5%8C+OR+TOPIX+OR+%E6%9D%B1%E8%A8%BC+OR+%E6%97%A5%E6%9C%AC%E6%A0%AA+OR+%E6%A0%AA%E5%BC%8F+OR+%E5%86%86+OR+%E7%82%BA%E6%9B%BF+OR+%E5%8E%9F%E6%B2%B9+OR+%E9%87%91+OR+%E9%8A%80+OR+%E7%B1%B3%E5%9B%BD%E6%A0%AA+OR+%E3%83%80%E3%82%A6+OR+%E3%83%8A%E3%82%B9%E3%83%80%E3%83%83%E3%82%AF+OR+S%26P500%29&mode=artlist&format=json&maxrecords=10&timespan=7day&sort=datedesc"
     }
   ],
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-03-24 09:54 UTC",
+    "generated_at": "2026-03-25 09:53 UTC",
     "error": null
   },
   "notes": {
