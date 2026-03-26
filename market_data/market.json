@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-25 09:53 UTC",
+  "updated_at": "2026-03-26 10:01 UTC",
   "days": 183,
   "series": [
     {
@@ -7,9 +7,9 @@
       "label": "TOPIX",
       "unit": "Index",
       "summary": {
-        "latest": 3650.99,
-        "change": 91.32,
-        "change_pct": 2.565
+        "latest": 3642.8,
+        "change": -8.19,
+        "change_pct": -0.224
       },
       "data": [
         {
@@ -495,6 +495,10 @@
         {
           "date": "2026-03-25",
           "value": 3650.99
+        },
+        {
+          "date": "2026-03-26",
+          "value": 3642.8
         }
       ]
     },
@@ -503,9 +507,9 @@
       "label": "日経225",
       "unit": "Index",
       "summary": {
-        "latest": 52252.28,
-        "change": 736.79,
-        "change_pct": 1.43
+        "latest": 53749.62,
+        "change": 1497.34,
+        "change_pct": 2.866
       },
       "data": [
         {
@@ -987,6 +991,10 @@
         {
           "date": "2026-03-24",
           "value": 52252.28
+        },
+        {
+          "date": "2026-03-25",
+          "value": 53749.62
         }
       ]
     },
@@ -995,15 +1003,11 @@
       "label": "S&P500",
       "unit": "Index",
       "summary": {
-        "latest": 6556.37,
-        "change": -24.63,
-        "change_pct": -0.374
+        "latest": 6591.9,
+        "change": 35.53,
+        "change_pct": 0.542
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 6656.92
-        },
         {
           "date": "2025-09-24",
           "value": 6637.97
@@ -1503,6 +1507,10 @@
         {
           "date": "2026-03-24",
           "value": 6556.37
+        },
+        {
+          "date": "2026-03-25",
+          "value": 6591.9
         }
       ]
     },
@@ -1511,15 +1519,11 @@
       "label": "NYダウ",
       "unit": "Index",
       "summary": {
-        "latest": 46124.06,
-        "change": -84.41,
-        "change_pct": -0.183
+        "latest": 46429.49,
+        "change": 305.43,
+        "change_pct": 0.662
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 46292.78
-        },
         {
           "date": "2025-09-24",
           "value": 46121.28
@@ -2019,6 +2023,10 @@
         {
           "date": "2026-03-24",
           "value": 46124.06
+        },
+        {
+          "date": "2026-03-25",
+          "value": 46429.49
         }
       ]
     },
@@ -2027,15 +2035,11 @@
       "label": "NASDAQ",
       "unit": "Index",
       "summary": {
-        "latest": 21761.89,
-        "change": -184.87,
-        "change_pct": -0.842
+        "latest": 21929.83,
+        "change": 167.94,
+        "change_pct": 0.772
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 22573.47
-        },
         {
           "date": "2025-09-24",
           "value": 22497.86
@@ -2535,6 +2539,10 @@
         {
           "date": "2026-03-24",
           "value": 21761.89
+        },
+        {
+          "date": "2026-03-25",
+          "value": 21929.83
         }
       ]
     },
@@ -2543,15 +2551,11 @@
       "label": "VIX",
       "unit": "Index",
       "summary": {
-        "latest": 26.15,
-        "change": -0.63,
-        "change_pct": -2.353
+        "latest": 26.95,
+        "change": 0.8,
+        "change_pct": 3.059
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 16.64
-        },
         {
           "date": "2025-09-24",
           "value": 16.18
@@ -3059,6 +3063,10 @@
         {
           "date": "2026-03-23",
           "value": 26.15
+        },
+        {
+          "date": "2026-03-24",
+          "value": 26.95
         }
       ]
     },
@@ -3067,15 +3075,11 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 158.917,
-        "change": 0.438,
-        "change_pct": 0.276
+        "latest": 159.506,
+        "change": 0.788,
+        "change_pct": 0.496
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 147.725
-        },
         {
           "date": "2025-09-24",
           "value": 147.613
@@ -3590,7 +3594,11 @@
         },
         {
           "date": "2026-03-25",
-          "value": 158.917
+          "value": 158.718
+        },
+        {
+          "date": "2026-03-26",
+          "value": 159.506
         }
       ]
     },
@@ -3599,15 +3607,11 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 183.93,
-        "change": -0.142,
-        "change_pct": -0.077
+        "latest": 184.366,
+        "change": 0.025,
+        "change_pct": 0.014
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 174.329
-        },
         {
           "date": "2025-09-24",
           "value": 174.382
@@ -4119,6 +4123,14 @@
         {
           "date": "2026-03-24",
           "value": 183.93
+        },
+        {
+          "date": "2026-03-25",
+          "value": 184.341
+        },
+        {
+          "date": "2026-03-26",
+          "value": 184.366
         }
       ]
     },
@@ -4127,15 +4139,11 @@
       "label": "ユーロ/米ドル",
       "unit": "USD per EUR",
       "summary": {
-        "latest": 1.16,
-        "change": -0.001,
-        "change_pct": -0.065
+        "latest": 1.156,
+        "change": -0.005,
+        "change_pct": -0.465
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 1.18
-        },
         {
           "date": "2025-09-24",
           "value": 1.181
@@ -4650,7 +4658,11 @@
         },
         {
           "date": "2026-03-25",
-          "value": 1.16
+          "value": 1.161
+        },
+        {
+          "date": "2026-03-26",
+          "value": 1.156
         }
       ]
     },
@@ -4659,15 +4671,11 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 88.34,
-        "change": -4.01,
-        "change_pct": -4.342
+        "latest": 93.54,
+        "change": 3.22,
+        "change_pct": 3.565
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 63.41
-        },
         {
           "date": "2025-09-24",
           "value": 64.99
@@ -5170,7 +5178,11 @@
         },
         {
           "date": "2026-03-25",
-          "value": 88.34
+          "value": 90.32
+        },
+        {
+          "date": "2026-03-26",
+          "value": 93.54
         }
       ]
     },
@@ -5179,15 +5191,11 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4556.2,
-        "change": 156.9,
-        "change_pct": 3.566
+        "latest": 4418.1,
+        "change": -131.7,
+        "change_pct": -2.895
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 3780.6
-        },
         {
           "date": "2025-09-24",
           "value": 3732.1
@@ -5690,7 +5698,11 @@
         },
         {
           "date": "2026-03-25",
-          "value": 4556.2
+          "value": 4549.8
+        },
+        {
+          "date": "2026-03-26",
+          "value": 4418.1
         }
       ]
     },
@@ -5699,15 +5711,11 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 72.935,
-        "change": 3.661,
-        "change_pct": 5.285
+        "latest": 67.89,
+        "change": -4.471,
+        "change_pct": -6.179
       },
       "data": [
-        {
-          "date": "2025-09-23",
-          "value": 44.192
-        },
         {
           "date": "2025-09-24",
           "value": 43.777
@@ -6210,23 +6218,102 @@
         },
         {
           "date": "2026-03-25",
-          "value": 72.935
+          "value": 72.361
+        },
+        {
+          "date": "2026-03-26",
+          "value": 67.89
         }
       ]
     }
   ],
-  "unavailable": [
+  "unavailable": [],
+  "news": [
     {
-      "id": "NEWS",
-      "label": "ニュース",
-      "reason": "429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=%28%E6%97%A5%E7%B5%8C+OR+TOPIX+OR+%E6%9D%B1%E8%A8%BC+OR+%E6%97%A5%E6%9C%AC%E6%A0%AA+OR+%E6%A0%AA%E5%BC%8F+OR+%E5%86%86+OR+%E7%82%BA%E6%9B%BF+OR+%E5%8E%9F%E6%B2%B9+OR+%E9%87%91+OR+%E9%8A%80+OR+%E7%B1%B3%E5%9B%BD%E6%A0%AA+OR+%E3%83%80%E3%82%A6+OR+%E3%83%8A%E3%82%B9%E3%83%80%E3%83%83%E3%82%AF+OR+S%26P500%29&mode=artlist&format=json&maxrecords=10&timespan=7day&sort=datedesc"
+      "title": "国际经济因战争等因素陷低迷 林家全相信马中经贸成长持续向前 | 中马 | 地方",
+      "url": "https://www.orientaldaily.com.my/news/central/2026/03/26/806728",
+      "source": "Malaysia",
+      "domain": "orientaldaily.com.my",
+      "language": "Chinese",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "Wal Timmendorfer Strand aktuell : So läuft heute die Rettung des gestrandeten Buckelwals",
+      "url": "https://www.moz.de/nachrichten/panorama/wal-timmendorfer-strand-aktuell-so-laeuft-die-rettung-des-gestrandeten-buckelwals-78739689.html",
+      "source": "Germany",
+      "domain": "moz.de",
+      "language": "German",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "Hitachi Rail to manufacture rolling stock for Seibu Railway  s new Fine Dining Train",
+      "url": "https://www.jcnnewswire.com/pressrelease/105888/3/Hitachi-Rail-to-manufacture-rolling-stock-for-Seibu-Railways-new-Fine-Dining-Train",
+      "source": "Japan",
+      "domain": "jcnnewswire.com",
+      "language": "English",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "Iran rejects US peace plan , offers its own conditions to end war",
+      "url": "https://www.irishtimes.com/world/middle-east/2026/03/26/iran-war-live-updates-israel-us-trump-energy-costs-middle-east/",
+      "source": "Ireland",
+      "domain": "irishtimes.com",
+      "language": "English",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "中东局势将利好光伏 ？ 别盲目乐观",
+      "url": "https://www.163.com/dy/article/KOVAT8RI0519S55I.html",
+      "source": "China",
+      "domain": "163.com",
+      "language": "Chinese",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "Spring staples faves from the M & S  Love That  collection",
+      "url": "https://www.ilfordrecorder.co.uk/offers/25959547.spring-staples-faves-m-s-love-that-collection/",
+      "source": "United Kingdom",
+      "domain": "ilfordrecorder.co.uk",
+      "language": "English",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "Best Bank Stocks To Keep An Eye On – March 23rd",
+      "url": "https://www.dailypolitical.com/2026/03/26/best-bank-stocks-to-keep-an-eye-on-march-23rd.html",
+      "source": "United States",
+      "domain": "dailypolitical.com",
+      "language": "English",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "测绘与勘察 ： 大规模应用于国土测绘 、 工程巡检 、 矿产开发 - 奉若神明网",
+      "url": "http://www.nashfm923krst.com/html/14f299983.html",
+      "source": "United States",
+      "domain": "nashfm923krst.com",
+      "language": "Chinese",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "Полицията нахлу във  Факултета , проверили са и Киро Японеца",
+      "url": "https://www.marica.bg/balgariq/obshtestvo/policiqta-nahlu-vav-fakulteta-proverili-sa-i-kiro-qponeca",
+      "source": "Bulgaria",
+      "domain": "marica.bg",
+      "language": "Bulgarian",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "段德春 ： 金价  探底 ， 还是下跌 !_ 中金在线财经号",
+      "url": "http://mp.cnfol.com/27466/article/1774510203-142327295.html",
+      "source": "China",
+      "domain": "mp.cnfol.com",
+      "language": "Chinese",
+      "published_at": "20260326T093000Z"
     }
   ],
-  "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-03-25 09:53 UTC",
-    "error": null
+    "generated_at": "2026-03-26 10:01 UTC",
+    "error": "429 Client Error: Too Many Requests for url: https://api.openai.com/v1/responses"
   },
   "notes": {
     "topix_source": "stooq (^TPX) via pandas_datareader",
