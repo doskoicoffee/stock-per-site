@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 21 * * 0'  # 毎週月曜6:00 JST（UTC基準）
+    - cron: '0 0 * * 6'  # 毎週土曜9:00 JST（UTC基準）
   workflow_dispatch:      # 手動実行も可能
 
 jobs:
@@ -41,6 +41,3 @@ jobs:
           git fetch origin main
           git rebase origin/main
           git push
-
-
-

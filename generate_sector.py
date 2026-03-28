@@ -125,28 +125,6 @@ def calc_pct(current, base):
     return round((current / base - 1) * 100, 2)
 
 
-def series_pct_to_current(df, days):
-    if df is None or df.empty:
-        return []
-    span = days + 1
-    if len(df) > span:
-        slice_df = df.iloc[-span:]
-    else:
-        slice_df = df
-    current = float(slice_df.iloc[-1]["close"])
-    out = []
-    for _, row in slice_df.iterrows():
-        close = row["close"]
-        if close is None or close == 0:
-            pct = None
-        else:
-            pct = round((current / close - 1) * 100, 2)
-        out.append({
-            "date": row["date"].strftime("%Y-%m-%d"),
-            "pct": pct
-        })
-    return out
-
 
 def compute_market_return(stocks, period):
     values = []
@@ -206,12 +184,6 @@ def main():
             "6m": calc_pct(current_close, pick_close(df_hist, H_DAYS))
         }
 
-        series = {
-            "1w": series_pct_to_current(df_hist, W_DAYS),
-            "1m": series_pct_to_current(df_hist, M_DAYS),
-            "6m": series_pct_to_current(df_hist, H_DAYS)
-        }
-
         stock = {
             "code": code,
             "name": name,
@@ -220,9 +192,8 @@ def main():
             "market_cap_oku": caps.get(code),
             "current_close": round(current_close, 2),
             "returns": returns,
-            "series": series
+            "history_path": f"sector_data/series/{code}.csv"
         }
-
         industries.setdefault(industry, {"name": industry, "markets": {}})
 
         for key in (market, "all"):
@@ -260,3 +231,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+

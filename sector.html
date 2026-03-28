@@ -273,12 +273,14 @@
     </div>
   </div>
 
-  <script>
+    <script>
     let sectorData = null;
     let currentPeriod = "1w";
     let currentMarket = "all";
     let currentSeries = "1w";
     let selectedStock = null;
+    const PERIOD_DAYS = { "1w": 5, "1m": 21, "6m": 126 };
+    const seriesCache = {};
 
     function clamp(value, min, max) {
       return Math.max(min, Math.min(max, value));
@@ -299,6 +301,55 @@
       if (value == null) return "--";
       const sign = value > 0 ? "+" : "";
       return sign + value.toFixed(2) + "%";
+    }
+
+    function parseCsv(text) {
+      const lines = text.trim().split(/\r?\n/);
+      if (lines.length <= 1) return [];
+      const out = [];
+      for (let i = 1; i < lines.length; i += 1) {
+        const parts = lines[i].split(",");
+        if (parts.length < 2) continue;
+        const date = parts[0].trim();
+        const value = Number(parts[1]);
+        if (!date || !Number.isFinite(value)) continue;
+        out.push({ date, close: value });
+      }
+      return out;
+    }
+
+    async function loadSeries(stock) {
+      const key = stock.code;
+      if (Object.prototype.hasOwnProperty.call(seriesCache, key)) {
+        return seriesCache[key];
+      }
+      const path = stock.history_path || `sector_data/series/${encodeURIComponent(stock.code)}.csv`;
+      try {
+        const res = await fetch(path + "?v=" + Date.now());
+        if (!res.ok) throw new Error("fetch failed");
+        const text = await res.text();
+        const rows = parseCsv(text);
+        seriesCache[key] = rows;
+        return rows;
+      } catch (e) {
+        seriesCache[key] = null;
+        return null;
+      }
+    }
+
+    function buildPctSeries(rows, period) {
+      if (!rows || rows.length === 0) return [];
+      const days = PERIOD_DAYS[period] || 5;
+      const span = days + 1;
+      const slice = rows.length > span ? rows.slice(-span) : rows.slice();
+      if (!slice.length) return [];
+      const current = slice[slice.length - 1].close;
+      return slice.map(row => {
+        if (!current || !row.close) {
+          return { date: row.date, pct: null };
+        }
+        return { date: row.date, pct: (current / row.close - 1) * 100 };
+      });
     }
 
     function buildItems() {
@@ -428,6 +479,11 @@
       document.querySelectorAll(".stock-row").forEach(el => el.classList.remove("active"));
       row.classList.add("active");
       renderStockDetail(stock);
+      loadSeries(stock).then(() => {
+        if (selectedStock && selectedStock.code === stock.code) {
+          renderSeriesTable(stock);
+        }
+      });
     }
 
     function renderStockDetail(stock) {
@@ -462,7 +518,16 @@
       const body = document.getElementById("seriesTable");
       body.innerHTML = "";
       if (!stock) return;
-      const series = stock.series?.[currentSeries] || [];
+      const cached = seriesCache[stock.code];
+      if (cached === undefined) {
+        body.innerHTML = "<tr><td colspan=\"2\">読み込み中...</td></tr>";
+        return;
+      }
+      if (!cached || cached.length === 0) {
+        body.innerHTML = "<tr><td colspan=\"2\">データがありません</td></tr>";
+        return;
+      }
+      const series = buildPctSeries(cached, currentSeries);
       if (!series.length) {
         body.innerHTML = "<tr><td colspan=\"2\">データがありません</td></tr>";
         return;
@@ -506,3 +571,4 @@
   </script>
 </body>
 </html>
+
