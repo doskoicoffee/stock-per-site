@@ -459,7 +459,8 @@ def main():
         news = rank_news_items(news, limit=NEWS_LIMIT)
     else:
         cached_news = (cached_market.get("news") or []) if cached_market else []
-        if cached_news:
+        cached_news_source = ((cached_market.get("notes") or {}).get("news_source")) if cached_market else None
+        if cached_news and cached_news_source == "newsapi":
             news = cached_news[:NEWS_LIMIT]
             news_reason = "newsapi unavailable; using cached news"
         else:
