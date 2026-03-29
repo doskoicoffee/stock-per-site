@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "updated_at": "2026-03-29 07:47 UTC",
+=======
+  "updated_at": "2026-03-29 16:52 JST",
+>>>>>>> 08d8c4f (update)
   "days": 183,
   "series": [
     {
@@ -5647,9 +5651,15 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
+<<<<<<< HEAD
         "latest": 69.545,
         "change": 1.874,
         "change_pct": 2.769
+=======
+        "latest": 69.796,
+        "change": 2.125,
+        "change_pct": 3.14
+>>>>>>> 08d8c4f (update)
       },
       "data": [
         {
@@ -6150,7 +6160,11 @@
         },
         {
           "date": "2026-03-27",
+<<<<<<< HEAD
           "value": 69.545
+=======
+          "value": 69.796
+>>>>>>> 08d8c4f (update)
         }
       ]
     }
@@ -6164,6 +6178,7 @@
   ],
   "news": [
     {
+<<<<<<< HEAD
       "title": "機票也要漲！4/1起亞洲基本航線調漲1至2千元 長程航線飆漲4千元",
       "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_777cce55-1590-4fb5-9978-24032f82a837",
       "description": "[Newtalk新聞] 中東戰局持續延燒，不僅剛影響我國油價飆漲，現在連機票也跟進漲價，預計4月起開始調漲機票的燃油附加費，東南亞等短線航班漲幅大約落在新台幣1、2,000元左右 以上，而長程航線漲幅最明顯，來回票價可能漲到4000元左右。 因應戰爭影響，導致國際原油價格持續攀升波及航空票價，品保協會主委李奇嶽表示，這波燃油附加費的調漲幅度與飛行距離成正比，飛得越遠漲幅就會越高。以飛行時間在4小時以內的東南亞等短線航班為例，漲幅大約落在新台幣1、2,000元左右，而長程航線如歐洲、美國、加拿大等因飛行距離遙遠，每…",
@@ -6207,12 +6222,57 @@
       "domain": null,
       "language": null,
       "published_at": "2026-03-28T06:12:28Z"
+=======
+      "title": "国际经济因战争等因素陷低迷 林家全相信马中经贸成长持续向前 | 中马 | 地方",
+      "url": "https://www.orientaldaily.com.my/news/central/2026/03/26/806728",
+      "source": "Malaysia",
+      "domain": "orientaldaily.com.my",
+      "language": "Chinese",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "Wal Timmendorfer Strand aktuell : So läuft heute die Rettung des gestrandeten Buckelwals",
+      "url": "https://www.moz.de/nachrichten/panorama/wal-timmendorfer-strand-aktuell-so-laeuft-die-rettung-des-gestrandeten-buckelwals-78739689.html",
+      "source": "Germany",
+      "domain": "moz.de",
+      "language": "German",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "Hitachi Rail to manufacture rolling stock for Seibu Railway  s new Fine Dining Train",
+      "url": "https://www.jcnnewswire.com/pressrelease/105888/3/Hitachi-Rail-to-manufacture-rolling-stock-for-Seibu-Railways-new-Fine-Dining-Train",
+      "source": "Japan",
+      "domain": "jcnnewswire.com",
+      "language": "English",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "Iran rejects US peace plan , offers its own conditions to end war",
+      "url": "https://www.irishtimes.com/world/middle-east/2026/03/26/iran-war-live-updates-israel-us-trump-energy-costs-middle-east/",
+      "source": "Ireland",
+      "domain": "irishtimes.com",
+      "language": "English",
+      "published_at": "20260326T093000Z"
+    },
+    {
+      "title": "中东局势将利好光伏 ？ 别盲目乐观",
+      "url": "https://www.163.com/dy/article/KOVAT8RI0519S55I.html",
+      "source": "China",
+      "domain": "163.com",
+      "language": "Chinese",
+      "published_at": "20260326T093000Z"
+>>>>>>> 08d8c4f (update)
     }
   ],
   "summary": {
     "text": null,
+<<<<<<< HEAD
     "generated_at": "2026-03-29 07:47 UTC",
     "error": "429 Client Error: Too Many Requests for url: https://api.openai.com/v1/responses"
+=======
+    "generated_at": "2026-03-29 16:52 JST",
+    "error": "missing OPENAI_API_KEY"
+>>>>>>> 08d8c4f (update)
   },
   "notes": {
     "topix_source": "stooq (^TPX) via pandas_datareader",

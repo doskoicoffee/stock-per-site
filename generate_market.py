@@ -4,6 +4,7 @@ import time
 from datetime import datetime, timedelta
 from io import StringIO
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 import requests
@@ -33,7 +34,8 @@ YF_SERIES = [
 
 UNAVAILABLE = []
 NEWS_LIMIT = 5
-NEWS_LOOKBACK_DAYS = 2
+NEWS_LOOKBACK_HOURS = 24
+JST = ZoneInfo("Asia/Tokyo")
 HIGH_IMPACT_KEYWORDS = {
     "日銀": 5,
     "FOMC": 5,
@@ -215,12 +217,12 @@ def fetch_newsapi_news(query, page_size=10):
         return [], "missing NEWSAPI_API_KEY"
 
     url = "https://newsapi.org/v2/everything"
-    from_date = (datetime.utcnow() - timedelta(days=NEWS_LOOKBACK_DAYS)).date().isoformat()
+    from_datetime = datetime.now(JST) - timedelta(hours=NEWS_LOOKBACK_HOURS)
     params = {
         "q": query,
         "sortBy": "publishedAt",
         "pageSize": page_size,
-        "from": from_date,
+        "from": from_datetime.isoformat(timespec="seconds"),
         "apiKey": api_key
     }
 
@@ -263,6 +265,10 @@ def parse_published_at(value):
         return datetime.fromisoformat(value.replace("Z", "+00:00"))
     except Exception:
         return None
+
+
+def jst_now_text():
+    return datetime.now(JST).strftime("%Y-%m-%d %H:%M JST")
 
 
 def score_news_item(item):
@@ -478,14 +484,14 @@ def main():
             summary_err = str(e)
 
     result = {
-        "updated_at": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+        "updated_at": jst_now_text(),
         "days": DAYS,
         "series": series_output,
         "unavailable": unavailable,
         "news": news[:NEWS_LIMIT],
         "summary": {
             "text": summary_text,
-            "generated_at": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+            "generated_at": jst_now_text(),
             "error": summary_err
         },
         "notes": {
