@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "updated_at": "2026-03-29 07:47 UTC",
-=======
-  "updated_at": "2026-03-29 16:52 JST",
->>>>>>> 08d8c4f (update)
+  "updated_at": "2026-03-29 17:02 JST",
   "days": 183,
   "series": [
     {
@@ -5651,15 +5647,9 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-<<<<<<< HEAD
-        "latest": 69.545,
-        "change": 1.874,
-        "change_pct": 2.769
-=======
         "latest": 69.796,
         "change": 2.125,
         "change_pct": 3.14
->>>>>>> 08d8c4f (update)
       },
       "data": [
         {
@@ -6160,11 +6150,7 @@
         },
         {
           "date": "2026-03-27",
-<<<<<<< HEAD
-          "value": 69.545
-=======
           "value": 69.796
->>>>>>> 08d8c4f (update)
         }
       ]
     }
@@ -6174,105 +6160,18 @@
       "id": "TOPIX",
       "label": "TOPIX",
       "reason": "stooq unavailable; using cached data (StooqDailyReader request returned no data; check URL for invalid inputs: https://stooq.com/q/d/l/)"
+    },
+    {
+      "id": "NEWS",
+      "label": "ニュース",
+      "reason": "401 Client Error: Unauthorized for url: https://newsapi.org/v2/everything?q=%28%E6%97%A5%E7%B5%8C%E5%B9%B3%E5%9D%87+OR+TOPIX+OR+%E6%9D%B1%E8%A8%BC+OR+%E6%97%A5%E6%9C%AC%E6%A0%AA+OR+%E5%86%86%E7%9B%B8%E5%A0%B4+OR+%E7%82%BA%E6%9B%BF+OR+%E5%8E%9F%E6%B2%B9+OR+%E9%87%91%E5%88%A9+OR+%E5%8D%8A%E5%B0%8E%E4%BD%93+OR+%E7%B1%B3%E5%9B%BD%E6%A0%AA+OR+%E3%83%80%E3%82%A6+OR+%E3%83%8A%E3%82%B9%E3%83%80%E3%83%83%E3%82%AF+OR+S%26P500%29&sortBy=publishedAt&pageSize=20&from=2026-03-28T17%3A02%3A06%2B09%3A00&apiKey=f583aaa7644343e7a677b33fb35dda40%0A"
     }
   ],
-  "news": [
-    {
-<<<<<<< HEAD
-      "title": "機票也要漲！4/1起亞洲基本航線調漲1至2千元 長程航線飆漲4千元",
-      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_777cce55-1590-4fb5-9978-24032f82a837",
-      "description": "[Newtalk新聞] 中東戰局持續延燒，不僅剛影響我國油價飆漲，現在連機票也跟進漲價，預計4月起開始調漲機票的燃油附加費，東南亞等短線航班漲幅大約落在新台幣1、2,000元左右 以上，而長程航線漲幅最明顯，來回票價可能漲到4000元左右。 因應戰爭影響，導致國際原油價格持續攀升波及航空票價，品保協會主委李奇嶽表示，這波燃油附加費的調漲幅度與飛行距離成正比，飛得越遠漲幅就會越高。以飛行時間在4小時以內的東南亞等短線航班為例，漲幅大約落在新台幣1、2,000元左右，而長程航線如歐洲、美國、加拿大等因飛行距離遙遠，每…",
-      "source": "Yahoo Entertainment",
-      "domain": null,
-      "language": null,
-      "published_at": "2026-03-28T07:19:06Z"
-    },
-    {
-      "title": "【朗報】INPEX、中央アジア産原油を日本企業に優先販売へ",
-      "url": "http://blog.livedoor.jp/nanjstu/archives/63101721.html",
-      "description": "転載元: https://nova.5ch.io/test/read.cgi/livegalileo/1774673169/1: それでも動く名無し 2026/03/28(土) 13:46:09.60 ID:XCSUmIw90\n 日本は潰れないンだわ \n\n2: それでも動く名無し 2026/03/28(土) 13:46:38.46 ID:XCSUmIw90 ソース https://news.yahoo.co.jp/pickup/...",
-      "source": "Livedoor.jp",
-      "domain": null,
-      "language": null,
-      "published_at": "2026-03-28T06:36:23Z"
-    },
-    {
-      "title": "バンドマン「高市が辞めるだけでイランから原油が入ってくるだけの話」←大炎上",
-      "url": "http://matometanews.com/archives/2114938.html",
-      "description": "1 ： 以下、？ちゃんねるからVIPがお送りします ：2026/03/28(土) 00:57:16.396 ID:7gPVOAF9M.netすまんマジで何言ってんのこの人高市早苗さんが総理大臣辞めるだけで中国からレアアース入るしイランから原油も普通に入ってくるのでただそれだけの話しでしかないような気がす...",
-      "source": "Matometanews.com",
-      "domain": null,
-      "language": null,
-      "published_at": "2026-03-28T06:18:00Z"
-    },
-    {
-      "title": "機票要漲價了！「這天」起長程機票最多漲數千元",
-      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_0cd309c5-aa43-46fd-8113-75e56f64e83e",
-      "description": "生活中心／李明融報導受中東地緣政治風險升溫影響，牽動全球能源危機。在國際原油價格不斷攀升下，航空業首當其衝。品保協會公關主委李奇嶽表示，多家航空公司已向旅行社發出公告，預計 4 月 起調漲燃油附加費。他呼籲有出國計畫的民眾，盡量在 3 月底 前完成機票開立，以避開這波調漲潮，減輕旅費負擔。",
-      "source": "Yahoo Entertainment",
-      "domain": null,
-      "language": null,
-      "published_at": "2026-03-28T06:14:35Z"
-    },
-    {
-      "title": "歐洲「全球門戶倡議」與「一帶一路」打對台 德、澳共同支持台海重要性",
-      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_996e1701-61b5-4463-978f-5c3bb72b7d20",
-      "description": "歐洲為擺脫中國大陸的「一帶一路」政策，推出「全球門戶倡議」（Global Gateway）作為替代方案，共同建立可信賴連結的韌性網絡，並呼籲歐盟與包括台灣在內的友盟深化合作；而「澳德防長會議」也再次強調台海和平的重要性。我外交部今（28）表示，我國將持續與友盟齊力捍衛國際秩序，透過「總合外交」續與歐盟等理念相近夥伴深化合作，強化全球安全與韌性。",
-      "source": "Yahoo Entertainment",
-      "domain": null,
-      "language": null,
-      "published_at": "2026-03-28T06:12:28Z"
-=======
-      "title": "国际经济因战争等因素陷低迷 林家全相信马中经贸成长持续向前 | 中马 | 地方",
-      "url": "https://www.orientaldaily.com.my/news/central/2026/03/26/806728",
-      "source": "Malaysia",
-      "domain": "orientaldaily.com.my",
-      "language": "Chinese",
-      "published_at": "20260326T093000Z"
-    },
-    {
-      "title": "Wal Timmendorfer Strand aktuell : So läuft heute die Rettung des gestrandeten Buckelwals",
-      "url": "https://www.moz.de/nachrichten/panorama/wal-timmendorfer-strand-aktuell-so-laeuft-die-rettung-des-gestrandeten-buckelwals-78739689.html",
-      "source": "Germany",
-      "domain": "moz.de",
-      "language": "German",
-      "published_at": "20260326T093000Z"
-    },
-    {
-      "title": "Hitachi Rail to manufacture rolling stock for Seibu Railway  s new Fine Dining Train",
-      "url": "https://www.jcnnewswire.com/pressrelease/105888/3/Hitachi-Rail-to-manufacture-rolling-stock-for-Seibu-Railways-new-Fine-Dining-Train",
-      "source": "Japan",
-      "domain": "jcnnewswire.com",
-      "language": "English",
-      "published_at": "20260326T093000Z"
-    },
-    {
-      "title": "Iran rejects US peace plan , offers its own conditions to end war",
-      "url": "https://www.irishtimes.com/world/middle-east/2026/03/26/iran-war-live-updates-israel-us-trump-energy-costs-middle-east/",
-      "source": "Ireland",
-      "domain": "irishtimes.com",
-      "language": "English",
-      "published_at": "20260326T093000Z"
-    },
-    {
-      "title": "中东局势将利好光伏 ？ 别盲目乐观",
-      "url": "https://www.163.com/dy/article/KOVAT8RI0519S55I.html",
-      "source": "China",
-      "domain": "163.com",
-      "language": "Chinese",
-      "published_at": "20260326T093000Z"
->>>>>>> 08d8c4f (update)
-    }
-  ],
+  "news": [],
   "summary": {
     "text": null,
-<<<<<<< HEAD
-    "generated_at": "2026-03-29 07:47 UTC",
-    "error": "429 Client Error: Too Many Requests for url: https://api.openai.com/v1/responses"
-=======
-    "generated_at": "2026-03-29 16:52 JST",
-    "error": "missing OPENAI_API_KEY"
->>>>>>> 08d8c4f (update)
+    "generated_at": "2026-03-29 17:02 JST",
+    "error": null
   },
   "notes": {
     "topix_source": "stooq (^TPX) via pandas_datareader",
