@@ -19,6 +19,19 @@
 	max-width: 1000px;
 	margin: auto;
     }
+
+    .back-link {
+	display: inline-block;
+	color: #2d7ff9;
+	text-decoration: none;
+    }
+
+    .page-nav {
+	display: flex;
+	gap: 12px;
+	margin-bottom: 12px;
+	align-items: center;
+    }
     
     .card {
 	background: white;
@@ -51,6 +64,10 @@
 <body>
   <!-- ここにHTML本体 -->
   <div class="container">
+    <div class="page-nav">
+      <a class="back-link" href="index.html">← トップへ</a>
+      <a class="back-link" href="#" onclick="goBack(event)">← 前に戻る</a>
+    </div>
     
     <h1 id="stock-name"></h1>
     
@@ -158,6 +175,15 @@ function moveStock(direction) {
   if (newIndex < 0 || newIndex >= allStocks.length) return;
   const nextCode = allStocks[newIndex].code;
   window.location.href = "detail.html?code=" + nextCode;
+}
+
+function goBack(event) {
+  event.preventDefault();
+  if (window.history.length > 1) {
+    window.history.back();
+    return;
+  }
+  window.location.href = "stocks.html";
 }
 
 loadDetail();

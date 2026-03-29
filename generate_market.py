@@ -32,6 +32,59 @@ YF_SERIES = [
 ]
 
 UNAVAILABLE = []
+NEWS_LIMIT = 5
+NEWS_LOOKBACK_DAYS = 2
+HIGH_IMPACT_KEYWORDS = {
+    "日銀": 5,
+    "FOMC": 5,
+    "FRB": 5,
+    "BOJ": 5,
+    "Fed": 5,
+    "利上げ": 5,
+    "利下げ": 5,
+    "政策金利": 5,
+    "雇用統計": 4,
+    "CPI": 4,
+    "インフレ": 4,
+    "関税": 4,
+    "GDP": 4,
+    "日経平均": 4,
+    "TOPIX": 4,
+    "円安": 4,
+    "円高": 4,
+    "為替": 3,
+    "原油": 3,
+    "金価格": 3,
+    "半導体": 3,
+    "決算": 3,
+    "下方修正": 4,
+    "上方修正": 4,
+    "自社株買い": 4,
+    "増配": 3,
+    "減配": 4,
+    "景気後退": 4,
+    "地政学": 3,
+    "Nikkei": 4,
+    "rates": 4,
+    "tariff": 4,
+    "inflation": 4,
+    "earnings": 3,
+    "guidance": 3,
+    "buyback": 4,
+    "dividend": 3,
+    "yen": 4,
+    "oil": 3
+}
+PRIORITY_SOURCES = {
+    "Nikkei Asia": 3,
+    "日本経済新聞": 3,
+    "Reuters": 3,
+    "ロイター": 3,
+    "Bloomberg": 3,
+    "ブルームバーグ": 3,
+    "Financial Times": 2,
+    "Wall Street Journal": 2
+}
 
 
 def fetch_fred_series(series_id):
@@ -156,46 +209,102 @@ def series_payload(series_id, label, unit, df):
     }
 
 
-def fetch_gdelt_news(query, maxrecords=30, timespan="1day"):
-    url = "https://api.gdeltproject.org/api/v2/doc/doc"
+def fetch_newsapi_news(query, page_size=10):
+    api_key = os.getenv("NEWSAPI_API_KEY") or os.getenv("NEWS_API_KEY")
+    if not api_key:
+        return [], "missing NEWSAPI_API_KEY"
+
+    url = "https://newsapi.org/v2/everything"
+    from_date = (datetime.utcnow() - timedelta(days=NEWS_LOOKBACK_DAYS)).date().isoformat()
     params = {
-        "query": query,
-        "mode": "artlist",
-        "format": "json",
-        "maxrecords": maxrecords,
-        "timespan": timespan,
-        "sort": "datedesc"
+        "q": query,
+        "sortBy": "publishedAt",
+        "pageSize": page_size,
+        "from": from_date,
+        "apiKey": api_key
     }
+
+    domains = (os.getenv("NEWSAPI_DOMAINS") or "").strip()
+    if domains:
+        params["domains"] = domains
+
     res = requests.get(url, params=params, timeout=30)
     res.raise_for_status()
+
     payload = res.json()
-    articles = payload.get("articles") or payload.get("data") or []
+    if payload.get("status") != "ok":
+        return [], payload.get("message") or "newsapi error"
+
     news = []
     seen = set()
-    for a in articles:
-        title = a.get("title") or a.get("seendate")
-        url = a.get("url") or a.get("link")
-        if not title or not url:
+    for article in payload.get("articles", []):
+        title = article.get("title")
+        article_url = article.get("url")
+        if not title or not article_url or article_url in seen:
             continue
-        if url in seen:
-            continue
-        seen.add(url)
-        published_raw = a.get("seendate") or a.get("date")
-        published_at = None
-        if published_raw:
-            try:
-                published_at = datetime.strptime(published_raw[:14], "%Y%m%d%H%M%S").isoformat()
-            except Exception:
-                published_at = published_raw
+        seen.add(article_url)
+        source = article.get("source") or {}
         news.append({
             "title": title,
-            "url": url,
-            "source": a.get("sourcecountry") or a.get("domain"),
-            "domain": a.get("domain"),
-            "language": a.get("language"),
-            "published_at": published_at
+            "url": article_url,
+            "description": article.get("description"),
+            "source": source.get("name"),
+            "domain": None,
+            "language": None,
+            "published_at": article.get("publishedAt")
         })
-    return news
+    return news, None
+
+
+def parse_published_at(value):
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
+def score_news_item(item):
+    score = 0
+    text = " ".join([
+        item.get("title") or "",
+        item.get("description") or ""
+    ])
+    lowered_text = text.lower()
+
+    for keyword, weight in HIGH_IMPACT_KEYWORDS.items():
+        if keyword.lower() in lowered_text:
+            score += weight
+
+    source = (item.get("source") or "").lower()
+    for name, weight in PRIORITY_SOURCES.items():
+        if name.lower() in source:
+            score += weight
+
+    published_at = parse_published_at(item.get("published_at"))
+    if published_at:
+        age_hours = max((datetime.now(published_at.tzinfo) - published_at).total_seconds() / 3600, 0)
+        if age_hours <= 6:
+            score += 4
+        elif age_hours <= 24:
+            score += 3
+        elif age_hours <= 48:
+            score += 2
+        else:
+            score += 1
+
+    return score
+
+
+def rank_news_items(items, limit=NEWS_LIMIT):
+    def sort_key(item):
+        published_at = parse_published_at(item.get("published_at"))
+        timestamp = published_at.timestamp() if published_at else 0
+        return (score_news_item(item), timestamp)
+
+    ranked = sorted(items, key=sort_key, reverse=True)
+    return ranked[:limit]
 
 
 def generate_ai_summary(series_output, news):
@@ -322,43 +431,41 @@ def main():
             df.to_csv(out_csv, index=False)
             series_output.append(series_payload(item["id"], item["label"], item["unit"], df))
             time.sleep(0.2)
-    # GDELT news
-    env_query = os.getenv("GDELT_QUERY")
+    # News
+    env_query = os.getenv("MARKET_NEWS_QUERY") or os.getenv("NEWSAPI_QUERY")
     base_query = (env_query or "").strip()
     if not base_query:
-        base_query = '(日経 OR TOPIX OR 東証 OR 日本株 OR 株式 OR 円 OR 為替 OR 原油 OR 金 OR 銀 OR 米国株 OR ダウ OR ナスダック OR S&P500)'
+        base_query = '(日経平均 OR TOPIX OR 東証 OR 日本株 OR 円相場 OR 為替 OR 原油 OR 金利 OR 半導体 OR 米国株 OR ダウ OR ナスダック OR S&P500)'
     news = []
     news_reason = None
-    rate_limited = False
-    attempts = [
-        (base_query + " sourcelang:japanese", "1day"),
-        (base_query, "1day"),
-        (base_query, "3day"),
-        (base_query, "7day"),
-        ("(Japan OR Tokyo OR Nikkei OR TOPIX OR yen OR Japanese stocks)", "7day")
+
+    newsapi_attempts = [
+        base_query,
+        '"日経平均" OR TOPIX OR 日本株 OR 東証 OR 円相場',
+        "Japan stocks OR Nikkei OR TOPIX OR yen OR BOJ OR Fed"
     ]
-    for idx, (q, span) in enumerate(attempts):
+    for idx, q in enumerate(newsapi_attempts):
         if idx > 0:
-            time.sleep(5)
+            time.sleep(1)
         try:
-            news = fetch_gdelt_news(q, maxrecords=10, timespan=span)
+            news, news_reason = fetch_newsapi_news(q, page_size=20)
             if news:
                 break
         except Exception as e:
             news_reason = str(e)
-            if "429" in news_reason or "Too Many Requests" in news_reason:
-                rate_limited = True
-                break
+            break
 
-    if not news:
-        if rate_limited:
-            cached_news = (cached_market.get("news") or []) if cached_market else []
-            if cached_news:
-                news = cached_news
-                news_reason = "gdelt rate limited; using cached news"
-        if not news_reason:
-            news_reason = "gdelt returned no articles"
-        unavailable.append({"id": "NEWS", "label": "ニュース", "reason": news_reason})
+    if news:
+        news = rank_news_items(news, limit=NEWS_LIMIT)
+    else:
+        cached_news = (cached_market.get("news") or []) if cached_market else []
+        if cached_news:
+            news = cached_news[:NEWS_LIMIT]
+            news_reason = "newsapi unavailable; using cached news"
+        else:
+            if not news_reason:
+                news_reason = "newsapi returned no articles"
+            unavailable.append({"id": "NEWS", "label": "ニュース", "reason": news_reason})
 
     # AI summary
     summary_text = None
@@ -374,7 +481,7 @@ def main():
         "days": DAYS,
         "series": series_output,
         "unavailable": unavailable,
-        "news": news[:10],
+        "news": news[:NEWS_LIMIT],
         "summary": {
             "text": summary_text,
             "generated_at": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
@@ -383,7 +490,8 @@ def main():
         "notes": {
             "topix_source": "stooq (^TPX) via pandas_datareader",
             "yfinance_source": "Yahoo Finance via yfinance",
-            "gdelt_source": "GDELT DOC 2.0 API",
+            "news_source": "newsapi",
+            "newsapi_source": "NewsAPI everything endpoint",
             "openai_model": os.getenv("OPENAI_MODEL") or "gpt-4o-mini"
         }
     }

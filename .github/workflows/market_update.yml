@@ -34,7 +34,7 @@ jobs:
           METALPRICEAPI_KEY: ${{ secrets.METALPRICEAPI_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
-          GDELT_QUERY: ${{ secrets.GDELT_QUERY }}
+          NEWSAPI_API_KEY: ${{ secrets.NEWSAPI_API_KEY }}
         run: |
           python generate_market.py
 
