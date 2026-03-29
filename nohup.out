@@ -1,0 +1,5 @@
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: 6576.T"}}}
+$6576.T: possibly delisted; no price data found  (period=200d) (Yahoo error = "No data found, symbol may be delisted")
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: 6576.T"}}}
+$6576.T: possibly delisted; no price data found  (period=200d) (Yahoo error = "No data found, symbol may be delisted")
+$6576.T: possibly delisted; no price data found  (period=200d) (Yahoo error = "No data found, symbol may be delisted")

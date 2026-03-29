@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>日本株 指標一覧</title>
+
+<style>
+body { font-family: Arial, sans-serif; }
+	      
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+.modal{
+ display:none;
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ background:rgba(0,0,0,0.4);
+}
+
+.modal-content{
+ background:white;
+ padding:25px;
+ width:400px;
+ margin:80px auto;
+ border-radius:10px;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>日本株 指標一覧</h1>
+<p>更新日時: <span id="updatedAt"></span></p>
+<button onclick="openFilter()">🔎 スクリーニング</button>
+
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Name</th>
+    <th>市場</th>
+    <th>業種</th>
+    
+    <th>次回決算日</th>
+    <th>株価</th>
+    <th>目標株価</th>
+    
+    <th>時価総額(億円)</th>
+    <th>売上高(億円)</th>
+    <th>営業利益(億円)</th>
+    <th>純利益(億円)</th>
+    
+    <th>営業利益率(%)</th>
+    <th>純利益率(%)</th>
+    
+    <th>PER</th>
+    <th>PBR</th>
+    <th>ROE(%)</th>
+    <th>ROA(%)</th>
+    
+    <th>配当利回り</th>
+    <th>1株配当</th>
+    <th>自己資本比率</th>
+    <th>流動比率</th>
+    
+  </tr>
+</thead>
+<tbody id="stock-body">
+</tbody>
+</table>
+
+<script>
+let originalData = [];
+
+function displayData(data) {
+  const tbody = document.getElementById("stock-body");
+  tbody.innerHTML = "";
+
+  data.forEach(stock => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+      <td>
+         <a href="detail.html?code=${stock.code}">
+          ${stock.code}
+         </a>
+      </td>
+      <td>${stock.name}</td>
+      <td>${stock.market}</td> 
+      <td>${stock.industry}</td> 
+
+      <td>${stock.next_earnings ?? "-"}</td> 
+      <td>${stock.price?.current ?? "-"}</td>
+      <td>${stock.price?.target ?? "-"}</td>
+
+      <td>${stock.financial?.market_cap_oku ?? "-"}</td>
+      <td>${stock.financial?.revenue_oku ?? "-"}</td>
+      <td>${stock.financial?.operating_income_oku ?? "-"}</td>
+      <td>${stock.financial?.net_income_oku ?? "-"}</td>
+
+      <td>${stock.profitability?.operating_margin ?? "-"}</td>
+      <td>${stock.profitability?.net_margin ?? "-"}</td>
+
+      <td>${stock.valuation?.per ?? "-"}</td>
+      <td>${stock.valuation?.pbr ?? "-"}</td>
+      <td>${stock.profitability?.roe ?? "-"}</td>
+      <td>${stock.profitability?.roa ?? "-"}</td>
+
+      <td>${stock.dividend?.yield ?? "-"}</td>
+      <td>${stock.dividend?.per_share ?? "-"}</td>
+      <td>${stock.financial?.equity_ratio ?? "-"}</td>
+      <td>${stock.financial?.current_ratio ?? "-"}</td>
+    `;
+
+    tbody.appendChild(row);
+  });
+}
+
+fetch("data.json?v=" + new Date().getTime())
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("updatedAt").innerText = data.updated_at;
+    originalData = data.stocks;
+    displayData(data.stocks);
+  });
+  
+
+function applyFilter() {
+  const perMax = parseFloat(document.getElementById("perFilter").value);
+  const roeMin = parseFloat(document.getElementById("roeFilter").value);
+
+  const filtered = originalData.filter(stock => {
+    const per = stock.valuation?.per;
+    const roe = stock.profitability?.roe;
+
+    if (!isNaN(perMax) && (per == null || per > perMax)) return false;
+    if (!isNaN(roeMin) && (roe == null || roe < roeMin)) return false;
+
+    return true;
+  });
+
+  displayData(filtered);
+}
+
+function resetFilter() {
+  document.getElementById("perFilter").value = "";
+  document.getElementById("roeFilter").value = "";
+  displayData(originalData);
+}
+
+function openFilter(){
+ document.getElementById("filterModal").style.display="block";
+}
+
+function closeFilter(){
+ document.getElementById("filterModal").style.display="none";
+}
+
+
+  
+</script>
+
+<div id="filterModal" class="modal">
+
+<div class="modal-content">
+
+<h2>スクリーニング条件</h2>
+
+PER  
+<input id="perMin"> ～ <input id="perMax">
+
+<br><br>
+
+ROE  
+<input id="roeMin">
+
+<br><br>
+
+配当利回り  
+<input id="divMin">
+
+<h3>市場</h3>
+
+<label><input type="radio" name="market" value="" checked>全て</label>
+<label><input type="radio" name="market" value="プライム">プライム</label>
+<label><input type="radio" name="market" value="スタンダード">スタンダード</label>
+
+<h3>業種</h3>
+
+<label><input type="radio" name="industry" value="" checked>全て</label>
+<label><input type="radio" name="industry" value="銀行業">銀行</label>
+<label><input type="radio" name="industry" value="電気機器">電気機器</label>
+
+<br><br>
+
+<button onclick="applyFilter()">適用</button>
+<button onclick="closeFilter()">閉じる</button>
+
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
