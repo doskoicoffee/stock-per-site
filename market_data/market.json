@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-29 18:34 JST",
+  "updated_at": "2026-03-30 19:15 JST",
   "days": 183,
   "series": [
     {
@@ -3051,9 +3051,9 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 159.704,
-        "change": 0.32,
-        "change_pct": 0.201
+        "latest": 159.523,
+        "change": -0.181,
+        "change_pct": -0.113
       },
       "data": [
         {
@@ -3567,6 +3567,10 @@
         {
           "date": "2026-03-27",
           "value": 159.704
+        },
+        {
+          "date": "2026-03-30",
+          "value": 159.523
         }
       ]
     },
@@ -3575,9 +3579,9 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 184.224,
-        "change": -0.047,
-        "change_pct": -0.026
+        "latest": 183.37,
+        "change": -0.854,
+        "change_pct": -0.464
       },
       "data": [
         {
@@ -4091,6 +4095,10 @@
         {
           "date": "2026-03-27",
           "value": 184.224
+        },
+        {
+          "date": "2026-03-30",
+          "value": 183.37
         }
       ]
     },
@@ -4099,9 +4107,9 @@
       "label": "ユーロ/米ドル",
       "unit": "USD per EUR",
       "summary": {
-        "latest": 1.154,
-        "change": -0.003,
-        "change_pct": -0.228
+        "latest": 1.15,
+        "change": -0.004,
+        "change_pct": -0.32
       },
       "data": [
         {
@@ -4615,6 +4623,10 @@
         {
           "date": "2026-03-27",
           "value": 1.154
+        },
+        {
+          "date": "2026-03-30",
+          "value": 1.15
         }
       ]
     },
@@ -4623,9 +4635,9 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 99.64,
-        "change": 5.16,
-        "change_pct": 5.461
+        "latest": 101.7,
+        "change": 2.06,
+        "change_pct": 2.067
       },
       "data": [
         {
@@ -5127,6 +5139,10 @@
         {
           "date": "2026-03-27",
           "value": 99.64
+        },
+        {
+          "date": "2026-03-30",
+          "value": 101.7
         }
       ]
     },
@@ -5135,9 +5151,9 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4524.3,
-        "change": 148.8,
-        "change_pct": 3.401
+        "latest": 4561.8,
+        "change": 69.8,
+        "change_pct": 1.554
       },
       "data": [
         {
@@ -5638,7 +5654,11 @@
         },
         {
           "date": "2026-03-27",
-          "value": 4524.3
+          "value": 4492.0
+        },
+        {
+          "date": "2026-03-30",
+          "value": 4561.8
         }
       ]
     },
@@ -5647,9 +5667,9 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 69.796,
-        "change": 2.125,
-        "change_pct": 3.14
+        "latest": 71.1,
+        "change": 1.555,
+        "change_pct": 2.236
       },
       "data": [
         {
@@ -6150,7 +6170,11 @@
         },
         {
           "date": "2026-03-27",
-          "value": 69.796
+          "value": 69.545
+        },
+        {
+          "date": "2026-03-30",
+          "value": 71.1
         }
       ]
     }
@@ -6164,13 +6188,13 @@
     {
       "id": "NEWS",
       "label": "ニュース",
-      "reason": "401 Client Error: Unauthorized for url: https://newsapi.org/v2/everything?q=%28%E6%97%A5%E7%B5%8C%E5%B9%B3%E5%9D%87+OR+TOPIX+OR+%E6%9D%B1%E8%A8%BC+OR+%E6%97%A5%E6%9C%AC%E6%A0%AA+OR+%E5%86%86%E7%9B%B8%E5%A0%B4+OR+%E7%82%BA%E6%9B%BF+OR+%E5%8E%9F%E6%B2%B9+OR+%E9%87%91%E5%88%A9+OR+%E5%8D%8A%E5%B0%8E%E4%BD%93+OR+%E7%B1%B3%E5%9B%BD%E6%A0%AA+OR+%E3%83%80%E3%82%A6+OR+%E3%83%8A%E3%82%B9%E3%83%80%E3%83%83%E3%82%AF+OR+S%26P500%29&sortBy=publishedAt&pageSize=20&from=2026-03-28T18%3A34%3A47%2B09%3A00&apiKey=f583aaa7644343e7a677b33fb35dda40%0A"
+      "reason": "401 Client Error: Unauthorized for url: https://newsapi.org/v2/everything?q=%28%E6%97%A5%E7%B5%8C%E5%B9%B3%E5%9D%87+OR+TOPIX+OR+%E6%9D%B1%E8%A8%BC+OR+%E6%97%A5%E6%9C%AC%E6%A0%AA+OR+%E5%86%86%E7%9B%B8%E5%A0%B4+OR+%E7%82%BA%E6%9B%BF+OR+%E5%8E%9F%E6%B2%B9+OR+%E9%87%91%E5%88%A9+OR+%E5%8D%8A%E5%B0%8E%E4%BD%93+OR+%E7%B1%B3%E5%9B%BD%E6%A0%AA+OR+%E3%83%80%E3%82%A6+OR+%E3%83%8A%E3%82%B9%E3%83%80%E3%83%83%E3%82%AF+OR+S%26P500%29&sortBy=publishedAt&pageSize=20&from=2026-03-29T19%3A15%3A06%2B09%3A00&apiKey=f583aaa7644343e7a677b33fb35dda40%0A"
     }
   ],
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-03-29 18:34 JST",
+    "generated_at": "2026-03-30 19:15 JST",
     "error": null
   },
   "notes": {
