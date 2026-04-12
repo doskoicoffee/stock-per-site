@@ -44,6 +44,17 @@ def percent(value):
     return round(num, 1)
 
 
+def percent_dividend_yield(value):
+    num = finite_number(value)
+    if num is None:
+        return None
+    # yfinance の dividendYield は銘柄により単位が混在するため、
+    # 0.2未満のみ比率(0.03=3%)として扱う。
+    if num < 0.2:
+        return round(num * 100, 1)
+    return round(num, 1)
+
+
 def oku(value):
     num = finite_number(value)
     if num is None:
@@ -178,7 +189,7 @@ for index, row in df.iterrows():
         stock["profitability"]["operating_margin"] = percent(info.get("operatingMargins"))
         stock["profitability"]["net_margin"] = percent(info.get("profitMargins"))
 
-        stock["dividend"]["yield"] = percent(info.get("dividendYield"))
+        stock["dividend"]["yield"] = percent_dividend_yield(info.get("dividendYield"))
         stock["dividend"]["per_share"] = r1(safe(info, "dividendRate"))
 
         stock["financial"]["market_cap_oku"] = oku(info.get("marketCap"))

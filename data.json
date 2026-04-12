@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-11 02:26",
+  "updated_at": "2026-04-12 18:58",
   "count": 3939,
   "stocks": [
     {
@@ -508,7 +508,7 @@
         "net_margin": 1.6
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 10.0
       },
       "financial": {
@@ -613,7 +613,7 @@
         "net_margin": 1.3
       },
       "dividend": {
-        "yield": 30.0,
+        "yield": 0.3,
         "per_share": 10.0
       },
       "financial": {
@@ -648,7 +648,7 @@
         "net_margin": 7.2
       },
       "dividend": {
-        "yield": 4.1,
+        "yield": 4.2,
         "per_share": 120.0
       },
       "financial": {
@@ -893,7 +893,7 @@
         "net_margin": 5.3
       },
       "dividend": {
-        "yield": 6.0,
+        "yield": 6.1,
         "per_share": 30.0
       },
       "financial": {
@@ -922,10 +922,10 @@
         "pbr": 4.3
       },
       "profitability": {
-        "roe": 8.3,
-        "roa": 3.7,
-        "operating_margin": 5.6,
-        "net_margin": 1.2
+        "roe": 10.2,
+        "roa": 3.6,
+        "operating_margin": -7.0,
+        "net_margin": 1.4
       },
       "dividend": {
         "yield": 3.1,
@@ -934,10 +934,10 @@
       "financial": {
         "market_cap_oku": 1176.9,
         "equity_ratio": null,
-        "current_ratio": 1.3,
-        "revenue_oku": 1955.2,
-        "operating_income_oku": 109.1,
-        "net_income_oku": 24.2
+        "current_ratio": 1.2,
+        "revenue_oku": 1977.5,
+        "operating_income_oku": -137.5,
+        "net_income_oku": 27.8
       },
       "price": {
         "current": 4055.0,
@@ -963,7 +963,7 @@
         "net_margin": 0.9
       },
       "dividend": {
-        "yield": 36.0,
+        "yield": 0.4,
         "per_share": 16.0
       },
       "financial": {
@@ -976,7 +976,7 @@
       },
       "price": {
         "current": 4425.0,
-        "target": 4600.0
+        "target": 4687.5
       },
       "schedule": {
         "next_earnings": null
@@ -1138,7 +1138,7 @@
         "net_margin": 1.3
       },
       "dividend": {
-        "yield": 99.0,
+        "yield": 1.0,
         "per_share": 6.4
       },
       "financial": {
@@ -1278,7 +1278,7 @@
         "net_margin": 8.3
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 2.0
       },
       "financial": {
@@ -1313,7 +1313,7 @@
         "net_margin": 3.2
       },
       "dividend": {
-        "yield": 38.0,
+        "yield": 0.4,
         "per_share": 15.0
       },
       "financial": {
@@ -1418,7 +1418,7 @@
         "net_margin": 12.4
       },
       "dividend": {
-        "yield": 37.0,
+        "yield": 0.4,
         "per_share": 1.1
       },
       "financial": {
@@ -2118,7 +2118,7 @@
         "net_margin": 23.8
       },
       "dividend": {
-        "yield": 42.0,
+        "yield": 0.4,
         "per_share": 5.5
       },
       "financial": {
@@ -2258,7 +2258,7 @@
         "net_margin": -0.9
       },
       "dividend": {
-        "yield": 99.0,
+        "yield": 1.0,
         "per_share": 10.0
       },
       "financial": {
@@ -3238,7 +3238,7 @@
         "net_margin": 2.4
       },
       "dividend": {
-        "yield": 3.6,
+        "yield": 3.7,
         "per_share": 117.0
       },
       "financial": {
@@ -3448,7 +3448,7 @@
         "net_margin": 11.0
       },
       "dividend": {
-        "yield": 78.0,
+        "yield": 0.8,
         "per_share": 10.0
       },
       "financial": {
@@ -3662,7 +3662,7 @@
         "per_share": 38.0
       },
       "financial": {
-        "market_cap_oku": 415.5,
+        "market_cap_oku": 415.8,
         "equity_ratio": null,
         "current_ratio": 2.7,
         "revenue_oku": 817.3,
@@ -4358,7 +4358,7 @@
         "net_margin": 3.6
       },
       "dividend": {
-        "yield": 4.8,
+        "yield": 4.9,
         "per_share": 308.0
       },
       "financial": {
@@ -4677,7 +4677,7 @@
         "per_share": 45.0
       },
       "financial": {
-        "market_cap_oku": 795.0,
+        "market_cap_oku": 795.2,
         "equity_ratio": null,
         "current_ratio": 2.1,
         "revenue_oku": 1798.6,
@@ -4791,7 +4791,7 @@
       },
       "price": {
         "current": 1487.5,
-        "target": 1527.5
+        "target": 1572.5
       },
       "schedule": {
         "next_earnings": null
@@ -5443,7 +5443,7 @@
         "net_margin": 4.1
       },
       "dividend": {
-        "yield": 3.1,
+        "yield": 3.2,
         "per_share": 174.0
       },
       "financial": {
@@ -5482,7 +5482,7 @@
         "per_share": 52.0
       },
       "financial": {
-        "market_cap_oku": 96.7,
+        "market_cap_oku": 97.0,
         "equity_ratio": null,
         "current_ratio": 3.0,
         "revenue_oku": 200.8,
@@ -5513,7 +5513,7 @@
         "net_margin": 8.9
       },
       "dividend": {
-        "yield": 79.0,
+        "yield": 0.8,
         "per_share": 22.5
       },
       "financial": {
@@ -5972,7 +5972,7 @@
         "per_share": 82.0
       },
       "financial": {
-        "market_cap_oku": 656.9,
+        "market_cap_oku": 657.7,
         "equity_ratio": null,
         "current_ratio": 2.0,
         "revenue_oku": 732.6,
@@ -7963,7 +7963,7 @@
         "net_margin": 10.8
       },
       "dividend": {
-        "yield": 3.3,
+        "yield": 3.4,
         "per_share": 21.0
       },
       "financial": {
@@ -8418,7 +8418,7 @@
         "net_margin": 1.4
       },
       "dividend": {
-        "yield": 2.3,
+        "yield": 2.4,
         "per_share": 12.0
       },
       "financial": {
@@ -8657,10 +8657,10 @@
         "pbr": 2.6
       },
       "profitability": {
-        "roe": 16.6,
-        "roa": 10.3,
-        "operating_margin": 1.7,
-        "net_margin": 7.7
+        "roe": 16.5,
+        "roa": 10.1,
+        "operating_margin": 20.9,
+        "net_margin": 8.0
       },
       "dividend": {
         "yield": 2.4,
@@ -8669,10 +8669,10 @@
       "financial": {
         "market_cap_oku": 906.7,
         "equity_ratio": null,
-        "current_ratio": 0.7,
-        "revenue_oku": 706.5,
-        "operating_income_oku": 12.0,
-        "net_income_oku": 54.6
+        "current_ratio": 0.8,
+        "revenue_oku": 743.1,
+        "operating_income_oku": 155.5,
+        "net_income_oku": 59.5
       },
       "price": {
         "current": 1100.0,
@@ -8803,7 +8803,7 @@
         "net_margin": -0.9
       },
       "dividend": {
-        "yield": 76.0,
+        "yield": 0.8,
         "per_share": 3.0
       },
       "financial": {
@@ -8908,7 +8908,7 @@
         "net_margin": -1.8
       },
       "dividend": {
-        "yield": 77.0,
+        "yield": 0.8,
         "per_share": 15.0
       },
       "financial": {
@@ -10028,7 +10028,7 @@
         "net_margin": 8.1
       },
       "dividend": {
-        "yield": 92.0,
+        "yield": 0.9,
         "per_share": 30.0
       },
       "financial": {
@@ -10654,7 +10654,7 @@
       "profitability": {
         "roe": 20.3,
         "roa": 9.2,
-        "operating_margin": 13.3,
+        "operating_margin": 13.2,
         "net_margin": 9.7
       },
       "dividend": {
@@ -10763,7 +10763,7 @@
         "net_margin": -0.6
       },
       "dividend": {
-        "yield": 67.0,
+        "yield": 0.7,
         "per_share": 20.0
       },
       "financial": {
@@ -11572,7 +11572,7 @@
         "per_share": 44.0
       },
       "financial": {
-        "market_cap_oku": 155.8,
+        "market_cap_oku": 157.1,
         "equity_ratio": null,
         "current_ratio": 4.3,
         "revenue_oku": 184.6,
@@ -11708,7 +11708,7 @@
         "net_margin": 4.0
       },
       "dividend": {
-        "yield": 2.3,
+        "yield": 2.4,
         "per_share": 5.0
       },
       "financial": {
@@ -11883,7 +11883,7 @@
         "net_margin": 8.7
       },
       "dividend": {
-        "yield": 52.0,
+        "yield": 0.5,
         "per_share": 2.0
       },
       "financial": {
@@ -11988,7 +11988,7 @@
         "net_margin": 11.1
       },
       "dividend": {
-        "yield": 2.6,
+        "yield": 2.7,
         "per_share": 60.0
       },
       "financial": {
@@ -12163,7 +12163,7 @@
         "net_margin": 2.5
       },
       "dividend": {
-        "yield": 93.0,
+        "yield": 0.9,
         "per_share": 2.0
       },
       "financial": {
@@ -12968,7 +12968,7 @@
         "net_margin": 2.3
       },
       "dividend": {
-        "yield": 5.0,
+        "yield": 5.1,
         "per_share": 136.0
       },
       "financial": {
@@ -13423,7 +13423,7 @@
         "net_margin": -0.3
       },
       "dividend": {
-        "yield": 78.0,
+        "yield": 0.8,
         "per_share": 3.0
       },
       "financial": {
@@ -13668,7 +13668,7 @@
         "net_margin": 8.2
       },
       "dividend": {
-        "yield": 71.0,
+        "yield": 0.7,
         "per_share": 7.0
       },
       "financial": {
@@ -14228,7 +14228,7 @@
         "net_margin": 2.0
       },
       "dividend": {
-        "yield": 49.0,
+        "yield": 0.5,
         "per_share": 5.0
       },
       "financial": {
@@ -14333,7 +14333,7 @@
         "net_margin": 5.2
       },
       "dividend": {
-        "yield": 6.2,
+        "yield": 6.3,
         "per_share": 20.0
       },
       "financial": {
@@ -14858,7 +14858,7 @@
         "net_margin": 2.8
       },
       "dividend": {
-        "yield": 69.0,
+        "yield": 0.7,
         "per_share": 30.0
       },
       "financial": {
@@ -14928,7 +14928,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 87.0,
+        "yield": 0.9,
         "per_share": 14.0
       },
       "financial": {
@@ -15173,7 +15173,7 @@
         "net_margin": 0.4
       },
       "dividend": {
-        "yield": 60.0,
+        "yield": 0.6,
         "per_share": 12.0
       },
       "financial": {
@@ -15208,7 +15208,7 @@
         "net_margin": 4.2
       },
       "dividend": {
-        "yield": 91.0,
+        "yield": 0.9,
         "per_share": 10.0
       },
       "financial": {
@@ -15523,7 +15523,7 @@
         "net_margin": 3.3
       },
       "dividend": {
-        "yield": 30.0,
+        "yield": 0.3,
         "per_share": 1.0
       },
       "financial": {
@@ -15873,7 +15873,7 @@
         "net_margin": 1.2
       },
       "dividend": {
-        "yield": 99.0,
+        "yield": 1.0,
         "per_share": 38.0
       },
       "financial": {
@@ -16083,7 +16083,7 @@
         "net_margin": -2.7
       },
       "dividend": {
-        "yield": 84.0,
+        "yield": 0.8,
         "per_share": 10.0
       },
       "financial": {
@@ -16096,7 +16096,7 @@
       },
       "price": {
         "current": 1209.0,
-        "target": 1291.4
+        "target": 1241.4
       },
       "schedule": {
         "next_earnings": null
@@ -16118,7 +16118,7 @@
         "net_margin": 5.5
       },
       "dividend": {
-        "yield": 50.0,
+        "yield": 0.5,
         "per_share": 10.0
       },
       "financial": {
@@ -16188,7 +16188,7 @@
         "net_margin": 0.4
       },
       "dividend": {
-        "yield": 99.0,
+        "yield": 1.0,
         "per_share": 10.0
       },
       "financial": {
@@ -16231,7 +16231,7 @@
         "equity_ratio": null,
         "current_ratio": 1.5,
         "revenue_oku": 3043.5,
-        "operating_income_oku": 104.1,
+        "operating_income_oku": 104.2,
         "net_income_oku": 95.0
       },
       "price": {
@@ -16363,7 +16363,7 @@
         "net_margin": 12.1
       },
       "dividend": {
-        "yield": 74.0,
+        "yield": 0.7,
         "per_share": 19.0
       },
       "financial": {
@@ -16468,7 +16468,7 @@
         "net_margin": -3.6
       },
       "dividend": {
-        "yield": 71.0,
+        "yield": 0.7,
         "per_share": 0.5
       },
       "financial": {
@@ -16503,7 +16503,7 @@
         "net_margin": 1.5
       },
       "dividend": {
-        "yield": 42.0,
+        "yield": 0.4,
         "per_share": 15.0
       },
       "financial": {
@@ -16529,7 +16529,7 @@
       "industry": "小売業",
       "valuation": {
         "per": 116.3,
-        "pbr": 4.8
+        "pbr": 4.9
       },
       "profitability": {
         "roe": 4.3,
@@ -16538,7 +16538,7 @@
         "net_margin": 0.5
       },
       "dividend": {
-        "yield": 53.0,
+        "yield": 0.5,
         "per_share": 17.0
       },
       "financial": {
@@ -16643,7 +16643,7 @@
         "net_margin": 8.1
       },
       "dividend": {
-        "yield": 78.0,
+        "yield": 0.8,
         "per_share": 64.0
       },
       "financial": {
@@ -16949,7 +16949,7 @@
       "industry": "小売業",
       "valuation": {
         "per": 11.8,
-        "pbr": 0.8
+        "pbr": 0.7
       },
       "profitability": {
         "roe": 7.5,
@@ -16987,10 +16987,10 @@
         "pbr": 0.6
       },
       "profitability": {
-        "roe": 6.8,
-        "roa": 3.1,
-        "operating_margin": 1.8,
-        "net_margin": 1.4
+        "roe": 6.3,
+        "roa": 3.5,
+        "operating_margin": 3.7,
+        "net_margin": 1.3
       },
       "dividend": {
         "yield": 2.4,
@@ -16999,10 +16999,10 @@
       "financial": {
         "market_cap_oku": 82.0,
         "equity_ratio": null,
-        "current_ratio": 1.7,
-        "revenue_oku": 619.3,
-        "operating_income_oku": 11.0,
-        "net_income_oku": 8.7
+        "current_ratio": 1.8,
+        "revenue_oku": 623.9,
+        "operating_income_oku": 23.0,
+        "net_income_oku": 8.3
       },
       "price": {
         "current": 626.0,
@@ -17092,10 +17092,10 @@
         "pbr": 1.2
       },
       "profitability": {
-        "roe": 13.1,
-        "roa": 6.1,
-        "operating_margin": 5.5,
-        "net_margin": 4.2
+        "roe": 12.1,
+        "roa": 6.3,
+        "operating_margin": 5.8,
+        "net_margin": 4.0
       },
       "dividend": {
         "yield": 1.6,
@@ -17104,10 +17104,10 @@
       "financial": {
         "market_cap_oku": 938.2,
         "equity_ratio": null,
-        "current_ratio": 0.9,
-        "revenue_oku": 2221.0,
-        "operating_income_oku": 122.3,
-        "net_income_oku": 93.4
+        "current_ratio": 0.8,
+        "revenue_oku": 2257.2,
+        "operating_income_oku": 129.9,
+        "net_income_oku": 89.9
       },
       "price": {
         "current": 4470.0,
@@ -17273,7 +17273,7 @@
         "net_margin": 3.6
       },
       "dividend": {
-        "yield": 23.0,
+        "yield": 0.2,
         "per_share": 9.0
       },
       "financial": {
@@ -17298,7 +17298,7 @@
       "market": "プライム（内国株式）",
       "industry": "小売業",
       "valuation": {
-        "per": 623.2,
+        "per": 626.7,
         "pbr": 6.5
       },
       "profitability": {
@@ -17308,7 +17308,7 @@
         "net_margin": 0.3
       },
       "dividend": {
-        "yield": 27.0,
+        "yield": 0.3,
         "per_share": 3.0
       },
       "financial": {
@@ -17579,13 +17579,13 @@
       "industry": "小売業",
       "valuation": {
         "per": null,
-        "pbr": 3.8
+        "pbr": 3.1
       },
       "profitability": {
-        "roe": -92.9,
-        "roa": -0.5,
-        "operating_margin": -0.2,
-        "net_margin": -14.4
+        "roe": -67.1,
+        "roa": 1.5,
+        "operating_margin": 7.4,
+        "net_margin": -10.3
       },
       "dividend": {
         "yield": null,
@@ -17595,9 +17595,9 @@
         "market_cap_oku": 74.6,
         "equity_ratio": null,
         "current_ratio": 1.9,
-        "revenue_oku": 239.4,
-        "operating_income_oku": -0.4,
-        "net_income_oku": -35.6
+        "revenue_oku": 238.9,
+        "operating_income_oku": 17.8,
+        "net_income_oku": -25.9
       },
       "price": {
         "current": 952.0,
@@ -17623,7 +17623,7 @@
         "net_margin": 14.8
       },
       "dividend": {
-        "yield": 76.0,
+        "yield": 0.8,
         "per_share": 27.0
       },
       "financial": {
@@ -17728,7 +17728,7 @@
         "net_margin": 24.4
       },
       "dividend": {
-        "yield": 57.0,
+        "yield": 0.6,
         "per_share": 15.0
       },
       "financial": {
@@ -17963,7 +17963,7 @@
       "market": "スタンダード（内国株式）",
       "industry": "小売業",
       "valuation": {
-        "per": 80.4,
+        "per": 80.6,
         "pbr": 0.3
       },
       "profitability": {
@@ -18002,22 +18002,22 @@
         "pbr": 1.1
       },
       "profitability": {
-        "roe": 9.5,
-        "roa": 4.2,
-        "operating_margin": 1.6,
-        "net_margin": 1.8
+        "roe": 7.8,
+        "roa": 3.6,
+        "operating_margin": 1.7,
+        "net_margin": 1.5
       },
       "dividend": {
-        "yield": 70.0,
+        "yield": 0.7,
         "per_share": 35.0
       },
       "financial": {
         "market_cap_oku": 663.9,
         "equity_ratio": null,
-        "current_ratio": 0.8,
-        "revenue_oku": 3069.7,
-        "operating_income_oku": 49.8,
-        "net_income_oku": 55.7
+        "current_ratio": 0.6,
+        "revenue_oku": 3140.7,
+        "operating_income_oku": 53.0,
+        "net_income_oku": 46.9
       },
       "price": {
         "current": 4990.0,
@@ -18323,7 +18323,7 @@
         "net_margin": 6.2
       },
       "dividend": {
-        "yield": 94.0,
+        "yield": 0.9,
         "per_share": 48.0
       },
       "financial": {
@@ -18922,7 +18922,7 @@
         "per_share": null
       },
       "financial": {
-        "market_cap_oku": 311.5,
+        "market_cap_oku": 312.3,
         "equity_ratio": null,
         "current_ratio": 2.2,
         "revenue_oku": 247.3,
@@ -18982,22 +18982,22 @@
         "pbr": 1.9
       },
       "profitability": {
-        "roe": 1.7,
-        "roa": 0.0,
-        "operating_margin": -10.5,
-        "net_margin": 0.6
+        "roe": 0.8,
+        "roa": 0.6,
+        "operating_margin": -7.6,
+        "net_margin": 0.2
       },
       "dividend": {
-        "yield": 86.0,
+        "yield": 0.9,
         "per_share": 18.0
       },
       "financial": {
         "market_cap_oku": 29.5,
         "equity_ratio": null,
-        "current_ratio": 1.1,
-        "revenue_oku": 45.0,
-        "operating_income_oku": -4.7,
-        "net_income_oku": 0.2
+        "current_ratio": 1.3,
+        "revenue_oku": 48.0,
+        "operating_income_oku": -3.6,
+        "net_income_oku": 0.1
       },
       "price": {
         "current": 2117.0,
@@ -19198,7 +19198,7 @@
         "net_margin": 0.4
       },
       "dividend": {
-        "yield": 75.0,
+        "yield": 0.8,
         "per_share": 15.0
       },
       "financial": {
@@ -19631,7 +19631,7 @@
       },
       "price": {
         "current": 1309.0,
-        "target": 1551.0
+        "target": 1663.2
       },
       "schedule": {
         "next_earnings": null
@@ -20213,7 +20213,7 @@
         "net_margin": -1.6
       },
       "dividend": {
-        "yield": 49.0,
+        "yield": 0.5,
         "per_share": 2.0
       },
       "financial": {
@@ -20458,7 +20458,7 @@
         "net_margin": 6.3
       },
       "dividend": {
-        "yield": 64.0,
+        "yield": 0.6,
         "per_share": 8.0
       },
       "financial": {
@@ -20773,7 +20773,7 @@
         "net_margin": 8.2
       },
       "dividend": {
-        "yield": 54.0,
+        "yield": 0.5,
         "per_share": 18.0
       },
       "financial": {
@@ -21053,7 +21053,7 @@
         "net_margin": 0.3
       },
       "dividend": {
-        "yield": 47.0,
+        "yield": 0.5,
         "per_share": 1.6
       },
       "financial": {
@@ -21327,10 +21327,10 @@
         "pbr": 0.8
       },
       "profitability": {
-        "roe": 11.9,
-        "roa": 3.4,
-        "operating_margin": 4.5,
-        "net_margin": 3.5
+        "roe": 11.2,
+        "roa": 3.6,
+        "operating_margin": 6.1,
+        "net_margin": 3.3
       },
       "dividend": {
         "yield": 2.0,
@@ -21339,10 +21339,10 @@
       "financial": {
         "market_cap_oku": 46.8,
         "equity_ratio": null,
-        "current_ratio": 1.8,
-        "revenue_oku": 190.0,
-        "operating_income_oku": 8.5,
-        "net_income_oku": 6.6
+        "current_ratio": 1.9,
+        "revenue_oku": 192.3,
+        "operating_income_oku": 11.8,
+        "net_income_oku": 6.4
       },
       "price": {
         "current": 501.0,
@@ -21613,7 +21613,7 @@
         "net_margin": 4.1
       },
       "dividend": {
-        "yield": 2.9,
+        "yield": 2.8,
         "per_share": 5.0
       },
       "financial": {
@@ -22068,7 +22068,7 @@
         "net_margin": 4.8
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 32.0
       },
       "financial": {
@@ -22173,7 +22173,7 @@
         "net_margin": -0.0
       },
       "dividend": {
-        "yield": 89.0,
+        "yield": 0.9,
         "per_share": 5.2
       },
       "financial": {
@@ -22272,10 +22272,10 @@
         "pbr": 3.9
       },
       "profitability": {
-        "roe": 29.5,
-        "roa": 14.0,
-        "operating_margin": 8.4,
-        "net_margin": 8.5
+        "roe": 25.5,
+        "roa": 13.5,
+        "operating_margin": 11.0,
+        "net_margin": 7.7
       },
       "dividend": {
         "yield": 2.1,
@@ -22285,13 +22285,13 @@
         "market_cap_oku": 1253.4,
         "equity_ratio": null,
         "current_ratio": 1.3,
-        "revenue_oku": 1001.5,
-        "operating_income_oku": 84.5,
-        "net_income_oku": 84.8
+        "revenue_oku": 1029.0,
+        "operating_income_oku": 112.9,
+        "net_income_oku": 79.4
       },
       "price": {
         "current": 5400.0,
-        "target": 7660.0
+        "target": 7591.4
       },
       "schedule": {
         "next_earnings": null
@@ -22307,9 +22307,9 @@
         "pbr": 1.8
       },
       "profitability": {
-        "roe": 11.0,
-        "roa": 4.0,
-        "operating_margin": 3.1,
+        "roe": 10.7,
+        "roa": 4.2,
+        "operating_margin": 4.2,
         "net_margin": 1.9
       },
       "dividend": {
@@ -22320,9 +22320,9 @@
         "market_cap_oku": 3027.7,
         "equity_ratio": null,
         "current_ratio": 1.3,
-        "revenue_oku": 9890.0,
-        "operating_income_oku": 306.7,
-        "net_income_oku": 191.4
+        "revenue_oku": 10034.1,
+        "operating_income_oku": 421.3,
+        "net_income_oku": 195.7
       },
       "price": {
         "current": 1826.0,
@@ -22587,22 +22587,22 @@
         "pbr": 6.5
       },
       "profitability": {
-        "roe": 4.5,
-        "roa": 2.7,
-        "operating_margin": 1.9,
-        "net_margin": 0.7
+        "roe": 17.0,
+        "roa": 2.6,
+        "operating_margin": 3.0,
+        "net_margin": 2.4
       },
       "dividend": {
-        "yield": 49.0,
+        "yield": 0.5,
         "per_share": 4.0
       },
       "financial": {
         "market_cap_oku": 100.1,
         "equity_ratio": null,
-        "current_ratio": 1.8,
-        "revenue_oku": 127.9,
-        "operating_income_oku": 2.4,
-        "net_income_oku": 0.3
+        "current_ratio": 1.7,
+        "revenue_oku": 130.5,
+        "operating_income_oku": 3.9,
+        "net_income_oku": 3.1
       },
       "price": {
         "current": 817.0,
@@ -22663,7 +22663,7 @@
         "net_margin": 2.2
       },
       "dividend": {
-        "yield": 31.0,
+        "yield": 0.3,
         "per_share": 5.0
       },
       "financial": {
@@ -22733,7 +22733,7 @@
         "net_margin": -1.5
       },
       "dividend": {
-        "yield": 57.0,
+        "yield": 0.6,
         "per_share": 17.0
       },
       "financial": {
@@ -22873,7 +22873,7 @@
         "net_margin": 3.3
       },
       "dividend": {
-        "yield": 87.0,
+        "yield": 0.9,
         "per_share": 14.0
       },
       "financial": {
@@ -23083,7 +23083,7 @@
         "net_margin": 1.8
       },
       "dividend": {
-        "yield": 78.0,
+        "yield": 0.8,
         "per_share": 7.5
       },
       "financial": {
@@ -23118,7 +23118,7 @@
         "net_margin": -15.9
       },
       "dividend": {
-        "yield": 76.0,
+        "yield": 0.8,
         "per_share": 10.0
       },
       "financial": {
@@ -23236,7 +23236,7 @@
       },
       "price": {
         "current": 2514.5,
-        "target": 3220.0
+        "target": 3190.0
       },
       "schedule": {
         "next_earnings": null
@@ -23328,7 +23328,7 @@
         "net_margin": 6.5
       },
       "dividend": {
-        "yield": 62.0,
+        "yield": 0.6,
         "per_share": 28.0
       },
       "financial": {
@@ -23468,7 +23468,7 @@
         "net_margin": 5.1
       },
       "dividend": {
-        "yield": 89.0,
+        "yield": 0.9,
         "per_share": 40.0
       },
       "financial": {
@@ -23643,7 +23643,7 @@
         "net_margin": 11.3
       },
       "dividend": {
-        "yield": 4.5,
+        "yield": 4.1,
         "per_share": 170.0
       },
       "financial": {
@@ -23853,7 +23853,7 @@
         "net_margin": 33.5
       },
       "dividend": {
-        "yield": 42.0,
+        "yield": 0.4,
         "per_share": 114.0
       },
       "financial": {
@@ -23866,7 +23866,7 @@
       },
       "price": {
         "current": 25290.0,
-        "target": 24730.0
+        "target": 25763.3
       },
       "schedule": {
         "next_earnings": null
@@ -24028,7 +24028,7 @@
         "net_margin": -1.4
       },
       "dividend": {
-        "yield": 85.0,
+        "yield": 0.8,
         "per_share": 2.0
       },
       "financial": {
@@ -24413,7 +24413,7 @@
         "net_margin": 3.2
       },
       "dividend": {
-        "yield": 38.0,
+        "yield": 0.4,
         "per_share": 4.0
       },
       "financial": {
@@ -24478,8 +24478,8 @@
       },
       "profitability": {
         "roe": 11.6,
-        "roa": 6.3,
-        "operating_margin": 4.8,
+        "roa": 6.2,
+        "operating_margin": 4.7,
         "net_margin": 3.5
       },
       "dividend": {
@@ -24491,7 +24491,7 @@
         "equity_ratio": null,
         "current_ratio": 1.3,
         "revenue_oku": 4838.4,
-        "operating_income_oku": 233.7,
+        "operating_income_oku": 229.4,
         "net_income_oku": 167.1
       },
       "price": {
@@ -25183,7 +25183,7 @@
         "net_margin": 3.9
       },
       "dividend": {
-        "yield": 82.0,
+        "yield": 0.8,
         "per_share": 10.0
       },
       "financial": {
@@ -25778,7 +25778,7 @@
         "net_margin": 0.8
       },
       "dividend": {
-        "yield": 73.0,
+        "yield": 0.7,
         "per_share": 13.0
       },
       "financial": {
@@ -25813,7 +25813,7 @@
         "net_margin": 3.7
       },
       "dividend": {
-        "yield": 79.0,
+        "yield": 0.8,
         "per_share": 26.0
       },
       "financial": {
@@ -25947,10 +25947,10 @@
         "pbr": 0.9
       },
       "profitability": {
-        "roe": 7.1,
+        "roe": 7.3,
         "roa": 4.0,
-        "operating_margin": 13.3,
-        "net_margin": 7.6
+        "operating_margin": 7.9,
+        "net_margin": 8.0
       },
       "dividend": {
         "yield": 3.5,
@@ -25960,9 +25960,9 @@
         "market_cap_oku": 1218.1,
         "equity_ratio": null,
         "current_ratio": 2.6,
-        "revenue_oku": 1193.8,
-        "operating_income_oku": 158.8,
-        "net_income_oku": 90.9
+        "revenue_oku": 1195.2,
+        "operating_income_oku": 94.2,
+        "net_income_oku": 95.6
       },
       "price": {
         "current": 1897.0,
@@ -26062,7 +26062,7 @@
         "per_share": 50.0
       },
       "financial": {
-        "market_cap_oku": 188.0,
+        "market_cap_oku": 188.6,
         "equity_ratio": null,
         "current_ratio": 1.1,
         "revenue_oku": 301.6,
@@ -26163,7 +26163,7 @@
         "net_margin": 8.0
       },
       "dividend": {
-        "yield": 86.0,
+        "yield": 0.9,
         "per_share": 30.0
       },
       "financial": {
@@ -26408,7 +26408,7 @@
         "net_margin": 1.6
       },
       "dividend": {
-        "yield": 1.7,
+        "yield": 1.6,
         "per_share": 6.0
       },
       "financial": {
@@ -26478,7 +26478,7 @@
         "net_margin": 1.8
       },
       "dividend": {
-        "yield": 83.0,
+        "yield": 0.8,
         "per_share": 3.0
       },
       "financial": {
@@ -27067,10 +27067,10 @@
         "pbr": 0.6
       },
       "profitability": {
-        "roe": 24.5,
-        "roa": 5.9,
-        "operating_margin": 11.7,
-        "net_margin": 8.3
+        "roe": 14.0,
+        "roa": 3.2,
+        "operating_margin": -0.9,
+        "net_margin": 6.4
       },
       "dividend": {
         "yield": 3.1,
@@ -27079,10 +27079,10 @@
       "financial": {
         "market_cap_oku": 65.8,
         "equity_ratio": null,
-        "current_ratio": 1.7,
-        "revenue_oku": 286.1,
-        "operating_income_oku": 33.5,
-        "net_income_oku": 23.8
+        "current_ratio": 1.5,
+        "revenue_oku": 223.1,
+        "operating_income_oku": -2.0,
+        "net_income_oku": 14.2
       },
       "price": {
         "current": 1134.0,
@@ -27528,7 +27528,7 @@
         "net_margin": 1.7
       },
       "dividend": {
-        "yield": 61.0,
+        "yield": 0.6,
         "per_share": 4.0
       },
       "financial": {
@@ -27843,7 +27843,7 @@
         "net_margin": 5.5
       },
       "dividend": {
-        "yield": 92.0,
+        "yield": 0.9,
         "per_share": 20.0
       },
       "financial": {
@@ -28123,7 +28123,7 @@
         "net_margin": 2.3
       },
       "dividend": {
-        "yield": 4.1,
+        "yield": 4.2,
         "per_share": 120.0
       },
       "financial": {
@@ -28403,7 +28403,7 @@
         "net_margin": 2.2
       },
       "dividend": {
-        "yield": 68.0,
+        "yield": 0.7,
         "per_share": 3.0
       },
       "financial": {
@@ -28609,8 +28609,8 @@
       "profitability": {
         "roe": 7.6,
         "roa": 2.6,
-        "operating_margin": 2.7,
-        "net_margin": 2.8
+        "operating_margin": 4.8,
+        "net_margin": 3.3
       },
       "dividend": {
         "yield": 3.0,
@@ -28620,13 +28620,13 @@
         "market_cap_oku": 46857.7,
         "equity_ratio": null,
         "current_ratio": 0.8,
-        "revenue_oku": 104302.7,
-        "operating_income_oku": 2864.2,
+        "revenue_oku": 88936.9,
+        "operating_income_oku": 4292.1,
         "net_income_oku": 2927.6
       },
       "price": {
         "current": 2096.5,
-        "target": 2460.7
+        "target": 2450.0
       },
       "schedule": {
         "next_earnings": null
@@ -28683,7 +28683,7 @@
         "net_margin": 3.1
       },
       "dividend": {
-        "yield": 59.0,
+        "yield": 0.6,
         "per_share": 4.5
       },
       "financial": {
@@ -28963,7 +28963,7 @@
         "net_margin": 1.6
       },
       "dividend": {
-        "yield": 26.0,
+        "yield": 0.3,
         "per_share": 11.0
       },
       "financial": {
@@ -28998,7 +28998,7 @@
         "net_margin": 1.5
       },
       "dividend": {
-        "yield": 85.0,
+        "yield": 0.8,
         "per_share": 30.0
       },
       "financial": {
@@ -29383,7 +29383,7 @@
         "net_margin": 3.0
       },
       "dividend": {
-        "yield": 68.0,
+        "yield": 0.7,
         "per_share": 7.5
       },
       "financial": {
@@ -29523,7 +29523,7 @@
         "net_margin": -3.0
       },
       "dividend": {
-        "yield": 93.0,
+        "yield": 0.9,
         "per_share": 4.0
       },
       "financial": {
@@ -29768,7 +29768,7 @@
         "net_margin": -2.9
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 20.0
       },
       "financial": {
@@ -30258,7 +30258,7 @@
         "net_margin": 11.7
       },
       "dividend": {
-        "yield": 9.8,
+        "yield": 9.7,
         "per_share": 146.0
       },
       "financial": {
@@ -30287,10 +30287,10 @@
         "pbr": 0.7
       },
       "profitability": {
-        "roe": 6.8,
-        "roa": 3.7,
-        "operating_margin": 42.5,
-        "net_margin": 9.2
+        "roe": 8.5,
+        "roa": 3.9,
+        "operating_margin": 13.4,
+        "net_margin": 10.6
       },
       "dividend": {
         "yield": 3.0,
@@ -30299,10 +30299,10 @@
       "financial": {
         "market_cap_oku": 172.1,
         "equity_ratio": null,
-        "current_ratio": 9.6,
-        "revenue_oku": 190.6,
-        "operating_income_oku": 81.0,
-        "net_income_oku": 17.5
+        "current_ratio": 12.0,
+        "revenue_oku": 205.1,
+        "operating_income_oku": 27.4,
+        "net_income_oku": 21.7
       },
       "price": {
         "current": 1236.0,
@@ -30923,7 +30923,7 @@
         "net_margin": 1.2
       },
       "dividend": {
-        "yield": 84.0,
+        "yield": 0.8,
         "per_share": 13.0
       },
       "financial": {
@@ -31092,10 +31092,10 @@
         "pbr": 0.6
       },
       "profitability": {
-        "roe": 4.2,
-        "roa": 2.1,
-        "operating_margin": 2.1,
-        "net_margin": 0.6
+        "roe": 3.6,
+        "roa": 1.9,
+        "operating_margin": 1.6,
+        "net_margin": 0.5
       },
       "dividend": {
         "yield": 3.0,
@@ -31105,9 +31105,9 @@
         "market_cap_oku": 178.0,
         "equity_ratio": null,
         "current_ratio": 1.3,
-        "revenue_oku": 1070.5,
-        "operating_income_oku": 22.5,
-        "net_income_oku": 6.9
+        "revenue_oku": 1071.5,
+        "operating_income_oku": 17.6,
+        "net_income_oku": 5.5
       },
       "price": {
         "current": 1404.0,
@@ -31193,7 +31193,7 @@
       "market": "スタンダード（内国株式）",
       "industry": "繊維製品",
       "valuation": {
-        "per": 15.1,
+        "per": 15.2,
         "pbr": 0.7
       },
       "profitability": {
@@ -31723,8 +31723,8 @@
       },
       "profitability": {
         "roe": 7.9,
-        "roa": 2.8,
-        "operating_margin": 0.7,
+        "roa": 2.9,
+        "operating_margin": 2.1,
         "net_margin": 1.7
       },
       "dividend": {
@@ -31734,10 +31734,10 @@
       "financial": {
         "market_cap_oku": 436.2,
         "equity_ratio": null,
-        "current_ratio": 1.1,
-        "revenue_oku": 1475.7,
-        "operating_income_oku": 10.1,
-        "net_income_oku": 25.1
+        "current_ratio": 1.2,
+        "revenue_oku": 1506.0,
+        "operating_income_oku": 31.1,
+        "net_income_oku": 25.4
       },
       "price": {
         "current": 1453.0,
@@ -31763,7 +31763,7 @@
         "net_margin": 6.1
       },
       "dividend": {
-        "yield": 76.0,
+        "yield": 0.8,
         "per_share": 15.0
       },
       "financial": {
@@ -31833,7 +31833,7 @@
         "net_margin": 3.5
       },
       "dividend": {
-        "yield": 43.0,
+        "yield": 0.4,
         "per_share": 16.0
       },
       "financial": {
@@ -32139,13 +32139,13 @@
       "industry": "小売業",
       "valuation": {
         "per": 8.9,
-        "pbr": 1.5
+        "pbr": 1.4
       },
       "profitability": {
-        "roe": 11.4,
-        "roa": 7.8,
-        "operating_margin": 27.7,
-        "net_margin": 6.4
+        "roe": 16.7,
+        "roa": 11.8,
+        "operating_margin": 20.6,
+        "net_margin": 9.3
       },
       "dividend": {
         "yield": 2.5,
@@ -32154,10 +32154,10 @@
       "financial": {
         "market_cap_oku": 82.9,
         "equity_ratio": null,
-        "current_ratio": 3.2,
-        "revenue_oku": 93.0,
-        "operating_income_oku": 25.7,
-        "net_income_oku": 6.0
+        "current_ratio": 3.9,
+        "revenue_oku": 100.0,
+        "operating_income_oku": 20.6,
+        "net_income_oku": 9.3
       },
       "price": {
         "current": 3650.0,
@@ -32253,7 +32253,7 @@
         "net_margin": 5.6
       },
       "dividend": {
-        "yield": 37.0,
+        "yield": 0.4,
         "per_share": 35.0
       },
       "financial": {
@@ -32323,7 +32323,7 @@
         "net_margin": 5.2
       },
       "dividend": {
-        "yield": 81.0,
+        "yield": 0.8,
         "per_share": 6.0
       },
       "financial": {
@@ -32842,10 +32842,10 @@
         "pbr": 0.7
       },
       "profitability": {
-        "roe": 19.3,
-        "roa": 1.3,
-        "operating_margin": 6.0,
-        "net_margin": 11.7
+        "roe": 3.3,
+        "roa": 1.7,
+        "operating_margin": 1.3,
+        "net_margin": 2.3
       },
       "dividend": {
         "yield": 6.2,
@@ -32854,10 +32854,10 @@
       "financial": {
         "market_cap_oku": 655.7,
         "equity_ratio": null,
-        "current_ratio": 1.2,
-        "revenue_oku": 1571.7,
-        "operating_income_oku": 95.1,
-        "net_income_oku": 183.5
+        "current_ratio": 2.3,
+        "revenue_oku": 1670.8,
+        "operating_income_oku": 21.6,
+        "net_income_oku": 37.9
       },
       "price": {
         "current": 1113.0,
@@ -32909,12 +32909,12 @@
       "industry": "繊維製品",
       "valuation": {
         "per": 9.4,
-        "pbr": 1.3
+        "pbr": 1.2
       },
       "profitability": {
         "roe": 13.1,
         "roa": 4.2,
-        "operating_margin": 3.7,
+        "operating_margin": 3.3,
         "net_margin": 4.2
       },
       "dividend": {
@@ -32926,7 +32926,7 @@
         "equity_ratio": null,
         "current_ratio": 0.9,
         "revenue_oku": 2840.1,
-        "operating_income_oku": 105.6,
+        "operating_income_oku": 94.2,
         "net_income_oku": 120.1
       },
       "price": {
@@ -33157,10 +33157,10 @@
         "pbr": 0.6
       },
       "profitability": {
-        "roe": -3.8,
-        "roa": -0.5,
-        "operating_margin": 4.8,
-        "net_margin": -2.5
+        "roe": -0.5,
+        "roa": 0.4,
+        "operating_margin": 3.5,
+        "net_margin": -0.6
       },
       "dividend": {
         "yield": 2.0,
@@ -33169,10 +33169,10 @@
       "financial": {
         "market_cap_oku": 34.4,
         "equity_ratio": null,
-        "current_ratio": 2.6,
-        "revenue_oku": 100.0,
-        "operating_income_oku": 4.8,
-        "net_income_oku": -2.5
+        "current_ratio": 2.4,
+        "revenue_oku": 104.1,
+        "operating_income_oku": 3.7,
+        "net_income_oku": -0.6
       },
       "price": {
         "current": 298.0,
@@ -33386,7 +33386,7 @@
       },
       "price": {
         "current": 1593.5,
-        "target": 2145.6
+        "target": 2138.9
       },
       "schedule": {
         "next_earnings": null
@@ -33548,7 +33548,7 @@
         "net_margin": 0.6
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 3.0
       },
       "financial": {
@@ -33612,10 +33612,10 @@
         "pbr": 3.5
       },
       "profitability": {
-        "roe": -36.1,
-        "roa": -13.3,
-        "operating_margin": -558.8,
-        "net_margin": -53.3
+        "roe": -40.0,
+        "roa": -14.6,
+        "operating_margin": -473.7,
+        "net_margin": -58.3
       },
       "dividend": {
         "yield": null,
@@ -33624,10 +33624,10 @@
       "financial": {
         "market_cap_oku": 30.9,
         "equity_ratio": null,
-        "current_ratio": 7.0,
-        "revenue_oku": 5.9,
-        "operating_income_oku": -33.0,
-        "net_income_oku": -3.1
+        "current_ratio": 6.5,
+        "revenue_oku": 5.8,
+        "operating_income_oku": -27.3,
+        "net_income_oku": -3.4
       },
       "price": {
         "current": 150.0,
@@ -33911,7 +33911,7 @@
       },
       "price": {
         "current": 2788.0,
-        "target": 3668.0
+        "target": 3641.7
       },
       "schedule": {
         "next_earnings": null
@@ -33968,7 +33968,7 @@
         "net_margin": 3.2
       },
       "dividend": {
-        "yield": 22.0,
+        "yield": 0.2,
         "per_share": 1.0
       },
       "financial": {
@@ -34248,7 +34248,7 @@
         "net_margin": 5.6
       },
       "dividend": {
-        "yield": 3.3,
+        "yield": 3.4,
         "per_share": 34.4
       },
       "financial": {
@@ -34948,7 +34948,7 @@
         "net_margin": 30.3
       },
       "dividend": {
-        "yield": 23.0,
+        "yield": 0.2,
         "per_share": 14.0
       },
       "financial": {
@@ -35263,7 +35263,7 @@
         "net_margin": 7.4
       },
       "dividend": {
-        "yield": 87.0,
+        "yield": 0.9,
         "per_share": 6.0
       },
       "financial": {
@@ -35403,7 +35403,7 @@
         "net_margin": 41.2
       },
       "dividend": {
-        "yield": 50.0,
+        "yield": 0.5,
         "per_share": 10.0
       },
       "financial": {
@@ -35744,33 +35744,34 @@
       "industry": "情報・通信業",
       "valuation": {
         "per": null,
-        "pbr": 74.5
+        "pbr": null
       },
       "profitability": {
-        "roe": -160.9,
-        "roa": -16.1,
-        "operating_margin": -1260.0,
-        "net_margin": 0.0
+        "roe": null,
+        "roa": null,
+        "operating_margin": null,
+        "net_margin": null
       },
       "dividend": {
         "yield": null,
         "per_share": null
       },
       "financial": {
-        "market_cap_oku": 75.3,
+        "market_cap_oku": null,
         "equity_ratio": null,
-        "current_ratio": 1.4,
-        "revenue_oku": 0.4,
-        "operating_income_oku": -5.0,
-        "net_income_oku": -17.0
+        "current_ratio": null,
+        "revenue_oku": null,
+        "operating_income_oku": null,
+        "net_income_oku": null
       },
       "price": {
-        "current": 835.0,
+        "current": null,
         "target": null
       },
       "schedule": {
         "next_earnings": null
-      }
+      },
+      "error": "Too Many Requests. Rate limited. Try after a while."
     },
     {
       "code": "3753",
@@ -36278,7 +36279,7 @@
         "net_margin": -2.7
       },
       "dividend": {
-        "yield": 85.0,
+        "yield": 0.8,
         "per_share": 2.0
       },
       "financial": {
@@ -36803,7 +36804,7 @@
         "net_margin": 12.5
       },
       "dividend": {
-        "yield": 63.0,
+        "yield": 0.6,
         "per_share": 11.0
       },
       "financial": {
@@ -36902,10 +36903,10 @@
         "pbr": 7.4
       },
       "profitability": {
-        "roe": -69.9,
-        "roa": -12.3,
-        "operating_margin": -36.3,
-        "net_margin": -31.8
+        "roe": -88.2,
+        "roa": -17.8,
+        "operating_margin": -38.1,
+        "net_margin": -40.5
       },
       "dividend": {
         "yield": null,
@@ -36915,9 +36916,9 @@
         "market_cap_oku": 47.2,
         "equity_ratio": null,
         "current_ratio": 1.9,
-        "revenue_oku": 18.1,
+        "revenue_oku": 17.4,
         "operating_income_oku": -6.6,
-        "net_income_oku": -5.8
+        "net_income_oku": -7.1
       },
       "price": {
         "current": 455.0,
@@ -37433,7 +37434,7 @@
         "net_margin": 8.5
       },
       "dividend": {
-        "yield": 3.4,
+        "yield": 3.7,
         "per_share": 50.0
       },
       "financial": {
@@ -37573,7 +37574,7 @@
         "net_margin": -7.7
       },
       "dividend": {
-        "yield": 59.0,
+        "yield": 0.6,
         "per_share": 5.0
       },
       "financial": {
@@ -37608,7 +37609,7 @@
         "net_margin": 33.2
       },
       "dividend": {
-        "yield": 61.0,
+        "yield": 0.6,
         "per_share": 9.0
       },
       "financial": {
@@ -38343,7 +38344,7 @@
         "net_margin": 4.3
       },
       "dividend": {
-        "yield": 77.0,
+        "yield": 0.8,
         "per_share": 13.0
       },
       "financial": {
@@ -38413,7 +38414,7 @@
         "net_margin": 3.4
       },
       "dividend": {
-        "yield": 92.0,
+        "yield": 0.9,
         "per_share": 3.9
       },
       "financial": {
@@ -38837,7 +38838,7 @@
         "per_share": null
       },
       "financial": {
-        "market_cap_oku": 36.4,
+        "market_cap_oku": 36.6,
         "equity_ratio": null,
         "current_ratio": 3.9,
         "revenue_oku": 28.1,
@@ -38973,7 +38974,7 @@
         "net_margin": 23.1
       },
       "dividend": {
-        "yield": 64.0,
+        "yield": 0.6,
         "per_share": 13.6
       },
       "financial": {
@@ -39008,7 +39009,7 @@
         "net_margin": 20.8
       },
       "dividend": {
-        "yield": 45.0,
+        "yield": 0.5,
         "per_share": 3.4
       },
       "financial": {
@@ -39323,7 +39324,7 @@
         "net_margin": 15.7
       },
       "dividend": {
-        "yield": 3.9,
+        "yield": 4.0,
         "per_share": 110.0
       },
       "financial": {
@@ -39524,7 +39525,7 @@
       "industry": "情報・通信業",
       "valuation": {
         "per": 22.7,
-        "pbr": 5.4
+        "pbr": 51.6
       },
       "profitability": {
         "roe": 27.0,
@@ -40478,7 +40479,7 @@
         "net_margin": 9.2
       },
       "dividend": {
-        "yield": 85.0,
+        "yield": 0.8,
         "per_share": 3.0
       },
       "financial": {
@@ -40583,7 +40584,7 @@
         "net_margin": 33.2
       },
       "dividend": {
-        "yield": 1.3,
+        "yield": 1.4,
         "per_share": 20.0
       },
       "financial": {
@@ -40713,35 +40714,34 @@
       "market": "スタンダード（内国株式）",
       "industry": "情報・通信業",
       "valuation": {
-        "per": null,
-        "pbr": null
+        "per": 14.0,
+        "pbr": 1.5
       },
       "profitability": {
-        "roe": null,
-        "roa": null,
-        "operating_margin": null,
-        "net_margin": null
+        "roe": 10.8,
+        "roa": 5.7,
+        "operating_margin": 5.9,
+        "net_margin": 2.7
       },
       "dividend": {
-        "yield": null,
-        "per_share": null
+        "yield": 1.5,
+        "per_share": 8.0
       },
       "financial": {
-        "market_cap_oku": null,
+        "market_cap_oku": 56.8,
         "equity_ratio": null,
-        "current_ratio": null,
-        "revenue_oku": null,
-        "operating_income_oku": null,
-        "net_income_oku": null
+        "current_ratio": 2.3,
+        "revenue_oku": 148.4,
+        "operating_income_oku": 8.7,
+        "net_income_oku": 4.0
       },
       "price": {
-        "current": null,
+        "current": 538.0,
         "target": null
       },
       "schedule": {
         "next_earnings": null
-      },
-      "error": "Too Many Requests. Rate limited. Try after a while."
+      }
     },
     {
       "code": "3989",
@@ -41004,7 +41004,7 @@
         "net_margin": 1.1
       },
       "dividend": {
-        "yield": 52.0,
+        "yield": 0.5,
         "per_share": 2.0
       },
       "financial": {
@@ -41074,7 +41074,7 @@
         "net_margin": 2.2
       },
       "dividend": {
-        "yield": 48.0,
+        "yield": 0.5,
         "per_share": 65.0
       },
       "financial": {
@@ -41183,7 +41183,7 @@
         "per_share": null
       },
       "financial": {
-        "market_cap_oku": 88.1,
+        "market_cap_oku": 89.2,
         "equity_ratio": null,
         "current_ratio": 0.6,
         "revenue_oku": 39.0,
@@ -42079,7 +42079,7 @@
       "market": "プライム（内国株式）",
       "industry": "化学",
       "valuation": {
-        "per": 48.6,
+        "per": 48.5,
         "pbr": 1.4
       },
       "profitability": {
@@ -42124,7 +42124,7 @@
         "net_margin": 9.2
       },
       "dividend": {
-        "yield": 2.2,
+        "yield": 2.3,
         "per_share": 125.0
       },
       "financial": {
@@ -42194,7 +42194,7 @@
         "net_margin": 3.2
       },
       "dividend": {
-        "yield": 2.2,
+        "yield": 2.3,
         "per_share": 10.0
       },
       "financial": {
@@ -42264,7 +42264,7 @@
         "net_margin": 12.3
       },
       "dividend": {
-        "yield": 72.0,
+        "yield": 0.7,
         "per_share": 11.0
       },
       "financial": {
@@ -42373,7 +42373,7 @@
         "per_share": 27.0
       },
       "financial": {
-        "market_cap_oku": 193.8,
+        "market_cap_oku": 193.4,
         "equity_ratio": null,
         "current_ratio": 2.0,
         "revenue_oku": 48.6,
@@ -42544,7 +42544,7 @@
         "net_margin": 10.0
       },
       "dividend": {
-        "yield": 20.0,
+        "yield": 0.2,
         "per_share": 20.0
       },
       "financial": {
@@ -42592,7 +42592,7 @@
       },
       "price": {
         "current": 6506.0,
-        "target": 6587.6
+        "target": 6617.1
       },
       "schedule": {
         "next_earnings": null
@@ -42920,13 +42920,13 @@
       "industry": "情報・通信業",
       "valuation": {
         "per": 9.5,
-        "pbr": 1.3
+        "pbr": 1.2
       },
       "profitability": {
-        "roe": 14.0,
-        "roa": 7.8,
-        "operating_margin": 9.0,
-        "net_margin": 7.3
+        "roe": 13.6,
+        "roa": 8.2,
+        "operating_margin": 10.0,
+        "net_margin": 7.2
       },
       "dividend": {
         "yield": 6.2,
@@ -42935,9 +42935,9 @@
       "financial": {
         "market_cap_oku": 51.4,
         "equity_ratio": null,
-        "current_ratio": 3.4,
-        "revenue_oku": 73.9,
-        "operating_income_oku": 6.6,
+        "current_ratio": 5.3,
+        "revenue_oku": 75.4,
+        "operating_income_oku": 7.5,
         "net_income_oku": 5.4
       },
       "price": {
@@ -43104,7 +43104,7 @@
         "net_margin": 8.6
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 58.0
       },
       "financial": {
@@ -43314,7 +43314,7 @@
         "net_margin": 6.6
       },
       "dividend": {
-        "yield": 93.0,
+        "yield": 0.9,
         "per_share": 10.0
       },
       "financial": {
@@ -43489,7 +43489,7 @@
         "net_margin": 16.6
       },
       "dividend": {
-        "yield": 79.0,
+        "yield": 0.8,
         "per_share": 40.0
       },
       "financial": {
@@ -43563,7 +43563,7 @@
         "per_share": 48.2
       },
       "financial": {
-        "market_cap_oku": 63.6,
+        "market_cap_oku": 68.1,
         "equity_ratio": null,
         "current_ratio": 3.0,
         "revenue_oku": 24.6,
@@ -44609,7 +44609,7 @@
         "net_margin": 5.8
       },
       "dividend": {
-        "yield": 27.0,
+        "yield": 0.3,
         "per_share": 2.3
       },
       "financial": {
@@ -44714,7 +44714,7 @@
         "net_margin": 6.1
       },
       "dividend": {
-        "yield": 88.0,
+        "yield": 0.9,
         "per_share": 80.0
       },
       "financial": {
@@ -44727,7 +44727,7 @@
       },
       "price": {
         "current": 8717.0,
-        "target": 8495.8
+        "target": 8695.8
       },
       "schedule": {
         "next_earnings": null
@@ -44743,10 +44743,10 @@
         "pbr": 1.6
       },
       "profitability": {
-        "roe": 14.5,
-        "roa": 6.3,
-        "operating_margin": 16.3,
-        "net_margin": 19.0
+        "roe": 15.0,
+        "roa": 6.9,
+        "operating_margin": 20.2,
+        "net_margin": 19.4
       },
       "dividend": {
         "yield": 2.0,
@@ -44755,10 +44755,10 @@
       "financial": {
         "market_cap_oku": 805.4,
         "equity_ratio": null,
-        "current_ratio": 3.4,
-        "revenue_oku": 362.7,
-        "operating_income_oku": 59.0,
-        "net_income_oku": 68.9
+        "current_ratio": 3.8,
+        "revenue_oku": 368.2,
+        "operating_income_oku": 74.4,
+        "net_income_oku": 71.4
       },
       "price": {
         "current": 3820.0,
@@ -44784,7 +44784,7 @@
         "net_margin": 2.2
       },
       "dividend": {
-        "yield": 3.3,
+        "yield": 3.2,
         "per_share": 32.0
       },
       "financial": {
@@ -45147,7 +45147,7 @@
       },
       "price": {
         "current": 1262.0,
-        "target": 1517.5
+        "target": 1507.5
       },
       "schedule": {
         "next_earnings": null
@@ -45182,7 +45182,7 @@
       },
       "price": {
         "current": 5176.0,
-        "target": 6280.0
+        "target": 6240.0
       },
       "schedule": {
         "next_earnings": null
@@ -45252,7 +45252,7 @@
       },
       "price": {
         "current": 1837.0,
-        "target": 2001.2
+        "target": 2000.0
       },
       "schedule": {
         "next_earnings": null
@@ -45554,7 +45554,7 @@
         "net_margin": 36.1
       },
       "dividend": {
-        "yield": 90.0,
+        "yield": 0.9,
         "per_share": 10.0
       },
       "financial": {
@@ -45939,8 +45939,8 @@
         "net_margin": 15.7
       },
       "dividend": {
-        "yield": 1.0,
-        "per_share": 4.0
+        "yield": 2.6,
+        "per_share": 10.0
       },
       "financial": {
         "market_cap_oku": 22.3,
@@ -46359,7 +46359,7 @@
         "net_margin": 12.7
       },
       "dividend": {
-        "yield": 56.0,
+        "yield": 0.6,
         "per_share": 15.7
       },
       "financial": {
@@ -46709,7 +46709,7 @@
         "net_margin": 6.6
       },
       "dividend": {
-        "yield": 76.0,
+        "yield": 0.8,
         "per_share": 10.0
       },
       "financial": {
@@ -46910,13 +46910,13 @@
       "industry": "小売業",
       "valuation": {
         "per": 25.7,
-        "pbr": 4.6
+        "pbr": 4.4
       },
       "profitability": {
         "roe": null,
         "roa": null,
-        "operating_margin": 6.7,
-        "net_margin": 4.0
+        "operating_margin": 5.4,
+        "net_margin": 3.9
       },
       "dividend": {
         "yield": 1.1,
@@ -46926,9 +46926,9 @@
         "market_cap_oku": 112.3,
         "equity_ratio": null,
         "current_ratio": 0.6,
-        "revenue_oku": 116.1,
-        "operating_income_oku": 7.8,
-        "net_income_oku": 4.6
+        "revenue_oku": 120.6,
+        "operating_income_oku": 6.5,
+        "net_income_oku": 4.7
       },
       "price": {
         "current": 886.0,
@@ -47304,7 +47304,7 @@
         "net_margin": 10.2
       },
       "dividend": {
-        "yield": 3.5,
+        "yield": 3.6,
         "per_share": 20.0
       },
       "financial": {
@@ -47724,7 +47724,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 57.0,
+        "yield": 0.6,
         "per_share": 20.0
       },
       "financial": {
@@ -47820,7 +47820,7 @@
       "industry": "サービス業",
       "valuation": {
         "per": 18.0,
-        "pbr": 6.7
+        "pbr": 6.4
       },
       "profitability": {
         "roe": 36.5,
@@ -47829,7 +47829,7 @@
         "net_margin": 3.0
       },
       "dividend": {
-        "yield": 79.0,
+        "yield": 0.8,
         "per_share": 20.0
       },
       "financial": {
@@ -47969,7 +47969,7 @@
         "net_margin": 4.8
       },
       "dividend": {
-        "yield": 2.1,
+        "yield": 2.0,
         "per_share": 50.0
       },
       "financial": {
@@ -48173,10 +48173,10 @@
         "pbr": 0.6
       },
       "profitability": {
-        "roe": 9.9,
-        "roa": 3.1,
-        "operating_margin": 8.4,
-        "net_margin": 3.4
+        "roe": 10.3,
+        "roa": 3.2,
+        "operating_margin": 4.9,
+        "net_margin": 3.5
       },
       "dividend": {
         "yield": 3.9,
@@ -48186,9 +48186,9 @@
         "market_cap_oku": 18.5,
         "equity_ratio": null,
         "current_ratio": 1.5,
-        "revenue_oku": 88.1,
-        "operating_income_oku": 7.4,
-        "net_income_oku": 3.0
+        "revenue_oku": 87.6,
+        "operating_income_oku": 4.3,
+        "net_income_oku": 3.1
       },
       "price": {
         "current": 1516.0,
@@ -48354,7 +48354,7 @@
         "net_margin": 17.5
       },
       "dividend": {
-        "yield": 90.0,
+        "yield": 0.9,
         "per_share": 27.3
       },
       "financial": {
@@ -48455,7 +48455,7 @@
       "profitability": {
         "roe": 5.6,
         "roa": 2.7,
-        "operating_margin": -18.5,
+        "operating_margin": 2.4,
         "net_margin": 4.9
       },
       "dividend": {
@@ -48467,7 +48467,7 @@
         "equity_ratio": null,
         "current_ratio": 3.0,
         "revenue_oku": 18.5,
-        "operating_income_oku": -3.4,
+        "operating_income_oku": 0.4,
         "net_income_oku": 0.9
       },
       "price": {
@@ -49089,7 +49089,7 @@
         "net_margin": 7.2
       },
       "dividend": {
-        "yield": 74.0,
+        "yield": 0.7,
         "per_share": 3.0
       },
       "financial": {
@@ -49369,7 +49369,7 @@
         "net_margin": 3.5
       },
       "dividend": {
-        "yield": 88.0,
+        "yield": 0.9,
         "per_share": 10.0
       },
       "financial": {
@@ -49404,7 +49404,7 @@
         "net_margin": 5.7
       },
       "dividend": {
-        "yield": 2.8,
+        "yield": 2.9,
         "per_share": 31.0
       },
       "financial": {
@@ -49789,7 +49789,7 @@
         "net_margin": 14.5
       },
       "dividend": {
-        "yield": 40.0,
+        "yield": 0.4,
         "per_share": 7.6
       },
       "financial": {
@@ -49884,7 +49884,7 @@
       "market": "グロース（内国株式）",
       "industry": "情報・通信業",
       "valuation": {
-        "per": 48.9,
+        "per": 49.0,
         "pbr": 1.9
       },
       "profitability": {
@@ -50069,7 +50069,7 @@
         "net_margin": 4.9
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 5.5
       },
       "financial": {
@@ -50415,8 +50415,8 @@
       "profitability": {
         "roe": null,
         "roa": null,
-        "operating_margin": 12.1,
-        "net_margin": 7.6
+        "operating_margin": 13.4,
+        "net_margin": 7.3
       },
       "dividend": {
         "yield": 6.6,
@@ -50425,10 +50425,10 @@
       "financial": {
         "market_cap_oku": 87.5,
         "equity_ratio": null,
-        "current_ratio": 1.9,
-        "revenue_oku": 106.8,
-        "operating_income_oku": 12.9,
-        "net_income_oku": 8.1
+        "current_ratio": 2.0,
+        "revenue_oku": 122.3,
+        "operating_income_oku": 16.3,
+        "net_income_oku": 8.9
       },
       "price": {
         "current": 1831.0,
@@ -50444,34 +50444,35 @@
       "market": "グロース（内国株式）",
       "industry": "情報・通信業",
       "valuation": {
-        "per": 24.8,
-        "pbr": 4.8
+        "per": null,
+        "pbr": null
       },
       "profitability": {
-        "roe": 23.9,
-        "roa": 15.1,
-        "operating_margin": 27.1,
-        "net_margin": 15.1
+        "roe": null,
+        "roa": null,
+        "operating_margin": null,
+        "net_margin": null
       },
       "dividend": {
-        "yield": 90.0,
-        "per_share": 20.0
+        "yield": null,
+        "per_share": null
       },
       "financial": {
-        "market_cap_oku": 429.1,
+        "market_cap_oku": null,
         "equity_ratio": null,
-        "current_ratio": 2.8,
-        "revenue_oku": 128.0,
-        "operating_income_oku": 34.7,
-        "net_income_oku": 19.3
+        "current_ratio": null,
+        "revenue_oku": null,
+        "operating_income_oku": null,
+        "net_income_oku": null
       },
       "price": {
-        "current": 2285.0,
+        "current": null,
         "target": null
       },
       "schedule": {
         "next_earnings": null
-      }
+      },
+      "error": "Too Many Requests. Rate limited. Try after a while."
     },
     {
       "code": "4432",
@@ -50480,7 +50481,7 @@
       "industry": "情報・通信業",
       "valuation": {
         "per": 14.1,
-        "pbr": 2.0
+        "pbr": 1.9
       },
       "profitability": {
         "roe": 14.6,
@@ -50515,7 +50516,7 @@
       "industry": "情報・通信業",
       "valuation": {
         "per": 19.6,
-        "pbr": 1.0
+        "pbr": 1.7
       },
       "profitability": {
         "roe": 16.9,
@@ -50559,7 +50560,7 @@
         "net_margin": -0.9
       },
       "dividend": {
-        "yield": 2.5,
+        "yield": 2.6,
         "per_share": 50.0
       },
       "financial": {
@@ -50629,7 +50630,7 @@
         "net_margin": 5.8
       },
       "dividend": {
-        "yield": 54.0,
+        "yield": 0.5,
         "per_share": 5.0
       },
       "financial": {
@@ -50804,7 +50805,7 @@
         "net_margin": 5.0
       },
       "dividend": {
-        "yield": 97.0,
+        "yield": 1.0,
         "per_share": 4.0
       },
       "financial": {
@@ -50830,13 +50831,13 @@
       "industry": "情報・通信業",
       "valuation": {
         "per": 76.9,
-        "pbr": 9.4
+        "pbr": 8.3
       },
       "profitability": {
-        "roe": 12.7,
-        "roa": 8.3,
-        "operating_margin": 18.2,
-        "net_margin": 4.3
+        "roe": 15.7,
+        "roa": 9.8,
+        "operating_margin": 21.9,
+        "net_margin": 5.5
       },
       "dividend": {
         "yield": null,
@@ -50846,13 +50847,13 @@
         "market_cap_oku": 1567.5,
         "equity_ratio": null,
         "current_ratio": 1.4,
-        "revenue_oku": 485.3,
-        "operating_income_oku": 88.3,
-        "net_income_oku": 20.6
+        "revenue_oku": 513.3,
+        "operating_income_oku": 112.2,
+        "net_income_oku": 28.4
       },
       "price": {
         "current": 1275.0,
-        "target": 2225.0
+        "target": 2143.8
       },
       "schedule": {
         "next_earnings": null
@@ -51469,7 +51470,7 @@
         "net_margin": 11.5
       },
       "dividend": {
-        "yield": 64.0,
+        "yield": 0.6,
         "per_share": 6.0
       },
       "financial": {
@@ -51634,7 +51635,7 @@
       "market": "プライム（内国株式）",
       "industry": "情報・通信業",
       "valuation": {
-        "per": 68.4,
+        "per": 68.0,
         "pbr": 4.3
       },
       "profitability": {
@@ -51749,7 +51750,7 @@
         "net_margin": 16.9
       },
       "dividend": {
-        "yield": 48.0,
+        "yield": 0.5,
         "per_share": 16.0
       },
       "financial": {
@@ -52029,7 +52030,7 @@
         "net_margin": 16.1
       },
       "dividend": {
-        "yield": 37.0,
+        "yield": 0.4,
         "per_share": 6.0
       },
       "financial": {
@@ -52169,7 +52170,7 @@
         "net_margin": 11.6
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 11.5
       },
       "financial": {
@@ -52379,7 +52380,7 @@
         "net_margin": -2.4
       },
       "dividend": {
-        "yield": 89.0,
+        "yield": 0.9,
         "per_share": 3.0
       },
       "financial": {
@@ -53324,7 +53325,7 @@
         "net_margin": 4.0
       },
       "dividend": {
-        "yield": 57.0,
+        "yield": 0.6,
         "per_share": 34.2
       },
       "financial": {
@@ -53569,7 +53570,7 @@
         "net_margin": 35.3
       },
       "dividend": {
-        "yield": 84.0,
+        "yield": 0.8,
         "per_share": 12.0
       },
       "financial": {
@@ -53773,10 +53774,10 @@
         "pbr": 0.8
       },
       "profitability": {
-        "roe": 4.4,
-        "roa": 2.2,
-        "operating_margin": 5.2,
-        "net_margin": 4.4
+        "roe": 5.7,
+        "roa": 2.9,
+        "operating_margin": 9.7,
+        "net_margin": 5.8
       },
       "dividend": {
         "yield": 2.9,
@@ -53785,10 +53786,10 @@
       "financial": {
         "market_cap_oku": 407.6,
         "equity_ratio": null,
-        "current_ratio": 2.4,
-        "revenue_oku": 512.0,
-        "operating_income_oku": 26.5,
-        "net_income_oku": 22.3
+        "current_ratio": 2.5,
+        "revenue_oku": 507.7,
+        "operating_income_oku": 49.3,
+        "net_income_oku": 29.6
       },
       "price": {
         "current": 1432.0,
@@ -53958,7 +53959,7 @@
         "per_share": null
       },
       "financial": {
-        "market_cap_oku": 70.1,
+        "market_cap_oku": 73.0,
         "equity_ratio": null,
         "current_ratio": 22.9,
         "revenue_oku": 2.2,
@@ -54129,7 +54130,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 87.0,
+        "yield": 0.9,
         "per_share": 12.0
       },
       "financial": {
@@ -54864,7 +54865,7 @@
         "net_margin": 2.7
       },
       "dividend": {
-        "yield": 2.4,
+        "yield": 2.5,
         "per_share": 20.0
       },
       "financial": {
@@ -55533,7 +55534,7 @@
         "per_share": 52.0
       },
       "financial": {
-        "market_cap_oku": 553.6,
+        "market_cap_oku": 554.5,
         "equity_ratio": null,
         "current_ratio": 1.9,
         "revenue_oku": 669.4,
@@ -55599,7 +55600,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 54.0,
+        "yield": 0.5,
         "per_share": 14.0
       },
       "financial": {
@@ -55803,10 +55804,10 @@
         "pbr": 1.5
       },
       "profitability": {
-        "roe": 14.9,
-        "roa": 6.5,
-        "operating_margin": 8.4,
-        "net_margin": 6.9
+        "roe": 13.5,
+        "roa": 5.9,
+        "operating_margin": 13.9,
+        "net_margin": 6.6
       },
       "dividend": {
         "yield": 3.9,
@@ -55815,10 +55816,10 @@
       "financial": {
         "market_cap_oku": 180.1,
         "equity_ratio": null,
-        "current_ratio": 2.5,
-        "revenue_oku": 251.6,
-        "operating_income_oku": 21.1,
-        "net_income_oku": 17.4
+        "current_ratio": 2.8,
+        "revenue_oku": 255.0,
+        "operating_income_oku": 35.4,
+        "net_income_oku": 16.8
       },
       "price": {
         "current": 718.0,
@@ -55870,13 +55871,13 @@
       "industry": "サービス業",
       "valuation": {
         "per": 7.7,
-        "pbr": 0.9
+        "pbr": 0.8
       },
       "profitability": {
-        "roe": 12.7,
-        "roa": 3.8,
-        "operating_margin": 1.8,
-        "net_margin": 4.9
+        "roe": 20.3,
+        "roa": 7.3,
+        "operating_margin": 23.5,
+        "net_margin": 7.7
       },
       "dividend": {
         "yield": 2.2,
@@ -55886,9 +55887,9 @@
         "market_cap_oku": 47.7,
         "equity_ratio": null,
         "current_ratio": 1.4,
-        "revenue_oku": 127.1,
-        "operating_income_oku": 2.3,
-        "net_income_oku": 6.2
+        "revenue_oku": 133.7,
+        "operating_income_oku": 31.4,
+        "net_income_oku": 10.4
       },
       "price": {
         "current": 5460.0,
@@ -56124,7 +56125,7 @@
         "net_margin": 54.9
       },
       "dividend": {
-        "yield": 2.1,
+        "yield": 2.2,
         "per_share": 84.0
       },
       "financial": {
@@ -56194,7 +56195,7 @@
         "net_margin": 29.3
       },
       "dividend": {
-        "yield": 67.0,
+        "yield": 0.7,
         "per_share": 24.0
       },
       "financial": {
@@ -56439,7 +56440,7 @@
         "net_margin": 12.5
       },
       "dividend": {
-        "yield": 3.5,
+        "yield": 3.6,
         "per_share": 185.0
       },
       "financial": {
@@ -56605,7 +56606,7 @@
       "industry": "サービス業",
       "valuation": {
         "per": 17.6,
-        "pbr": 0.7
+        "pbr": 11.1
       },
       "profitability": {
         "roe": -9.2,
@@ -56640,7 +56641,7 @@
       "industry": "サービス業",
       "valuation": {
         "per": 23.6,
-        "pbr": 2.9
+        "pbr": 2.7
       },
       "profitability": {
         "roe": 13.3,
@@ -57063,10 +57064,10 @@
         "pbr": 0.8
       },
       "profitability": {
-        "roe": 2.4,
-        "roa": 1.7,
-        "operating_margin": 0.1,
-        "net_margin": 0.3
+        "roe": -0.7,
+        "roa": 1.6,
+        "operating_margin": 3.7,
+        "net_margin": -0.1
       },
       "dividend": {
         "yield": 2.0,
@@ -57076,9 +57077,9 @@
         "market_cap_oku": 29.8,
         "equity_ratio": null,
         "current_ratio": 0.8,
-        "revenue_oku": 266.1,
-        "operating_income_oku": 0.4,
-        "net_income_oku": 0.9
+        "revenue_oku": 269.9,
+        "operating_income_oku": 9.9,
+        "net_income_oku": -0.3
       },
       "price": {
         "current": 310.0,
@@ -57257,7 +57258,7 @@
       },
       "price": {
         "current": 1314.5,
-        "target": 1811.2
+        "target": 1823.8
       },
       "schedule": {
         "next_earnings": null
@@ -57413,10 +57414,10 @@
         "pbr": 0.9
       },
       "profitability": {
-        "roe": 7.8,
-        "roa": 3.0,
-        "operating_margin": 4.9,
-        "net_margin": 1.7
+        "roe": 10.0,
+        "roa": 3.7,
+        "operating_margin": 5.1,
+        "net_margin": 2.2
       },
       "dividend": {
         "yield": 4.3,
@@ -57426,9 +57427,9 @@
         "market_cap_oku": 13.1,
         "equity_ratio": null,
         "current_ratio": 1.1,
-        "revenue_oku": 64.2,
-        "operating_income_oku": 3.1,
-        "net_income_oku": 1.1
+        "revenue_oku": 65.4,
+        "operating_income_oku": 3.3,
+        "net_income_oku": 1.4
       },
       "price": {
         "current": 1640.0,
@@ -57515,7 +57516,7 @@
       "industry": "サービス業",
       "valuation": {
         "per": 7.1,
-        "pbr": 1.6
+        "pbr": 1.5
       },
       "profitability": {
         "roe": 23.5,
@@ -57532,7 +57533,7 @@
         "equity_ratio": null,
         "current_ratio": 1.3,
         "revenue_oku": 613.9,
-        "operating_income_oku": 44.3,
+        "operating_income_oku": 44.4,
         "net_income_oku": 40.8
       },
       "price": {
@@ -58215,7 +58216,7 @@
       "industry": "サービス業",
       "valuation": {
         "per": 13.2,
-        "pbr": 1.8
+        "pbr": 2.2
       },
       "profitability": {
         "roe": 20.5,
@@ -58263,7 +58264,7 @@
         "per_share": 20.0
       },
       "financial": {
-        "market_cap_oku": 92.8,
+        "market_cap_oku": 95.7,
         "equity_ratio": null,
         "current_ratio": 2.0,
         "revenue_oku": 56.5,
@@ -58639,8 +58640,8 @@
       },
       "profitability": {
         "roe": 0.9,
-        "roa": 0.7,
-        "operating_margin": 1.2,
+        "roa": 0.6,
+        "operating_margin": 1.1,
         "net_margin": 0.6
       },
       "dividend": {
@@ -58652,7 +58653,7 @@
         "equity_ratio": null,
         "current_ratio": 7.1,
         "revenue_oku": 45.1,
-        "operating_income_oku": 0.6,
+        "operating_income_oku": 0.5,
         "net_income_oku": 0.3
       },
       "price": {
@@ -58914,35 +58915,34 @@
       "market": "プライム（内国株式）",
       "industry": "情報・通信業",
       "valuation": {
-        "per": null,
-        "pbr": null
+        "per": 18.9,
+        "pbr": 2.6
       },
       "profitability": {
-        "roe": null,
-        "roa": null,
-        "operating_margin": null,
-        "net_margin": null
+        "roe": 14.3,
+        "roa": 6.8,
+        "operating_margin": 14.5,
+        "net_margin": 8.2
       },
       "dividend": {
-        "yield": null,
-        "per_share": null
+        "yield": 3.8,
+        "per_share": 37.0
       },
       "financial": {
-        "market_cap_oku": null,
+        "market_cap_oku": 254.2,
         "equity_ratio": null,
-        "current_ratio": null,
-        "revenue_oku": null,
-        "operating_income_oku": null,
-        "net_income_oku": null
+        "current_ratio": 1.4,
+        "revenue_oku": 164.1,
+        "operating_income_oku": 23.9,
+        "net_income_oku": 13.5
       },
       "price": {
-        "current": null,
+        "current": 980.0,
         "target": null
       },
       "schedule": {
         "next_earnings": null
-      },
-      "error": "Too Many Requests. Rate limited. Try after a while."
+      }
     },
     {
       "code": "4848",
@@ -59231,7 +59231,7 @@
       "industry": "医薬品",
       "valuation": {
         "per": null,
-        "pbr": 1.3
+        "pbr": 1.7
       },
       "profitability": {
         "roe": -67.9,
@@ -59559,7 +59559,7 @@
         "per_share": null
       },
       "financial": {
-        "market_cap_oku": 60.4,
+        "market_cap_oku": 60.5,
         "equity_ratio": null,
         "current_ratio": 4.5,
         "revenue_oku": 2.3,
@@ -59708,7 +59708,7 @@
       },
       "price": {
         "current": 3115.0,
-        "target": 3925.4
+        "target": 3902.3
       },
       "schedule": {
         "next_earnings": null
@@ -60430,7 +60430,7 @@
         "net_margin": 0.5
       },
       "dividend": {
-        "yield": 72.0,
+        "yield": 0.7,
         "per_share": 2.0
       },
       "financial": {
@@ -60675,7 +60675,7 @@
         "net_margin": 4.5
       },
       "dividend": {
-        "yield": 75.0,
+        "yield": 0.8,
         "per_share": 5.0
       },
       "financial": {
@@ -60815,7 +60815,7 @@
         "net_margin": -4.5
       },
       "dividend": {
-        "yield": 35.0,
+        "yield": 0.3,
         "per_share": 40.0
       },
       "financial": {
@@ -61064,7 +61064,7 @@
         "per_share": 36.0
       },
       "financial": {
-        "market_cap_oku": 218.0,
+        "market_cap_oku": 218.3,
         "equity_ratio": null,
         "current_ratio": 3.0,
         "revenue_oku": 375.1,
@@ -61261,13 +61261,13 @@
       "industry": "化学",
       "valuation": {
         "per": 10.7,
-        "pbr": 0.9
+        "pbr": 0.8
       },
       "profitability": {
-        "roe": 9.0,
-        "roa": 4.3,
-        "operating_margin": 0.9,
-        "net_margin": 9.1
+        "roe": 9.1,
+        "roa": 4.4,
+        "operating_margin": 14.1,
+        "net_margin": 9.5
       },
       "dividend": {
         "yield": 3.0,
@@ -61276,10 +61276,10 @@
       "financial": {
         "market_cap_oku": 467.1,
         "equity_ratio": null,
-        "current_ratio": 2.6,
-        "revenue_oku": 491.2,
-        "operating_income_oku": 4.4,
-        "net_income_oku": 44.5
+        "current_ratio": 2.7,
+        "revenue_oku": 500.1,
+        "operating_income_oku": 70.4,
+        "net_income_oku": 47.7
       },
       "price": {
         "current": 1795.0,
@@ -61585,7 +61585,7 @@
         "net_margin": 12.5
       },
       "dividend": {
-        "yield": 59.0,
+        "yield": 0.6,
         "per_share": 27.0
       },
       "financial": {
@@ -61865,7 +61865,7 @@
         "net_margin": 1.6
       },
       "dividend": {
-        "yield": 50.0,
+        "yield": 0.5,
         "per_share": 2.0
       },
       "financial": {
@@ -62110,7 +62110,7 @@
         "net_margin": -4.1
       },
       "dividend": {
-        "yield": 75.0,
+        "yield": 0.8,
         "per_share": 3.0
       },
       "financial": {
@@ -62320,7 +62320,7 @@
         "net_margin": 2.0
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 5.8
       },
       "financial": {
@@ -62841,7 +62841,7 @@
       "profitability": {
         "roe": -43.8,
         "roa": -19.5,
-        "operating_margin": -83.4,
+        "operating_margin": -79.3,
         "net_margin": -53.2
       },
       "dividend": {
@@ -62853,7 +62853,7 @@
         "equity_ratio": null,
         "current_ratio": 6.1,
         "revenue_oku": 39.8,
-        "operating_income_oku": -33.2,
+        "operating_income_oku": -31.6,
         "net_income_oku": -21.2
       },
       "price": {
@@ -63195,7 +63195,7 @@
         "net_margin": 18.0
       },
       "dividend": {
-        "yield": 97.0,
+        "yield": 1.0,
         "per_share": 9.0
       },
       "financial": {
@@ -63230,7 +63230,7 @@
         "net_margin": -0.7
       },
       "dividend": {
-        "yield": 2.1,
+        "yield": 2.0,
         "per_share": 30.0
       },
       "financial": {
@@ -64799,10 +64799,10 @@
         "pbr": 0.8
       },
       "profitability": {
-        "roe": 2.7,
-        "roa": 2.5,
-        "operating_margin": -7.9,
-        "net_margin": 0.9
+        "roe": -5.5,
+        "roa": 0.4,
+        "operating_margin": -8.6,
+        "net_margin": -1.9
       },
       "dividend": {
         "yield": 3.6,
@@ -64811,10 +64811,10 @@
       "financial": {
         "market_cap_oku": 30.7,
         "equity_ratio": null,
-        "current_ratio": 1.0,
-        "revenue_oku": 126.9,
-        "operating_income_oku": -10.1,
-        "net_income_oku": 1.1
+        "current_ratio": 1.2,
+        "revenue_oku": 116.9,
+        "operating_income_oku": -10.0,
+        "net_income_oku": -2.2
       },
       "price": {
         "current": 2340.0,
@@ -64910,7 +64910,7 @@
         "net_margin": 9.3
       },
       "dividend": {
-        "yield": 3.1,
+        "yield": 3.2,
         "per_share": 80.0
       },
       "financial": {
@@ -65499,10 +65499,10 @@
         "pbr": 1.9
       },
       "profitability": {
-        "roe": -30.0,
-        "roa": -6.7,
-        "operating_margin": -8.5,
-        "net_margin": -7.8
+        "roe": -29.4,
+        "roa": -6.8,
+        "operating_margin": -4.8,
+        "net_margin": -8.1
       },
       "dividend": {
         "yield": null,
@@ -65511,10 +65511,10 @@
       "financial": {
         "market_cap_oku": 22.3,
         "equity_ratio": null,
-        "current_ratio": 2.4,
+        "current_ratio": 2.7,
         "revenue_oku": 43.4,
-        "operating_income_oku": -3.7,
-        "net_income_oku": -3.4
+        "operating_income_oku": -2.1,
+        "net_income_oku": -3.5
       },
       "price": {
         "current": 259.0,
@@ -65890,7 +65890,7 @@
         "net_margin": 4.6
       },
       "dividend": {
-        "yield": 97.0,
+        "yield": 1.0,
         "per_share": 10.0
       },
       "financial": {
@@ -65938,7 +65938,7 @@
       },
       "price": {
         "current": 2937.0,
-        "target": 3267.5
+        "target": 3297.5
       },
       "schedule": {
         "next_earnings": null
@@ -66113,7 +66113,7 @@
       },
       "price": {
         "current": 603.4,
-        "target": 687.8
+        "target": 688.9
       },
       "schedule": {
         "next_earnings": null
@@ -66489,7 +66489,7 @@
         "per_share": 89.0
       },
       "financial": {
-        "market_cap_oku": 2034.3,
+        "market_cap_oku": 2055.0,
         "equity_ratio": null,
         "current_ratio": 6.2,
         "revenue_oku": 2006.8,
@@ -66664,7 +66664,7 @@
         "per_share": 49.0
       },
       "financial": {
-        "market_cap_oku": 3913.8,
+        "market_cap_oku": 3800.2,
         "equity_ratio": null,
         "current_ratio": 2.4,
         "revenue_oku": 5712.1,
@@ -67154,7 +67154,7 @@
         "per_share": null
       },
       "financial": {
-        "market_cap_oku": 223.9,
+        "market_cap_oku": 225.3,
         "equity_ratio": null,
         "current_ratio": 2.9,
         "revenue_oku": 81.9,
@@ -67535,7 +67535,7 @@
         "net_margin": 3.9
       },
       "dividend": {
-        "yield": 79.0,
+        "yield": 0.8,
         "per_share": 7.0
       },
       "financial": {
@@ -67780,7 +67780,7 @@
         "net_margin": 8.5
       },
       "dividend": {
-        "yield": 49.0,
+        "yield": 0.5,
         "per_share": 3.9
       },
       "financial": {
@@ -68515,7 +68515,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 89.0,
+        "yield": 0.9,
         "per_share": 88.0
       },
       "financial": {
@@ -68550,7 +68550,7 @@
         "net_margin": 1.5
       },
       "dividend": {
-        "yield": 4.4,
+        "yield": 4.5,
         "per_share": 80.0
       },
       "financial": {
@@ -68960,7 +68960,7 @@
       "market": "プライム（内国株式）",
       "industry": "非鉄金属",
       "valuation": {
-        "per": 45.5,
+        "per": 45.7,
         "pbr": 5.9
       },
       "profitability": {
@@ -68970,7 +68970,7 @@
         "net_margin": 8.5
       },
       "dividend": {
-        "yield": 65.0,
+        "yield": 0.7,
         "per_share": 240.0
       },
       "financial": {
@@ -69215,7 +69215,7 @@
         "net_margin": 4.6
       },
       "dividend": {
-        "yield": 36.0,
+        "yield": 0.4,
         "per_share": 12.0
       },
       "financial": {
@@ -69250,7 +69250,7 @@
         "net_margin": 10.3
       },
       "dividend": {
-        "yield": 52.0,
+        "yield": 0.5,
         "per_share": 15.0
       },
       "financial": {
@@ -69285,7 +69285,7 @@
         "net_margin": 3.0
       },
       "dividend": {
-        "yield": 56.0,
+        "yield": 0.6,
         "per_share": 18.0
       },
       "financial": {
@@ -69425,7 +69425,7 @@
         "net_margin": -2.1
       },
       "dividend": {
-        "yield": 59.0,
+        "yield": 0.6,
         "per_share": 15.0
       },
       "financial": {
@@ -69495,7 +69495,7 @@
         "net_margin": 4.1
       },
       "dividend": {
-        "yield": 35.0,
+        "yield": 0.3,
         "per_share": 160.0
       },
       "financial": {
@@ -69508,7 +69508,7 @@
       },
       "price": {
         "current": 44640.0,
-        "target": 36700.0
+        "target": 38700.0
       },
       "schedule": {
         "next_earnings": null
@@ -69565,7 +69565,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 71.0,
+        "yield": 0.7,
         "per_share": 40.0
       },
       "financial": {
@@ -69578,7 +69578,7 @@
       },
       "price": {
         "current": 5028.0,
-        "target": 5081.2
+        "target": 5188.1
       },
       "schedule": {
         "next_earnings": null
@@ -69670,7 +69670,7 @@
         "net_margin": 1.3
       },
       "dividend": {
-        "yield": 63.0,
+        "yield": 0.6,
         "per_share": 10.0
       },
       "financial": {
@@ -69858,7 +69858,7 @@
       },
       "price": {
         "current": 2846.0,
-        "target": 3074.3
+        "target": 3174.3
       },
       "schedule": {
         "next_earnings": null
@@ -69893,7 +69893,7 @@
       },
       "price": {
         "current": 3067.0,
-        "target": 2595.0
+        "target": 2945.0
       },
       "schedule": {
         "next_earnings": null
@@ -70055,7 +70055,7 @@
         "net_margin": 14.9
       },
       "dividend": {
-        "yield": 94.0,
+        "yield": 0.9,
         "per_share": 22.0
       },
       "financial": {
@@ -70615,7 +70615,7 @@
         "net_margin": 11.2
       },
       "dividend": {
-        "yield": 99.0,
+        "yield": 1.0,
         "per_share": 29.0
       },
       "financial": {
@@ -70924,10 +70924,10 @@
         "pbr": 0.3
       },
       "profitability": {
-        "roe": 1.3,
+        "roe": 2.2,
         "roa": 1.0,
-        "operating_margin": 2.2,
-        "net_margin": 1.5
+        "operating_margin": 6.6,
+        "net_margin": 2.6
       },
       "dividend": {
         "yield": 3.1,
@@ -70936,10 +70936,10 @@
       "financial": {
         "market_cap_oku": 44.4,
         "equity_ratio": null,
-        "current_ratio": 3.7,
-        "revenue_oku": 111.4,
-        "operating_income_oku": 2.4,
-        "net_income_oku": 1.7
+        "current_ratio": 3.6,
+        "revenue_oku": 115.7,
+        "operating_income_oku": 7.6,
+        "net_income_oku": 3.0
       },
       "price": {
         "current": 805.0,
@@ -71445,34 +71445,35 @@
       "market": "プライム（内国株式）",
       "industry": "金属製品",
       "valuation": {
-        "per": 10.0,
-        "pbr": 1.2
+        "per": null,
+        "pbr": null
       },
       "profitability": {
-        "roe": 12.4,
-        "roa": 4.5,
-        "operating_margin": 7.3,
-        "net_margin": 5.7
+        "roe": null,
+        "roa": null,
+        "operating_margin": null,
+        "net_margin": null
       },
       "dividend": {
-        "yield": 3.8,
-        "per_share": 74.0
+        "yield": null,
+        "per_share": null
       },
       "financial": {
-        "market_cap_oku": 1356.8,
+        "market_cap_oku": null,
         "equity_ratio": null,
-        "current_ratio": 2.0,
-        "revenue_oku": 2329.4,
-        "operating_income_oku": 169.8,
-        "net_income_oku": 133.9
+        "current_ratio": null,
+        "revenue_oku": null,
+        "operating_income_oku": null,
+        "net_income_oku": null
       },
       "price": {
-        "current": 1930.0,
+        "current": null,
         "target": null
       },
       "schedule": {
         "next_earnings": null
-      }
+      },
+      "error": "Too Many Requests. Rate limited. Try after a while."
     },
     {
       "code": "5932",
@@ -71630,7 +71631,7 @@
         "net_margin": 3.5
       },
       "dividend": {
-        "yield": 56.0,
+        "yield": 0.6,
         "per_share": 30.0
       },
       "financial": {
@@ -72050,7 +72051,7 @@
         "net_margin": 2.8
       },
       "dividend": {
-        "yield": 84.0,
+        "yield": 0.8,
         "per_share": 1.0
       },
       "financial": {
@@ -72639,10 +72640,10 @@
         "pbr": 1.3
       },
       "profitability": {
-        "roe": 10.0,
-        "roa": 5.3,
-        "operating_margin": 9.5,
-        "net_margin": 7.4
+        "roe": 10.4,
+        "roa": 5.7,
+        "operating_margin": 10.7,
+        "net_margin": 7.8
       },
       "dividend": {
         "yield": 3.1,
@@ -72651,10 +72652,10 @@
       "financial": {
         "market_cap_oku": 634.4,
         "equity_ratio": null,
-        "current_ratio": 2.6,
-        "revenue_oku": 664.0,
-        "operating_income_oku": 62.9,
-        "net_income_oku": 48.8
+        "current_ratio": 2.9,
+        "revenue_oku": 667.8,
+        "operating_income_oku": 71.4,
+        "net_income_oku": 52.2
       },
       "price": {
         "current": 4010.0,
@@ -72890,7 +72891,7 @@
         "net_margin": 4.3
       },
       "dividend": {
-        "yield": 4.9,
+        "yield": 5.0,
         "per_share": 64.0
       },
       "financial": {
@@ -73205,7 +73206,7 @@
         "net_margin": 3.8
       },
       "dividend": {
-        "yield": 56.0,
+        "yield": 0.6,
         "per_share": 66.0
       },
       "financial": {
@@ -73275,7 +73276,7 @@
         "net_margin": 3.1
       },
       "dividend": {
-        "yield": 92.0,
+        "yield": 0.9,
         "per_share": 30.0
       },
       "financial": {
@@ -73695,7 +73696,7 @@
         "net_margin": 13.1
       },
       "dividend": {
-        "yield": 54.0,
+        "yield": 0.5,
         "per_share": 8.0
       },
       "financial": {
@@ -74080,7 +74081,7 @@
         "net_margin": 9.1
       },
       "dividend": {
-        "yield": 2.5,
+        "yield": 2.6,
         "per_share": 33.0
       },
       "financial": {
@@ -74150,7 +74151,7 @@
         "net_margin": 9.5
       },
       "dividend": {
-        "yield": 45.0,
+        "yield": 0.5,
         "per_share": 13.0
       },
       "financial": {
@@ -74220,7 +74221,7 @@
         "net_margin": 2.7
       },
       "dividend": {
-        "yield": 99.0,
+        "yield": 1.0,
         "per_share": 9.0
       },
       "financial": {
@@ -75025,7 +75026,7 @@
         "net_margin": 12.8
       },
       "dividend": {
-        "yield": 35.0,
+        "yield": 0.3,
         "per_share": 25.0
       },
       "financial": {
@@ -75165,7 +75166,7 @@
         "net_margin": 1.8
       },
       "dividend": {
-        "yield": 3.5,
+        "yield": 3.2,
         "per_share": 140.0
       },
       "financial": {
@@ -75369,10 +75370,10 @@
         "pbr": 1.2
       },
       "profitability": {
-        "roe": 7.9,
-        "roa": 4.8,
-        "operating_margin": 14.7,
-        "net_margin": 8.9
+        "roe": 9.3,
+        "roa": 5.5,
+        "operating_margin": 14.4,
+        "net_margin": 10.1
       },
       "dividend": {
         "yield": 3.0,
@@ -75381,10 +75382,10 @@
       "financial": {
         "market_cap_oku": 2259.1,
         "equity_ratio": null,
-        "current_ratio": 5.9,
-        "revenue_oku": 1606.2,
-        "operating_income_oku": 236.5,
-        "net_income_oku": 143.3
+        "current_ratio": 6.7,
+        "revenue_oku": 1654.7,
+        "operating_income_oku": 238.1,
+        "net_income_oku": 167.6
       },
       "price": {
         "current": 2675.0,
@@ -75541,7 +75542,7 @@
       "industry": "機械",
       "valuation": {
         "per": 17.7,
-        "pbr": 0.8
+        "pbr": 1.3
       },
       "profitability": {
         "roe": 13.7,
@@ -75655,7 +75656,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 68.0,
+        "yield": 0.7,
         "per_share": 437.0
       },
       "financial": {
@@ -75970,7 +75971,7 @@
         "net_margin": 16.0
       },
       "dividend": {
-        "yield": 53.0,
+        "yield": 0.5,
         "per_share": 12.0
       },
       "financial": {
@@ -76975,35 +76976,34 @@
       "market": "プライム（内国株式）",
       "industry": "サービス業",
       "valuation": {
-        "per": null,
-        "pbr": null
+        "per": 13.9,
+        "pbr": 5.0
       },
       "profitability": {
-        "roe": null,
-        "roa": null,
-        "operating_margin": null,
-        "net_margin": null
+        "roe": 40.5,
+        "roa": 28.4,
+        "operating_margin": 37.2,
+        "net_margin": 28.2
       },
       "dividend": {
-        "yield": null,
-        "per_share": null
+        "yield": 4.3,
+        "per_share": 29.5
       },
       "financial": {
-        "market_cap_oku": null,
+        "market_cap_oku": 572.7,
         "equity_ratio": null,
-        "current_ratio": null,
-        "revenue_oku": null,
-        "operating_income_oku": null,
-        "net_income_oku": null
+        "current_ratio": 2.9,
+        "revenue_oku": 147.6,
+        "operating_income_oku": 55.0,
+        "net_income_oku": 41.6
       },
       "price": {
-        "current": null,
-        "target": null
+        "current": 695.0,
+        "target": 1366.7
       },
       "schedule": {
         "next_earnings": null
-      },
-      "error": "Too Many Requests. Rate limited. Try after a while."
+      }
     },
     {
       "code": "6201",
@@ -77091,7 +77091,7 @@
         "net_margin": 2.8
       },
       "dividend": {
-        "yield": 72.0,
+        "yield": 0.7,
         "per_share": 15.0
       },
       "financial": {
@@ -77406,7 +77406,7 @@
         "net_margin": 10.4
       },
       "dividend": {
-        "yield": 28.0,
+        "yield": 0.3,
         "per_share": 17.0
       },
       "financial": {
@@ -77441,7 +77441,7 @@
         "net_margin": -18.0
       },
       "dividend": {
-        "yield": 92.0,
+        "yield": 0.9,
         "per_share": 6.0
       },
       "financial": {
@@ -77725,7 +77725,7 @@
         "per_share": 39.0
       },
       "financial": {
-        "market_cap_oku": 351.1,
+        "market_cap_oku": 351.2,
         "equity_ratio": null,
         "current_ratio": 5.0,
         "revenue_oku": 432.9,
@@ -77970,7 +77970,7 @@
         "per_share": 100.0
       },
       "financial": {
-        "market_cap_oku": 378.8,
+        "market_cap_oku": 378.9,
         "equity_ratio": null,
         "current_ratio": 12.8,
         "revenue_oku": 273.5,
@@ -78351,7 +78351,7 @@
         "net_margin": 5.1
       },
       "dividend": {
-        "yield": 1.8,
+        "yield": 1.7,
         "per_share": 82.0
       },
       "financial": {
@@ -78561,7 +78561,7 @@
         "net_margin": 15.2
       },
       "dividend": {
-        "yield": 78.0,
+        "yield": 0.8,
         "per_share": 130.0
       },
       "financial": {
@@ -78765,10 +78765,10 @@
         "pbr": 1.3
       },
       "profitability": {
-        "roe": 5.3,
-        "roa": 4.0,
-        "operating_margin": 15.1,
-        "net_margin": 7.4
+        "roe": 4.3,
+        "roa": 3.6,
+        "operating_margin": 5.1,
+        "net_margin": 6.1
       },
       "dividend": {
         "yield": 2.7,
@@ -78777,10 +78777,10 @@
       "financial": {
         "market_cap_oku": 506.3,
         "equity_ratio": null,
-        "current_ratio": 3.3,
-        "revenue_oku": 283.7,
-        "operating_income_oku": 42.8,
-        "net_income_oku": 21.0
+        "current_ratio": 3.4,
+        "revenue_oku": 286.0,
+        "operating_income_oku": 14.6,
+        "net_income_oku": 17.4
       },
       "price": {
         "current": 1971.0,
@@ -79121,7 +79121,7 @@
         "net_margin": 10.7
       },
       "dividend": {
-        "yield": 2.7,
+        "yield": 2.8,
         "per_share": 15.0
       },
       "financial": {
@@ -79226,7 +79226,7 @@
         "net_margin": 10.9
       },
       "dividend": {
-        "yield": 73.0,
+        "yield": 0.7,
         "per_share": 20.0
       },
       "financial": {
@@ -79366,7 +79366,7 @@
         "net_margin": 14.8
       },
       "dividend": {
-        "yield": 50.0,
+        "yield": 0.5,
         "per_share": 20.0
       },
       "financial": {
@@ -79401,7 +79401,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 50.0,
+        "yield": 0.5,
         "per_share": 20.0
       },
       "financial": {
@@ -79506,7 +79506,7 @@
         "net_margin": 8.2
       },
       "dividend": {
-        "yield": 72.0,
+        "yield": 0.7,
         "per_share": 14.0
       },
       "financial": {
@@ -79576,7 +79576,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 94.0,
+        "yield": 0.9,
         "per_share": 25.0
       },
       "financial": {
@@ -79996,7 +79996,7 @@
         "net_margin": 16.8
       },
       "dividend": {
-        "yield": 36.0,
+        "yield": 0.4,
         "per_share": 0.6
       },
       "financial": {
@@ -80206,7 +80206,7 @@
         "net_margin": 3.8
       },
       "dividend": {
-        "yield": 65.0,
+        "yield": 0.7,
         "per_share": 8.0
       },
       "financial": {
@@ -80801,7 +80801,7 @@
         "net_margin": 4.9
       },
       "dividend": {
-        "yield": 77.0,
+        "yield": 0.8,
         "per_share": 30.0
       },
       "financial": {
@@ -80976,7 +80976,7 @@
         "net_margin": 17.7
       },
       "dividend": {
-        "yield": 65.0,
+        "yield": 0.7,
         "per_share": 60.0
       },
       "financial": {
@@ -81256,7 +81256,7 @@
         "net_margin": -1.5
       },
       "dividend": {
-        "yield": 66.0,
+        "yield": 0.7,
         "per_share": 12.0
       },
       "financial": {
@@ -81396,7 +81396,7 @@
         "net_margin": 8.4
       },
       "dividend": {
-        "yield": 1.4,
+        "yield": 1.3,
         "per_share": 70.0
       },
       "financial": {
@@ -81501,7 +81501,7 @@
         "net_margin": 5.9
       },
       "dividend": {
-        "yield": 4.1,
+        "yield": 4.2,
         "per_share": 50.0
       },
       "financial": {
@@ -81810,10 +81810,10 @@
         "pbr": 1.9
       },
       "profitability": {
-        "roe": 15.6,
-        "roa": 10.4,
-        "operating_margin": 13.7,
-        "net_margin": 11.9
+        "roe": 16.0,
+        "roa": 10.6,
+        "operating_margin": 11.9,
+        "net_margin": 12.5
       },
       "dividend": {
         "yield": 1.5,
@@ -81822,14 +81822,14 @@
       "financial": {
         "market_cap_oku": 3307.4,
         "equity_ratio": null,
-        "current_ratio": 4.8,
-        "revenue_oku": 2196.6,
-        "operating_income_oku": 300.4,
-        "net_income_oku": 262.0
+        "current_ratio": 4.9,
+        "revenue_oku": 2252.8,
+        "operating_income_oku": 268.4,
+        "net_income_oku": 282.7
       },
       "price": {
         "current": 6510.0,
-        "target": 6697.5
+        "target": 6747.5
       },
       "schedule": {
         "next_earnings": null
@@ -82249,7 +82249,7 @@
       },
       "price": {
         "current": 2470.0,
-        "target": 3263.6
+        "target": 3219.1
       },
       "schedule": {
         "next_earnings": null
@@ -82376,7 +82376,7 @@
         "net_margin": 9.1
       },
       "dividend": {
-        "yield": 95.0,
+        "yield": 0.9,
         "per_share": 40.0
       },
       "financial": {
@@ -82437,7 +82437,7 @@
       "industry": "機械",
       "valuation": {
         "per": 40.2,
-        "pbr": 4.2
+        "pbr": 3.8
       },
       "profitability": {
         "roe": 9.5,
@@ -82446,7 +82446,7 @@
         "net_margin": 5.8
       },
       "dividend": {
-        "yield": 65.0,
+        "yield": 0.7,
         "per_share": 20.0
       },
       "financial": {
@@ -82616,7 +82616,7 @@
       },
       "profitability": {
         "roe": 2.9,
-        "roa": 1.7,
+        "roa": 1.8,
         "operating_margin": 4.2,
         "net_margin": 2.1
       },
@@ -82716,7 +82716,7 @@
       "market": "プライム（内国株式）",
       "industry": "機械",
       "valuation": {
-        "per": 63.6,
+        "per": 63.7,
         "pbr": 2.4
       },
       "profitability": {
@@ -82930,10 +82930,10 @@
         "pbr": 1.2
       },
       "profitability": {
-        "roe": 11.5,
-        "roa": 7.8,
-        "operating_margin": 12.0,
-        "net_margin": 8.7
+        "roe": 11.2,
+        "roa": 6.9,
+        "operating_margin": 23.0,
+        "net_margin": 8.9
       },
       "dividend": {
         "yield": 2.3,
@@ -82942,10 +82942,10 @@
       "financial": {
         "market_cap_oku": 363.0,
         "equity_ratio": null,
-        "current_ratio": 2.9,
-        "revenue_oku": 384.2,
-        "operating_income_oku": 46.3,
-        "net_income_oku": 33.4
+        "current_ratio": 2.4,
+        "revenue_oku": 389.8,
+        "operating_income_oku": 89.8,
+        "net_income_oku": 34.6
       },
       "price": {
         "current": 2068.0,
@@ -83006,7 +83006,7 @@
         "net_margin": 11.4
       },
       "dividend": {
-        "yield": 43.0,
+        "yield": 0.4,
         "per_share": 50.0
       },
       "financial": {
@@ -83111,7 +83111,7 @@
         "net_margin": 5.7
       },
       "dividend": {
-        "yield": 97.0,
+        "yield": 1.0,
         "per_share": 2.0
       },
       "financial": {
@@ -83251,7 +83251,7 @@
         "net_margin": 8.0
       },
       "dividend": {
-        "yield": 94.0,
+        "yield": 0.9,
         "per_share": 45.0
       },
       "financial": {
@@ -83286,7 +83286,7 @@
         "net_margin": 6.6
       },
       "dividend": {
-        "yield": 95.0,
+        "yield": 0.9,
         "per_share": 55.0
       },
       "financial": {
@@ -83385,10 +83385,10 @@
         "pbr": 2.7
       },
       "profitability": {
-        "roe": null,
-        "roa": null,
-        "operating_margin": 7.3,
-        "net_margin": 6.9
+        "roe": 7.8,
+        "roa": 3.8,
+        "operating_margin": 9.6,
+        "net_margin": 6.5
       },
       "dividend": {
         "yield": 1.5,
@@ -83397,14 +83397,14 @@
       "financial": {
         "market_cap_oku": 12692.4,
         "equity_ratio": null,
-        "current_ratio": 2.1,
-        "revenue_oku": 5392.2,
-        "operating_income_oku": 393.8,
-        "net_income_oku": 370.5
+        "current_ratio": 2.5,
+        "revenue_oku": 5421.2,
+        "operating_income_oku": 520.8,
+        "net_income_oku": 352.4
       },
       "price": {
         "current": 4674.0,
-        "target": 5347.1
+        "target": 5358.8
       },
       "schedule": {
         "next_earnings": null
@@ -83426,7 +83426,7 @@
         "net_margin": 10.1
       },
       "dividend": {
-        "yield": 89.0,
+        "yield": 0.9,
         "per_share": 120.0
       },
       "financial": {
@@ -83741,7 +83741,7 @@
         "net_margin": 17.1
       },
       "dividend": {
-        "yield": 91.0,
+        "yield": 0.8,
         "per_share": 40.0
       },
       "financial": {
@@ -83754,7 +83754,7 @@
       },
       "price": {
         "current": 4375.0,
-        "target": 4200.0
+        "target": 4466.7
       },
       "schedule": {
         "next_earnings": null
@@ -83776,7 +83776,7 @@
         "net_margin": 13.8
       },
       "dividend": {
-        "yield": 52.0,
+        "yield": 0.5,
         "per_share": 36.0
       },
       "financial": {
@@ -84361,7 +84361,7 @@
       "market": "スタンダード（内国株式）",
       "industry": "サービス業",
       "valuation": {
-        "per": 10.9,
+        "per": 11.0,
         "pbr": 2.7
       },
       "profitability": {
@@ -84470,10 +84470,10 @@
         "pbr": 0.7
       },
       "profitability": {
-        "roe": -7.5,
-        "roa": 4.2,
-        "operating_margin": 10.3,
-        "net_margin": -8.2
+        "roe": 6.3,
+        "roa": 4.4,
+        "operating_margin": 16.7,
+        "net_margin": 6.7
       },
       "dividend": {
         "yield": null,
@@ -84482,10 +84482,10 @@
       "financial": {
         "market_cap_oku": 20.5,
         "equity_ratio": null,
-        "current_ratio": 1.8,
-        "revenue_oku": 26.1,
-        "operating_income_oku": 2.7,
-        "net_income_oku": -2.1
+        "current_ratio": 1.9,
+        "revenue_oku": 25.8,
+        "operating_income_oku": 4.3,
+        "net_income_oku": 1.7
       },
       "price": {
         "current": 447.0,
@@ -84721,7 +84721,7 @@
         "net_margin": 24.9
       },
       "dividend": {
-        "yield": 88.0,
+        "yield": 0.9,
         "per_share": 18.0
       },
       "financial": {
@@ -85001,7 +85001,7 @@
         "net_margin": 30.9
       },
       "dividend": {
-        "yield": 93.0,
+        "yield": 0.9,
         "per_share": 1.0
       },
       "financial": {
@@ -85281,7 +85281,7 @@
         "net_margin": -1.1
       },
       "dividend": {
-        "yield": 70.0,
+        "yield": 0.7,
         "per_share": 20.0
       },
       "financial": {
@@ -85946,7 +85946,7 @@
         "net_margin": -0.0
       },
       "dividend": {
-        "yield": 2.3,
+        "yield": 2.2,
         "per_share": 20.0
       },
       "financial": {
@@ -86681,7 +86681,7 @@
         "net_margin": 3.6
       },
       "dividend": {
-        "yield": 90.0,
+        "yield": 0.9,
         "per_share": 3.0
       },
       "financial": {
@@ -86780,10 +86780,10 @@
         "pbr": 1.3
       },
       "profitability": {
-        "roe": 13.8,
-        "roa": 3.9,
-        "operating_margin": 8.9,
-        "net_margin": 14.1
+        "roe": 12.4,
+        "roa": 3.8,
+        "operating_margin": 14.0,
+        "net_margin": 13.8
       },
       "dividend": {
         "yield": 1.2,
@@ -86792,10 +86792,10 @@
       "financial": {
         "market_cap_oku": 171.5,
         "equity_ratio": null,
-        "current_ratio": 2.3,
-        "revenue_oku": 123.2,
-        "operating_income_oku": 10.9,
-        "net_income_oku": 17.4
+        "current_ratio": 2.5,
+        "revenue_oku": 118.5,
+        "operating_income_oku": 16.6,
+        "net_income_oku": 16.4
       },
       "price": {
         "current": 1955.0,
@@ -86891,7 +86891,7 @@
         "net_margin": 3.9
       },
       "dividend": {
-        "yield": 4.2,
+        "yield": 4.3,
         "per_share": 91.7
       },
       "financial": {
@@ -87171,7 +87171,7 @@
         "net_margin": 7.0
       },
       "dividend": {
-        "yield": 83.0,
+        "yield": 0.8,
         "per_share": 32.0
       },
       "financial": {
@@ -87429,7 +87429,7 @@
       },
       "price": {
         "current": 2595.0,
-        "target": 3016.2
+        "target": 3039.2
       },
       "schedule": {
         "next_earnings": null
@@ -88151,7 +88151,7 @@
         "net_margin": -1.6
       },
       "dividend": {
-        "yield": 75.0,
+        "yield": 0.8,
         "per_share": 25.0
       },
       "financial": {
@@ -88501,7 +88501,7 @@
         "net_margin": 22.1
       },
       "dividend": {
-        "yield": 91.0,
+        "yield": 0.9,
         "per_share": 200.0
       },
       "financial": {
@@ -88676,7 +88676,7 @@
         "net_margin": 7.5
       },
       "dividend": {
-        "yield": 43.0,
+        "yield": 0.4,
         "per_share": 115.0
       },
       "financial": {
@@ -88886,7 +88886,7 @@
         "net_margin": 3.2
       },
       "dividend": {
-        "yield": 93.0,
+        "yield": 0.9,
         "per_share": 1.0
       },
       "financial": {
@@ -88969,7 +88969,7 @@
       },
       "price": {
         "current": 21190.0,
-        "target": 23886.7
+        "target": 23953.3
       },
       "schedule": {
         "next_earnings": null
@@ -89306,7 +89306,7 @@
         "net_margin": 9.2
       },
       "dividend": {
-        "yield": 1.8,
+        "yield": 1.7,
         "per_share": 90.0
       },
       "financial": {
@@ -89376,7 +89376,7 @@
         "net_margin": 17.8
       },
       "dividend": {
-        "yield": 34.0,
+        "yield": 0.3,
         "per_share": 100.0
       },
       "financial": {
@@ -89516,7 +89516,7 @@
         "net_margin": 14.6
       },
       "dividend": {
-        "yield": 40.0,
+        "yield": 0.4,
         "per_share": 5.0
       },
       "financial": {
@@ -89901,7 +89901,7 @@
         "net_margin": 27.9
       },
       "dividend": {
-        "yield": 20.0,
+        "yield": 0.2,
         "per_share": 49.0
       },
       "financial": {
@@ -90006,7 +90006,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 88.0,
+        "yield": 0.9,
         "per_share": 550.0
       },
       "financial": {
@@ -90041,7 +90041,7 @@
         "net_margin": 5.1
       },
       "dividend": {
-        "yield": 82.0,
+        "yield": 0.8,
         "per_share": 18.0
       },
       "financial": {
@@ -90286,7 +90286,7 @@
         "net_margin": 17.2
       },
       "dividend": {
-        "yield": 74.0,
+        "yield": 0.7,
         "per_share": 95.0
       },
       "financial": {
@@ -91056,7 +91056,7 @@
         "net_margin": 34.7
       },
       "dividend": {
-        "yield": 79.0,
+        "yield": 0.8,
         "per_share": 329.0
       },
       "financial": {
@@ -91104,7 +91104,7 @@
       },
       "price": {
         "current": 2972.0,
-        "target": 3417.8
+        "target": 3440.0
       },
       "schedule": {
         "next_earnings": null
@@ -91594,7 +91594,7 @@
       },
       "price": {
         "current": 5895.0,
-        "target": 6805.2
+        "target": 6807.5
       },
       "schedule": {
         "next_earnings": null
@@ -91699,7 +91699,7 @@
       },
       "price": {
         "current": 10500.0,
-        "target": 7650.0
+        "target": 9050.0
       },
       "schedule": {
         "next_earnings": null
@@ -91721,7 +91721,7 @@
         "net_margin": 11.9
       },
       "dividend": {
-        "yield": 59.0,
+        "yield": 0.6,
         "per_share": 90.0
       },
       "financial": {
@@ -92014,7 +92014,7 @@
       },
       "price": {
         "current": 4863.0,
-        "target": 4630.0
+        "target": 4742.5
       },
       "schedule": {
         "next_earnings": null
@@ -92491,7 +92491,7 @@
         "net_margin": 8.4
       },
       "dividend": {
-        "yield": 83.0,
+        "yield": 0.8,
         "per_share": 50.0
       },
       "financial": {
@@ -92561,7 +92561,7 @@
         "net_margin": 5.4
       },
       "dividend": {
-        "yield": 51.0,
+        "yield": 0.5,
         "per_share": 24.0
       },
       "financial": {
@@ -92596,7 +92596,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 33.2
       },
       "financial": {
@@ -92631,7 +92631,7 @@
         "net_margin": 7.5
       },
       "dividend": {
-        "yield": 61.0,
+        "yield": 0.6,
         "per_share": 20.0
       },
       "financial": {
@@ -92666,7 +92666,7 @@
         "net_margin": 12.4
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 40.0
       },
       "financial": {
@@ -92701,7 +92701,7 @@
         "net_margin": 4.0
       },
       "dividend": {
-        "yield": 72.0,
+        "yield": 0.7,
         "per_share": 100.0
       },
       "financial": {
@@ -92902,7 +92902,7 @@
       "industry": "サービス業",
       "valuation": {
         "per": 22.6,
-        "pbr": 0.7
+        "pbr": 0.8
       },
       "profitability": {
         "roe": 16.0,
@@ -93296,7 +93296,7 @@
         "net_margin": 4.9
       },
       "dividend": {
-        "yield": 77.0,
+        "yield": 0.8,
         "per_share": 10.0
       },
       "financial": {
@@ -93331,7 +93331,7 @@
         "net_margin": 4.1
       },
       "dividend": {
-        "yield": 52.0,
+        "yield": 0.5,
         "per_share": 12.0
       },
       "financial": {
@@ -93856,7 +93856,7 @@
         "net_margin": 0.7
       },
       "dividend": {
-        "yield": 97.0,
+        "yield": 1.0,
         "per_share": 10.0
       },
       "financial": {
@@ -93961,7 +93961,7 @@
         "net_margin": 6.7
       },
       "dividend": {
-        "yield": 93.0,
+        "yield": 0.9,
         "per_share": 4.0
       },
       "financial": {
@@ -94591,7 +94591,7 @@
         "net_margin": 2.2
       },
       "dividend": {
-        "yield": 38.0,
+        "yield": 0.4,
         "per_share": 5.0
       },
       "financial": {
@@ -94700,7 +94700,7 @@
         "per_share": 40.0
       },
       "financial": {
-        "market_cap_oku": 149.4,
+        "market_cap_oku": 149.6,
         "equity_ratio": null,
         "current_ratio": 1.5,
         "revenue_oku": 204.7,
@@ -94801,7 +94801,7 @@
         "net_margin": 4.0
       },
       "dividend": {
-        "yield": 95.0,
+        "yield": 0.9,
         "per_share": 28.0
       },
       "financial": {
@@ -95001,7 +95001,7 @@
       "market": "グロース（内国株式）",
       "industry": "小売業",
       "valuation": {
-        "per": 140.0,
+        "per": 140.9,
         "pbr": 4.5
       },
       "profitability": {
@@ -95107,34 +95107,33 @@
       "industry": "卸売業",
       "valuation": {
         "per": null,
-        "pbr": null
+        "pbr": 1.4
       },
       "profitability": {
-        "roe": null,
-        "roa": null,
-        "operating_margin": null,
-        "net_margin": null
+        "roe": 8.3,
+        "roa": 6.2,
+        "operating_margin": 6.6,
+        "net_margin": 3.4
       },
       "dividend": {
-        "yield": null,
-        "per_share": null
+        "yield": 1.3,
+        "per_share": 2269117.2
       },
       "financial": {
-        "market_cap_oku": null,
+        "market_cap_oku": 0.0,
         "equity_ratio": null,
-        "current_ratio": null,
-        "revenue_oku": null,
-        "operating_income_oku": null,
-        "net_income_oku": null
+        "current_ratio": 0.6,
+        "revenue_oku": 54.4,
+        "operating_income_oku": 3.6,
+        "net_income_oku": 1.8
       },
       "price": {
-        "current": null,
+        "current": 1175.0,
         "target": null
       },
       "schedule": {
         "next_earnings": null
-      },
-      "error": "Too Many Requests. Rate limited. Try after a while."
+      }
     },
     {
       "code": "7119",
@@ -96005,7 +96004,7 @@
       },
       "price": {
         "current": 1348.5,
-        "target": 1400.0
+        "target": 1480.0
       },
       "schedule": {
         "next_earnings": null
@@ -96320,7 +96319,7 @@
       },
       "price": {
         "current": 2723.5,
-        "target": 2787.3
+        "target": 2897.3
       },
       "schedule": {
         "next_earnings": null
@@ -96460,7 +96459,7 @@
       },
       "price": {
         "current": 1534.0,
-        "target": 1632.2
+        "target": 1676.7
       },
       "schedule": {
         "next_earnings": null
@@ -96740,7 +96739,7 @@
       },
       "price": {
         "current": 356.3,
-        "target": 416.6
+        "target": 411.4
       },
       "schedule": {
         "next_earnings": null
@@ -96775,7 +96774,7 @@
       },
       "price": {
         "current": 2395.0,
-        "target": 2760.0
+        "target": 2729.2
       },
       "schedule": {
         "next_earnings": null
@@ -96915,7 +96914,7 @@
       },
       "price": {
         "current": 318.6,
-        "target": 413.3
+        "target": 414.5
       },
       "schedule": {
         "next_earnings": null
@@ -97141,10 +97140,10 @@
         "pbr": 0.3
       },
       "profitability": {
-        "roe": 2.9,
-        "roa": 1.3,
-        "operating_margin": -1.9,
-        "net_margin": 3.5
+        "roe": 3.9,
+        "roa": 1.9,
+        "operating_margin": 6.6,
+        "net_margin": 4.5
       },
       "dividend": {
         "yield": 2.8,
@@ -97153,10 +97152,10 @@
       "financial": {
         "market_cap_oku": 32.7,
         "equity_ratio": null,
-        "current_ratio": 3.7,
-        "revenue_oku": 89.2,
-        "operating_income_oku": -1.7,
-        "net_income_oku": 3.1
+        "current_ratio": 4.5,
+        "revenue_oku": 91.8,
+        "operating_income_oku": 6.0,
+        "net_income_oku": 4.1
       },
       "price": {
         "current": 2310.0,
@@ -97580,7 +97579,7 @@
       },
       "price": {
         "current": 2889.5,
-        "target": 2772.0
+        "target": 2892.0
       },
       "schedule": {
         "next_earnings": null
@@ -97882,7 +97881,7 @@
         "net_margin": 6.7
       },
       "dividend": {
-        "yield": 91.0,
+        "yield": 0.9,
         "per_share": 5.0
       },
       "financial": {
@@ -98140,7 +98139,7 @@
       },
       "price": {
         "current": 1276.0,
-        "target": 1562.4
+        "target": 1556.8
       },
       "schedule": {
         "next_earnings": null
@@ -98175,7 +98174,7 @@
       },
       "price": {
         "current": 1842.0,
-        "target": 2751.8
+        "target": 2728.2
       },
       "schedule": {
         "next_earnings": null
@@ -98302,7 +98301,7 @@
         "net_margin": 11.0
       },
       "dividend": {
-        "yield": 46.0,
+        "yield": 0.5,
         "per_share": 3.0
       },
       "financial": {
@@ -98350,7 +98349,7 @@
       },
       "price": {
         "current": 2560.0,
-        "target": 2369.0
+        "target": 2439.0
       },
       "schedule": {
         "next_earnings": null
@@ -99002,7 +99001,7 @@
         "net_margin": 17.1
       },
       "dividend": {
-        "yield": 92.0,
+        "yield": 0.9,
         "per_share": 10.0
       },
       "financial": {
@@ -99072,7 +99071,7 @@
         "net_margin": -3.3
       },
       "dividend": {
-        "yield": 59.0,
+        "yield": 0.6,
         "per_share": 10.0
       },
       "financial": {
@@ -99260,7 +99259,7 @@
       },
       "price": {
         "current": 1888.5,
-        "target": 1600.0
+        "target": 1660.0
       },
       "schedule": {
         "next_earnings": null
@@ -99317,7 +99316,7 @@
         "net_margin": 1.2
       },
       "dividend": {
-        "yield": 36.0,
+        "yield": 0.4,
         "per_share": 4.0
       },
       "financial": {
@@ -99622,7 +99621,7 @@
       "market": "スタンダード（内国株式）",
       "industry": "サービス業",
       "valuation": {
-        "per": 438.0,
+        "per": 434.3,
         "pbr": 3.9
       },
       "profitability": {
@@ -99728,12 +99727,12 @@
       "industry": "サービス業",
       "valuation": {
         "per": null,
-        "pbr": 2.3
+        "pbr": 2.5
       },
       "profitability": {
         "roe": -14.7,
         "roa": -9.8,
-        "operating_margin": -1.0,
+        "operating_margin": -110.5,
         "net_margin": -17.5
       },
       "dividend": {
@@ -99745,7 +99744,7 @@
         "equity_ratio": null,
         "current_ratio": 5.3,
         "revenue_oku": 8.6,
-        "operating_income_oku": -0.1,
+        "operating_income_oku": -9.5,
         "net_income_oku": -1.5
       },
       "price": {
@@ -99912,7 +99911,7 @@
         "net_margin": 5.3
       },
       "dividend": {
-        "yield": 89.0,
+        "yield": 0.9,
         "per_share": 11.0
       },
       "financial": {
@@ -100147,14 +100146,14 @@
       "market": "グロース（内国株式）",
       "industry": "サービス業",
       "valuation": {
-        "per": 13.7,
+        "per": 13.8,
         "pbr": 3.5
       },
       "profitability": {
-        "roe": 28.9,
-        "roa": 20.1,
-        "operating_margin": 22.5,
-        "net_margin": 14.3
+        "roe": 26.7,
+        "roa": 18.8,
+        "operating_margin": 19.4,
+        "net_margin": 13.4
       },
       "dividend": {
         "yield": 1.8,
@@ -100164,9 +100163,9 @@
         "market_cap_oku": 254.9,
         "equity_ratio": null,
         "current_ratio": 2.2,
-        "revenue_oku": 139.6,
-        "operating_income_oku": 31.4,
-        "net_income_oku": 20.0
+        "revenue_oku": 142.7,
+        "operating_income_oku": 27.7,
+        "net_income_oku": 19.2
       },
       "price": {
         "current": 1723.0,
@@ -100367,7 +100366,7 @@
         "net_margin": 17.0
       },
       "dividend": {
-        "yield": 6.0,
+        "yield": 5.8,
         "per_share": 120.0
       },
       "financial": {
@@ -100682,7 +100681,7 @@
         "net_margin": 0.8
       },
       "dividend": {
-        "yield": 77.0,
+        "yield": 0.8,
         "per_share": 20.0
       },
       "financial": {
@@ -100892,7 +100891,7 @@
         "net_margin": 0.9
       },
       "dividend": {
-        "yield": 31.0,
+        "yield": 0.3,
         "per_share": 5.0
       },
       "financial": {
@@ -101026,10 +101025,10 @@
         "pbr": 0.4
       },
       "profitability": {
-        "roe": 5.8,
-        "roa": 1.6,
-        "operating_margin": 0.2,
-        "net_margin": 0.6
+        "roe": 6.5,
+        "roa": 1.9,
+        "operating_margin": 1.4,
+        "net_margin": 0.7
       },
       "dividend": {
         "yield": 3.4,
@@ -101038,10 +101037,10 @@
       "financial": {
         "market_cap_oku": 53.3,
         "equity_ratio": null,
-        "current_ratio": 1.3,
-        "revenue_oku": 1055.5,
-        "operating_income_oku": 2.5,
-        "net_income_oku": 6.8
+        "current_ratio": 1.4,
+        "revenue_oku": 1058.1,
+        "operating_income_oku": 15.0,
+        "net_income_oku": 7.8
       },
       "price": {
         "current": 885.0,
@@ -101452,7 +101451,7 @@
         "net_margin": -1.7
       },
       "dividend": {
-        "yield": 85.0,
+        "yield": 0.8,
         "per_share": 32.0
       },
       "financial": {
@@ -101465,7 +101464,7 @@
       },
       "price": {
         "current": 3604.0,
-        "target": 3962.0
+        "target": 3980.0
       },
       "schedule": {
         "next_earnings": null
@@ -102181,10 +102180,10 @@
         "pbr": 0.8
       },
       "profitability": {
-        "roe": 2.5,
-        "roa": 1.0,
-        "operating_margin": 8.3,
-        "net_margin": 4.4
+        "roe": 2.9,
+        "roa": 1.2,
+        "operating_margin": 5.5,
+        "net_margin": 5.0
       },
       "dividend": {
         "yield": 1.3,
@@ -102193,10 +102192,10 @@
       "financial": {
         "market_cap_oku": 165.4,
         "equity_ratio": null,
-        "current_ratio": 3.8,
-        "revenue_oku": 103.8,
-        "operating_income_oku": 8.6,
-        "net_income_oku": 4.6
+        "current_ratio": 4.1,
+        "revenue_oku": 105.2,
+        "operating_income_oku": 5.8,
+        "net_income_oku": 5.3
       },
       "price": {
         "current": 1990.0,
@@ -102321,22 +102320,22 @@
         "pbr": 1.1
       },
       "profitability": {
-        "roe": -2.9,
-        "roa": -1.1,
-        "operating_margin": -1.1,
-        "net_margin": -4.0
+        "roe": -2.6,
+        "roa": -0.9,
+        "operating_margin": -2.4,
+        "net_margin": -3.5
       },
       "dividend": {
-        "yield": 62.0,
+        "yield": 0.6,
         "per_share": 12.0
       },
       "financial": {
         "market_cap_oku": 47.4,
         "equity_ratio": null,
         "current_ratio": 4.3,
-        "revenue_oku": 32.2,
-        "operating_income_oku": -0.4,
-        "net_income_oku": -1.3
+        "revenue_oku": 33.1,
+        "operating_income_oku": -0.8,
+        "net_income_oku": -1.2
       },
       "price": {
         "current": 1947.0,
@@ -102671,10 +102670,10 @@
         "pbr": 0.7
       },
       "profitability": {
-        "roe": -0.3,
-        "roa": 0.2,
-        "operating_margin": -3.5,
-        "net_margin": -0.1
+        "roe": -1.3,
+        "roa": -0.1,
+        "operating_margin": 1.5,
+        "net_margin": -0.3
       },
       "dividend": {
         "yield": 3.0,
@@ -102683,10 +102682,10 @@
       "financial": {
         "market_cap_oku": 104.7,
         "equity_ratio": null,
-        "current_ratio": 1.4,
-        "revenue_oku": 606.8,
-        "operating_income_oku": -21.0,
-        "net_income_oku": -0.4
+        "current_ratio": 1.5,
+        "revenue_oku": 607.0,
+        "operating_income_oku": 8.9,
+        "net_income_oku": -2.1
       },
       "price": {
         "current": 856.0,
@@ -102712,7 +102711,7 @@
         "net_margin": 0.4
       },
       "dividend": {
-        "yield": 66.0,
+        "yield": 0.7,
         "per_share": 30.0
       },
       "financial": {
@@ -102852,7 +102851,7 @@
         "net_margin": 4.0
       },
       "dividend": {
-        "yield": 96.0,
+        "yield": 1.0,
         "per_share": 10.0
       },
       "financial": {
@@ -103062,7 +103061,7 @@
         "net_margin": 4.3
       },
       "dividend": {
-        "yield": 91.0,
+        "yield": 0.9,
         "per_share": 8.5
       },
       "financial": {
@@ -103136,7 +103135,7 @@
         "per_share": 6.0
       },
       "financial": {
-        "market_cap_oku": 52.6,
+        "market_cap_oku": 52.9,
         "equity_ratio": null,
         "current_ratio": 1.5,
         "revenue_oku": 1043.7,
@@ -103272,7 +103271,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 80.0,
+        "yield": 0.8,
         "per_share": 70.0
       },
       "financial": {
@@ -103412,7 +103411,7 @@
         "net_margin": 4.6
       },
       "dividend": {
-        "yield": 89.0,
+        "yield": 0.9,
         "per_share": 10.0
       },
       "financial": {
@@ -103517,7 +103516,7 @@
         "net_margin": 1.5
       },
       "dividend": {
-        "yield": 81.0,
+        "yield": 0.8,
         "per_share": 30.0
       },
       "financial": {
@@ -103622,7 +103621,7 @@
         "net_margin": 1.0
       },
       "dividend": {
-        "yield": 41.0,
+        "yield": 0.4,
         "per_share": 2.0
       },
       "financial": {
@@ -103788,7 +103787,7 @@
       "industry": "小売業",
       "valuation": {
         "per": 24.8,
-        "pbr": 2.3
+        "pbr": 2.2
       },
       "profitability": {
         "roe": 10.1,
@@ -103797,7 +103796,7 @@
         "net_margin": 4.4
       },
       "dividend": {
-        "yield": 54.0,
+        "yield": 0.5,
         "per_share": 30.0
       },
       "financial": {
@@ -104246,10 +104245,10 @@
         "pbr": 1.0
       },
       "profitability": {
-        "roe": 8.1,
-        "roa": 4.2,
-        "operating_margin": 5.5,
-        "net_margin": 4.0
+        "roe": 8.3,
+        "roa": 4.6,
+        "operating_margin": 7.3,
+        "net_margin": 4.2
       },
       "dividend": {
         "yield": 3.9,
@@ -104258,10 +104257,10 @@
       "financial": {
         "market_cap_oku": 422.1,
         "equity_ratio": null,
-        "current_ratio": 2.2,
-        "revenue_oku": 866.0,
-        "operating_income_oku": 47.5,
-        "net_income_oku": 34.9
+        "current_ratio": 2.5,
+        "revenue_oku": 887.2,
+        "operating_income_oku": 64.9,
+        "net_income_oku": 37.1
       },
       "price": {
         "current": 3180.0,
@@ -104386,10 +104385,10 @@
         "pbr": 4.5
       },
       "profitability": {
-        "roe": 19.5,
-        "roa": 12.5,
-        "operating_margin": 10.5,
-        "net_margin": 8.1
+        "roe": 18.7,
+        "roa": 12.0,
+        "operating_margin": 8.1,
+        "net_margin": 7.6
       },
       "dividend": {
         "yield": 1.8,
@@ -104399,9 +104398,9 @@
         "market_cap_oku": 1061.4,
         "equity_ratio": null,
         "current_ratio": 2.1,
-        "revenue_oku": 608.4,
-        "operating_income_oku": 64.0,
-        "net_income_oku": 49.0
+        "revenue_oku": 622.5,
+        "operating_income_oku": 50.3,
+        "net_income_oku": 47.3
       },
       "price": {
         "current": 3010.0,
@@ -104532,7 +104531,7 @@
         "net_margin": 0.9
       },
       "dividend": {
-        "yield": 26.0,
+        "yield": 0.3,
         "per_share": 5.0
       },
       "financial": {
@@ -104602,7 +104601,7 @@
         "net_margin": -5.9
       },
       "dividend": {
-        "yield": 45.0,
+        "yield": 0.5,
         "per_share": 15.0
       },
       "financial": {
@@ -105057,7 +105056,7 @@
         "net_margin": 4.5
       },
       "dividend": {
-        "yield": 71.0,
+        "yield": 0.7,
         "per_share": 25.0
       },
       "financial": {
@@ -105121,10 +105120,10 @@
         "pbr": 1.1
       },
       "profitability": {
-        "roe": 10.4,
-        "roa": 4.3,
-        "operating_margin": 7.0,
-        "net_margin": 3.9
+        "roe": 10.8,
+        "roa": 4.4,
+        "operating_margin": 6.9,
+        "net_margin": 4.2
       },
       "dividend": {
         "yield": 3.6,
@@ -105134,9 +105133,9 @@
         "market_cap_oku": 93.7,
         "equity_ratio": null,
         "current_ratio": 1.6,
-        "revenue_oku": 224.1,
-        "operating_income_oku": 15.7,
-        "net_income_oku": 8.6
+        "revenue_oku": 221.2,
+        "operating_income_oku": 15.2,
+        "net_income_oku": 9.3
       },
       "price": {
         "current": 1736.0,
@@ -105162,7 +105161,7 @@
         "net_margin": -12.1
       },
       "dividend": {
-        "yield": 35.0,
+        "yield": 0.3,
         "per_share": 10.0
       },
       "financial": {
@@ -105197,7 +105196,7 @@
         "net_margin": 0.2
       },
       "dividend": {
-        "yield": 96.0,
+        "yield": 1.0,
         "per_share": 25.0
       },
       "financial": {
@@ -105372,7 +105371,7 @@
         "net_margin": 1.3
       },
       "dividend": {
-        "yield": 41.0,
+        "yield": 0.4,
         "per_share": 17.0
       },
       "financial": {
@@ -105442,7 +105441,7 @@
         "net_margin": 5.2
       },
       "dividend": {
-        "yield": 52.0,
+        "yield": 0.5,
         "per_share": 17.5
       },
       "financial": {
@@ -105792,7 +105791,7 @@
         "net_margin": 1.0
       },
       "dividend": {
-        "yield": 80.0,
+        "yield": 0.8,
         "per_share": 20.0
       },
       "financial": {
@@ -106002,7 +106001,7 @@
         "net_margin": 2.8
       },
       "dividend": {
-        "yield": 80.0,
+        "yield": 0.8,
         "per_share": 50.0
       },
       "financial": {
@@ -106247,7 +106246,7 @@
         "net_margin": 7.3
       },
       "dividend": {
-        "yield": 53.0,
+        "yield": 0.5,
         "per_share": 40.0
       },
       "financial": {
@@ -106346,10 +106345,10 @@
         "pbr": 1.5
       },
       "profitability": {
-        "roe": 3.4,
-        "roa": 2.3,
-        "operating_margin": 13.9,
-        "net_margin": 8.0
+        "roe": 5.1,
+        "roa": 3.9,
+        "operating_margin": 26.2,
+        "net_margin": 11.3
       },
       "dividend": {
         "yield": 2.8,
@@ -106358,10 +106357,10 @@
       "financial": {
         "market_cap_oku": 161.0,
         "equity_ratio": null,
-        "current_ratio": 7.3,
-        "revenue_oku": 47.5,
-        "operating_income_oku": 6.6,
-        "net_income_oku": 3.8
+        "current_ratio": 7.7,
+        "revenue_oku": 50.7,
+        "operating_income_oku": 13.3,
+        "net_income_oku": 5.7
       },
       "price": {
         "current": 1650.0,
@@ -106387,7 +106386,7 @@
         "net_margin": -0.0
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 10.0
       },
       "financial": {
@@ -106575,7 +106574,7 @@
       },
       "price": {
         "current": 1588.5,
-        "target": 1807.7
+        "target": 1803.8
       },
       "schedule": {
         "next_earnings": null
@@ -106737,7 +106736,7 @@
         "net_margin": 27.4
       },
       "dividend": {
-        "yield": 83.0,
+        "yield": 0.8,
         "per_share": 240.0
       },
       "financial": {
@@ -107052,7 +107051,7 @@
         "net_margin": 10.7
       },
       "dividend": {
-        "yield": 93.0,
+        "yield": 0.9,
         "per_share": 30.0
       },
       "financial": {
@@ -107787,7 +107786,7 @@
         "net_margin": 8.7
       },
       "dividend": {
-        "yield": 49.0,
+        "yield": 0.5,
         "per_share": 30.0
       },
       "financial": {
@@ -107956,10 +107955,10 @@
         "pbr": 0.8
       },
       "profitability": {
-        "roe": 10.6,
-        "roa": 4.4,
-        "operating_margin": 6.0,
-        "net_margin": 4.1
+        "roe": 10.7,
+        "roa": 4.6,
+        "operating_margin": 5.0,
+        "net_margin": 4.4
       },
       "dividend": {
         "yield": 4.0,
@@ -107968,10 +107967,10 @@
       "financial": {
         "market_cap_oku": 165.5,
         "equity_ratio": null,
-        "current_ratio": 1.6,
-        "revenue_oku": 499.4,
-        "operating_income_oku": 29.9,
-        "net_income_oku": 20.5
+        "current_ratio": 1.7,
+        "revenue_oku": 496.4,
+        "operating_income_oku": 24.6,
+        "net_income_oku": 21.8
       },
       "price": {
         "current": 1791.0,
@@ -108500,7 +108499,7 @@
       },
       "price": {
         "current": 3939.0,
-        "target": 5246.2
+        "target": 5174.4
       },
       "schedule": {
         "next_earnings": null
@@ -108767,7 +108766,7 @@
         "net_margin": 9.5
       },
       "dividend": {
-        "yield": 85.0,
+        "yield": 0.8,
         "per_share": 42.0
       },
       "financial": {
@@ -109461,10 +109460,10 @@
         "pbr": 0.3
       },
       "profitability": {
-        "roe": -1.7,
-        "roa": -0.0,
-        "operating_margin": -0.3,
-        "net_margin": -1.3
+        "roe": -2.1,
+        "roa": -0.2,
+        "operating_margin": -1.8,
+        "net_margin": -1.5
       },
       "dividend": {
         "yield": 4.5,
@@ -109473,10 +109472,10 @@
       "financial": {
         "market_cap_oku": 105.4,
         "equity_ratio": null,
-        "current_ratio": 1.9,
-        "revenue_oku": 646.9,
-        "operating_income_oku": -1.9,
-        "net_income_oku": -8.3
+        "current_ratio": 1.8,
+        "revenue_oku": 640.0,
+        "operating_income_oku": -11.2,
+        "net_income_oku": -9.4
       },
       "price": {
         "current": 673.0,
@@ -109842,7 +109841,7 @@
       "market": "スタンダード（内国株式）",
       "industry": "その他製品",
       "valuation": {
-        "per": 18.4,
+        "per": 18.3,
         "pbr": 0.5
       },
       "profitability": {
@@ -109887,7 +109886,7 @@
         "net_margin": 7.0
       },
       "dividend": {
-        "yield": 78.0,
+        "yield": 0.8,
         "per_share": 24.0
       },
       "financial": {
@@ -110517,7 +110516,7 @@
         "net_margin": 12.2
       },
       "dividend": {
-        "yield": 83.0,
+        "yield": 0.8,
         "per_share": 38.0
       },
       "financial": {
@@ -110902,7 +110901,7 @@
         "net_margin": 4.3
       },
       "dividend": {
-        "yield": 2.1,
+        "yield": 2.2,
         "per_share": 26.0
       },
       "financial": {
@@ -111195,7 +111194,7 @@
       },
       "price": {
         "current": 1734.0,
-        "target": 1800.0
+        "target": 1850.0
       },
       "schedule": {
         "next_earnings": null
@@ -111357,7 +111356,7 @@
         "net_margin": 18.9
       },
       "dividend": {
-        "yield": 2.1,
+        "yield": 2.2,
         "per_share": 181.0
       },
       "financial": {
@@ -111567,7 +111566,7 @@
         "net_margin": -21.4
       },
       "dividend": {
-        "yield": 86.0,
+        "yield": 0.9,
         "per_share": 10.0
       },
       "financial": {
@@ -111637,7 +111636,7 @@
         "net_margin": -2.8
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 12.0
       },
       "financial": {
@@ -112226,10 +112225,10 @@
         "pbr": 1.0
       },
       "profitability": {
-        "roe": 4.2,
-        "roa": 2.8,
-        "operating_margin": 4.3,
-        "net_margin": 2.4
+        "roe": 4.5,
+        "roa": 2.6,
+        "operating_margin": 4.6,
+        "net_margin": 2.6
       },
       "dividend": {
         "yield": 4.7,
@@ -112238,10 +112237,10 @@
       "financial": {
         "market_cap_oku": 387.6,
         "equity_ratio": null,
-        "current_ratio": 1.5,
-        "revenue_oku": 675.0,
-        "operating_income_oku": 29.3,
-        "net_income_oku": 16.2
+        "current_ratio": 1.7,
+        "revenue_oku": 699.6,
+        "operating_income_oku": 32.2,
+        "net_income_oku": 17.9
       },
       "price": {
         "current": 1818.0,
@@ -112433,7 +112432,7 @@
       "industry": "繊維製品",
       "valuation": {
         "per": 10.6,
-        "pbr": 1.2
+        "pbr": 1.1
       },
       "profitability": {
         "roe": 11.4,
@@ -112862,7 +112861,7 @@
         "net_margin": 0.6
       },
       "dividend": {
-        "yield": 86.0,
+        "yield": 0.9,
         "per_share": 35.0
       },
       "financial": {
@@ -113027,35 +113026,34 @@
       "market": "スタンダード（内国株式）",
       "industry": "卸売業",
       "valuation": {
-        "per": null,
-        "pbr": null
+        "per": 10.9,
+        "pbr": 0.6
       },
       "profitability": {
-        "roe": null,
-        "roa": null,
-        "operating_margin": null,
-        "net_margin": null
+        "roe": 6.4,
+        "roa": 3.0,
+        "operating_margin": 7.8,
+        "net_margin": 5.2
       },
       "dividend": {
-        "yield": null,
-        "per_share": null
+        "yield": 3.2,
+        "per_share": 34.0
       },
       "financial": {
-        "market_cap_oku": null,
+        "market_cap_oku": 189.4,
         "equity_ratio": null,
-        "current_ratio": null,
-        "revenue_oku": null,
-        "operating_income_oku": null,
-        "net_income_oku": null
+        "current_ratio": 2.7,
+        "revenue_oku": 388.8,
+        "operating_income_oku": 30.2,
+        "net_income_oku": 20.2
       },
       "price": {
-        "current": null,
+        "current": 1057.0,
         "target": null
       },
       "schedule": {
         "next_earnings": null
-      },
-      "error": "Too Many Requests. Rate limited. Try after a while."
+      }
     },
     {
       "code": "8050",
@@ -114368,7 +114366,7 @@
         "net_margin": 4.7
       },
       "dividend": {
-        "yield": 3.0,
+        "yield": 2.9,
         "per_share": 42.0
       },
       "financial": {
@@ -114572,10 +114570,10 @@
         "pbr": 0.7
       },
       "profitability": {
-        "roe": 0.9,
-        "roa": -0.5,
-        "operating_margin": 2.4,
-        "net_margin": 0.8
+        "roe": 0.8,
+        "roa": -0.7,
+        "operating_margin": -3.1,
+        "net_margin": 0.7
       },
       "dividend": {
         "yield": 2.3,
@@ -114585,9 +114583,9 @@
         "market_cap_oku": 123.6,
         "equity_ratio": null,
         "current_ratio": 1.9,
-        "revenue_oku": 194.6,
-        "operating_income_oku": 4.8,
-        "net_income_oku": 1.5
+        "revenue_oku": 193.9,
+        "operating_income_oku": -5.9,
+        "net_income_oku": 1.4
       },
       "price": {
         "current": 600.0,
@@ -114928,7 +114926,7 @@
         "net_margin": 3.5
       },
       "dividend": {
-        "yield": 73.0,
+        "yield": 0.7,
         "per_share": 15.0
       },
       "financial": {
@@ -114963,7 +114961,7 @@
         "net_margin": 0.3
       },
       "dividend": {
-        "yield": 89.0,
+        "yield": 0.9,
         "per_share": 12.5
       },
       "financial": {
@@ -115243,7 +115241,7 @@
         "net_margin": 4.5
       },
       "dividend": {
-        "yield": 70.0,
+        "yield": 0.7,
         "per_share": 30.0
       },
       "financial": {
@@ -115453,7 +115451,7 @@
         "net_margin": 1.4
       },
       "dividend": {
-        "yield": 81.0,
+        "yield": 0.8,
         "per_share": 10.0
       },
       "financial": {
@@ -115727,10 +115725,10 @@
         "pbr": 0.7
       },
       "profitability": {
-        "roe": 4.5,
-        "roa": 1.5,
-        "operating_margin": 1.8,
-        "net_margin": 2.8
+        "roe": 0.5,
+        "roa": 0.9,
+        "operating_margin": -3.4,
+        "net_margin": 0.3
       },
       "dividend": {
         "yield": 5.2,
@@ -115739,10 +115737,10 @@
       "financial": {
         "market_cap_oku": 355.8,
         "equity_ratio": null,
-        "current_ratio": 2.5,
-        "revenue_oku": 813.4,
-        "operating_income_oku": 14.5,
-        "net_income_oku": 23.0
+        "current_ratio": 2.8,
+        "revenue_oku": 813.8,
+        "operating_income_oku": -27.5,
+        "net_income_oku": 2.4
       },
       "price": {
         "current": 1050.0,
@@ -115832,22 +115830,22 @@
         "pbr": 4.2
       },
       "profitability": {
-        "roe": 7.9,
-        "roa": 3.3,
-        "operating_margin": 3.1,
-        "net_margin": 2.4
+        "roe": 12.0,
+        "roa": 2.9,
+        "operating_margin": 2.4,
+        "net_margin": 3.8
       },
       "dividend": {
-        "yield": 57.0,
+        "yield": 0.6,
         "per_share": 13.0
       },
       "financial": {
         "market_cap_oku": 589.8,
         "equity_ratio": null,
         "current_ratio": 0.9,
-        "revenue_oku": 451.1,
-        "operating_income_oku": 14.1,
-        "net_income_oku": 10.8
+        "revenue_oku": 450.8,
+        "operating_income_oku": 10.9,
+        "net_income_oku": 17.3
       },
       "price": {
         "current": 2324.0,
@@ -115947,7 +115945,7 @@
         "per_share": null
       },
       "financial": {
-        "market_cap_oku": 113.3,
+        "market_cap_oku": 114.9,
         "equity_ratio": null,
         "current_ratio": 1.3,
         "revenue_oku": 120.7,
@@ -116039,7 +116037,7 @@
       "industry": "小売業",
       "valuation": {
         "per": 125.0,
-        "pbr": 0.5
+        "pbr": 0.4
       },
       "profitability": {
         "roe": 0.4,
@@ -116328,7 +116326,7 @@
         "net_margin": 2.0
       },
       "dividend": {
-        "yield": 54.0,
+        "yield": 0.5,
         "per_share": 12.0
       },
       "financial": {
@@ -116392,10 +116390,10 @@
         "pbr": 1.6
       },
       "profitability": {
-        "roe": 15.8,
-        "roa": 3.3,
-        "operating_margin": 5.1,
-        "net_margin": 5.2
+        "roe": 8.8,
+        "roa": 3.5,
+        "operating_margin": 7.9,
+        "net_margin": 3.0
       },
       "dividend": {
         "yield": 1.1,
@@ -116405,9 +116403,9 @@
         "market_cap_oku": 708.8,
         "equity_ratio": null,
         "current_ratio": 0.5,
-        "revenue_oku": 1248.2,
-        "operating_income_oku": 63.2,
-        "net_income_oku": 64.3
+        "revenue_oku": 1254.5,
+        "operating_income_oku": 98.6,
+        "net_income_oku": 37.1
       },
       "price": {
         "current": 1823.0,
@@ -116427,10 +116425,10 @@
         "pbr": 0.3
       },
       "profitability": {
-        "roe": 4.0,
-        "roa": 0.3,
-        "operating_margin": -0.3,
-        "net_margin": 1.4
+        "roe": -21.0,
+        "roa": 0.4,
+        "operating_margin": 1.4,
+        "net_margin": -7.1
       },
       "dividend": {
         "yield": null,
@@ -116440,9 +116438,9 @@
         "market_cap_oku": 19.9,
         "equity_ratio": null,
         "current_ratio": 0.4,
-        "revenue_oku": 161.4,
-        "operating_income_oku": -0.4,
-        "net_income_oku": 2.2
+        "revenue_oku": 159.8,
+        "operating_income_oku": 2.2,
+        "net_income_oku": -11.3
       },
       "price": {
         "current": 347.0,
@@ -116602,10 +116600,10 @@
         "pbr": 0.4
       },
       "profitability": {
-        "roe": 7.1,
+        "roe": 4.1,
         "roa": 0.9,
-        "operating_margin": -1.3,
-        "net_margin": 3.8
+        "operating_margin": 7.9,
+        "net_margin": 2.3
       },
       "dividend": {
         "yield": 1.5,
@@ -116615,9 +116613,9 @@
         "market_cap_oku": 52.3,
         "equity_ratio": null,
         "current_ratio": 0.3,
-        "revenue_oku": 214.6,
-        "operating_income_oku": -2.8,
-        "net_income_oku": 8.1
+        "revenue_oku": 212.8,
+        "operating_income_oku": 16.8,
+        "net_income_oku": 4.9
       },
       "price": {
         "current": 467.0,
@@ -116639,11 +116637,11 @@
       "profitability": {
         "roe": 5.8,
         "roa": 1.2,
-        "operating_margin": 4.2,
+        "operating_margin": 4.3,
         "net_margin": 0.7
       },
       "dividend": {
-        "yield": 79.0,
+        "yield": 0.8,
         "per_share": 14.0
       },
       "financial": {
@@ -116651,7 +116649,7 @@
         "equity_ratio": null,
         "current_ratio": 1.0,
         "revenue_oku": 107153.4,
-        "operating_income_oku": 4542.2,
+        "operating_income_oku": 4569.0,
         "net_income_oku": 726.8
       },
       "price": {
@@ -117251,7 +117249,7 @@
       },
       "price": {
         "current": 2222.0,
-        "target": 2266.7
+        "target": 2333.3
       },
       "schedule": {
         "next_earnings": null
@@ -117343,7 +117341,7 @@
         "net_margin": 15.4
       },
       "dividend": {
-        "yield": 46.0,
+        "yield": 0.5,
         "per_share": 10.0
       },
       "financial": {
@@ -117378,7 +117376,7 @@
         "net_margin": 17.4
       },
       "dividend": {
-        "yield": 82.0,
+        "yield": 0.8,
         "per_share": 5.0
       },
       "financial": {
@@ -117671,7 +117669,7 @@
       },
       "price": {
         "current": 2159.0,
-        "target": 1950.0
+        "target": 2175.0
       },
       "schedule": {
         "next_earnings": null
@@ -117706,7 +117704,7 @@
       },
       "price": {
         "current": 2112.5,
-        "target": 1825.0
+        "target": 2125.0
       },
       "schedule": {
         "next_earnings": null
@@ -118393,7 +118391,7 @@
         "net_margin": 5.7
       },
       "dividend": {
-        "yield": 4.0,
+        "yield": 4.1,
         "per_share": 11.0
       },
       "financial": {
@@ -118441,7 +118439,7 @@
       },
       "price": {
         "current": 6730.0,
-        "target": 6920.0
+        "target": 7146.2
       },
       "schedule": {
         "next_earnings": null
@@ -118861,7 +118859,7 @@
       },
       "price": {
         "current": 1040.0,
-        "target": 900.0
+        "target": 1000.0
       },
       "schedule": {
         "next_earnings": null
@@ -119758,7 +119756,7 @@
         "net_margin": -9.7
       },
       "dividend": {
-        "yield": 96.0,
+        "yield": 1.0,
         "per_share": 5.0
       },
       "financial": {
@@ -120003,7 +120001,7 @@
         "net_margin": 27.4
       },
       "dividend": {
-        "yield": 81.0,
+        "yield": 0.8,
         "per_share": 10.0
       },
       "financial": {
@@ -120318,7 +120316,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 56.0,
+        "yield": 0.6,
         "per_share": 9.0
       },
       "financial": {
@@ -120366,7 +120364,7 @@
       },
       "price": {
         "current": 4115.0,
-        "target": 4549.0
+        "target": 4432.7
       },
       "schedule": {
         "next_earnings": null
@@ -120996,7 +120994,7 @@
       },
       "price": {
         "current": 4620.0,
-        "target": 5372.7
+        "target": 5295.5
       },
       "schedule": {
         "next_earnings": null
@@ -121066,7 +121064,7 @@
       },
       "price": {
         "current": 3785.0,
-        "target": 4298.9
+        "target": 4333.3
       },
       "schedule": {
         "next_earnings": null
@@ -121123,7 +121121,7 @@
         "net_margin": 0.0
       },
       "dividend": {
-        "yield": 89.0,
+        "yield": 0.9,
         "per_share": 43.0
       },
       "financial": {
@@ -121267,7 +121265,7 @@
         "per_share": 27.0
       },
       "financial": {
-        "market_cap_oku": 402.6,
+        "market_cap_oku": 402.7,
         "equity_ratio": null,
         "current_ratio": 2.4,
         "revenue_oku": 1296.9,
@@ -121852,10 +121850,10 @@
         "pbr": 1.2
       },
       "profitability": {
-        "roe": 14.2,
-        "roa": 5.8,
-        "operating_margin": 4.7,
-        "net_margin": 7.7
+        "roe": 15.4,
+        "roa": 6.1,
+        "operating_margin": 6.3,
+        "net_margin": 7.1
       },
       "dividend": {
         "yield": 4.8,
@@ -121864,10 +121862,10 @@
       "financial": {
         "market_cap_oku": 157.3,
         "equity_ratio": null,
-        "current_ratio": 2.2,
-        "revenue_oku": 228.7,
-        "operating_income_oku": 10.8,
-        "net_income_oku": 17.7
+        "current_ratio": 2.1,
+        "revenue_oku": 269.7,
+        "operating_income_oku": 16.9,
+        "net_income_oku": 19.2
       },
       "price": {
         "current": 926.0,
@@ -121994,7 +121992,7 @@
       "profitability": {
         "roe": 4.9,
         "roa": 2.6,
-        "operating_margin": 23.2,
+        "operating_margin": 23.1,
         "net_margin": 14.8
       },
       "dividend": {
@@ -122272,10 +122270,10 @@
         "pbr": 0.5
       },
       "profitability": {
-        "roe": 10.1,
-        "roa": 3.2,
-        "operating_margin": 15.4,
-        "net_margin": 7.8
+        "roe": 7.8,
+        "roa": 2.8,
+        "operating_margin": -3.2,
+        "net_margin": 6.2
       },
       "dividend": {
         "yield": 4.2,
@@ -122284,10 +122282,10 @@
       "financial": {
         "market_cap_oku": 181.0,
         "equity_ratio": null,
-        "current_ratio": 2.1,
-        "revenue_oku": 439.7,
-        "operating_income_oku": 67.8,
-        "net_income_oku": 34.2
+        "current_ratio": 2.5,
+        "revenue_oku": 421.4,
+        "operating_income_oku": -13.5,
+        "net_income_oku": 26.2
       },
       "price": {
         "current": 1685.0,
@@ -122383,7 +122381,7 @@
         "net_margin": -18.1
       },
       "dividend": {
-        "yield": 61.0,
+        "yield": 0.6,
         "per_share": 2.0
       },
       "financial": {
@@ -122597,7 +122595,7 @@
         "per_share": 32.0
       },
       "financial": {
-        "market_cap_oku": 161.6,
+        "market_cap_oku": 162.9,
         "equity_ratio": null,
         "current_ratio": 2.4,
         "revenue_oku": 527.2,
@@ -122943,7 +122941,7 @@
         "net_margin": 5.4
       },
       "dividend": {
-        "yield": 50.0,
+        "yield": 0.5,
         "per_share": 10.0
       },
       "financial": {
@@ -123026,7 +123024,7 @@
       },
       "price": {
         "current": 3157.0,
-        "target": 3404.5
+        "target": 3340.1
       },
       "schedule": {
         "next_earnings": null
@@ -123048,7 +123046,7 @@
         "net_margin": 27.3
       },
       "dividend": {
-        "yield": 76.0,
+        "yield": 0.8,
         "per_share": 32.0
       },
       "financial": {
@@ -123118,7 +123116,7 @@
         "net_margin": 21.9
       },
       "dividend": {
-        "yield": 97.0,
+        "yield": 1.0,
         "per_share": 40.0
       },
       "financial": {
@@ -123411,7 +123409,7 @@
       },
       "price": {
         "current": 1908.0,
-        "target": null
+        "target": 2000.0
       },
       "schedule": {
         "next_earnings": null
@@ -123678,7 +123676,7 @@
         "net_margin": 12.6
       },
       "dividend": {
-        "yield": 28.0,
+        "yield": 0.3,
         "per_share": 20.0
       },
       "financial": {
@@ -124133,7 +124131,7 @@
         "net_margin": 2.2
       },
       "dividend": {
-        "yield": 99.0,
+        "yield": 1.0,
         "per_share": 12.0
       },
       "financial": {
@@ -124308,7 +124306,7 @@
         "net_margin": 1.2
       },
       "dividend": {
-        "yield": 57.0,
+        "yield": 0.6,
         "per_share": 8.0
       },
       "financial": {
@@ -124588,7 +124586,7 @@
         "net_margin": 9.2
       },
       "dividend": {
-        "yield": 36.0,
+        "yield": 0.4,
         "per_share": 5.0
       },
       "financial": {
@@ -125218,7 +125216,7 @@
         "net_margin": 17.3
       },
       "dividend": {
-        "yield": 4.2,
+        "yield": 4.3,
         "per_share": 21.0
       },
       "financial": {
@@ -125323,7 +125321,7 @@
         "net_margin": 2.6
       },
       "dividend": {
-        "yield": 33.0,
+        "yield": 0.3,
         "per_share": 10.0
       },
       "financial": {
@@ -125406,7 +125404,7 @@
       },
       "price": {
         "current": 2588.0,
-        "target": 3190.0
+        "target": 3150.0
       },
       "schedule": {
         "next_earnings": null
@@ -125498,7 +125496,7 @@
         "net_margin": 0.4
       },
       "dividend": {
-        "yield": 77.0,
+        "yield": 0.8,
         "per_share": 3.0
       },
       "financial": {
@@ -125737,10 +125735,10 @@
         "pbr": 3.2
       },
       "profitability": {
-        "roe": 1.6,
-        "roa": 3.4,
-        "operating_margin": 4.4,
-        "net_margin": 0.4
+        "roe": 2.7,
+        "roa": 4.7,
+        "operating_margin": 5.0,
+        "net_margin": 0.7
       },
       "dividend": {
         "yield": 4.2,
@@ -125749,10 +125747,10 @@
       "financial": {
         "market_cap_oku": 259.9,
         "equity_ratio": null,
-        "current_ratio": 2.2,
-        "revenue_oku": 359.7,
-        "operating_income_oku": 15.7,
-        "net_income_oku": 1.4
+        "current_ratio": 2.6,
+        "revenue_oku": 361.4,
+        "operating_income_oku": 18.1,
+        "net_income_oku": 2.4
       },
       "price": {
         "current": 1886.0,
@@ -125953,7 +125951,7 @@
         "net_margin": -3.2
       },
       "dividend": {
-        "yield": 43.0,
+        "yield": 0.4,
         "per_share": 2.0
       },
       "financial": {
@@ -126758,7 +126756,7 @@
         "net_margin": 5.2
       },
       "dividend": {
-        "yield": 76.0,
+        "yield": 0.8,
         "per_share": 30.0
       },
       "financial": {
@@ -127003,7 +127001,7 @@
         "net_margin": 5.1
       },
       "dividend": {
-        "yield": 2.0,
+        "yield": 2.1,
         "per_share": 18.0
       },
       "financial": {
@@ -127108,7 +127106,7 @@
         "net_margin": 3.7
       },
       "dividend": {
-        "yield": 32.0,
+        "yield": 0.3,
         "per_share": 13.0
       },
       "financial": {
@@ -127172,10 +127170,10 @@
         "pbr": 3.2
       },
       "profitability": {
-        "roe": 25.0,
-        "roa": 5.9,
-        "operating_margin": 6.1,
-        "net_margin": 2.1
+        "roe": 31.1,
+        "roa": 7.9,
+        "operating_margin": 7.5,
+        "net_margin": 2.8
       },
       "dividend": {
         "yield": 4.3,
@@ -127184,10 +127182,10 @@
       "financial": {
         "market_cap_oku": 275.5,
         "equity_ratio": null,
-        "current_ratio": 1.6,
-        "revenue_oku": 905.5,
-        "operating_income_oku": 55.6,
-        "net_income_oku": 19.0
+        "current_ratio": 1.3,
+        "revenue_oku": 959.8,
+        "operating_income_oku": 71.7,
+        "net_income_oku": 26.5
       },
       "price": {
         "current": 2147.0,
@@ -127388,7 +127386,7 @@
         "net_margin": 6.8
       },
       "dividend": {
-        "yield": 55.0,
+        "yield": 0.6,
         "per_share": 26.0
       },
       "financial": {
@@ -127668,7 +127666,7 @@
         "net_margin": 4.1
       },
       "dividend": {
-        "yield": 47.0,
+        "yield": 0.5,
         "per_share": 7.3
       },
       "financial": {
@@ -127804,7 +127802,7 @@
       "profitability": {
         "roe": 2.5,
         "roa": 1.6,
-        "operating_margin": 4.8,
+        "operating_margin": 11.9,
         "net_margin": 6.3
       },
       "dividend": {
@@ -127815,8 +127813,8 @@
         "market_cap_oku": 61.7,
         "equity_ratio": null,
         "current_ratio": 0.8,
-        "revenue_oku": 49.3,
-        "operating_income_oku": 2.4,
+        "revenue_oku": 49.7,
+        "operating_income_oku": 5.9,
         "net_income_oku": 3.1
       },
       "price": {
@@ -127977,10 +127975,10 @@
         "pbr": 2.3
       },
       "profitability": {
-        "roe": -13.0,
-        "roa": 0.6,
-        "operating_margin": 1.7,
-        "net_margin": -1.7
+        "roe": 9.5,
+        "roa": 1.8,
+        "operating_margin": 3.4,
+        "net_margin": 1.1
       },
       "dividend": {
         "yield": 2.1,
@@ -127989,10 +127987,10 @@
       "financial": {
         "market_cap_oku": 48.6,
         "equity_ratio": null,
-        "current_ratio": 1.6,
-        "revenue_oku": 174.9,
-        "operating_income_oku": 3.0,
-        "net_income_oku": -3.0
+        "current_ratio": 1.5,
+        "revenue_oku": 183.5,
+        "operating_income_oku": 6.2,
+        "net_income_oku": 2.1
       },
       "price": {
         "current": 474.0,
@@ -129072,7 +129070,7 @@
         "per_share": 34.0
       },
       "financial": {
-        "market_cap_oku": 366.5,
+        "market_cap_oku": 366.8,
         "equity_ratio": null,
         "current_ratio": 2.1,
         "revenue_oku": 629.2,
@@ -129103,7 +129101,7 @@
         "net_margin": 1.3
       },
       "dividend": {
-        "yield": 74.0,
+        "yield": 0.7,
         "per_share": 24.0
       },
       "financial": {
@@ -129272,10 +129270,10 @@
         "pbr": 2.4
       },
       "profitability": {
-        "roe": -70.0,
-        "roa": -12.0,
+        "roe": -36.3,
+        "roa": -9.9,
         "operating_margin": -358.3,
-        "net_margin": -247.7
+        "net_margin": 0.0
       },
       "dividend": {
         "yield": null,
@@ -129284,9 +129282,9 @@
       "financial": {
         "market_cap_oku": 51.3,
         "equity_ratio": null,
-        "current_ratio": 0.6,
+        "current_ratio": 0.2,
         "revenue_oku": 0.0,
-        "operating_income_oku": -0.1,
+        "operating_income_oku": -0.0,
         "net_income_oku": -0.0
       },
       "price": {
@@ -129418,7 +129416,7 @@
         "net_margin": 5.6
       },
       "dividend": {
-        "yield": 57.0,
+        "yield": 0.6,
         "per_share": 16.0
       },
       "financial": {
@@ -129956,7 +129954,7 @@
       },
       "price": {
         "current": 2708.5,
-        "target": 2804.7
+        "target": 2801.5
       },
       "schedule": {
         "next_earnings": null
@@ -129991,7 +129989,7 @@
       },
       "price": {
         "current": 215.6,
-        "target": 235.4
+        "target": 237.1
       },
       "schedule": {
         "next_earnings": null
@@ -130493,7 +130491,7 @@
       "market": "プライム（内国株式）",
       "industry": "情報・通信業",
       "valuation": {
-        "per": 91.2,
+        "per": 90.9,
         "pbr": 2.1
       },
       "profitability": {
@@ -130503,7 +130501,7 @@
         "net_margin": 0.8
       },
       "dividend": {
-        "yield": 83.0,
+        "yield": 0.8,
         "per_share": 30.0
       },
       "financial": {
@@ -130608,7 +130606,7 @@
         "net_margin": 3.8
       },
       "dividend": {
-        "yield": 87.0,
+        "yield": 0.9,
         "per_share": 5.0
       },
       "financial": {
@@ -130678,7 +130676,7 @@
         "net_margin": 7.8
       },
       "dividend": {
-        "yield": 84.0,
+        "yield": 0.8,
         "per_share": 4.0
       },
       "financial": {
@@ -130878,35 +130876,34 @@
       "market": "プライム（内国株式）",
       "industry": "電気・ガス業",
       "valuation": {
-        "per": null,
-        "pbr": null
+        "per": 3.5,
+        "pbr": 0.5
       },
       "profitability": {
-        "roe": null,
-        "roa": null,
-        "operating_margin": null,
-        "net_margin": null
+        "roe": 16.4,
+        "roa": 3.0,
+        "operating_margin": 7.5,
+        "net_margin": 7.0
       },
       "dividend": {
-        "yield": null,
-        "per_share": null
+        "yield": 3.4,
+        "per_share": 40.0
       },
       "financial": {
-        "market_cap_oku": null,
+        "market_cap_oku": 5823.7,
         "equity_ratio": null,
-        "current_ratio": null,
-        "revenue_oku": null,
-        "operating_income_oku": null,
-        "net_income_oku": null
+        "current_ratio": 1.1,
+        "revenue_oku": 24517.0,
+        "operating_income_oku": 1846.9,
+        "net_income_oku": 1706.1
       },
       "price": {
-        "current": null,
-        "target": null
+        "current": 1175.5,
+        "target": 1485.0
       },
       "schedule": {
         "next_earnings": null
-      },
-      "error": "Too Many Requests. Rate limited. Try after a while."
+      }
     },
     {
       "code": "9507",
@@ -131147,7 +131144,7 @@
       },
       "price": {
         "current": 925.0,
-        "target": 770.0
+        "target": 853.3
       },
       "schedule": {
         "next_earnings": null
@@ -131554,7 +131551,7 @@
         "net_margin": 14.7
       },
       "dividend": {
-        "yield": 80.0,
+        "yield": 0.8,
         "per_share": 5.0
       },
       "financial": {
@@ -131760,7 +131757,7 @@
       "profitability": {
         "roe": 32.6,
         "roa": 15.6,
-        "operating_margin": 15.3,
+        "operating_margin": 15.2,
         "net_margin": 12.5
       },
       "dividend": {
@@ -131772,7 +131769,7 @@
         "equity_ratio": null,
         "current_ratio": 2.0,
         "revenue_oku": 62.7,
-        "operating_income_oku": 9.6,
+        "operating_income_oku": 9.5,
         "net_income_oku": 7.9
       },
       "price": {
@@ -132009,7 +132006,7 @@
         "net_margin": 5.4
       },
       "dividend": {
-        "yield": 26.0,
+        "yield": 0.3,
         "per_share": 30.0
       },
       "financial": {
@@ -132114,7 +132111,7 @@
         "net_margin": 11.7
       },
       "dividend": {
-        "yield": 20.0,
+        "yield": 0.2,
         "per_share": 12.0
       },
       "financial": {
@@ -132534,7 +132531,7 @@
         "net_margin": 6.5
       },
       "dividend": {
-        "yield": 62.0,
+        "yield": 0.6,
         "per_share": 10.0
       },
       "financial": {
@@ -132604,7 +132601,7 @@
         "net_margin": 2.1
       },
       "dividend": {
-        "yield": 24.0,
+        "yield": 0.2,
         "per_share": 10.0
       },
       "financial": {
@@ -132738,22 +132735,22 @@
         "pbr": 1.1
       },
       "profitability": {
-        "roe": 14.0,
-        "roa": 7.3,
-        "operating_margin": 7.2,
-        "net_margin": 7.2
+        "roe": 14.1,
+        "roa": 7.7,
+        "operating_margin": 13.9,
+        "net_margin": 7.6
       },
       "dividend": {
-        "yield": 36.0,
+        "yield": 0.4,
         "per_share": 30.0
       },
       "financial": {
         "market_cap_oku": 49.4,
         "equity_ratio": null,
-        "current_ratio": 2.1,
-        "revenue_oku": 84.4,
-        "operating_income_oku": 6.0,
-        "net_income_oku": 6.1
+        "current_ratio": 2.3,
+        "revenue_oku": 84.0,
+        "operating_income_oku": 11.7,
+        "net_income_oku": 6.3
       },
       "price": {
         "current": 8300.0,
@@ -133107,7 +133104,7 @@
       },
       "price": {
         "current": 2590.0,
-        "target": 2624.0
+        "target": 2617.8
       },
       "schedule": {
         "next_earnings": null
@@ -133317,7 +133314,7 @@
       },
       "price": {
         "current": 3328.0,
-        "target": 4395.6
+        "target": 4389.4
       },
       "schedule": {
         "next_earnings": null
@@ -133409,7 +133406,7 @@
         "net_margin": -3.7
       },
       "dividend": {
-        "yield": 97.0,
+        "yield": 1.0,
         "per_share": 45.0
       },
       "financial": {
@@ -133549,7 +133546,7 @@
         "net_margin": 5.5
       },
       "dividend": {
-        "yield": 39.0,
+        "yield": 0.4,
         "per_share": 6.0
       },
       "financial": {
@@ -133619,7 +133616,7 @@
         "net_margin": 5.9
       },
       "dividend": {
-        "yield": 54.0,
+        "yield": 0.5,
         "per_share": 5.0
       },
       "financial": {
@@ -133759,7 +133756,7 @@
         "net_margin": 3.7
       },
       "dividend": {
-        "yield": 41.0,
+        "yield": 0.4,
         "per_share": 25.0
       },
       "financial": {
@@ -133794,7 +133791,7 @@
         "net_margin": 11.3
       },
       "dividend": {
-        "yield": 86.0,
+        "yield": 0.9,
         "per_share": 20.0
       },
       "financial": {
@@ -133829,7 +133826,7 @@
         "net_margin": -0.4
       },
       "dividend": {
-        "yield": 46.0,
+        "yield": 0.5,
         "per_share": 3.0
       },
       "financial": {
@@ -133912,7 +133909,7 @@
       },
       "price": {
         "current": 2723.0,
-        "target": 2835.0
+        "target": 2971.0
       },
       "schedule": {
         "next_earnings": null
@@ -134529,7 +134526,7 @@
         "net_margin": 18.5
       },
       "dividend": {
-        "yield": 98.0,
+        "yield": 1.0,
         "per_share": 190.5
       },
       "financial": {
@@ -134542,7 +134539,7 @@
       },
       "price": {
         "current": 19195.0,
-        "target": 25638.8
+        "target": 25563.5
       },
       "schedule": {
         "next_earnings": null
@@ -134910,7 +134907,7 @@
       "profitability": {
         "roe": 11.2,
         "roa": 8.3,
-        "operating_margin": 18.9,
+        "operating_margin": 18.8,
         "net_margin": 12.7
       },
       "dividend": {
@@ -134922,7 +134919,7 @@
         "equity_ratio": null,
         "current_ratio": 2.3,
         "revenue_oku": 718.5,
-        "operating_income_oku": 135.7,
+        "operating_income_oku": 135.3,
         "net_income_oku": 91.6
       },
       "price": {
@@ -135443,7 +135440,7 @@
         "per_share": 72.0
       },
       "financial": {
-        "market_cap_oku": 497.9,
+        "market_cap_oku": 476.5,
         "equity_ratio": null,
         "current_ratio": 3.0,
         "revenue_oku": 568.7,
@@ -135522,7 +135519,7 @@
       },
       "price": {
         "current": 2485.5,
-        "target": 2920.9
+        "target": 2934.5
       },
       "schedule": {
         "next_earnings": null
@@ -135544,7 +135541,7 @@
         "net_margin": 5.6
       },
       "dividend": {
-        "yield": 2.2,
+        "yield": 2.3,
         "per_share": 33.0
       },
       "financial": {
@@ -135649,7 +135646,7 @@
         "net_margin": 0.7
       },
       "dividend": {
-        "yield": 71.0,
+        "yield": 0.7,
         "per_share": 7.0
       },
       "financial": {
@@ -135684,7 +135681,7 @@
         "net_margin": 0.6
       },
       "dividend": {
-        "yield": 33.0,
+        "yield": 0.3,
         "per_share": 3.0
       },
       "financial": {
@@ -135819,12 +135816,12 @@
       },
       "profitability": {
         "roe": 7.1,
-        "roa": 4.1,
-        "operating_margin": 4.6,
+        "roa": 4.0,
+        "operating_margin": 4.2,
         "net_margin": 2.1
       },
       "dividend": {
-        "yield": 64.0,
+        "yield": 0.6,
         "per_share": 22.0
       },
       "financial": {
@@ -135832,7 +135829,7 @@
         "equity_ratio": null,
         "current_ratio": 1.2,
         "revenue_oku": 2256.7,
-        "operating_income_oku": 102.9,
+        "operating_income_oku": 94.4,
         "net_income_oku": 46.6
       },
       "price": {
@@ -135859,7 +135856,7 @@
         "net_margin": 5.1
       },
       "dividend": {
-        "yield": 52.0,
+        "yield": 0.5,
         "per_share": 50.0
       },
       "financial": {
@@ -136139,7 +136136,7 @@
         "net_margin": 1.9
       },
       "dividend": {
-        "yield": 42.0,
+        "yield": 0.4,
         "per_share": 24.0
       },
       "financial": {
@@ -136349,7 +136346,7 @@
         "net_margin": 3.9
       },
       "dividend": {
-        "yield": 54.0,
+        "yield": 0.5,
         "per_share": 10.0
       },
       "financial": {
@@ -136979,7 +136976,7 @@
         "net_margin": 0.4
       },
       "dividend": {
-        "yield": 59.0,
+        "yield": 0.6,
         "per_share": 20.0
       },
       "financial": {
@@ -137014,7 +137011,7 @@
         "net_margin": 8.1
       },
       "dividend": {
-        "yield": 60.0,
+        "yield": 0.6,
         "per_share": 17.0
       },
       "financial": {
@@ -137224,7 +137221,7 @@
         "net_margin": -16.4
       },
       "dividend": {
-        "yield": 2.5,
+        "yield": 2.6,
         "per_share": 7.0
       },
       "financial": {
@@ -137232,7 +137229,7 @@
         "equity_ratio": null,
         "current_ratio": 1.9,
         "revenue_oku": 161.3,
-        "operating_income_oku": 1.3,
+        "operating_income_oku": 1.2,
         "net_income_oku": -26.5
       },
       "price": {
@@ -137288,9 +137285,9 @@
         "pbr": 1.4
       },
       "profitability": {
-        "roe": 11.2,
-        "roa": 5.0,
-        "operating_margin": 3.5,
+        "roe": 11.0,
+        "roa": 5.3,
+        "operating_margin": 5.0,
         "net_margin": 3.0
       },
       "dividend": {
@@ -137301,9 +137298,9 @@
         "market_cap_oku": 1597.7,
         "equity_ratio": null,
         "current_ratio": 0.8,
-        "revenue_oku": 4176.7,
-        "operating_income_oku": 145.7,
-        "net_income_oku": 123.8
+        "revenue_oku": 4234.3,
+        "operating_income_oku": 210.8,
+        "net_income_oku": 126.8
       },
       "price": {
         "current": 7720.0,
@@ -137434,7 +137431,7 @@
         "net_margin": 5.9
       },
       "dividend": {
-        "yield": 96.0,
+        "yield": 1.0,
         "per_share": 1.0
       },
       "financial": {
@@ -137499,12 +137496,12 @@
       },
       "profitability": {
         "roe": 20.6,
-        "roa": 10.2,
-        "operating_margin": 18.8,
+        "roa": 10.0,
+        "operating_margin": 17.7,
         "net_margin": 13.1
       },
       "dividend": {
-        "yield": 85.0,
+        "yield": 0.8,
         "per_share": 640.0
       },
       "financial": {
@@ -137512,12 +137509,12 @@
         "equity_ratio": null,
         "current_ratio": 3.2,
         "revenue_oku": 36655.7,
-        "operating_income_oku": 6883.2,
+        "operating_income_oku": 6496.5,
         "net_income_oku": 4787.3
       },
       "price": {
         "current": 67450.0,
-        "target": 66750.0
+        "target": 68764.3
       },
       "schedule": {
         "next_earnings": null
@@ -137539,7 +137536,7 @@
         "net_margin": 48.2
       },
       "dividend": {
-        "yield": 29.0,
+        "yield": 0.3,
         "per_share": 11.0
       },
       "financial": {
@@ -137657,7 +137654,7 @@
       },
       "price": {
         "current": 3926.0,
-        "target": 4994.3
+        "target": 4980.0
       },
       "schedule": {
         "next_earnings": null
