@@ -212,7 +212,7 @@ def series_payload(series_id, label, unit, df):
 
 
 def fetch_newsapi_news(query, page_size=10):
-    api_key = os.getenv("NEWSAPI_API_KEY") or os.getenv("NEWS_API_KEY")
+    api_key = (os.getenv("NEWSAPI_API_KEY") or os.getenv("NEWS_API_KEY") or "").strip()
     if not api_key:
         return [], "missing NEWSAPI_API_KEY"
 
@@ -223,15 +223,19 @@ def fetch_newsapi_news(query, page_size=10):
         "sortBy": "publishedAt",
         "pageSize": page_size,
         "from": from_datetime.isoformat(timespec="seconds"),
-        "apiKey": api_key
     }
+    headers = {"X-Api-Key": api_key}
 
     domains = (os.getenv("NEWSAPI_DOMAINS") or "").strip()
     if domains:
         params["domains"] = domains
 
-    res = requests.get(url, params=params, timeout=30)
-    res.raise_for_status()
+    res = requests.get(url, params=params, headers=headers, timeout=30)
+    try:
+        res.raise_for_status()
+    except requests.HTTPError as e:
+        status = e.response.status_code if e.response is not None else "unknown"
+        return [], f"newsapi http {status}"
 
     payload = res.json()
     if payload.get("status") != "ok":
