@@ -97,81 +97,302 @@ let allStocks = [];
 let currentIndex = 0;
 let priceChart = null;
 let financeChart = null;
+const historyCache = new Map();
 
-async function loadDetail() {
-  const params = new URLSearchParams(window.location.search);
-  const code = params.get("code");
-
-  const response = await fetch("data.json");
-  const data = await response.json();
-  allStocks = data.stocks;
-
-  const stock = allStocks.find(s => s.code === code);
-  currentIndex = allStocks.findIndex(s => s.code === code);
-
-  if (!stock) return;
-
-  document.getElementById("stock-name").innerText =
-    stock.name + " (" + stock.code + ")";
-
-  document.getElementById("stock-detail").innerHTML = `
-    PER: ${stock.valuation.per ?? "-"}<br>
-    PBR: ${stock.valuation.pbr ?? "-"}<br>
-    ROE: ${stock.profitability.roe ?? "-"}%<br>
-    売上: ${stock.financial.revenue_oku ?? "-"} 億円<br>
-    営業利益: ${stock.financial.operating_income_oku ?? "-"} 億円<br>
-    純利益: ${stock.financial.net_income_oku ?? "-"} 億円<br>
-    自己資本比率: ${stock.financial.equity_ratio ?? "-"}%
-  `;
-
-  createPriceChart();
-  createFinanceChart(stock);
+function toNumber(value) {
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
 }
 
-function createPriceChart() {
-  const ctx = document.getElementById('priceChart');
+function formatNumber(value, digits = 1) {
+  const n = toNumber(value);
+  if (n == null) return "-";
+  return n.toLocaleString("ja-JP", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: digits
+  });
+}
+
+function formatPercent(value, digits = 1) {
+  const n = toNumber(value);
+  if (n == null) return "-";
+  return `${formatNumber(n, digits)}%`;
+}
+
+function splitCsvLine(line) {
+  const out = [];
+  let cur = "";
+  let inQuote = false;
+  for (let i = 0; i < line.length; i += 1) {
+    const ch = line[i];
+    if (ch === '"') {
+      const next = line[i + 1];
+      if (inQuote && next === '"') {
+        cur += '"';
+        i += 1;
+      } else {
+        inQuote = !inQuote;
+      }
+      continue;
+    }
+    if (ch === "," && !inQuote) {
+      out.push(cur);
+      cur = "";
+      continue;
+    }
+    cur += ch;
+  }
+  out.push(cur);
+  return out;
+}
+
+function parsePriceCsv(text) {
+  const lines = text.trim().split(/\r?\n/);
+  if (lines.length <= 1) return [];
+
+  const headers = splitCsvLine(lines[0]).map(h => h.trim().toLowerCase());
+  const dateIdx = headers.indexOf("date");
+  let closeIdx = headers.indexOf("close");
+  if (closeIdx < 0) {
+    closeIdx = headers.indexOf("adj close");
+  }
+
+  // fallback: older simple format "date,close"
+  const fallbackSimple = dateIdx < 0 || closeIdx < 0;
+
+  const out = [];
+  for (let i = 1; i < lines.length; i += 1) {
+    const cols = splitCsvLine(lines[i]);
+    if (fallbackSimple) {
+      if (cols.length < 2) continue;
+      const dateRaw = (cols[0] || "").trim();
+      const close = Number(cols[1]);
+      if (!dateRaw || !Number.isFinite(close)) continue;
+      out.push({ date: dateRaw.slice(0, 10), close });
+      continue;
+    }
+
+    const dateRaw = (cols[dateIdx] || "").trim();
+    const close = Number(cols[closeIdx]);
+    if (!dateRaw || !Number.isFinite(close)) continue;
+    out.push({ date: dateRaw.slice(0, 10), close });
+  }
+  return out;
+}
+
+async function loadPriceHistory(code) {
+  const key = String(code || "").trim();
+  if (!key) return [];
+  if (historyCache.has(key)) return historyCache.get(key);
+
+  const path = `sector_data/series/${encodeURIComponent(key)}.csv?v=${Date.now()}`;
+  try {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error("history fetch failed");
+    const text = await res.text();
+    const rows = parsePriceCsv(text);
+    historyCache.set(key, rows);
+    return rows;
+  } catch (e) {
+    historyCache.set(key, []);
+    return [];
+  }
+}
+
+function movingAverage(values, span) {
+  const out = new Array(values.length).fill(null);
+  if (!Array.isArray(values) || values.length === 0 || span <= 0) return out;
+
+  let sum = 0;
+  for (let i = 0; i < values.length; i += 1) {
+    sum += values[i];
+    if (i >= span) {
+      sum -= values[i - span];
+    }
+    if (i >= span - 1) {
+      out[i] = sum / span;
+    }
+  }
+  return out;
+}
+
+function calcReturnPct(rows, backDays) {
+  if (!rows || rows.length <= backDays) return null;
+  const latest = toNumber(rows[rows.length - 1]?.close);
+  const base = toNumber(rows[rows.length - 1 - backDays]?.close);
+  if (latest == null || base == null || base === 0) return null;
+  return ((latest / base) - 1) * 100;
+}
+
+function renderStockDetail(stock, rows) {
+  const r1w = calcReturnPct(rows, 5);
+  const r1m = calcReturnPct(rows, 21);
+  const r3m = calcReturnPct(rows, 63);
+
+  document.getElementById("stock-detail").innerHTML = `
+    市場: ${stock.market ?? "-"} / 業種: ${stock.industry ?? "-"}<br>
+    現在値: ${formatNumber(stock.price?.current, 1)} 円<br>
+    目標株価: ${formatNumber(stock.price?.target, 1)} 円<br>
+    PER: ${formatNumber(stock.valuation?.per, 1)}<br>
+    PBR: ${formatNumber(stock.valuation?.pbr, 1)}<br>
+    ROE: ${formatPercent(stock.profitability?.roe, 1)}<br>
+    ROA: ${formatPercent(stock.profitability?.roa, 1)}<br>
+    営業利益率: ${formatPercent(stock.profitability?.operating_margin, 1)}<br>
+    純利益率: ${formatPercent(stock.profitability?.net_margin, 1)}<br>
+    配当利回り: ${formatPercent(stock.dividend?.yield, 1)}<br>
+    1株配当: ${formatNumber(stock.dividend?.per_share, 1)} 円<br>
+    売上: ${formatNumber(stock.financial?.revenue_oku, 1)} 億円<br>
+    営業利益: ${formatNumber(stock.financial?.operating_income_oku, 1)} 億円<br>
+    純利益: ${formatNumber(stock.financial?.net_income_oku, 1)} 億円<br>
+    自己資本比率: ${formatPercent(stock.financial?.equity_ratio, 1)}<br>
+    流動比率: ${formatNumber(stock.financial?.current_ratio, 1)}<br>
+    騰落率(1週): ${formatPercent(r1w, 2)}<br>
+    騰落率(1か月): ${formatPercent(r1m, 2)}<br>
+    騰落率(3か月): ${formatPercent(r3m, 2)}<br>
+    次回決算: ${stock.schedule?.next_earnings ?? "-"}
+  `;
+}
+
+function createPriceChart(stock, rows) {
+  const ctx = document.getElementById("priceChart");
 
   if (priceChart) {
     priceChart.destroy();
   }
 
+  let labels = [];
+  let closeSeries = [];
+  if (rows && rows.length > 0) {
+    const recent = rows.slice(-120);
+    labels = recent.map(r => r.date);
+    closeSeries = recent.map(r => r.close);
+  } else {
+    const current = toNumber(stock.price?.current);
+    if (current != null) {
+      labels = ["現在"];
+      closeSeries = [current];
+    }
+  }
+
+  const sma5 = movingAverage(closeSeries, 5);
+  const sma25 = movingAverage(closeSeries, 25);
+
   priceChart = new Chart(ctx, {
-    type: 'line',
+    type: "line",
     data: {
-      labels: Array.from({length: 30}, (_, i) => i + 1),
-      datasets: [{
-        label: '株価（サンプル）',
-        data: Array.from({length: 30}, () => 5000 + Math.random()*200),
-      }]
+      labels,
+      datasets: [
+        {
+          label: "終値",
+          data: closeSeries,
+          borderColor: "#1f6feb",
+          backgroundColor: "rgba(31,111,235,0.1)",
+          borderWidth: 2,
+          pointRadius: 0,
+          tension: 0.2
+        },
+        {
+          label: "SMA5",
+          data: sma5,
+          borderColor: "#f59e0b",
+          borderWidth: 1.8,
+          pointRadius: 0,
+          tension: 0.2
+        },
+        {
+          label: "SMA25",
+          data: sma25,
+          borderColor: "#10b981",
+          borderWidth: 1.8,
+          pointRadius: 0,
+          tension: 0.2
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        title: {
+          display: true,
+          text: `${stock.name} (${stock.code}) \u7D42\u5024 + \u79FB\u52D5\u5E73\u5747`
+        }
+      },
+      scales: {
+        y: {
+          ticks: {
+            callback: function(v) {
+              return Number(v).toLocaleString("ja-JP");
+            }
+          }
+        }
+      }
     }
   });
 }
 
 function createFinanceChart(stock) {
-  const ctx = document.getElementById('financeChart');
+  const ctx = document.getElementById("financeChart");
 
   if (financeChart) {
     financeChart.destroy();
   }
 
   financeChart = new Chart(ctx, {
-    type: 'bar',
+    type: "bar",
     data: {
-      labels: ['売上', '営業利益', '純利益'],
+      labels: ["売上", "営業利益", "純利益"],
       datasets: [{
-        label: '億円',
+        label: "億円",
         data: [
-          stock.financial.revenue_oku ?? 0,
-          stock.financial.operating_income_oku ?? 0,
-          stock.financial.net_income_oku ?? 0
+          toNumber(stock.financial?.revenue_oku) ?? 0,
+          toNumber(stock.financial?.operating_income_oku) ?? 0,
+          toNumber(stock.financial?.net_income_oku) ?? 0
+        ],
+        backgroundColor: [
+          "rgba(45,127,249,0.75)",
+          "rgba(16,185,129,0.75)",
+          "rgba(245,158,11,0.75)"
         ]
       }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true
     }
   });
 }
 
+async function loadDetail() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    if (!code) return;
+
+    const response = await fetch("data.json?v=" + Date.now());
+    if (!response.ok) return;
+    const data = await response.json();
+    allStocks = data.stocks || [];
+
+    const stock = allStocks.find(s => s.code === code);
+    currentIndex = allStocks.findIndex(s => s.code === code);
+
+    if (!stock) return;
+
+    document.getElementById("stock-name").innerText = `${stock.name} (${stock.code})`;
+
+    const rows = await loadPriceHistory(stock.code);
+    renderStockDetail(stock, rows);
+    createPriceChart(stock, rows);
+    createFinanceChart(stock);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 function moveStock(direction) {
-  let newIndex = currentIndex + direction;
+  const newIndex = currentIndex + direction;
   if (newIndex < 0 || newIndex >= allStocks.length) return;
   const nextCode = allStocks[newIndex].code;
   window.location.href = "detail.html?code=" + nextCode;
