@@ -1,18 +1,26 @@
-﻿name: Weekly Update
+name: Data Update
 
 permissions:
   contents: write
 
 on:
   schedule:
+    - cron: '0 0 * * 0-5'  # 日曜-金曜 9:00 JST（UTC基準）
     - cron: '0 0 * * 6'  # 毎週土曜9:00 JST（UTC基準）
-  workflow_dispatch:      # 手動実行も可能
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      NEWSAPI_API_KEY: ${{ secrets.NEWSAPI_API_KEY }}
+      NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+      NEWSAPI_DOMAINS: ${{ secrets.NEWSAPI_DOMAINS }}
+      NEWSAPI_QUERY: ${{ secrets.NEWSAPI_QUERY }}
+      MARKET_NEWS_QUERY: ${{ secrets.MARKET_NEWS_QUERY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
 
     steps:
       - name: リポジトリを取得
@@ -31,8 +39,17 @@ jobs:
 
       - name: スクリプト実行
         run: |
-          python generate.py
-          python generate_sector.py
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python generate.py
+            python generate_sector.py
+            python generate_market.py
+          elif [ "${{ github.event.schedule }}" = "0 0 * * 6" ]; then
+            python generate.py
+            python generate_sector.py
+            python generate_market.py
+          else
+            python generate_market.py
+          fi
 
       - name: 自動コミット
         run: |

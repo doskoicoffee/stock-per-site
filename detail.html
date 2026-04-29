@@ -2,102 +2,264 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>銘柄詳細</title>
-
-  <!-- ここに Chart.js -->
+  <title>&#x9298;&#x67C4;&#x8A73;&#x7D30;</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <!-- ここにCSS -->
   <style>
     body {
-	font-family: Arial, sans-serif;
-	background: #f5f7fa;
-	margin: 20px;
-    }
-    
-    .container {
-	max-width: 1000px;
-	margin: auto;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 20px;
+      color: #1f2937;
     }
 
-    .back-link {
-	display: inline-block;
-	color: #2d7ff9;
-	text-decoration: none;
+    .container {
+      max-width: 1080px;
+      margin: auto;
     }
 
     .page-nav {
-	display: flex;
-	gap: 12px;
-	margin-bottom: 12px;
-	align-items: center;
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    
+
+    .back-link {
+      display: inline-block;
+      color: #2d7ff9;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .switcher {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0 16px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      background: #2d7ff9;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn.secondary {
+      background: #0f766e;
+    }
+
+    .btn.ghost {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
     .card {
-	background: white;
-	padding: 20px;
-	margin-bottom: 20px;
-	border-radius: 12px;
-	box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      background: white;
+      padding: 20px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     }
-    
+
     .card h2 {
-	margin-top: 0;
+      margin: 0 0 12px;
+      font-size: 20px;
     }
-    
-    button {
-	padding: 8px 16px;
-	border: none;
-	background: #2d7ff9;
-	color: white;
-	border-radius: 6px;
-	cursor: pointer;
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
     }
-    
-    button:hover {
-	opacity: 0.85;
+
+    .kpi-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: #fafafa;
+      min-height: 64px;
+    }
+
+    .kpi-label {
+      color: #6b7280;
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+
+    .kpi-value {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #111827;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .kpi-sub {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #374151;
+    }
+
+    .chart-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .overlay-summary {
+      font-size: 13px;
+      color: #374151;
+    }
+
+    .overlay-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.45);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .overlay-modal.open {
+      display: flex;
+    }
+
+    .overlay-panel {
+      width: min(560px, 96vw);
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      padding: 16px;
+    }
+
+    .overlay-panel h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .overlay-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .overlay-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      padding: 6px 8px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    .overlay-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .chart-wrap {
+      min-height: 320px;
+    }
+
+    @media (max-width: 900px) {
+      .kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .overlay-options {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
-  
 </head>
-
 <body>
-  <!-- ここにHTML本体 -->
   <div class="container">
     <div class="page-nav">
-      <a class="back-link" href="index.html">← トップへ</a>
-      <a class="back-link" href="#" onclick="goBack(event)">← 前に戻る</a>
+      <a class="back-link" href="index.html">&#x2190; &#x30C8;&#x30C3;&#x30D7;&#x3078;</a>
+      <a class="back-link" href="#" onclick="goBack(event)">&#x2190; &#x524D;&#x306B;&#x623B;&#x308B;</a>
     </div>
-    
+
     <h1 id="stock-name"></h1>
-    
-    <div>
-      <button onclick="moveStock(-1)">← 前へ</button>
-      <button onclick="moveStock(1)">次へ →</button>
+
+    <div class="switcher">
+      <button class="btn" onclick="moveStock(-1)">&#x2190; &#x524D;&#x3078;</button>
+      <button class="btn" onclick="moveStock(1)">&#x6B21;&#x3078; &#x2192;</button>
     </div>
-    
+
     <div class="card">
-      <h2>📊 株価チャート</h2>
-      <canvas id="priceChart"></canvas>
+      <h2>&#x4E3B;&#x8981;&#x6307;&#x6A19;</h2>
+      <div id="kpi-grid" class="kpi-grid"></div>
+      <div id="kpi-sub" class="kpi-sub"></div>
     </div>
-    
+
     <div class="card">
-      <h2>📈 主要指標</h2>
-      <div id="stock-detail"></div>
+      <h2>&#x682A;&#x4FA1;&#x30C1;&#x30E3;&#x30FC;&#x30C8;</h2>
+      <div class="chart-toolbar">
+        <button class="btn secondary" type="button" onclick="openOverlayWindow()">&#x91CD;&#x7573;&#x6307;&#x6A19;&#x3092;&#x9078;&#x629E;</button>
+        <div id="overlay-summary" class="overlay-summary">&#x91CD;&#x7573;: &#x306A;&#x3057;</div>
+      </div>
+      <div class="chart-wrap">
+        <canvas id="priceChart"></canvas>
+      </div>
     </div>
-    
+
     <div class="card">
-      <h2>📊 財務グラフ</h2>
-      <canvas id="financeChart"></canvas>
-    </div>   
+      <h2>&#x8CA1;&#x52D9;&#x30B0;&#x30E9;&#x30D5;&#xFF08;&#x5E74;&#x6B21;&#xFF09;</h2>
+      <div class="chart-wrap">
+        <canvas id="financeChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div id="overlay-modal" class="overlay-modal" onclick="handleOverlayBackdrop(event)">
+    <div class="overlay-panel">
+      <h3>&#x91CD;&#x7573;&#x3059;&#x308B;&#x6307;&#x6A19;&#x3092;&#x30C1;&#x30A7;&#x30C3;&#x30AF;</h3>
+      <div id="overlay-options" class="overlay-options"></div>
+      <div class="overlay-actions">
+        <button class="btn ghost" type="button" onclick="closeOverlayWindow()">&#x30AD;&#x30E3;&#x30F3;&#x30BB;&#x30EB;</button>
+        <button class="btn" type="button" onclick="applyOverlaySelection()">&#x9069;&#x7528;</button>
+      </div>
+    </div>
   </div>
 
   <script>
 let allStocks = [];
 let currentIndex = 0;
+let currentStock = null;
+let currentRows = [];
 let priceChart = null;
 let financeChart = null;
 const historyCache = new Map();
+
+const overlayDefs = [
+  { key: "per", label: "PER", unit: "\u500d", color: "#8b5cf6", getter: s => s?.valuation?.per },
+  { key: "pbr", label: "PBR", unit: "\u500d", color: "#7c3aed", getter: s => s?.valuation?.pbr },
+  { key: "roe", label: "ROE", unit: "%", color: "#ef4444", getter: s => s?.profitability?.roe },
+  { key: "roa", label: "ROA", unit: "%", color: "#f97316", getter: s => s?.profitability?.roa },
+  { key: "div_yield", label: "\u914d\u5f53\u5229\u56de\u308a", unit: "%", color: "#0ea5e9", getter: s => s?.dividend?.yield },
+  { key: "op_margin", label: "\u55b6\u696d\u5229\u76ca\u7387", unit: "%", color: "#10b981", getter: s => s?.profitability?.operating_margin },
+  { key: "net_margin", label: "\u7d14\u5229\u76ca\u7387", unit: "%", color: "#14b8a6", getter: s => s?.profitability?.net_margin },
+  { key: "equity_ratio", label: "\u81ea\u5df1\u8cc7\u672c\u6bd4\u7387", unit: "%", color: "#22c55e", getter: s => s?.financial?.equity_ratio }
+];
+
+let selectedOverlayKeys = [];
 
 function toNumber(value) {
   const n = Number(value);
@@ -153,14 +315,11 @@ function parsePriceCsv(text) {
   const headers = splitCsvLine(lines[0]).map(h => h.trim().toLowerCase());
   const dateIdx = headers.indexOf("date");
   let closeIdx = headers.indexOf("close");
-  if (closeIdx < 0) {
-    closeIdx = headers.indexOf("adj close");
-  }
+  if (closeIdx < 0) closeIdx = headers.indexOf("adj close");
 
-  // fallback: older simple format "date,close"
   const fallbackSimple = dateIdx < 0 || closeIdx < 0;
-
   const out = [];
+
   for (let i = 1; i < lines.length; i += 1) {
     const cols = splitCsvLine(lines[i]);
     if (fallbackSimple) {
@@ -177,6 +336,7 @@ function parsePriceCsv(text) {
     if (!dateRaw || !Number.isFinite(close)) continue;
     out.push({ date: dateRaw.slice(0, 10), close });
   }
+
   return out;
 }
 
@@ -206,12 +366,8 @@ function movingAverage(values, span) {
   let sum = 0;
   for (let i = 0; i < values.length; i += 1) {
     sum += values[i];
-    if (i >= span) {
-      sum -= values[i - span];
-    }
-    if (i >= span - 1) {
-      out[i] = sum / span;
-    }
+    if (i >= span) sum -= values[i - span];
+    if (i >= span - 1) out[i] = sum / span;
   }
   return out;
 }
@@ -224,52 +380,121 @@ function calcReturnPct(rows, backDays) {
   return ((latest / base) - 1) * 100;
 }
 
-function renderStockDetail(stock, rows) {
+function renderKpiGrid(stock, rows) {
+  const kpis = [
+    { label: "\u73FE\u5728\u5024", value: `${formatNumber(stock?.price?.current, 1)} \u5186` },
+    { label: "PER", value: formatNumber(stock?.valuation?.per, 1) },
+    { label: "PBR", value: formatNumber(stock?.valuation?.pbr, 1) },
+    { label: "ROE", value: formatPercent(stock?.profitability?.roe, 1) },
+    { label: "\u914d\u5F53\u5229\u56DE\u308A", value: formatPercent(stock?.dividend?.yield, 1) },
+    { label: "\u55B6\u696D\u5229\u76CA\u7387", value: formatPercent(stock?.profitability?.operating_margin, 1) },
+    { label: "\u7D14\u5229\u76CA\u7387", value: formatPercent(stock?.profitability?.net_margin, 1) },
+    { label: "\u81EA\u5DF1\u8CC7\u672C\u6BD4\u7387", value: formatPercent(stock?.financial?.equity_ratio, 1) }
+  ];
+
+  const grid = document.getElementById("kpi-grid");
+  grid.innerHTML = kpis.map(item => `
+    <div class="kpi-item">
+      <div class="kpi-label">${item.label}</div>
+      <div class="kpi-value">${item.value}</div>
+    </div>
+  `).join("");
+
   const r1w = calcReturnPct(rows, 5);
   const r1m = calcReturnPct(rows, 21);
   const r3m = calcReturnPct(rows, 63);
+  document.getElementById("kpi-sub").innerText =
+    `\u5E02\u5834: ${stock.market ?? "-"} / \u696D\u7A2E: ${stock.industry ?? "-"} / \u9A30\u843D\u7387(1\u9031): ${formatPercent(r1w, 2)} / \u9A30\u843D\u7387(1\u304B\u6708): ${formatPercent(r1m, 2)} / \u9A30\u843D\u7387(3\u304B\u6708): ${formatPercent(r3m, 2)} / \u6B21\u56DE\u6C7A\u7B97: ${stock?.schedule?.next_earnings ?? "-"}`;
+}
 
-  document.getElementById("stock-detail").innerHTML = `
-    市場: ${stock.market ?? "-"} / 業種: ${stock.industry ?? "-"}<br>
-    現在値: ${formatNumber(stock.price?.current, 1)} 円<br>
-    目標株価: ${formatNumber(stock.price?.target, 1)} 円<br>
-    PER: ${formatNumber(stock.valuation?.per, 1)}<br>
-    PBR: ${formatNumber(stock.valuation?.pbr, 1)}<br>
-    ROE: ${formatPercent(stock.profitability?.roe, 1)}<br>
-    ROA: ${formatPercent(stock.profitability?.roa, 1)}<br>
-    営業利益率: ${formatPercent(stock.profitability?.operating_margin, 1)}<br>
-    純利益率: ${formatPercent(stock.profitability?.net_margin, 1)}<br>
-    配当利回り: ${formatPercent(stock.dividend?.yield, 1)}<br>
-    1株配当: ${formatNumber(stock.dividend?.per_share, 1)} 円<br>
-    売上: ${formatNumber(stock.financial?.revenue_oku, 1)} 億円<br>
-    営業利益: ${formatNumber(stock.financial?.operating_income_oku, 1)} 億円<br>
-    純利益: ${formatNumber(stock.financial?.net_income_oku, 1)} 億円<br>
-    自己資本比率: ${formatPercent(stock.financial?.equity_ratio, 1)}<br>
-    流動比率: ${formatNumber(stock.financial?.current_ratio, 1)}<br>
-    騰落率(1週): ${formatPercent(r1w, 2)}<br>
-    騰落率(1か月): ${formatPercent(r1m, 2)}<br>
-    騰落率(3か月): ${formatPercent(r3m, 2)}<br>
-    次回決算: ${stock.schedule?.next_earnings ?? "-"}
-  `;
+function availableOverlayDefs(stock) {
+  return overlayDefs.filter(def => toNumber(def.getter(stock)) != null);
+}
+
+function renderOverlayOptions(stock) {
+  const options = availableOverlayDefs(stock);
+  const root = document.getElementById("overlay-options");
+  root.innerHTML = options.map(def => {
+    const checked = selectedOverlayKeys.includes(def.key) ? "checked" : "";
+    return `
+      <label class="overlay-option">
+        <input type="checkbox" value="${def.key}" ${checked}>
+        <span>${def.label}</span>
+      </label>
+    `;
+  }).join("");
+
+  const availSet = new Set(options.map(d => d.key));
+  selectedOverlayKeys = selectedOverlayKeys.filter(key => availSet.has(key));
+}
+
+function updateOverlaySummary() {
+  const selected = overlayDefs.filter(d => selectedOverlayKeys.includes(d.key));
+  const summary = selected.length ? selected.map(d => d.label).join(" / ") : "\u306A\u3057";
+  document.getElementById("overlay-summary").innerText = `\u91CD\u7573: ${summary}`;
+}
+
+function openOverlayWindow() {
+  if (!currentStock) return;
+  renderOverlayOptions(currentStock);
+  document.getElementById("overlay-modal").classList.add("open");
+}
+
+function closeOverlayWindow() {
+  document.getElementById("overlay-modal").classList.remove("open");
+}
+
+function handleOverlayBackdrop(event) {
+  if (event.target.id === "overlay-modal") closeOverlayWindow();
+}
+
+function applyOverlaySelection() {
+  const checked = Array.from(document.querySelectorAll("#overlay-options input[type='checkbox']:checked"));
+  selectedOverlayKeys = checked.map(el => el.value);
+  closeOverlayWindow();
+  updateOverlaySummary();
+  createPriceChart(currentStock, currentRows);
+}
+
+function buildOverlayDatasets(stock, labelsCount) {
+  if (!stock || !labelsCount || labelsCount <= 0) return [];
+  const datasets = [];
+
+  for (const def of overlayDefs) {
+    if (!selectedOverlayKeys.includes(def.key)) continue;
+    const v = toNumber(def.getter(stock));
+    if (v == null) continue;
+
+    datasets.push({
+      label: `${def.label} (${def.unit})`,
+      data: Array.from({ length: labelsCount }, () => v),
+      yAxisID: "yMetric",
+      borderColor: def.color,
+      borderWidth: 1.6,
+      borderDash: [6, 5],
+      pointRadius: 0,
+      tension: 0
+    });
+  }
+
+  return datasets;
 }
 
 function createPriceChart(stock, rows) {
   const ctx = document.getElementById("priceChart");
-
-  if (priceChart) {
-    priceChart.destroy();
-  }
+  if (priceChart) priceChart.destroy();
 
   let labels = [];
   let closeSeries = [];
+
   if (rows && rows.length > 0) {
-    const recent = rows.slice(-120);
+    const recent = rows.slice(-180);
     labels = recent.map(r => r.date);
     closeSeries = recent.map(r => r.close);
   } else {
-    const current = toNumber(stock.price?.current);
+    const current = toNumber(stock?.price?.current);
     if (current != null) {
-      labels = ["現在"];
+      labels = ["\u73FE\u5728"];
       closeSeries = [current];
     }
   }
@@ -277,54 +502,76 @@ function createPriceChart(stock, rows) {
   const sma5 = movingAverage(closeSeries, 5);
   const sma25 = movingAverage(closeSeries, 25);
 
+  const baseDatasets = [
+    {
+      label: "\u7D42\u5024",
+      data: closeSeries,
+      yAxisID: "yPrice",
+      borderColor: "#1f6feb",
+      backgroundColor: "rgba(31,111,235,0.12)",
+      borderWidth: 2,
+      pointRadius: 0,
+      tension: 0.2
+    },
+    {
+      label: "SMA5",
+      data: sma5,
+      yAxisID: "yPrice",
+      borderColor: "#f59e0b",
+      borderWidth: 1.8,
+      pointRadius: 0,
+      tension: 0.2
+    },
+    {
+      label: "SMA25",
+      data: sma25,
+      yAxisID: "yPrice",
+      borderColor: "#10b981",
+      borderWidth: 1.8,
+      pointRadius: 0,
+      tension: 0.2
+    }
+  ];
+
+  const overlayDatasets = buildOverlayDatasets(stock, labels.length);
+
   priceChart = new Chart(ctx, {
     type: "line",
     data: {
       labels,
-      datasets: [
-        {
-          label: "終値",
-          data: closeSeries,
-          borderColor: "#1f6feb",
-          backgroundColor: "rgba(31,111,235,0.1)",
-          borderWidth: 2,
-          pointRadius: 0,
-          tension: 0.2
-        },
-        {
-          label: "SMA5",
-          data: sma5,
-          borderColor: "#f59e0b",
-          borderWidth: 1.8,
-          pointRadius: 0,
-          tension: 0.2
-        },
-        {
-          label: "SMA25",
-          data: sma25,
-          borderColor: "#10b981",
-          borderWidth: 1.8,
-          pointRadius: 0,
-          tension: 0.2
-        }
-      ]
+      datasets: [...baseDatasets, ...overlayDatasets]
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       interaction: { mode: "index", intersect: false },
       plugins: {
         title: {
           display: true,
-          text: `${stock.name} (${stock.code}) \u7D42\u5024 + \u79FB\u52D5\u5E73\u5747`
+          text: `${stock.name} (${stock.code}) \u7D42\u5024 + \u6307\u6A19\u91CD\u7573`
         }
       },
       scales: {
-        y: {
+        yPrice: {
+          type: "linear",
+          position: "left",
           ticks: {
-            callback: function(v) {
-              return Number(v).toLocaleString("ja-JP");
-            }
+            callback: (v) => Number(v).toLocaleString("ja-JP")
+          },
+          title: {
+            display: true,
+            text: "\u682A\u4FA1(\u5186)"
+          }
+        },
+        yMetric: {
+          type: "linear",
+          position: "right",
+          grid: {
+            drawOnChartArea: false
+          },
+          title: {
+            display: true,
+            text: "\u6307\u6A19"
           }
         }
       }
@@ -332,34 +579,77 @@ function createPriceChart(stock, rows) {
   });
 }
 
+function buildFinancialHistory(stock) {
+  const raw = Array.isArray(stock?.financial_history) ? stock.financial_history : [];
+  const rows = raw
+    .map(item => ({
+      year: String(item?.year ?? ""),
+      revenue_oku: toNumber(item?.revenue_oku),
+      operating_income_oku: toNumber(item?.operating_income_oku),
+      net_income_oku: toNumber(item?.net_income_oku)
+    }))
+    .filter(item => item.year && (item.revenue_oku != null || item.operating_income_oku != null || item.net_income_oku != null))
+    .sort((a, b) => Number(a.year) - Number(b.year));
+
+  if (rows.length > 0) return rows;
+
+  const year = String(new Date().getFullYear());
+  return [{
+    year,
+    revenue_oku: toNumber(stock?.financial?.revenue_oku),
+    operating_income_oku: toNumber(stock?.financial?.operating_income_oku),
+    net_income_oku: toNumber(stock?.financial?.net_income_oku)
+  }];
+}
+
 function createFinanceChart(stock) {
   const ctx = document.getElementById("financeChart");
+  if (financeChart) financeChart.destroy();
 
-  if (financeChart) {
-    financeChart.destroy();
-  }
+  const history = buildFinancialHistory(stock);
 
   financeChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["売上", "営業利益", "純利益"],
-      datasets: [{
-        label: "億円",
-        data: [
-          toNumber(stock.financial?.revenue_oku) ?? 0,
-          toNumber(stock.financial?.operating_income_oku) ?? 0,
-          toNumber(stock.financial?.net_income_oku) ?? 0
-        ],
-        backgroundColor: [
-          "rgba(45,127,249,0.75)",
-          "rgba(16,185,129,0.75)",
-          "rgba(245,158,11,0.75)"
-        ]
-      }]
+      labels: history.map(r => r.year),
+      datasets: [
+        {
+          label: "\u58F2\u4E0A(\u5104\u5186)",
+          data: history.map(r => r.revenue_oku),
+          backgroundColor: "rgba(45,127,249,0.75)"
+        },
+        {
+          label: "\u55B6\u696D\u5229\u76CA(\u5104\u5186)",
+          data: history.map(r => r.operating_income_oku),
+          backgroundColor: "rgba(16,185,129,0.75)"
+        },
+        {
+          label: "\u7D14\u5229\u76CA(\u5104\u5186)",
+          data: history.map(r => r.net_income_oku),
+          backgroundColor: "rgba(245,158,11,0.75)"
+        }
+      ]
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "\u5E74"
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: "\u91D1\u984D(\u5104\u5186)"
+          },
+          ticks: {
+            callback: (v) => Number(v).toLocaleString("ja-JP")
+          }
+        }
+      }
     }
   });
 }
@@ -368,24 +658,25 @@ async function loadDetail() {
   try {
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
-    if (!code) return;
 
     const response = await fetch("data.json?v=" + Date.now());
     if (!response.ok) return;
+
     const data = await response.json();
     allStocks = data.stocks || [];
+    if (allStocks.length === 0) return;
 
-    const stock = allStocks.find(s => s.code === code);
-    currentIndex = allStocks.findIndex(s => s.code === code);
+    currentStock = allStocks.find(s => s.code === code) || allStocks[0];
+    currentIndex = allStocks.findIndex(s => s.code === currentStock.code);
 
-    if (!stock) return;
+    document.getElementById("stock-name").innerText = `${currentStock.name} (${currentStock.code})`;
 
-    document.getElementById("stock-name").innerText = `${stock.name} (${stock.code})`;
-
-    const rows = await loadPriceHistory(stock.code);
-    renderStockDetail(stock, rows);
-    createPriceChart(stock, rows);
-    createFinanceChart(stock);
+    currentRows = await loadPriceHistory(currentStock.code);
+    renderKpiGrid(currentStock, currentRows);
+    renderOverlayOptions(currentStock);
+    updateOverlaySummary();
+    createPriceChart(currentStock, currentRows);
+    createFinanceChart(currentStock);
   } catch (e) {
     console.error(e);
   }
@@ -408,8 +699,6 @@ function goBack(event) {
 }
 
 loadDetail();
-</script>
-
-  
+  </script>
 </body>
 </html>

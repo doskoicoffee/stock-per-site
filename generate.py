@@ -87,22 +87,98 @@ def to_date(value):
     return None
 
 
-def get_info_with_retry(code):
+def get_ticker_info_with_retry(code):
     last_error = None
     for attempt in range(MAX_RETRIES + 1):
         try:
             ticker = yf.Ticker(code + ".T")
-            return ticker.info or {}
+            return ticker, (ticker.info or {})
         except Exception as e:
             last_error = e
             msg = str(e)
             if "Too Many Requests" in msg or "Rate limited" in msg:
                 wait = RETRY_SLEEP_SECONDS * (attempt + 1)
-                print("レート制限:", code, "待機", wait, "秒")
+                print("Rate limited:", code, "sleep", wait, "seconds")
                 time.sleep(wait)
                 continue
             break
     raise last_error
+
+
+def _pick_row_value(df, row_keys, col):
+    if df is None or df.empty:
+        return None
+
+    key_map = {}
+    for idx in df.index:
+        key_map[str(idx).strip().lower()] = idx
+
+    for key in row_keys:
+        idx = key_map.get(str(key).strip().lower())
+        if idx is None:
+            continue
+        try:
+            val = df.at[idx, col]
+        except Exception:
+            continue
+        num = finite_number(val)
+        if num is not None:
+            return num
+    return None
+
+
+def extract_financial_history(ticker, max_years=6):
+    frames = []
+    for attr in ("income_stmt", "financials"):
+        try:
+            obj = getattr(ticker, attr)
+            df = obj() if callable(obj) else obj
+        except Exception:
+            df = None
+        if isinstance(df, pd.DataFrame) and not df.empty:
+            frames.append(df)
+
+    if not frames:
+        return []
+
+    df = frames[0]
+    col_year_pairs = []
+    for col in df.columns:
+        dt = pd.to_datetime(col, errors="coerce")
+        if pd.isna(dt):
+            continue
+        col_year_pairs.append((col, int(dt.year), dt))
+
+    if not col_year_pairs:
+        return []
+
+    col_year_pairs.sort(key=lambda x: x[2])
+
+    revenue_keys = ["Total Revenue", "Revenue", "Operating Revenue", "TotalRevenue"]
+    operating_keys = ["Operating Income", "Operating Income Loss", "OperatingIncome"]
+    net_keys = ["Net Income", "Net Income Common Stockholders", "NetIncome"]
+
+    by_year = {}
+    for col, year, _ in col_year_pairs:
+        revenue = _pick_row_value(df, revenue_keys, col)
+        operating_income = _pick_row_value(df, operating_keys, col)
+        net_income = _pick_row_value(df, net_keys, col)
+
+        if revenue is None and operating_income is None and net_income is None:
+            continue
+
+        by_year[year] = {
+            "year": str(year),
+            "revenue_oku": oku(revenue),
+            "operating_income_oku": oku(operating_income),
+            "net_income_oku": oku(net_income)
+        }
+
+    years = sorted(by_year.keys())
+    rows = [by_year[y] for y in years]
+    if max_years and len(rows) > max_years:
+        rows = rows[-max_years:]
+    return rows
 
 
 # ===== CSV読み込み =====
@@ -147,6 +223,7 @@ for index, row in df.iterrows():
             "operating_income_oku": None,
             "net_income_oku": None
         },
+        "financial_history": [],
         "price": {
             "current": None,
             "target": None
@@ -157,7 +234,7 @@ for index, row in df.iterrows():
     }
 
     try:
-        info = get_info_with_retry(code)
+        ticker, info = get_ticker_info_with_retry(code)
         revenue = info.get("totalRevenue")
         operating_margin = info.get("operatingMargins")
         net_income = info.get("netIncomeToCommon")
@@ -198,6 +275,7 @@ for index, row in df.iterrows():
         stock["financial"]["revenue_oku"] = oku(info.get("totalRevenue"))
         stock["financial"]["operating_income_oku"] = oku(operating_income)
         stock["financial"]["net_income_oku"] = oku(net_income)
+        stock["financial_history"] = extract_financial_history(ticker)
 
         stock["price"]["current"] = r1(safe(info, "previousClose"))
         stock["price"]["target"] = r1(safe(info, "targetMeanPrice"))
