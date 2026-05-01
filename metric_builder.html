@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>指標作成</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --panel: #ffffff;
+      --border: #d8dee8;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2d7ff9;
+      --accent-soft: #e8f1ff;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    h1, h2 {
+      margin: 0 0 12px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .metric-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .metric-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fafbfd;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .metric-item.active {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .field-row input,
+    .field-row select,
+    .token-row input,
+    .token-row select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .token-list {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 16px;
+    }
+
+    .token-row {
+      display: grid;
+      grid-template-columns: 140px 1fr 44px;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .actions,
+    .secondary-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    button {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    .primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .expression-preview {
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      background: #fafbfd;
+      padding: 12px;
+      font-size: 14px;
+      min-height: 24px;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    @media (max-width: 840px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .field-row,
+      .token-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>指標作成</h1>
+    <div class="muted">既存の指標を組み合わせて、一覧ページのスクリーニング条件として使うカスタム指標を作成します。</div>
+
+    <div class="layout">
+      <div class="panel">
+        <div class="actions">
+          <button class="primary" type="button" onclick="startNewMetric()">新規作成</button>
+        </div>
+        <div id="metric-list" class="metric-list"></div>
+      </div>
+
+      <div class="panel">
+        <div class="field-row">
+          <label for="metric-name">指標名</label>
+          <input id="metric-name" type="text" placeholder="例: PER÷PBR">
+        </div>
+
+        <div class="secondary-actions">
+          <button type="button" onclick="addToken('metric')">指標を追加</button>
+          <button type="button" onclick="addToken('operator')">演算子を追加</button>
+          <button type="button" onclick="addToken('paren')">括弧を追加</button>
+          <button type="button" onclick="addToken('number')">数値を追加</button>
+        </div>
+
+        <div id="token-list" class="token-list"></div>
+
+        <h2>式プレビュー</h2>
+        <div id="expression-preview" class="expression-preview">未設定</div>
+
+        <div class="actions" style="margin-top:16px;">
+          <button class="primary" type="button" onclick="saveMetric()">保存</button>
+          <button type="button" onclick="cancelBuilder()">キャンセル</button>
+          <button type="button" onclick="deleteMetric()">削除</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const STORAGE_KEY = "stock-custom-metrics";
+    const BUILTIN_METRICS = [
+      { id: "per", label: "PER" },
+      { id: "pbr", label: "PBR" },
+      { id: "roe", label: "ROE" },
+      { id: "roa", label: "ROA" },
+      { id: "marketCap", label: "時価総額（億）" },
+      { id: "revenue", label: "売上高（億）" },
+      { id: "operatingIncome", label: "営業利益（億）" },
+      { id: "netIncome", label: "純利益（億）" },
+      { id: "operatingMargin", label: "営業利益率（%）" },
+      { id: "netMargin", label: "純利益率（%）" },
+      { id: "divYield", label: "配当利回り（%）" },
+      { id: "divPerShare", label: "1株配当" },
+      { id: "equityRatio", label: "自己資本比率（%）" },
+      { id: "currentRatio", label: "流動比率" }
+    ];
+
+    let metrics = [];
+    let currentId = null;
+
+    function loadMetrics() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        metrics = raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        metrics = [];
+      }
+    }
+
+    function persistMetrics() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(metrics));
+      if (window.opener) {
+        window.opener.postMessage({ type: "custom-metrics-updated" }, "*");
+      }
+    }
+
+    function metricLabel(id) {
+      const found = BUILTIN_METRICS.find(item => item.id === id);
+      return found ? found.label : id;
+    }
+
+    function describeToken(token) {
+      if (token.type === "metric") return metricLabel(token.value);
+      if (token.type === "number") return String(token.value || 0);
+      return token.value || "";
+    }
+
+    function currentMetric() {
+      return metrics.find(item => item.id === currentId) || null;
+    }
+
+    function renderMetricList() {
+      const root = document.getElementById("metric-list");
+      if (!metrics.length) {
+        root.innerHTML = '<div class="muted">まだカスタム指標はありません。</div>';
+        return;
+      }
+
+      root.innerHTML = metrics.map(metric => `
+        <div class="metric-item ${metric.id === currentId ? "active" : ""}" data-id="${metric.id}">
+          <div><strong>${metric.name}</strong></div>
+          <div class="muted">${metric.tokens.map(describeToken).join(" ") || "未設定"}</div>
+        </div>
+      `).join("");
+
+      root.querySelectorAll(".metric-item").forEach(el => {
+        el.addEventListener("click", () => {
+          currentId = el.dataset.id;
+          renderAll();
+        });
+      });
+    }
+
+    function tokenTypeOptions(selected) {
+      const options = [
+        ["metric", "指標"],
+        ["operator", "演算子"],
+        ["paren", "括弧"],
+        ["number", "数値"]
+      ];
+      return options.map(([value, label]) =>
+        `<option value="${value}" ${value === selected ? "selected" : ""}>${label}</option>`
+      ).join("");
+    }
+
+    function tokenValueControl(token, index) {
+      if (token.type === "metric") {
+        return `<select data-role="value" data-index="${index}">${BUILTIN_METRICS.map(item =>
+          `<option value="${item.id}" ${item.id === token.value ? "selected" : ""}>${item.label}</option>`
+        ).join("")}</select>`;
+      }
+      if (token.type === "operator") {
+        return `<select data-role="value" data-index="${index}">${["+", "-", "*", "/"].map(item =>
+          `<option value="${item}" ${item === token.value ? "selected" : ""}>${item}</option>`
+        ).join("")}</select>`;
+      }
+      if (token.type === "paren") {
+        return `<select data-role="value" data-index="${index}">${["(", ")"].map(item =>
+          `<option value="${item}" ${item === token.value ? "selected" : ""}>${item}</option>`
+        ).join("")}</select>`;
+      }
+      return `<input data-role="value" data-index="${index}" type="number" step="any" value="${token.value ?? ""}">`;
+    }
+
+    function renderEditor() {
+      const metric = currentMetric();
+      document.getElementById("metric-name").value = metric ? metric.name : "";
+
+      const tokenList = document.getElementById("token-list");
+      if (!metric || !metric.tokens.length) {
+        tokenList.innerHTML = '<div class="muted">トークンを追加して式を作成してください。</div>';
+      } else {
+        tokenList.innerHTML = metric.tokens.map((token, index) => `
+          <div class="token-row">
+            <select data-role="type" data-index="${index}">
+              ${tokenTypeOptions(token.type)}
+            </select>
+            ${tokenValueControl(token, index)}
+            <button type="button" data-role="remove" data-index="${index}">×</button>
+          </div>
+        `).join("");
+      }
+
+      bindEditorEvents();
+      renderPreview();
+    }
+
+    function bindEditorEvents() {
+      document.querySelectorAll("[data-role='type']").forEach(el => {
+        el.addEventListener("change", () => {
+          const metric = currentMetric();
+          if (!metric) return;
+          const index = Number(el.dataset.index);
+          const nextType = el.value;
+          const defaults = {
+            metric: BUILTIN_METRICS[0].id,
+            operator: "+",
+            paren: "(",
+            number: 0
+          };
+          metric.tokens[index] = { type: nextType, value: defaults[nextType] };
+          renderEditor();
+        });
+      });
+
+      document.querySelectorAll("[data-role='value']").forEach(el => {
+        el.addEventListener("change", () => {
+          const metric = currentMetric();
+          if (!metric) return;
+          const index = Number(el.dataset.index);
+          metric.tokens[index].value = metric.tokens[index].type === "number" ? Number(el.value) : el.value;
+          renderPreview();
+        });
+      });
+
+      document.querySelectorAll("[data-role='remove']").forEach(el => {
+        el.addEventListener("click", () => {
+          const metric = currentMetric();
+          if (!metric) return;
+          const index = Number(el.dataset.index);
+          metric.tokens.splice(index, 1);
+          renderEditor();
+        });
+      });
+    }
+
+    function renderPreview() {
+      const metric = currentMetric();
+      const preview = document.getElementById("expression-preview");
+      if (!metric || !metric.tokens.length) {
+        preview.innerText = "未設定";
+        return;
+      }
+      preview.innerText = metric.tokens.map(describeToken).join(" ");
+    }
+
+    function renderAll() {
+      renderMetricList();
+      renderEditor();
+    }
+
+    function startNewMetric() {
+      const id = "metric_" + Date.now();
+      metrics.push({ id, name: "", tokens: [] });
+      currentId = id;
+      renderAll();
+    }
+
+    function addToken(type) {
+      const metric = currentMetric();
+      if (!metric) {
+        startNewMetric();
+        return addToken(type);
+      }
+      const defaults = {
+        metric: BUILTIN_METRICS[0].id,
+        operator: "+",
+        paren: "(",
+        number: 0
+      };
+      metric.tokens.push({ type, value: defaults[type] });
+      renderEditor();
+    }
+
+    function saveMetric() {
+      const metric = currentMetric();
+      if (!metric) return;
+
+      const name = document.getElementById("metric-name").value.trim();
+      if (!name) {
+        alert("指標名を入力してください。");
+        return;
+      }
+      if (!metric.tokens.length) {
+        alert("式を作成してください。");
+        return;
+      }
+
+      metric.name = name;
+      persistMetrics();
+      renderAll();
+      alert("保存しました。");
+    }
+
+    function deleteMetric() {
+      const metric = currentMetric();
+      if (!metric) return;
+      metrics = metrics.filter(item => item.id !== metric.id);
+      currentId = metrics[0] ? metrics[0].id : null;
+      persistMetrics();
+      renderAll();
+    }
+
+    function cancelBuilder() {
+      window.close();
+    }
+
+    loadMetrics();
+    currentId = metrics[0] ? metrics[0].id : null;
+    renderAll();
+  </script>
+</body>
+</html>

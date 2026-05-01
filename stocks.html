@@ -80,10 +80,16 @@ background:rgba(0,0,0,0.4);
 background:white;
 width:760px;
 max-width:90vw;
-margin:80px auto;
+position:absolute;
+left:50%;
+top:60px;
+transform:translateX(-50%);
 padding:25px;
 border-radius:10px;
 font-size:13px;
+max-height:calc(100vh - 80px);
+overflow-y:auto;
+box-sizing:border-box;
 }
 
 .filter-grid{
@@ -131,6 +137,90 @@ gap:6px 10px;
 align-items:center;
 }
 
+.section-row{
+display:flex;
+align-items:center;
+gap:12px;
+margin-top:15px;
+}
+
+.section-row .section-title{
+margin-top:0;
+}
+
+.subtle-btn{
+padding:5px 10px;
+border:1px solid #cfd6e4;
+background:#fff;
+color:#1f2937;
+border-radius:8px;
+cursor:pointer;
+font-size:11px;
+width:fit-content;
+}
+
+.custom-metric-filters{
+display:grid;
+gap:8px;
+margin-bottom:10px;
+}
+
+.custom-metric-item{
+display:grid;
+      grid-template-columns:120px 108px 108px;
+gap:8px;
+align-items:center;
+}
+
+.custom-metric-item input{
+width:100%;
+box-sizing:border-box;
+padding:5px 6px;
+font-size:12px;
+}
+
+.custom-metric-label{
+min-width:0;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+}
+
+.custom-metric-max-wrap{
+display:grid;
+      grid-template-columns:108px auto;
+gap:6px;
+align-items:center;
+}
+
+.custom-metric-empty{
+color:#666;
+font-size:12px;
+margin-bottom:10px;
+}
+
+.modal-title-handle{
+margin-top:0;
+cursor:grab;
+position:sticky;
+top:-25px;
+background:white;
+padding-top:4px;
+padding-bottom:10px;
+}
+
+.metric-delete-btn{
+padding:5px 6px;
+border:1px solid #e2b3b3;
+background:#fff5f5;
+color:#8f2d2d;
+border-radius:8px;
+cursor:pointer;
+font-size:11px;
+min-width:44px;
+white-space:nowrap;
+}
+
 </style>
 
 </head>
@@ -157,14 +247,12 @@ align-items:center;
 
 <thead>
 
-<tr>
+<tr id="stockHeadRow">
 
 <th>コード</th>
 <th>銘柄</th>
 <th>市場</th>
 <th>業種</th>
-
-<th>次回決算</th>
 
 <th>株価</th>
 <th>目標株価</th>
@@ -201,7 +289,9 @@ align-items:center;
 
 <div class="modal-content">
 
-<h2>スクリーニング条件</h2>
+<h2 id="filterModalHandle" class="modal-title-handle">スクリーニング条件</h2>
+
+<div class="section-title" style="margin-bottom:8px;">■ 指標</div>
 
 <div class="filter-grid">
 
@@ -263,7 +353,14 @@ align-items:center;
 
 </div>
 
-<div class="section-title">市場</div>
+<div class="section-row">
+<div class="section-title">■ 指標作成</div>
+<button type="button" class="subtle-btn" onclick="openMetricBuilder()">指標を作成</button>
+</div>
+<div id="customMetricFilters" class="custom-metric-filters"></div>
+<div id="customMetricEmpty" class="custom-metric-empty">カスタム指標はまだありません。</div>
+
+<div class="section-title">■ 市場</div>
 
 <div class="radio-group market-group all-top">
 
@@ -271,7 +368,7 @@ align-items:center;
 
 </div>
 
-<div class="section-title">業種</div>
+<div class="section-title">■ 業種</div>
 
 <div class="radio-group industry-group all-top">
 
@@ -321,15 +418,263 @@ align-items:center;
 <script>
 
 let originalData = []
+const CUSTOM_METRIC_STORAGE_KEY = "stock-custom-metrics"
+let modalDragActive = false
+let modalDragOffsetY = 0
+
+const builtinMetricDefs = [
+{ id:"per", label:"PER", getter: stock => stock.valuation?.per },
+{ id:"pbr", label:"PBR", getter: stock => stock.valuation?.pbr },
+{ id:"roe", label:"ROE", getter: stock => stock.profitability?.roe },
+{ id:"roa", label:"ROA", getter: stock => stock.profitability?.roa },
+{ id:"marketCap", label:"時価総額（億）", getter: stock => stock.financial?.market_cap_oku },
+{ id:"revenue", label:"売上高（億）", getter: stock => stock.financial?.revenue_oku },
+{ id:"operatingIncome", label:"営業利益（億）", getter: stock => stock.financial?.operating_income_oku },
+{ id:"netIncome", label:"純利益（億）", getter: stock => stock.financial?.net_income_oku },
+{ id:"operatingMargin", label:"営業利益率（%）", getter: stock => stock.profitability?.operating_margin },
+{ id:"netMargin", label:"純利益率（%）", getter: stock => stock.profitability?.net_margin },
+{ id:"divYield", label:"配当利回り（%）", getter: stock => stock.dividend?.yield },
+{ id:"divPerShare", label:"1株配当", getter: stock => stock.dividend?.per_share },
+{ id:"equityRatio", label:"自己資本比率（%）", getter: stock => stock.financial?.equity_ratio },
+{ id:"currentRatio", label:"流動比率", getter: stock => stock.financial?.current_ratio }
+]
+
+function builtinMetricById(id){
+return builtinMetricDefs.find(def => def.id === id) || null
+}
+
+function loadCustomMetrics(){
+try{
+return JSON.parse(localStorage.getItem(CUSTOM_METRIC_STORAGE_KEY) || "[]")
+}catch(e){
+return []
+}
+}
+
+function saveCustomMetrics(metrics){
+localStorage.setItem(CUSTOM_METRIC_STORAGE_KEY, JSON.stringify(metrics))
+}
+
+function customMetricInputId(metricId, suffix){
+return `customMetric_${metricId}_${suffix}`
+}
+
+function renderCustomMetricFilters(){
+const root=document.getElementById("customMetricFilters")
+const empty=document.getElementById("customMetricEmpty")
+const metrics=loadCustomMetrics()
+
+if(!metrics.length){
+root.innerHTML=""
+empty.style.display="block"
+return
+}
+
+empty.style.display="none"
+root.innerHTML=metrics.map(metric=>`
+<div class="custom-metric-item">
+  <div class="custom-metric-label" title="${metric.tokens.map(tokenToLabel).join(" ")}">${metric.name}</div>
+  <input id="${customMetricInputId(metric.id,"min")}" placeholder="min">
+  <div class="custom-metric-max-wrap">
+    <input id="${customMetricInputId(metric.id,"max")}" placeholder="max">
+    <span>
+      <button type="button" class="metric-delete-btn" onclick="deleteCustomMetric('${metric.id}')">削除</button>
+    </span>
+  </div>
+</div>
+`).join("")
+}
+
+function tokenToLabel(token){
+if(token.type==="metric"){
+const def=builtinMetricById(token.value)
+return def ? def.label : token.value
+}
+return String(token.value ?? "")
+}
+
+function openMetricBuilder(){
+window.open("metric_builder.html","metric-builder","width=1080,height=860")
+}
+
+function deleteCustomMetric(metricId){
+const metrics=loadCustomMetrics().filter(metric => metric.id !== metricId)
+saveCustomMetrics(metrics)
+renderCustomMetricFilters()
+renderTableHeader()
+displayData(originalData)
+}
+
+window.addEventListener("message",(event)=>{
+if(event.data && event.data.type==="custom-metrics-updated"){
+renderCustomMetricFilters()
+renderTableHeader()
+displayData(originalData)
+}
+})
+
+window.addEventListener("storage",(event)=>{
+if(event.key===CUSTOM_METRIC_STORAGE_KEY){
+renderCustomMetricFilters()
+renderTableHeader()
+displayData(originalData)
+}
+})
+
+function toFiniteNumber(value){
+const num=Number(value)
+return Number.isFinite(num) ? num : null
+}
+
+function tokenizeCustomMetric(metric, stock){
+const tokens=[]
+for(const token of metric.tokens || []){
+if(token.type==="metric"){
+const def=builtinMetricById(token.value)
+if(!def) return null
+const value=toFiniteNumber(def.getter(stock))
+if(value==null) return null
+tokens.push({ type:"number", value })
+continue
+}
+if(token.type==="number"){
+const value=toFiniteNumber(token.value)
+if(value==null) return null
+tokens.push({ type:"number", value })
+continue
+}
+if(token.type==="operator" || token.type==="paren"){
+tokens.push(token)
+}
+}
+return tokens
+}
+
+function toRpn(tokens){
+const output=[]
+const stack=[]
+const precedence={"+":1,"-":1,"*":2,"/":2}
+
+for(const token of tokens){
+if(token.type==="number"){
+output.push(token)
+continue
+}
+
+if(token.type==="operator"){
+while(stack.length){
+const top=stack[stack.length-1]
+if(top.type!=="operator") break
+if(precedence[top.value] < precedence[token.value]) break
+output.push(stack.pop())
+}
+stack.push(token)
+continue
+}
+
+if(token.type==="paren" && token.value==="("){
+stack.push(token)
+continue
+}
+
+if(token.type==="paren" && token.value===")"){
+let matched=false
+while(stack.length){
+const top=stack.pop()
+if(top.type==="paren" && top.value==="("){
+matched=true
+break
+}
+output.push(top)
+}
+if(!matched) return null
+}
+}
+
+while(stack.length){
+const top=stack.pop()
+if(top.type==="paren") return null
+output.push(top)
+}
+
+return output
+}
+
+function evalRpn(tokens){
+const stack=[]
+for(const token of tokens){
+if(token.type==="number"){
+stack.push(token.value)
+continue
+}
+if(token.type!=="operator" || stack.length<2) return null
+const right=stack.pop()
+const left=stack.pop()
+let next=null
+if(token.value==="+") next=left+right
+if(token.value==="-") next=left-right
+if(token.value==="*") next=left*right
+if(token.value==="/"){
+if(right===0) return null
+next=left/right
+}
+if(!Number.isFinite(next)) return null
+stack.push(next)
+}
+return stack.length===1 ? stack[0] : null
+}
+
+function calcCustomMetric(metric, stock){
+const prepared=tokenizeCustomMetric(metric, stock)
+if(!prepared || !prepared.length) return null
+const rpn=toRpn(prepared)
+if(!rpn) return null
+const value=evalRpn(rpn)
+if(value==null) return null
+return Math.round(value * 1000) / 1000
+}
+
+function renderTableHeader(){
+const row=document.getElementById("stockHeadRow")
+const customMetrics=loadCustomMetrics()
+row.innerHTML=`
+<th>コード</th>
+<th>銘柄</th>
+<th>市場</th>
+<th>業種</th>
+<th>株価</th>
+<th>目標株価</th>
+<th>時価総額</th>
+<th>売上高</th>
+<th>営業利益</th>
+<th>純利益</th>
+<th>営業利益率</th>
+<th>純利益率</th>
+<th>PER</th>
+<th>PBR</th>
+<th>ROE</th>
+<th>ROA</th>
+<th>配当利回り</th>
+<th>1株配当</th>
+<th>自己資本比率</th>
+<th>流動比率</th>
+${customMetrics.map(metric => `<th>${metric.name}</th>`).join("")}
+`
+}
 
 function displayData(data){
 
 const tbody=document.getElementById("stock-body")
 tbody.innerHTML=""
+const customMetrics=loadCustomMetrics()
 
 data.forEach(stock=>{
 
 const row=document.createElement("tr")
+const customCells=customMetrics.map(metric=>{
+const value=calcCustomMetric(metric, stock)
+return `<td>${value ?? "-"}</td>`
+}).join("")
 
 row.innerHTML=`
 
@@ -342,8 +687,6 @@ ${stock.code}
 <td>${stock.name}</td>
 <td>${stock.market}</td>
 <td>${stock.industry}</td>
-
-<td>${stock.next_earnings ?? "-"}</td>
 
 <td>${stock.price?.current ?? "-"}</td>
 <td>${stock.price?.target ?? "-"}</td>
@@ -365,6 +708,7 @@ ${stock.code}
 <td>${stock.dividend?.per_share ?? "-"}</td>
 <td>${stock.financial?.equity_ratio ?? "-"}</td>
 <td>${stock.financial?.current_ratio ?? "-"}</td>
+${customCells}
 
 `
 
@@ -382,6 +726,8 @@ fetch("data.json?v="+new Date().getTime())
 
 document.getElementById("updatedAt").innerText=data.updated_at
 originalData=data.stocks
+renderCustomMetricFilters()
+renderTableHeader()
 displayData(originalData)
 
 })
@@ -390,7 +736,10 @@ displayData(originalData)
 
 function openFilter(){
 
-document.getElementById("filterModal").style.display="block"
+const modal=document.getElementById("filterModal")
+const panel=modal.querySelector(".modal-content")
+panel.style.top="60px"
+modal.style.display="block"
 
 }
 
@@ -399,6 +748,30 @@ function closeFilter(){
 
 document.getElementById("filterModal").style.display="none"
 
+}
+
+function clampModalTop(value){
+const min=10
+const max=Math.max(20, window.innerHeight - 120)
+return Math.min(Math.max(value, min), max)
+}
+
+function startModalDrag(event){
+const panel=document.querySelector("#filterModal .modal-content")
+modalDragActive=true
+modalDragOffsetY=event.clientY - panel.getBoundingClientRect().top
+document.body.style.userSelect="none"
+}
+
+function moveModal(event){
+if(!modalDragActive) return
+const panel=document.querySelector("#filterModal .modal-content")
+panel.style.top=`${clampModalTop(event.clientY - modalDragOffsetY)}px`
+}
+
+function stopModalDrag(){
+modalDragActive=false
+document.body.style.userSelect=""
 }
 
 
@@ -449,6 +822,7 @@ const currentRatioMax=parseFloat(document.getElementById("currentRatioMax").valu
 
 const market=document.querySelector('input[name="market"]:checked').value
 const industry=document.querySelector('input[name="industry"]:checked').value
+const customMetrics=loadCustomMetrics()
 
 
 const filtered=originalData.filter(stock=>{
@@ -510,6 +884,15 @@ if(!isNaN(equityRatioMax) && (equityRatio==null || equityRatio>equityRatioMax)) 
 if(!isNaN(currentRatioMin) && (currentRatio==null || currentRatio<currentRatioMin)) return false
 if(!isNaN(currentRatioMax) && (currentRatio==null || currentRatio>currentRatioMax)) return false
 
+for(const metric of customMetrics){
+const value=calcCustomMetric(metric, stock)
+const min=parseFloat(document.getElementById(customMetricInputId(metric.id,"min"))?.value)
+const max=parseFloat(document.getElementById(customMetricInputId(metric.id,"max"))?.value)
+
+if(!isNaN(min) && (value==null || value<min)) return false
+if(!isNaN(max) && (value==null || value>max)) return false
+}
+
 if(market){
     if(market === "PRO Market"){
         if(stock.market !== "PRO Market") return false
@@ -534,8 +917,20 @@ closeFilter()
 function resetFilter(){
 
 displayData(originalData)
+document.querySelectorAll("#filterModal input").forEach(input=>{
+if(input.type!=="radio") input.value=""
+})
+document.querySelectorAll('#filterModal input[type="radio"]').forEach(input=>{
+input.checked=input.defaultChecked
+})
+renderCustomMetricFilters()
+renderTableHeader()
 
 }
+
+document.getElementById("filterModalHandle").addEventListener("mousedown", startModalDrag)
+window.addEventListener("mousemove", moveModal)
+window.addEventListener("mouseup", stopModalDrag)
 
 </script>
 

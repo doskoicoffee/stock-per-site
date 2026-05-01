@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>市況（生成AI / 日次更新）</title>
+  <title>市況（日時更新）</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     body {
@@ -77,18 +77,6 @@
       width: 100%;
       height: 100%;
       display: block;
-    }
-    .news-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .news-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid #eef1f5;
-    }
-    .news-list li:last-child {
-      border-bottom: none;
     }
     .back-link {
       display: inline-block;
@@ -214,8 +202,8 @@
 <body>
   <div class="container">
     <a class="back-link" href="index.html">← トップへ</a>
-    <h1>市況（生成AI / 日次更新）</h1>
-    <div class="subtitle">主要指数・為替・原油・ニュース要約（仮）</div>
+    <h1>市況（日時更新）</h1>
+    <div class="subtitle">主要指数・為替・原油</div>
     <div class="subtitle" id="market-updated">更新日時: --</div>
 
     <div class="grid">
@@ -290,11 +278,6 @@
         </div>
       </div>
 
-      <div class="card">
-        <h2>主要ニュース</h2>
-        <div class="summary-box" id="market-summary">要約を生成中です...</div>
-        <ul class="news-list" id="news-list"></ul>
-      </div>
     </div>
   </div>
 
@@ -513,47 +496,6 @@
       });
     }
 
-    function renderSummary(data) {
-      const box = document.getElementById("market-summary");
-      if (!box) return;
-      const text = data?.summary?.text;
-      if (!text) {
-        box.innerText = "要約は準備中です。";
-        return;
-      }
-      box.innerHTML = text.replace(/\n/g, "<br>");
-    }
-
-    function renderNews(data) {
-      const list = document.getElementById("news-list");
-      if (!list) return;
-      list.innerHTML = "";
-      const items = data?.news || [];
-      if (items.length === 0) {
-        const li = document.createElement("li");
-        li.innerText = "ニュースが取得できませんでした。";
-        list.appendChild(li);
-        return;
-      }
-      items.forEach(n => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = n.url;
-        a.target = "_blank";
-        a.rel = "noopener";
-        a.innerText = n.title || n.url;
-        li.appendChild(a);
-        const meta = document.createElement("div");
-        meta.style.color = "#777";
-        meta.style.fontSize = "12px";
-        const date = n.published_at ? n.published_at.replace("T", " ").replace("Z", "") : "";
-        const source = n.domain || n.source || "";
-        meta.innerText = [source, date].filter(Boolean).join(" ・ ");
-        li.appendChild(meta);
-        list.appendChild(li);
-      });
-    }
-
     async function loadMarket() {
       const res = await fetch("market_data/market.json?v=" + new Date().getTime());
       const data = await res.json();
@@ -588,8 +530,6 @@
       setValue("kpi-eurusd", seriesMap["EURUSD"]?.summary?.latest ?? "--");
 
       buildCharts();
-      renderSummary(data);
-      renderNews(data);
     }
 
     bindRangeButtons();

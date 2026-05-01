@@ -221,9 +221,23 @@
     </div>
 
     <div class="card">
-      <h2>&#x8CA1;&#x52D9;&#x30B0;&#x30E9;&#x30D5;&#xFF08;&#x5E74;&#x6B21;&#xFF09;</h2>
+      <h2>&#x58F2;&#x4E0A;&#x9AD8;</h2>
       <div class="chart-wrap">
         <canvas id="financeChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>&#x5229;&#x76CA;</h2>
+      <div class="chart-wrap">
+        <canvas id="profitChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>&#x914d;&#x5F53;&#x30B0;&#x30E9;&#x30D5;&#xFF08;&#x5E74;&#x6B21;&#xFF09;</h2>
+      <div class="chart-wrap">
+        <canvas id="dividendChart"></canvas>
       </div>
     </div>
   </div>
@@ -246,6 +260,8 @@ let currentStock = null;
 let currentRows = [];
 let priceChart = null;
 let financeChart = null;
+let profitChart = null;
+let dividendChart = null;
 const historyCache = new Map();
 
 const overlayDefs = [
@@ -404,7 +420,7 @@ function renderKpiGrid(stock, rows) {
   const r1m = calcReturnPct(rows, 21);
   const r3m = calcReturnPct(rows, 63);
   document.getElementById("kpi-sub").innerText =
-    `\u5E02\u5834: ${stock.market ?? "-"} / \u696D\u7A2E: ${stock.industry ?? "-"} / \u9A30\u843D\u7387(1\u9031): ${formatPercent(r1w, 2)} / \u9A30\u843D\u7387(1\u304B\u6708): ${formatPercent(r1m, 2)} / \u9A30\u843D\u7387(3\u304B\u6708): ${formatPercent(r3m, 2)} / \u6B21\u56DE\u6C7A\u7B97: ${stock?.schedule?.next_earnings ?? "-"}`;
+    `\u5E02\u5834: ${stock.market ?? "-"} / \u696D\u7A2E: ${stock.industry ?? "-"} / \u9A30\u843D\u7387(1\u9031): ${formatPercent(r1w, 2)} / \u9A30\u843D\u7387(1\u304B\u6708): ${formatPercent(r1m, 2)} / \u9A30\u843D\u7387(3\u304B\u6708): ${formatPercent(r3m, 2)}`;
 }
 
 function availableOverlayDefs(stock) {
@@ -511,7 +527,7 @@ function createPriceChart(stock, rows) {
       backgroundColor: "rgba(31,111,235,0.12)",
       borderWidth: 2,
       pointRadius: 0,
-      tension: 0.2
+      tension: 0
     },
     {
       label: "SMA5",
@@ -520,7 +536,7 @@ function createPriceChart(stock, rows) {
       borderColor: "#f59e0b",
       borderWidth: 1.8,
       pointRadius: 0,
-      tension: 0.2
+      tension: 0
     },
     {
       label: "SMA25",
@@ -529,7 +545,7 @@ function createPriceChart(stock, rows) {
       borderColor: "#10b981",
       borderWidth: 1.8,
       pointRadius: 0,
-      tension: 0.2
+      tension: 0
     }
   ];
 
@@ -586,9 +602,21 @@ function buildFinancialHistory(stock) {
       year: String(item?.year ?? ""),
       revenue_oku: toNumber(item?.revenue_oku),
       operating_income_oku: toNumber(item?.operating_income_oku),
-      net_income_oku: toNumber(item?.net_income_oku)
+      net_income_oku: toNumber(item?.net_income_oku),
+      roe: toNumber(item?.roe),
+      roa: toNumber(item?.roa),
+      eps: toNumber(item?.eps),
+      bps: toNumber(item?.bps)
     }))
-    .filter(item => item.year && (item.revenue_oku != null || item.operating_income_oku != null || item.net_income_oku != null))
+    .filter(item => item.year && (
+      item.revenue_oku != null ||
+      item.operating_income_oku != null ||
+      item.net_income_oku != null ||
+      item.roe != null ||
+      item.roa != null ||
+      item.eps != null ||
+      item.bps != null
+    ))
     .sort((a, b) => Number(a.year) - Number(b.year));
 
   if (rows.length > 0) return rows;
@@ -598,7 +626,32 @@ function buildFinancialHistory(stock) {
     year,
     revenue_oku: toNumber(stock?.financial?.revenue_oku),
     operating_income_oku: toNumber(stock?.financial?.operating_income_oku),
-    net_income_oku: toNumber(stock?.financial?.net_income_oku)
+    net_income_oku: toNumber(stock?.financial?.net_income_oku),
+    roe: toNumber(stock?.profitability?.roe),
+    roa: toNumber(stock?.profitability?.roa),
+    eps: null,
+    bps: null
+  }];
+}
+
+function buildDividendHistory(stock) {
+  const raw = Array.isArray(stock?.dividend_history) ? stock.dividend_history : [];
+  const rows = raw
+    .map(item => ({
+      year: String(item?.year ?? ""),
+      dividend_per_share: toNumber(item?.dividend_per_share),
+      dividend_yield: toNumber(item?.dividend_yield)
+    }))
+    .filter(item => item.year && (item.dividend_per_share != null || item.dividend_yield != null))
+    .sort((a, b) => Number(a.year) - Number(b.year));
+
+  if (rows.length > 0) return rows;
+
+  const year = String(new Date().getFullYear());
+  return [{
+    year,
+    dividend_per_share: toNumber(stock?.dividend?.per_share),
+    dividend_yield: toNumber(stock?.dividend?.yield)
   }];
 }
 
@@ -616,23 +669,59 @@ function createFinanceChart(stock) {
         {
           label: "\u58F2\u4E0A(\u5104\u5186)",
           data: history.map(r => r.revenue_oku),
+          yAxisID: "yAmount",
           backgroundColor: "rgba(45,127,249,0.75)"
         },
         {
-          label: "\u55B6\u696D\u5229\u76CA(\u5104\u5186)",
-          data: history.map(r => r.operating_income_oku),
-          backgroundColor: "rgba(16,185,129,0.75)"
+          type: "line",
+          label: "ROE(%)",
+          data: history.map(r => r.roe),
+          yAxisID: "yPercent",
+          borderColor: "#ef4444",
+          backgroundColor: "#ef4444",
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0
         },
         {
-          label: "\u7D14\u5229\u76CA(\u5104\u5186)",
-          data: history.map(r => r.net_income_oku),
-          backgroundColor: "rgba(245,158,11,0.75)"
+          type: "line",
+          label: "ROA(%)",
+          data: history.map(r => r.roa),
+          yAxisID: "yPercent",
+          borderColor: "#f97316",
+          backgroundColor: "#f97316",
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0
+        },
+        {
+          type: "line",
+          label: "EPS(\u5186)",
+          data: history.map(r => r.eps),
+          yAxisID: "yPerShare",
+          borderColor: "#7c3aed",
+          backgroundColor: "#7c3aed",
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0
+        },
+        {
+          type: "line",
+          label: "BPS(\u5186)",
+          data: history.map(r => r.bps),
+          yAxisID: "yPerShare",
+          borderColor: "#0ea5e9",
+          backgroundColor: "#0ea5e9",
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0
         }
       ]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
       scales: {
         x: {
           title: {
@@ -640,13 +729,244 @@ function createFinanceChart(stock) {
             text: "\u5E74"
           }
         },
-        y: {
+        yAmount: {
           title: {
             display: true,
             text: "\u91D1\u984D(\u5104\u5186)"
           },
           ticks: {
             callback: (v) => Number(v).toLocaleString("ja-JP")
+          }
+        },
+        yPercent: {
+          position: "right",
+          grid: {
+            drawOnChartArea: false
+          },
+          title: {
+            display: true,
+            text: "\u53CE\u76CA\u6027(%)"
+          }
+        },
+        yPerShare: {
+          position: "right",
+          offset: true,
+          grid: {
+            drawOnChartArea: false
+          },
+          title: {
+            display: true,
+            text: "EPS / BPS(\u5186)"
+          },
+          ticks: {
+            callback: (v) => Number(v).toLocaleString("ja-JP")
+          }
+        },
+        yPercent: {
+          position: "right",
+          grid: {
+            drawOnChartArea: false
+          },
+          title: {
+            display: true,
+            text: "\u53CE\u76CA\u6027(%)"
+          }
+        },
+        yPerShare: {
+          position: "right",
+          offset: true,
+          grid: {
+            drawOnChartArea: false
+          },
+          title: {
+            display: true,
+            text: "EPS / BPS(\u5186)"
+          },
+          ticks: {
+            callback: (v) => Number(v).toLocaleString("ja-JP")
+          }
+        }
+      }
+    }
+  });
+}
+
+function createProfitChart(stock) {
+  const ctx = document.getElementById("profitChart");
+  if (profitChart) profitChart.destroy();
+
+  const history = buildFinancialHistory(stock);
+
+  profitChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: history.map(r => r.year),
+      datasets: [
+        {
+          label: "\u55B6\u696D\u5229\u76CA(\u5104\u5186)",
+          data: history.map(r => r.operating_income_oku),
+          yAxisID: "yAmount",
+          backgroundColor: "rgba(16,185,129,0.75)"
+        },
+        {
+          label: "\u7D14\u5229\u76CA(\u5104\u5186)",
+          data: history.map(r => r.net_income_oku),
+          yAxisID: "yAmount",
+          backgroundColor: "rgba(245,158,11,0.75)"
+        },
+        {
+          type: "line",
+          label: "ROE(%)",
+          data: history.map(r => r.roe),
+          yAxisID: "yPercent",
+          borderColor: "#ef4444",
+          backgroundColor: "#ef4444",
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0
+        },
+        {
+          type: "line",
+          label: "ROA(%)",
+          data: history.map(r => r.roa),
+          yAxisID: "yPercent",
+          borderColor: "#f97316",
+          backgroundColor: "#f97316",
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0
+        },
+        {
+          type: "line",
+          label: "EPS(\u5186)",
+          data: history.map(r => r.eps),
+          yAxisID: "yPerShare",
+          borderColor: "#7c3aed",
+          backgroundColor: "#7c3aed",
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0
+        },
+        {
+          type: "line",
+          label: "BPS(\u5186)",
+          data: history.map(r => r.bps),
+          yAxisID: "yPerShare",
+          borderColor: "#0ea5e9",
+          backgroundColor: "#0ea5e9",
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "\u5E74"
+          }
+        },
+        yAmount: {
+          title: {
+            display: true,
+            text: "\u91D1\u984D(\u5104\u5186)"
+          },
+          ticks: {
+            callback: (v) => Number(v).toLocaleString("ja-JP")
+          }
+        },
+        yPercent: {
+          position: "right",
+          grid: {
+            drawOnChartArea: false
+          },
+          title: {
+            display: true,
+            text: "\u53CE\u76CA\u6027(%)"
+          }
+        },
+        yPerShare: {
+          position: "right",
+          offset: true,
+          grid: {
+            drawOnChartArea: false
+          },
+          title: {
+            display: true,
+            text: "EPS / BPS(\u5186)"
+          },
+          ticks: {
+            callback: (v) => Number(v).toLocaleString("ja-JP")
+          }
+        }
+      }
+    }
+  });
+}
+
+function createDividendChart(stock) {
+  const ctx = document.getElementById("dividendChart");
+  if (dividendChart) dividendChart.destroy();
+
+  const history = buildDividendHistory(stock);
+
+  dividendChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: history.map(r => r.year),
+      datasets: [
+        {
+          label: "\u914d\u5F53\u984D(\u5186)",
+          data: history.map(r => r.dividend_per_share),
+          yAxisID: "yDividend",
+          backgroundColor: "rgba(34,197,94,0.75)"
+        },
+        {
+          type: "line",
+          label: "\u914d\u5F53\u7387(%)",
+          data: history.map(r => r.dividend_yield),
+          yAxisID: "yYield",
+          borderColor: "#2563eb",
+          backgroundColor: "#2563eb",
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "\u5E74"
+          }
+        },
+        yDividend: {
+          title: {
+            display: true,
+            text: "\u914d\u5F53\u984D(\u5186)"
+          },
+          ticks: {
+            callback: (v) => Number(v).toLocaleString("ja-JP")
+          }
+        },
+        yYield: {
+          position: "right",
+          grid: {
+            drawOnChartArea: false
+          },
+          title: {
+            display: true,
+            text: "\u914d\u5F53\u7387(%)"
           }
         }
       }
@@ -677,6 +997,8 @@ async function loadDetail() {
     updateOverlaySummary();
     createPriceChart(currentStock, currentRows);
     createFinanceChart(currentStock);
+    createProfitChart(currentStock);
+    createDividendChart(currentStock);
   } catch (e) {
     console.error(e);
   }
