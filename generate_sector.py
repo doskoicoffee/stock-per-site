@@ -89,8 +89,22 @@ def normalize_history(hist):
     df = df.rename(columns={date_col: "date", "Close": "close"})
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df["close"] = pd.to_numeric(df["close"], errors="coerce")
+    if "Volume" in df.columns:
+        df["Volume"] = pd.to_numeric(df["Volume"], errors="coerce")
     df = df.dropna(subset=["date", "close"])
-    return df.sort_values("date")
+    df = df.sort_values("date").reset_index(drop=True)
+
+    if "Volume" in df.columns and not df.empty:
+        prev_close = df["close"].shift(1)
+        ratio = df["close"] / prev_close
+        suspicious = (
+            prev_close.notna() &
+            (df["Volume"].fillna(0) <= 0) &
+            ((ratio >= 5) | (ratio <= 0.2))
+        )
+        df = df.loc[~suspicious].copy()
+
+    return df[["date", "close"]].reset_index(drop=True)
 
 
 def load_cached_history(code):
