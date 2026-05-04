@@ -22,45 +22,14 @@
       max-width: 900px;
       margin: 0 auto;
     }
-    .page-hero {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      padding: 18px 20px;
-      margin-bottom: 20px;
-    }
-    .page-eyebrow {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
     h1 {
       margin: 0 0 8px;
       font-size: 32px;
     }
     .subtitle {
       color: var(--muted);
-      margin-bottom: 0;
+      margin-bottom: 20px;
       line-height: 1.6;
-    }
-    .hero-sections {
-      display: grid;
-      gap: 18px;
-      margin-top: 18px;
-    }
-    .hero-section-title {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #222;
-    }
-    .hero-copy {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
     }
     .grid {
       display: grid;
@@ -93,13 +62,7 @@
       position: absolute;
       inset: 0 auto 0 0;
       width: 4px;
-      background: var(--accent);
-    }
-    .card-type {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 0.02em;
+      background: #d6dde8;
     }
     .card h2 {
       margin: 0 0 10px 0;
@@ -123,7 +86,7 @@
     }
     .card-points li::before {
       content: ">";
-      color: var(--accent);
+      color: var(--muted);
       margin-right: 6px;
       font-weight: 700;
     }
@@ -134,23 +97,34 @@
       gap: 6px;
       font-size: 13px;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--text);
     }
-    .detail-list {
+    .hero-link {
+      color: var(--text);
+      text-decoration: underline;
+    }
+    .hero-link:hover {
+      opacity: 0.8;
+    }
+    .data-note {
+      margin-top: 8px;
       display: grid;
       gap: 10px;
     }
-    .detail-item {
+    .data-note h2 {
+      margin: 0;
+      font-size: 18px;
+      color: #222;
+    }
+    .data-note p {
+      margin: 0;
       font-size: 14px;
       line-height: 1.7;
       color: var(--muted);
     }
-    .detail-item strong {
-      color: #222;
-    }
     @media (max-width: 800px) {
       body { margin: 14px; }
-      .page-hero, .card { padding: 16px; }
+      .card { padding: 16px; }
       .grid { grid-template-columns: 1fr; }
       .card { min-height: auto; }
     }
@@ -158,31 +132,13 @@
 </head>
 <body>
   <div class="container">
-    <div class="page-hero">
-      <div class="page-eyebrow">STOCK DASHBOARD</div>
-      <h1>株式ダッシュボード</h1>
-      <div class="subtitle">
-        本ページは、バイブコーディングの練習用としてお試しで作成したサイトです。
-      </div>
-      <div class="hero-sections">
-        <div>
-          <div class="hero-section-title">サイト概要</div>
-          <p class="hero-copy">日本株の銘柄比較、相場全体の確認、業種ごとの強弱の把握を、3つのページに分けて見られるようにしています。</p>
-        </div>
-        <div>
-          <div class="hero-section-title">各ページでできること</div>
-          <div class="detail-list">
-            <div class="detail-item"><strong>日本株スクリーナー:</strong> yfinance で取得した各銘柄の指標を一覧で確認でき、スクリーニングにも対応しています。更新は毎週土曜日です。</div>
-            <div class="detail-item"><strong>マーケット概況:</strong> 株価指数や先物、為替を確認できます。チャートでは過去半年まで表示でき、2つの指標を重ねて見られます。データは yfinance から取得しています。</div>
-            <div class="detail-item"><strong>業種別ヒートマップ:</strong> 指定期間と市場別で、33業種のヒートマップを確認できます。業種ごとの主要銘柄の動きもあわせて見られます。</div>
-          </div>
-        </div>
-      </div>
+    <h1>株式ダッシュボード</h1>
+    <div class="subtitle">
+      本ページは、<a class="hero-link" href="https://x.com/hago_nosefun?s=09" target="_blank" rel="noopener noreferrer">hago_nosefun</a> がバイブコーディングの練習用としてお試しで作成したサイトです。なお、株については素人のため、内容の正確性や投資判断への利用にはご注意ください。
     </div>
 
     <div class="grid">
       <a class="card" href="stocks.html">
-        <div class="card-type">SCREENING</div>
         <h2>日本株スクリーナー</h2>
         <p>日本株の主要指標を一覧で見ながら、条件を指定して絞り込めます。</p>
         <ul class="card-points">
@@ -192,7 +148,6 @@
         <div class="card-footer">ページを開く →</div>
       </a>
       <a class="card" href="market.html">
-        <div class="card-type">MARKET</div>
         <h2>マーケット概況</h2>
         <p>指数、先物、為替の動きをまとめて見て、相場全体の温度感をつかめます。</p>
         <ul class="card-points">
@@ -202,7 +157,6 @@
         <div class="card-footer">ページを開く →</div>
       </a>
       <a class="card" href="sector.html">
-        <div class="card-type">SECTOR</div>
         <h2>業種別ヒートマップ</h2>
         <p>業種ごとの強弱をヒートマップで見て、どこに資金が向かっているかを確認できます。</p>
         <ul class="card-points">
@@ -211,6 +165,13 @@
         </ul>
         <div class="card-footer">ページを開く →</div>
       </a>
+    </div>
+
+    <div class="data-note">
+      <h2>データについて</h2>
+      <p>データは yfinance から取得しています。</p>
+      <p>yfinance で取得できる範囲に依存するため、過去データは数年分に限られる場合があります。</p>
+      <p>銘柄や指標によっては、取得できない値や欠損が含まれることがあります。</p>
     </div>
   </div>
 </body>
