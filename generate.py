@@ -77,6 +77,13 @@ def safe_ratio(numerator, denominator):
     return n / d
 
 
+def first_non_null(*values):
+    for value in values:
+        if value is not None:
+            return value
+    return None
+
+
 def get_ticker_info_with_retry(code):
     last_error = None
     for attempt in range(MAX_RETRIES + 1):
@@ -429,12 +436,11 @@ for index, row in df.iterrows():
         total_equity, total_assets = extract_balance_sheet_snapshot(ticker, info)
 
         equity_ratio = safe_ratio(total_equity, total_assets)
+        roe_calc = percent(safe_ratio(net_income, total_equity))
+        roa_calc = percent(safe_ratio(net_income, total_assets))
 
         stock["valuation"]["per"] = r1(safe(info, "trailingPE"))
         stock["valuation"]["pbr"] = r1(safe(info, "priceToBook"))
-
-        stock["profitability"]["roe"] = percent(info.get("returnOnEquity"))
-        stock["profitability"]["roa"] = percent(info.get("returnOnAssets"))
         stock["profitability"]["operating_margin"] = percent(info.get("operatingMargins"))
         stock["profitability"]["net_margin"] = percent(info.get("profitMargins"))
 
@@ -449,6 +455,18 @@ for index, row in df.iterrows():
         stock["financial"]["operating_income_oku"] = oku(operating_income)
         stock["financial"]["net_income_oku"] = oku(net_income)
         stock["financial_history"] = extract_financial_history(ticker, info)
+
+        latest_history = stock["financial_history"][-1] if stock["financial_history"] else {}
+        stock["profitability"]["roe"] = first_non_null(
+            percent(info.get("returnOnEquity")),
+            roe_calc,
+            latest_history.get("roe")
+        )
+        stock["profitability"]["roa"] = first_non_null(
+            percent(info.get("returnOnAssets")),
+            roa_calc,
+            latest_history.get("roa")
+        )
 
         stock["price"]["current"] = r1(safe(info, "previousClose"))
         stock["price"]["target"] = r1(safe(info, "targetMeanPrice"))

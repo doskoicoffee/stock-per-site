@@ -3,34 +3,101 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>日本株 指標一覧</title>
+<title>日本株スクリーナー</title>
 
 <style>
+
+:root{
+--bg:#f5f7fa;
+--surface:#ffffff;
+--line:#e7ecf3;
+--line-strong:#d7dee8;
+--text:#1f2937;
+--muted:#5b6472;
+--accent:#2d7ff9;
+}
 
 body{
 font-family: Arial, sans-serif;
 margin:20px;
-background:#f7f9fc;
+background:var(--bg);
+color:var(--text);
 }
 
 h1{
-margin-bottom:5px;
+margin:0 0 8px;
+font-size:32px;
+}
+
+.page-hero{
+background:var(--surface);
+border:1px solid var(--line);
+border-radius:14px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+padding:18px 20px;
+margin-bottom:18px;
+}
+
+.page-nav{
+display:flex;
+gap:10px;
+align-items:center;
+flex-wrap:wrap;
+margin-bottom:14px;
+}
+
+.back-link{
+display:inline-flex;
+align-items:center;
+color:var(--accent);
+text-decoration:none;
+font-weight:600;
+}
+
+.page-eyebrow{
+font-size:12px;
+font-weight:700;
+letter-spacing:0;
+color:var(--accent);
+margin-bottom:6px;
 }
 
 .top-bar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:15px;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.hero-copy p{
+margin:0;
+color:var(--muted);
+font-size:14px;
+line-height:1.6;
+}
+
+.hero-meta{
+margin-top:8px;
+font-size:13px;
+color:#6b7280;
+}
+
+.hero-actions{
+display:flex;
+gap:10px;
+align-items:center;
+flex-wrap:wrap;
 }
 
 button{
-padding:8px 14px;
+padding:9px 14px;
 border:none;
-background:#2d7ff9;
+background:var(--accent);
 color:white;
-border-radius:6px;
+border-radius:8px;
 cursor:pointer;
+font-weight:600;
 }
 
 button:hover{
@@ -40,28 +107,31 @@ opacity:0.9;
 table{
 border-collapse:collapse;
 width:100%;
-background:white;
+background:var(--surface);
+border:1px solid var(--line);
 }
 
 th,td{
-border:1px solid #ddd;
-padding:5px;
+border-bottom:1px solid var(--line);
+padding:8px 10px;
 text-align:center;
 font-size:13px;
 }
 
 th{
-background:#f1f3f8;
+background:#f7f9fc;
+border-bottom:1px solid var(--line-strong);
+font-weight:700;
+white-space:nowrap;
 }
 
 a{
-color:#2d7ff9;
+color:var(--accent);
 text-decoration:none;
 }
 
-.back-link{
-display:inline-block;
-margin-bottom:12px;
+tbody tr:hover{
+background:#f8fbff;
 }
 
 /* モーダル */
@@ -77,7 +147,7 @@ background:rgba(0,0,0,0.4);
 }
 
 .modal-content{
-background:white;
+background:var(--surface);
 width:760px;
 max-width:90vw;
 position:absolute;
@@ -85,11 +155,12 @@ left:50%;
 top:60px;
 transform:translateX(-50%);
 padding:25px;
-border-radius:10px;
+border-radius:14px;
 font-size:13px;
 max-height:calc(100vh - 80px);
 overflow-y:auto;
 box-sizing:border-box;
+border:1px solid var(--line);
 }
 
 .filter-grid{
@@ -221,28 +292,57 @@ min-width:44px;
 white-space:nowrap;
 }
 
+@media (max-width: 900px){
+body{
+margin:14px;
+}
+
+.page-hero{
+padding:16px;
+margin-bottom:16px;
+}
+
+button{
+padding:8px 12px;
+}
+
+th,td{
+padding:7px 8px;
+font-size:12px;
+}
+
+.modal-content{
+padding:18px 16px;
+top:20px;
+max-height:calc(100vh - 40px);
+}
+}
+
 </style>
 
 </head>
 
 <body>
 
+<div class="page-hero">
+<div class="page-nav">
 <a class="back-link" href="index.html">← トップへ</a>
-
-<div class="top-bar">
-
-<div>
-<h1>日本株 指標一覧</h1>
-<p>更新日時: <span id="updatedAt"></span></p>
 </div>
-
-<div>
+<div class="top-bar">
+<div class="hero-copy">
+<div class="page-eyebrow">JAPAN STOCKS</div>
+<h1>日本株スクリーナー</h1>
+<p>日本株の主要指標を一覧で比較し、条件を指定してスクリーニングできます。</p>
+<div class="hero-meta">更新日時: <span id="updatedAt"></span> / 更新頻度: 毎週土曜日</div>
+</div>
+<div class="hero-actions">
 <button onclick="openFilter()">🔎 スクリーニング</button>
 <button onclick="resetFilter()">リセット</button>
 </div>
-
+</div>
 </div>
 
+<div style="overflow-x:auto; border-radius:14px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
 <table>
 
 <thead>
@@ -282,6 +382,7 @@ white-space:nowrap;
 <tbody id="stock-body"></tbody>
 
 </table>
+</div>
 
 <!-- モーダル -->
 

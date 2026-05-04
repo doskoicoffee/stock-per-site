@@ -4,73 +4,212 @@
   <meta charset="UTF-8">
   <title>株式ダッシュボード</title>
   <style>
+    :root {
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --line: #e7ecf3;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --accent: #2d7ff9;
+    }
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      background: var(--bg);
       margin: 20px;
+      color: var(--text);
     }
     .container {
       max-width: 900px;
       margin: 0 auto;
     }
+    .page-hero {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 18px 20px;
+      margin-bottom: 20px;
+    }
+    .page-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
     h1 {
-      margin-bottom: 8px;
+      margin: 0 0 8px;
+      font-size: 32px;
     }
     .subtitle {
-      color: #555;
-      margin-bottom: 20px;
+      color: var(--muted);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+    .hero-sections {
+      display: grid;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    .hero-section-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    .hero-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
+      margin-bottom: 24px;
     }
     .card {
-      background: white;
-      padding: 18px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       text-decoration: none;
       color: #222;
-      border: 1px solid #eef1f5;
+      border: 1px solid var(--line);
       transition: transform 0.08s ease, box-shadow 0.08s ease;
+      display: grid;
+      gap: 12px;
+      align-content: start;
+      min-height: 180px;
+      position: relative;
+      overflow: hidden;
     }
     .card:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 14px rgba(0,0,0,0.08);
     }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--accent);
+    }
+    .card-type {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
     .card h2 {
-      margin: 0 0 8px 0;
+      margin: 0 0 10px 0;
       font-size: 18px;
     }
     .card p {
       margin: 0;
-      color: #555;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .card-points {
+      display: grid;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
       font-size: 13px;
       line-height: 1.5;
     }
+    .card-points li::before {
+      content: ">";
+      color: var(--accent);
+      margin-right: 6px;
+      font-weight: 700;
+    }
+    .card-footer {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .detail-list {
+      display: grid;
+      gap: 10px;
+    }
+    .detail-item {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .detail-item strong {
+      color: #222;
+    }
     @media (max-width: 800px) {
+      body { margin: 14px; }
+      .page-hero, .card { padding: 16px; }
       .grid { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>株式ダッシュボード</h1>
-    <div class="subtitle">各ページへのリンク</div>
+    <div class="page-hero">
+      <div class="page-eyebrow">STOCK DASHBOARD</div>
+      <h1>株式ダッシュボード</h1>
+      <div class="subtitle">
+        本ページは、バイブコーディングの練習用としてお試しで作成したサイトです。
+      </div>
+      <div class="hero-sections">
+        <div>
+          <div class="hero-section-title">サイト概要</div>
+          <p class="hero-copy">日本株の銘柄比較、相場全体の確認、業種ごとの強弱の把握を、3つのページに分けて見られるようにしています。</p>
+        </div>
+        <div>
+          <div class="hero-section-title">各ページでできること</div>
+          <div class="detail-list">
+            <div class="detail-item"><strong>日本株スクリーナー:</strong> yfinance で取得した各銘柄の指標を一覧で確認でき、スクリーニングにも対応しています。更新は毎週土曜日です。</div>
+            <div class="detail-item"><strong>マーケット概況:</strong> 株価指数や先物、為替を確認できます。チャートでは過去半年まで表示でき、2つの指標を重ねて見られます。データは yfinance から取得しています。</div>
+            <div class="detail-item"><strong>業種別ヒートマップ:</strong> 指定期間と市場別で、33業種のヒートマップを確認できます。業種ごとの主要銘柄の動きもあわせて見られます。</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="grid">
       <a class="card" href="stocks.html">
-        <h2>銘柄の一覧（週一更新）</h2>
-        <p>一覧表示とスクリーニング。週次更新。</p>
+        <div class="card-type">SCREENING</div>
+        <h2>日本株スクリーナー</h2>
+        <p>日本株の主要指標を一覧で見ながら、条件を指定して絞り込めます。</p>
+        <ul class="card-points">
+          <li>銘柄一覧の比較</li>
+          <li>条件指定のスクリーニング</li>
+        </ul>
+        <div class="card-footer">ページを開く →</div>
       </a>
       <a class="card" href="market.html">
-        <h2>市況（生成AI / 日次更新）</h2>
-        <p>主要指数・為替・原油・ニュースなど。</p>
+        <div class="card-type">MARKET</div>
+        <h2>マーケット概況</h2>
+        <p>指数、先物、為替の動きをまとめて見て、相場全体の温度感をつかめます。</p>
+        <ul class="card-points">
+          <li>主要指標の確認</li>
+          <li>チャート比較</li>
+        </ul>
+        <div class="card-footer">ページを開く →</div>
       </a>
       <a class="card" href="sector.html">
-        <h2>業界別動向（週一更新）</h2>
-        <p>33業種ヒートマップと銘柄詳細。</p>
+        <div class="card-type">SECTOR</div>
+        <h2>業種別ヒートマップ</h2>
+        <p>業種ごとの強弱をヒートマップで見て、どこに資金が向かっているかを確認できます。</p>
+        <ul class="card-points">
+          <li>期間別の比較</li>
+          <li>市場別の切り替え</li>
+        </ul>
+        <div class="card-footer">ページを開く →</div>
       </a>
     </div>
   </div>

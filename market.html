@@ -2,24 +2,62 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>市況（日時更新）</title>
+  <title>マーケット概況</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
+    :root {
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --surface-soft: #f7f9fc;
+      --line: #e7ecf3;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --accent: #2d7ff9;
+    }
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      background: var(--bg);
       margin: 20px;
+      color: var(--text);
     }
     .container {
       max-width: 1100px;
       margin: 0 auto;
     }
+    .page-hero {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 18px 20px;
+      margin-bottom: 18px;
+    }
+    .page-nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
     h1 {
-      margin-bottom: 8px;
+      margin: 0 0 8px;
+      font-size: 32px;
     }
     .subtitle {
-      color: #555;
-      margin-bottom: 20px;
+      color: var(--muted);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+    .page-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .hero-meta {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #6b7280;
     }
     .section-head {
       margin: 0 0 8px 0;
@@ -31,11 +69,11 @@
       gap: 16px;
     }
     .card {
-      background: white;
-      padding: 18px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      border: 1px solid #eef1f5;
+      background: var(--surface);
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border: 1px solid var(--line);
     }
     .card h2 {
       margin: 0 0 8px 0;
@@ -57,9 +95,9 @@
       gap: 12px;
     }
     .kpi {
-      background: #f7f9fc;
-      padding: 10px;
-      border-radius: 8px;
+      background: var(--surface-soft);
+      padding: 12px;
+      border-radius: 10px;
       border: 1px solid #edf0f4;
     }
     .kpi .label {
@@ -79,10 +117,11 @@
       display: block;
     }
     .back-link {
-      display: inline-block;
-      margin-bottom: 12px;
+      display: inline-flex;
+      align-items: center;
       text-decoration: none;
-      color: #2d7ff9;
+      color: var(--accent);
+      font-weight: 600;
     }
 
     .chart-controls {
@@ -101,11 +140,11 @@
     }
     .range-label {
       font-size: 12px;
-      color: #555;
+      color: var(--muted);
     }
     .range-btn {
-      padding: 6px 10px;
-      border-radius: 6px;
+      padding: 7px 12px;
+      border-radius: 8px;
       border: 1px solid #cfd6e4;
       background: #fff;
       cursor: pointer;
@@ -124,8 +163,8 @@
     .chart-panel {
       background: #f9fbfe;
       border: 1px solid #eef1f5;
-      border-radius: 10px;
-      padding: 10px;
+      border-radius: 12px;
+      padding: 12px;
     }
     .chart-panel-head {
       display: flex;
@@ -139,8 +178,8 @@
       color: #333;
     }
     .btn {
-      padding: 6px 10px;
-      border-radius: 6px;
+      padding: 7px 12px;
+      border-radius: 8px;
       border: 1px solid #cfd6e4;
       background: #fff;
       cursor: pointer;
@@ -160,8 +199,8 @@
       background: #fff;
       width: 560px;
       max-width: 92vw;
-      border-radius: 10px;
-      padding: 16px;
+      border-radius: 14px;
+      padding: 18px;
       border: 1px solid #e6e9ef;
     }
     .modal-title {
@@ -193,6 +232,8 @@
     }
 
     @media (max-width: 900px) {
+      body { margin: 14px; }
+      .page-hero, .card { padding: 16px; }
       .grid { grid-template-columns: 1fr; }
       .kpi-row { grid-template-columns: 1fr; }
       .chart-grid { grid-template-columns: 1fr; }
@@ -201,10 +242,15 @@
 </head>
 <body>
   <div class="container">
-    <a class="back-link" href="index.html">← トップへ</a>
-    <h1>市況（日時更新）</h1>
-    <div class="subtitle">主要指数・為替・原油</div>
-    <div class="subtitle" id="market-updated">更新日時: --</div>
+    <div class="page-hero">
+      <div class="page-nav">
+        <a class="back-link" href="index.html">← トップへ</a>
+      </div>
+      <div class="page-eyebrow">MARKET OVERVIEW</div>
+      <h1>マーケット概況</h1>
+      <div class="subtitle">株価指数、先物、為替などの動きを一覧とチャートで確認できます。</div>
+      <div class="hero-meta" id="market-updated">更新日時: -- / 更新頻度: 毎日</div>
+    </div>
 
     <div class="grid">
       <h2 class="section-head">主要指標</h2>

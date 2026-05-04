@@ -2,28 +2,60 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>業界別動向（週一更新）</title>
+  <title>業種別ヒートマップ</title>
   <style>
+    :root {
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --line: #e7ecf3;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --accent: #2d7ff9;
+    }
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      background: var(--bg);
       margin: 20px;
+      color: var(--text);
     }
     .container {
       max-width: 1200px;
       margin: 0 auto;
     }
+    .page-hero {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 18px 20px;
+      margin-bottom: 18px;
+    }
+    .page-nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
     h1 {
-      margin-bottom: 6px;
+      margin: 0 0 8px;
+      font-size: 32px;
     }
     .subtitle {
-      color: #555;
-      margin-bottom: 6px;
+      color: var(--muted);
+      margin-bottom: 0;
+      line-height: 1.6;
     }
     .updated {
-      color: #777;
+      color: #6b7280;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .page-eyebrow {
       font-size: 12px;
-      margin-bottom: 16px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
     }
     .toolbar {
       display: flex;
@@ -40,17 +72,17 @@
       color: #444;
     }
     .toolbar select {
-      padding: 6px 10px;
-      border-radius: 6px;
+      padding: 7px 12px;
+      border-radius: 8px;
       border: 1px solid #d7dde5;
       background: #fff;
     }
     .heatmap {
-      background: white;
-      padding: 12px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      border: 1px solid #eef1f5;
+      background: var(--surface);
+      padding: 14px;
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border: 1px solid var(--line);
       height: 620px;
       position: relative;
       overflow: hidden;
@@ -78,10 +110,11 @@
       font-size: 12px;
     }
     .back-link {
-      display: inline-block;
-      margin-bottom: 12px;
+      display: inline-flex;
+      align-items: center;
       text-decoration: none;
-      color: #2d7ff9;
+      color: var(--accent);
+      font-weight: 600;
     }
     .note {
       color: #666;
@@ -113,7 +146,7 @@
       background: #fff;
       width: min(1100px, 92vw);
       max-height: 85vh;
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -133,8 +166,8 @@
       overflow: auto;
     }
     .stock-list {
-      border: 1px solid #e6e9ef;
-      border-radius: 8px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
       overflow: auto;
       max-height: 60vh;
     }
@@ -168,9 +201,9 @@
       gap: 8px;
     }
     .stock-detail {
-      border: 1px solid #e6e9ef;
-      border-radius: 8px;
-      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -181,8 +214,8 @@
       gap: 6px;
     }
     .series-tab {
-      padding: 4px 8px;
-      border-radius: 6px;
+      padding: 7px 12px;
+      border-radius: 8px;
       border: 1px solid #d7dde5;
       background: #fff;
       cursor: pointer;
@@ -199,15 +232,18 @@
       font-size: 12px;
     }
     th, td {
-      border-bottom: 1px solid #edf0f5;
-      padding: 6px 4px;
+      border-bottom: 1px solid var(--line);
+      padding: 8px 6px;
       text-align: left;
     }
     th {
       color: #666;
       font-weight: 600;
+      background: #fafbfc;
     }
     @media (max-width: 900px) {
+      body { margin: 14px; }
+      .page-hero, .modal-content { padding-left: 16px; padding-right: 16px; }
       .modal-body {
         grid-template-columns: 1fr;
       }
@@ -219,10 +255,15 @@
 </head>
 <body>
   <div class="container">
-    <a class="back-link" href="index.html">← トップへ</a>
-    <h1>業界別動向（週一更新）</h1>
-    <div class="subtitle">33業種ヒートマップ</div>
-    <div class="updated" id="updatedAt">更新日時: --</div>
+    <div class="page-hero">
+      <div class="page-nav">
+        <a class="back-link" href="index.html">← トップへ</a>
+      </div>
+      <div class="page-eyebrow">SECTOR HEATMAP</div>
+      <h1>業種別ヒートマップ</h1>
+      <div class="subtitle">指定期間と市場別で、33業種の強弱と主要銘柄の動きを確認できます。</div>
+      <div class="updated" id="updatedAt">更新日時: -- / 更新頻度: 毎週土曜日</div>
+    </div>
 
     <div class="toolbar">
       <label>期間

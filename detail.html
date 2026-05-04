@@ -5,11 +5,20 @@
   <title>&#x9298;&#x67C4;&#x8A73;&#x7D30;</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
+    :root {
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --surface-soft: #fafafa;
+      --line: #e7ecf3;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --accent: #2d7ff9;
+    }
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
+      background: var(--bg);
       margin: 20px;
-      color: #1f2937;
+      color: var(--text);
     }
 
     .container {
@@ -17,33 +26,63 @@
       margin: auto;
     }
 
+    .page-hero {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 18px 20px;
+      margin-bottom: 18px;
+    }
+
     .page-nav {
       display: flex;
       gap: 12px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       align-items: center;
       flex-wrap: wrap;
     }
 
     .back-link {
-      display: inline-block;
-      color: #2d7ff9;
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent);
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .page-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      margin: 0 0 8px;
+      font-size: 32px;
+    }
+
+    .hero-subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .switcher {
       display: flex;
       gap: 10px;
-      margin: 10px 0 16px;
+      margin: 0 0 16px;
+      flex-wrap: wrap;
     }
 
     .btn {
-      padding: 8px 16px;
+      padding: 9px 14px;
       border: none;
-      background: #2d7ff9;
+      background: var(--accent);
       color: white;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       font-weight: 600;
     }
@@ -62,16 +101,17 @@
     }
 
     .card {
-      background: white;
+      background: var(--surface);
       padding: 20px;
       margin-bottom: 18px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--line);
     }
 
     .card h2 {
       margin: 0 0 12px;
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .kpi-grid {
@@ -83,8 +123,8 @@
     .kpi-item {
       border: 1px solid #e5e7eb;
       border-radius: 10px;
-      padding: 10px 12px;
-      background: #fafafa;
+      padding: 12px;
+      background: var(--surface-soft);
       min-height: 64px;
     }
 
@@ -140,10 +180,10 @@
 
     .overlay-panel {
       width: min(560px, 96vw);
-      background: #fff;
-      border-radius: 12px;
+      background: var(--surface);
+      border-radius: 14px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      padding: 16px;
+      padding: 18px;
     }
 
     .overlay-panel h3 {
@@ -180,6 +220,13 @@
     }
 
     @media (max-width: 900px) {
+      body {
+        margin: 14px;
+      }
+      .page-hero,
+      .card {
+        padding: 16px;
+      }
       .kpi-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -191,12 +238,15 @@
 </head>
 <body>
   <div class="container">
-    <div class="page-nav">
-      <a class="back-link" href="index.html">&#x2190; &#x30C8;&#x30C3;&#x30D7;&#x3078;</a>
-      <a class="back-link" href="#" onclick="goBack(event)">&#x2190; &#x524D;&#x306B;&#x623B;&#x308B;</a>
+    <div class="page-hero">
+      <div class="page-nav">
+        <a class="back-link" href="index.html">&#x2190; &#x30C8;&#x30C3;&#x30D7;&#x3078;</a>
+        <a class="back-link" href="#" onclick="goBack(event)">&#x2190; &#x524D;&#x306B;&#x623B;&#x308B;</a>
+      </div>
+      <div class="page-eyebrow">STOCK DETAIL</div>
+      <h1 id="stock-name" class="hero-title"></h1>
+      <p class="hero-subtitle">個別銘柄の主要指標、株価推移、年次の業績推移をまとめて確認できます。</p>
     </div>
-
-    <h1 id="stock-name"></h1>
 
     <div class="switcher">
       <button class="btn" onclick="moveStock(-1)">&#x2190; &#x524D;&#x3078;</button>
