@@ -122,11 +122,41 @@
       line-height: 1.7;
       color: var(--muted);
     }
+    .visitor-count {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .visitor-count-grid {
+      display: inline-grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 8px;
+    }
+    .visitor-count-item {
+      min-width: 180px;
+    }
+    .visitor-count-label {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .visitor-count strong {
+      color: var(--text);
+      font-size: 16px;
+    }
     @media (max-width: 800px) {
       body { margin: 14px; }
       .card { padding: 16px; }
       .grid { grid-template-columns: 1fr; }
       .card { min-height: auto; }
+      .visitor-count-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
     }
   </style>
 </head>
@@ -173,6 +203,87 @@
       <p>yfinance で取得できる範囲に依存するため、過去データは数年分に限られる場合があります。</p>
       <p>銘柄や指標によっては、取得できない値や欠損が含まれることがあります。</p>
     </div>
+
+    <div class="visitor-count" id="visitorCount">
+      <div class="visitor-count-grid">
+        <div class="visitor-count-item">
+          <div class="visitor-count-label">今までの訪問者数は <strong id="visitorCountTotal">--</strong> 人</div>
+        </div>
+        <div class="visitor-count-item">
+          <div class="visitor-count-label">本日の訪問者数は <strong id="visitorCountToday">--</strong> 人</div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    const COUNTER_API_URL = "https://billowing-bar-4797.doskoicoffee.workers.dev/";
+    const VISITOR_COUNT_TOTAL_CACHE_KEY = "stock-dashboard-visitor-total";
+    const VISITOR_COUNT_TODAY_CACHE_KEY = "stock-dashboard-visitor-today";
+    const VISITOR_COUNT_CACHE_DATE_KEY = "stock-dashboard-visitor-date";
+
+    function getTodayKey() {
+      return new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Asia/Tokyo",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).format(new Date());
+    }
+
+    function readCachedVisitorCount() {
+      const total = Number(localStorage.getItem(VISITOR_COUNT_TOTAL_CACHE_KEY));
+      const today = Number(localStorage.getItem(VISITOR_COUNT_TODAY_CACHE_KEY));
+      const dateKey = localStorage.getItem(VISITOR_COUNT_CACHE_DATE_KEY);
+      return {
+        total: Number.isFinite(total) ? total : null,
+        today: Number.isFinite(today) ? today : null,
+        dateKey: dateKey || null
+      };
+    }
+
+    function writeCachedVisitorCount(total, today) {
+      localStorage.setItem(VISITOR_COUNT_TOTAL_CACHE_KEY, String(total));
+      localStorage.setItem(VISITOR_COUNT_TODAY_CACHE_KEY, String(today));
+      localStorage.setItem(VISITOR_COUNT_CACHE_DATE_KEY, getTodayKey());
+    }
+
+    function renderVisitorCount(total, today) {
+      if (Number.isFinite(total)) {
+        document.getElementById("visitorCountTotal").textContent = total.toLocaleString("ja-JP");
+      }
+      if (Number.isFinite(today)) {
+        document.getElementById("visitorCountToday").textContent = today.toLocaleString("ja-JP");
+      }
+    }
+
+    async function loadVisitorCount() {
+      if (!COUNTER_API_URL) return;
+
+      const cached = readCachedVisitorCount();
+      if (cached.total != null || cached.today != null) {
+        renderVisitorCount(cached.total, cached.today);
+      }
+
+      if (cached.dateKey === getTodayKey()) {
+        return;
+      }
+
+      try {
+        const response = await fetch(COUNTER_API_URL, { method: "POST" });
+        if (!response.ok) throw new Error("counter request failed");
+        const data = await response.json();
+        const total = Number(data.total ?? data.count);
+        const today = Number(data.today ?? data.count);
+        if (!Number.isFinite(total) || !Number.isFinite(today)) return;
+        writeCachedVisitorCount(total, today);
+        renderVisitorCount(total, today);
+      } catch (error) {
+        console.error("visitor count error", error);
+      }
+    }
+
+    loadVisitorCount();
+  </script>
 </body>
 </html>
