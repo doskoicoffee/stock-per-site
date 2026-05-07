@@ -255,12 +255,13 @@
       </div>
       <h1>業種別ヒートマップ</h1>
       <div class="subtitle">指定期間と市場別で、33業種の強弱と主要銘柄の動きを確認できます。</div>
-      <div class="updated" id="updatedAt">更新日時: -- / 更新頻度: 毎週土曜日</div>
+      <div class="updated" id="updatedAt">更新日時: -- / 更新頻度: 日次</div>
     </div>
 
     <div class="toolbar">
       <label>期間
         <select id="periodSelect">
+          <option value="1d">日次</option>
           <option value="1w">週次</option>
           <option value="1m">月次</option>
           <option value="6m">半年</option>
@@ -292,6 +293,7 @@
         <div class="stock-detail">
           <div id="stockInfo">銘柄を選択してください</div>
           <div class="series-tabs" id="seriesTabs">
+            <button class="series-tab" data-period="1d">日次</button>
             <button class="series-tab" data-period="1w">週次</button>
             <button class="series-tab" data-period="1m">月次</button>
             <button class="series-tab" data-period="6m">半年</button>
@@ -309,11 +311,11 @@
 
     <script>
     let sectorData = null;
-    let currentPeriod = "1w";
+    let currentPeriod = "1d";
     let currentMarket = "all";
-    let currentSeries = "1w";
+    let currentSeries = "1d";
     let selectedStock = null;
-    const PERIOD_DAYS = { "1w": 5, "1m": 21, "6m": 126 };
+    const PERIOD_DAYS = { "1d": 1, "1w": 5, "1m": 21, "6m": 126 };
     const seriesCache = {};
 
     function clamp(value, min, max) {

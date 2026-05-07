@@ -449,6 +449,7 @@ max-height:calc(100vh - 40px);
 <div class="section-title">■ 指標作成</div>
 <button type="button" class="subtle-btn" onclick="openMetricBuilder()">指標を作成</button>
 </div>
+<div class="custom-metric-empty" style="display:block;">君だけのオリジナル指標を作ってスクリーニングしよう！</div>
 <div id="customMetricFilters" class="custom-metric-filters"></div>
 <div id="customMetricEmpty" class="custom-metric-empty">カスタム指標はまだありません。</div>
 
@@ -456,7 +457,7 @@ max-height:calc(100vh - 40px);
 
 <div class="radio-group market-group all-top">
 
-<label><input type="radio" name="market" value="" checked>全て</label> <label><input type="radio" name="market" value="プライム">プライム（内国・外国）</label> <label><input type="radio" name="market" value="スタンダード">スタンダード（内国・外国）</label> <label><input type="radio" name="market" value="グロース">グロース（内国・外国）</label> <label><input type="radio" name="market" value="PRO Market">PRO Market</label>
+<label><input type="checkbox" name="market" value="" checked>全て</label> <label><input type="checkbox" name="market" value="プライム">プライム（内国・外国）</label> <label><input type="checkbox" name="market" value="スタンダード">スタンダード（内国・外国）</label> <label><input type="checkbox" name="market" value="グロース">グロース（内国・外国）</label> <label><input type="checkbox" name="market" value="PRO Market">PRO Market</label>
 
 </div>
 
@@ -464,40 +465,40 @@ max-height:calc(100vh - 40px);
 
 <div class="radio-group industry-group all-top">
 
-<label><input type="radio" name="industry" value="" checked>全て</label>
-<label><input type="radio" name="industry" value="水産・農林業">水産・農林業</label>
-<label><input type="radio" name="industry" value="鉱業">鉱業</label>
-<label><input type="radio" name="industry" value="建設業">建設業</label>
-<label><input type="radio" name="industry" value="食料品">食料品</label>
-<label><input type="radio" name="industry" value="繊維製品">繊維製品</label>
-<label><input type="radio" name="industry" value="パルプ・紙">パルプ・紙</label>
-<label><input type="radio" name="industry" value="化学">化学</label>
-<label><input type="radio" name="industry" value="医薬品">医薬品</label>
-<label><input type="radio" name="industry" value="石油・石炭製品">石油・石炭製品</label>
-<label><input type="radio" name="industry" value="ゴム製品">ゴム製品</label>
-<label><input type="radio" name="industry" value="ガラス・土石製品">ガラス・土石製品</label>
-<label><input type="radio" name="industry" value="鉄鋼">鉄鋼</label>
-<label><input type="radio" name="industry" value="非鉄金属">非鉄金属</label>
-<label><input type="radio" name="industry" value="金属製品">金属製品</label>
-<label><input type="radio" name="industry" value="機械">機械</label>
-<label><input type="radio" name="industry" value="電気機器">電気機器</label>
-<label><input type="radio" name="industry" value="輸送用機器">輸送用機器</label>
-<label><input type="radio" name="industry" value="精密機器">精密機器</label>
-<label><input type="radio" name="industry" value="その他製品">その他製品</label>
-<label><input type="radio" name="industry" value="電気・ガス業">電気・ガス業</label>
-<label><input type="radio" name="industry" value="陸運業">陸運業</label>
-<label><input type="radio" name="industry" value="海運業">海運業</label>
-<label><input type="radio" name="industry" value="空運業">空運業</label>
-<label><input type="radio" name="industry" value="倉庫・運輸関連業">倉庫・運輸関連業</label>
-<label><input type="radio" name="industry" value="情報・通信業">情報・通信業</label>
-<label><input type="radio" name="industry" value="卸売業">卸売業</label>
-<label><input type="radio" name="industry" value="小売業">小売業</label>
-<label><input type="radio" name="industry" value="銀行業">銀行業</label>
-<label><input type="radio" name="industry" value="証券、商品先物取引業">証券、商品先物取引業</label>
-<label><input type="radio" name="industry" value="保険業">保険業</label>
-<label><input type="radio" name="industry" value="その他金融業">その他金融業</label>
-<label><input type="radio" name="industry" value="不動産業">不動産業</label>
-<label><input type="radio" name="industry" value="サービス業">サービス業</label>
+<label><input type="checkbox" name="industry" value="" checked>全て</label>
+<label><input type="checkbox" name="industry" value="水産・農林業">水産・農林業</label>
+<label><input type="checkbox" name="industry" value="鉱業">鉱業</label>
+<label><input type="checkbox" name="industry" value="建設業">建設業</label>
+<label><input type="checkbox" name="industry" value="食料品">食料品</label>
+<label><input type="checkbox" name="industry" value="繊維製品">繊維製品</label>
+<label><input type="checkbox" name="industry" value="パルプ・紙">パルプ・紙</label>
+<label><input type="checkbox" name="industry" value="化学">化学</label>
+<label><input type="checkbox" name="industry" value="医薬品">医薬品</label>
+<label><input type="checkbox" name="industry" value="石油・石炭製品">石油・石炭製品</label>
+<label><input type="checkbox" name="industry" value="ゴム製品">ゴム製品</label>
+<label><input type="checkbox" name="industry" value="ガラス・土石製品">ガラス・土石製品</label>
+<label><input type="checkbox" name="industry" value="鉄鋼">鉄鋼</label>
+<label><input type="checkbox" name="industry" value="非鉄金属">非鉄金属</label>
+<label><input type="checkbox" name="industry" value="金属製品">金属製品</label>
+<label><input type="checkbox" name="industry" value="機械">機械</label>
+<label><input type="checkbox" name="industry" value="電気機器">電気機器</label>
+<label><input type="checkbox" name="industry" value="輸送用機器">輸送用機器</label>
+<label><input type="checkbox" name="industry" value="精密機器">精密機器</label>
+<label><input type="checkbox" name="industry" value="その他製品">その他製品</label>
+<label><input type="checkbox" name="industry" value="電気・ガス業">電気・ガス業</label>
+<label><input type="checkbox" name="industry" value="陸運業">陸運業</label>
+<label><input type="checkbox" name="industry" value="海運業">海運業</label>
+<label><input type="checkbox" name="industry" value="空運業">空運業</label>
+<label><input type="checkbox" name="industry" value="倉庫・運輸関連業">倉庫・運輸関連業</label>
+<label><input type="checkbox" name="industry" value="情報・通信業">情報・通信業</label>
+<label><input type="checkbox" name="industry" value="卸売業">卸売業</label>
+<label><input type="checkbox" name="industry" value="小売業">小売業</label>
+<label><input type="checkbox" name="industry" value="銀行業">銀行業</label>
+<label><input type="checkbox" name="industry" value="証券、商品先物取引業">証券、商品先物取引業</label>
+<label><input type="checkbox" name="industry" value="保険業">保険業</label>
+<label><input type="checkbox" name="industry" value="その他金融業">その他金融業</label>
+<label><input type="checkbox" name="industry" value="不動産業">不動産業</label>
+<label><input type="checkbox" name="industry" value="サービス業">サービス業</label>
 
 </div>
 
@@ -912,8 +913,10 @@ const equityRatioMax=parseFloat(document.getElementById("equityRatioMax").value)
 const currentRatioMin=parseFloat(document.getElementById("currentRatioMin").value)
 const currentRatioMax=parseFloat(document.getElementById("currentRatioMax").value)
 
-const market=document.querySelector('input[name="market"]:checked').value
-const industry=document.querySelector('input[name="industry"]:checked').value
+const selectedMarkets=Array.from(document.querySelectorAll('input[name="market"]:checked')).map(input=>input.value).filter(Boolean)
+const selectedIndustries=Array.from(document.querySelectorAll('input[name="industry"]:checked')).map(input=>input.value).filter(Boolean)
+const marketAllSelected=document.querySelector('input[name="market"][value=""]')?.checked
+const industryAllSelected=document.querySelector('input[name="industry"][value=""]')?.checked
 const customMetrics=loadCustomMetrics()
 
 
@@ -985,14 +988,14 @@ if(!isNaN(min) && (value==null || value<min)) return false
 if(!isNaN(max) && (value==null || value>max)) return false
 }
 
-if(market){
-    if(market === "PRO Market"){
-        if(stock.market !== "PRO Market") return false
-    }else{
-        if(!stock.market || !stock.market.includes(market)) return false
-    }
+if(!marketAllSelected && selectedMarkets.length){
+    const matchedMarket=selectedMarkets.some(market=>{
+        if(market === "PRO Market") return stock.market === "PRO Market"
+        return stock.market && stock.market.includes(market)
+    })
+    if(!matchedMarket) return false
 }
-if(industry && stock.industry!==industry) return false
+if(!industryAllSelected && selectedIndustries.length && !selectedIndustries.includes(stock.industry)) return false
 
 return true
 
@@ -1023,6 +1026,33 @@ renderTableHeader()
 document.getElementById("filterModalHandle").addEventListener("mousedown", startModalDrag)
 window.addEventListener("mousemove", moveModal)
 window.addEventListener("mouseup", stopModalDrag)
+
+function setupMultiSelectGroup(name){
+const inputs=Array.from(document.querySelectorAll(`input[name="${name}"]`))
+const allInput=inputs.find(input=>input.value==="")
+const optionInputs=inputs.filter(input=>input.value!=="")
+if(!allInput) return
+
+allInput.addEventListener("change",()=>{
+if(allInput.checked){
+optionInputs.forEach(input=>{ input.checked=false })
+}
+})
+
+optionInputs.forEach(input=>{
+input.addEventListener("change",()=>{
+if(input.checked){
+allInput.checked=false
+}
+if(!optionInputs.some(option=>option.checked)){
+allInput.checked=true
+}
+})
+})
+}
+
+setupMultiSelectGroup("market")
+setupMultiSelectGroup("industry")
 
 </script>
 

@@ -5,8 +5,8 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 0 * * 0-5'  # 日曜-金曜 9:00 JST（UTC基準）
-    - cron: '0 0 * * 6'  # 毎週土曜9:00 JST（UTC基準）
+    - cron: '0 12 * * 0-5'  # 日曜-金曜 21:00 JST（UTC基準）
+    - cron: '0 12 * * 6'  # 毎週土曜21:00 JST（UTC基準）
   workflow_dispatch:
 
 jobs:
@@ -43,11 +43,12 @@ jobs:
             python generate.py
             python generate_sector.py
             python generate_market.py
-          elif [ "${{ github.event.schedule }}" = "0 0 * * 6" ]; then
+          elif [ "${{ github.event.schedule }}" = "0 12 * * 6" ]; then
             python generate.py
             python generate_sector.py
             python generate_market.py
           else
+            python generate_sector.py
             python generate_market.py
           fi
 

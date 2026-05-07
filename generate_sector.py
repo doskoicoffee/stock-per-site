@@ -12,6 +12,7 @@ OUTPUT_DIR = Path("sector_data")
 SERIES_DIR = OUTPUT_DIR / "series"
 
 DAYS = 200
+D_DAYS = 1
 W_DAYS = 5
 M_DAYS = 21
 H_DAYS = 126
@@ -28,6 +29,7 @@ MARKET_ALIASES = {
 }
 
 PERIODS = {
+    "1d": D_DAYS,
     "1w": W_DAYS,
     "1m": M_DAYS,
     "6m": H_DAYS
@@ -193,6 +195,7 @@ def main():
         current_close = float(df_hist.iloc[-1]["close"])
 
         returns = {
+            "1d": calc_pct(current_close, pick_close(df_hist, D_DAYS)),
             "1w": calc_pct(current_close, pick_close(df_hist, W_DAYS)),
             "1m": calc_pct(current_close, pick_close(df_hist, M_DAYS)),
             "6m": calc_pct(current_close, pick_close(df_hist, H_DAYS))
@@ -228,6 +231,7 @@ def main():
         for market_key, bucket in industry["markets"].items():
             bucket["stocks"].sort(key=lambda s: (s.get("market_cap_oku") or 0), reverse=True)
             bucket["returns"]["1w"] = compute_market_return(bucket["stocks"], "1w")
+            bucket["returns"]["1d"] = compute_market_return(bucket["stocks"], "1d")
             bucket["returns"]["1m"] = compute_market_return(bucket["stocks"], "1m")
             bucket["returns"]["6m"] = compute_market_return(bucket["stocks"], "6m")
             bucket["market_cap"] = round(bucket["market_cap"], 2)
@@ -235,7 +239,7 @@ def main():
     result = {
         "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "markets": ["all", "プライム", "スタンダード", "グロース", "PRO Market"],
-        "periods": {"1w": "週次", "1m": "月次", "6m": "半年"},
+        "periods": {"1d": "日次", "1w": "週次", "1m": "月次", "6m": "半年"},
         "industries": list(industries.values())
     }
 
