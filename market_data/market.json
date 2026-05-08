@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-07 20:08 JST",
+  "updated_at": "2026-05-08 19:22 JST",
   "days": 183,
   "series": [
     {
@@ -503,15 +503,11 @@
       "label": "日経225",
       "unit": "Index",
       "summary": {
-        "latest": 59513.12,
-        "change": 228.2,
-        "change_pct": 0.385
+        "latest": 62833.84,
+        "change": 3320.72,
+        "change_pct": 5.58
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 50212.27
-        },
         {
           "date": "2025-11-06",
           "value": 50883.68
@@ -983,6 +979,10 @@
         {
           "date": "2026-05-01",
           "value": 59513.12
+        },
+        {
+          "date": "2026-05-07",
+          "value": 62833.84
         }
       ]
     },
@@ -991,15 +991,11 @@
       "label": "S&P500",
       "unit": "Index",
       "summary": {
-        "latest": 7365.12,
-        "change": 105.9,
-        "change_pct": 1.459
+        "latest": 7337.11,
+        "change": -28.01,
+        "change_pct": -0.38
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 6796.29
-        },
         {
           "date": "2025-11-06",
           "value": 6720.32
@@ -1495,6 +1491,10 @@
         {
           "date": "2026-05-06",
           "value": 7365.12
+        },
+        {
+          "date": "2026-05-07",
+          "value": 7337.11
         }
       ]
     },
@@ -1503,15 +1503,11 @@
       "label": "NYダウ",
       "unit": "Index",
       "summary": {
-        "latest": 49910.59,
-        "change": 612.34,
-        "change_pct": 1.242
+        "latest": 49596.97,
+        "change": -313.62,
+        "change_pct": -0.628
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 47311.0
-        },
         {
           "date": "2025-11-06",
           "value": 46912.3
@@ -2007,6 +2003,10 @@
         {
           "date": "2026-05-06",
           "value": 49910.59
+        },
+        {
+          "date": "2026-05-07",
+          "value": 49596.97
         }
       ]
     },
@@ -2015,15 +2015,11 @@
       "label": "NASDAQ",
       "unit": "Index",
       "summary": {
-        "latest": 25838.94,
-        "change": 512.81,
-        "change_pct": 2.025
+        "latest": 25806.2,
+        "change": -32.74,
+        "change_pct": -0.127
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 23499.8
-        },
         {
           "date": "2025-11-06",
           "value": 23053.99
@@ -2519,6 +2515,10 @@
         {
           "date": "2026-05-06",
           "value": 25838.94
+        },
+        {
+          "date": "2026-05-07",
+          "value": 25806.2
         }
       ]
     },
@@ -2527,15 +2527,11 @@
       "label": "VIX",
       "unit": "Index",
       "summary": {
-        "latest": 17.38,
-        "change": -0.91,
-        "change_pct": -4.975
+        "latest": 17.39,
+        "change": 0.01,
+        "change_pct": 0.058
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 18.01
-        },
         {
           "date": "2025-11-06",
           "value": 19.5
@@ -3039,6 +3035,10 @@
         {
           "date": "2026-05-05",
           "value": 17.38
+        },
+        {
+          "date": "2026-05-06",
+          "value": 17.39
         }
       ]
     },
@@ -3047,15 +3047,11 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 156.376,
-        "change": -1.301,
-        "change_pct": -0.825
+        "latest": 156.693,
+        "change": 0.185,
+        "change_pct": 0.118
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 153.557
-        },
         {
           "date": "2025-11-06",
           "value": 154.073
@@ -3570,7 +3566,11 @@
         },
         {
           "date": "2026-05-07",
-          "value": 156.376
+          "value": 156.508
+        },
+        {
+          "date": "2026-05-08",
+          "value": 156.693
         }
       ]
     },
@@ -3579,15 +3579,11 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 183.995,
-        "change": -0.744,
-        "change_pct": -0.403
+        "latest": 184.416,
+        "change": 0.565,
+        "change_pct": 0.307
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 176.358
-        },
         {
           "date": "2025-11-06",
           "value": 177.128
@@ -4102,7 +4098,11 @@
         },
         {
           "date": "2026-05-07",
-          "value": 183.995
+          "value": 183.851
+        },
+        {
+          "date": "2026-05-08",
+          "value": 184.416
         }
       ]
     },
@@ -4112,14 +4112,10 @@
       "unit": "USD per EUR",
       "summary": {
         "latest": 1.177,
-        "change": 0.005,
-        "change_pct": 0.465
+        "change": 0.003,
+        "change_pct": 0.218
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 1.149
-        },
         {
           "date": "2025-11-06",
           "value": 1.15
@@ -4634,6 +4630,10 @@
         },
         {
           "date": "2026-05-07",
+          "value": 1.175
+        },
+        {
+          "date": "2026-05-08",
           "value": 1.177
         }
       ]
@@ -4643,15 +4643,11 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 92.89,
-        "change": -2.19,
-        "change_pct": -2.303
+        "latest": 95.21,
+        "change": 0.4,
+        "change_pct": 0.422
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 59.6
-        },
         {
           "date": "2025-11-06",
           "value": 59.43
@@ -5150,7 +5146,11 @@
         },
         {
           "date": "2026-05-07",
-          "value": 92.89
+          "value": 94.81
+        },
+        {
+          "date": "2026-05-08",
+          "value": 95.21
         }
       ]
     },
@@ -5159,15 +5159,11 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4746.5,
-        "change": 64.6,
-        "change_pct": 1.38
+        "latest": 4724.7,
+        "change": 24.9,
+        "change_pct": 0.53
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 3980.3
-        },
         {
           "date": "2025-11-06",
           "value": 3979.9
@@ -5666,7 +5662,11 @@
         },
         {
           "date": "2026-05-07",
-          "value": 4746.5
+          "value": 4699.8
+        },
+        {
+          "date": "2026-05-08",
+          "value": 4724.7
         }
       ]
     },
@@ -5675,15 +5675,11 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 80.865,
-        "change": 4.054,
-        "change_pct": 5.278
+        "latest": 80.815,
+        "change": 1.114,
+        "change_pct": 1.398
       },
       "data": [
-        {
-          "date": "2025-11-05",
-          "value": 47.863
-        },
         {
           "date": "2025-11-06",
           "value": 47.794
@@ -6182,7 +6178,11 @@
         },
         {
           "date": "2026-05-07",
-          "value": 80.865
+          "value": 79.701
+        },
+        {
+          "date": "2026-05-08",
+          "value": 80.815
         }
       ]
     }
@@ -6202,7 +6202,7 @@
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-05-07 20:08 JST",
+    "generated_at": "2026-05-08 19:22 JST",
     "error": null
   },
   "notes": {
