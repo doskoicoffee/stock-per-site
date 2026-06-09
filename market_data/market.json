@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09 20:58 JST",
+  "updated_at": "2026-06-10 00:28 JST",
   "days": 183,
   "series": [
     {
@@ -503,9 +503,9 @@
       "label": "日経225",
       "unit": "Index",
       "summary": {
-        "latest": 64024.6,
-        "change": -2563.52,
-        "change_pct": -3.85
+        "latest": 65416.63,
+        "change": 1392.03,
+        "change_pct": 2.174
       },
       "data": [
         {
@@ -987,6 +987,10 @@
         {
           "date": "2026-06-08",
           "value": 64024.6
+        },
+        {
+          "date": "2026-06-09",
+          "value": 65416.63
         }
       ]
     },
@@ -2531,9 +2535,9 @@
       "label": "VIX",
       "unit": "Index",
       "summary": {
-        "latest": 21.51,
-        "change": 6.11,
-        "change_pct": 39.675
+        "latest": 18.92,
+        "change": -2.59,
+        "change_pct": -12.041
       },
       "data": [
         {
@@ -3043,6 +3047,10 @@
         {
           "date": "2026-06-05",
           "value": 21.51
+        },
+        {
+          "date": "2026-06-08",
+          "value": 18.92
         }
       ]
     },
@@ -3051,9 +3059,9 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 160.15,
-        "change": -0.177,
-        "change_pct": -0.11
+        "latest": 160.257,
+        "change": -0.07,
+        "change_pct": -0.044
       },
       "data": [
         {
@@ -3574,7 +3582,7 @@
         },
         {
           "date": "2026-06-09",
-          "value": 160.15
+          "value": 160.257
         }
       ]
     },
@@ -3583,9 +3591,9 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 185.355,
-        "change": 0.623,
-        "change_pct": 0.337
+        "latest": 184.732,
+        "change": -1.036,
+        "change_pct": -0.558
       },
       "data": [
         {
@@ -4103,10 +4111,6 @@
         {
           "date": "2026-06-08",
           "value": 184.732
-        },
-        {
-          "date": "2026-06-09",
-          "value": 185.355
         }
       ]
     },
@@ -4115,9 +4119,9 @@
       "label": "ユーロ/米ドル",
       "unit": "USD per EUR",
       "summary": {
-        "latest": 1.158,
-        "change": 0.005,
-        "change_pct": 0.47
+        "latest": 1.156,
+        "change": 0.004,
+        "change_pct": 0.365
       },
       "data": [
         {
@@ -4638,7 +4642,7 @@
         },
         {
           "date": "2026-06-09",
-          "value": 1.158
+          "value": 1.156
         }
       ]
     },
@@ -4647,9 +4651,9 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 89.68,
-        "change": -1.62,
-        "change_pct": -1.774
+        "latest": 87.41,
+        "change": -3.89,
+        "change_pct": -4.261
       },
       "data": [
         {
@@ -5154,7 +5158,7 @@
         },
         {
           "date": "2026-06-09",
-          "value": 89.68
+          "value": 87.41
         }
       ]
     },
@@ -5163,9 +5167,9 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4364.0,
-        "change": 28.1,
-        "change_pct": 0.648
+        "latest": 4319.6,
+        "change": -16.3,
+        "change_pct": -0.376
       },
       "data": [
         {
@@ -5670,7 +5674,7 @@
         },
         {
           "date": "2026-06-09",
-          "value": 4364.0
+          "value": 4319.6
         }
       ]
     },
@@ -5679,9 +5683,9 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 68.68,
-        "change": 0.255,
-        "change_pct": 0.373
+        "latest": 66.285,
+        "change": -2.14,
+        "change_pct": -3.128
       },
       "data": [
         {
@@ -6186,7 +6190,7 @@
         },
         {
           "date": "2026-06-09",
-          "value": 68.68
+          "value": 66.285
         }
       ]
     }
@@ -6206,7 +6210,7 @@
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-06-09 20:58 JST",
+    "generated_at": "2026-06-10 00:28 JST",
     "error": null
   },
   "notes": {
