@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14 00:45 JST",
+  "updated_at": "2026-06-14 20:28 JST",
   "days": 183,
   "series": [
     {
@@ -509,10 +509,6 @@
       },
       "data": [
         {
-          "date": "2025-12-12",
-          "value": 50836.55
-        },
-        {
           "date": "2025-12-15",
           "value": 50168.11
         },
@@ -1000,10 +996,6 @@
         "change_pct": 0.503
       },
       "data": [
-        {
-          "date": "2025-12-12",
-          "value": 6827.41
-        },
         {
           "date": "2025-12-15",
           "value": 6816.51
@@ -1513,10 +1505,6 @@
       },
       "data": [
         {
-          "date": "2025-12-12",
-          "value": 48458.05
-        },
-        {
           "date": "2025-12-15",
           "value": 48416.56
         },
@@ -2025,10 +2013,6 @@
       },
       "data": [
         {
-          "date": "2025-12-12",
-          "value": 23195.17
-        },
-        {
           "date": "2025-12-15",
           "value": 23057.41
         },
@@ -2536,10 +2520,6 @@
         "change_pct": -12.511
       },
       "data": [
-        {
-          "date": "2025-12-12",
-          "value": 15.74
-        },
         {
           "date": "2025-12-15",
           "value": 16.5
@@ -3057,10 +3037,6 @@
       },
       "data": [
         {
-          "date": "2025-12-12",
-          "value": 155.567
-        },
-        {
           "date": "2025-12-15",
           "value": 155.888
         },
@@ -3573,7 +3549,7 @@
           "value": 160.13
         },
         {
-          "date": "2026-06-13",
+          "date": "2026-06-14",
           "value": 160.185
         }
       ]
@@ -3588,10 +3564,6 @@
         "change_pct": 0.105
       },
       "data": [
-        {
-          "date": "2025-12-12",
-          "value": 182.624
-        },
         {
           "date": "2025-12-15",
           "value": 182.961
@@ -4117,10 +4089,6 @@
       },
       "data": [
         {
-          "date": "2025-12-12",
-          "value": 1.174
-        },
-        {
           "date": "2025-12-15",
           "value": 1.174
         },
@@ -4645,10 +4613,6 @@
       },
       "data": [
         {
-          "date": "2025-12-12",
-          "value": 57.44
-        },
-        {
           "date": "2025-12-15",
           "value": 56.82
         },
@@ -5151,15 +5115,11 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4215.0,
-        "change": 124.7,
-        "change_pct": 3.049
+        "latest": 4238.8,
+        "change": 148.5,
+        "change_pct": 3.631
       },
       "data": [
-        {
-          "date": "2025-12-12",
-          "value": 4300.1
-        },
         {
           "date": "2025-12-15",
           "value": 4306.7
@@ -5654,7 +5614,7 @@
         },
         {
           "date": "2026-06-12",
-          "value": 4215.0
+          "value": 4238.8
         }
       ]
     },
@@ -5663,15 +5623,11 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 67.859,
-        "change": 3.974,
-        "change_pct": 6.221
+        "latest": 67.974,
+        "change": 4.089,
+        "change_pct": 6.401
       },
       "data": [
-        {
-          "date": "2025-12-12",
-          "value": 61.362
-        },
         {
           "date": "2025-12-15",
           "value": 62.94
@@ -6166,7 +6122,7 @@
         },
         {
           "date": "2026-06-12",
-          "value": 67.859
+          "value": 67.974
         }
       ]
     }
@@ -6175,7 +6131,7 @@
     {
       "id": "TOPIX",
       "label": "TOPIX",
-      "reason": "stooq unavailable; using cached data (Unable to read URL: https://stooq.com/q/d/l/?s=%5ETPX&i=d&d1=20251212&d2=20260613\nResponse Text:\nb'<meta charset=utf-8><title>Stooq</title><center style=font-family:arial;margin-top:50px><p><a href=/><img src=//static.stooq.com/stooq.svg height=68></a><p style=font-size:x-large>The page you requested does not exist<br>or has been moved<p><small><a href=/>Main Page</a>')"
+      "reason": "stooq unavailable; using cached data (Unable to read URL: https://stooq.com/q/d/l/?s=%5ETPX&i=d&d1=20251213&d2=20260614\nResponse Text:\nb'<meta charset=utf-8><title>Stooq</title><center style=font-family:arial;margin-top:50px><p><a href=/><img src=//static.stooq.com/stooq.svg height=68></a><p style=font-size:x-large>The page you requested does not exist<br>or has been moved<p><small><a href=/>Main Page</a>')"
     },
     {
       "id": "NEWS",
@@ -6186,7 +6142,7 @@
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-06-14 00:45 JST",
+    "generated_at": "2026-06-14 20:28 JST",
     "error": null
   },
   "notes": {
