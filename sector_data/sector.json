@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14 14:28",
+  "updated_at": "2026-06-15 17:45",
   "markets": [
     "all",
     "プライム",
@@ -52015,12 +52015,12 @@
               "market": "プライム",
               "industry": "小売業",
               "market_cap_oku": null,
-              "current_close": 4970.0,
+              "current_close": 4910.0,
               "returns": {
-                "1d": 1.28,
-                "1w": 0.0,
-                "1m": -0.4,
-                "6m": -1.88
+                "1d": -1.21,
+                "1w": 0.2,
+                "1m": -1.45,
+                "6m": -3.16
               },
               "history_path": "sector_data/series/75505.csv"
             }
@@ -54257,12 +54257,12 @@
               "market": "プライム",
               "industry": "小売業",
               "market_cap_oku": null,
-              "current_close": 4970.0,
+              "current_close": 4910.0,
               "returns": {
-                "1d": 1.28,
-                "1w": 0.0,
-                "1m": -0.4,
-                "6m": -1.88
+                "1d": -1.21,
+                "1w": 0.2,
+                "1m": -1.45,
+                "6m": -3.16
               },
               "history_path": "sector_data/series/75505.csv"
             }
@@ -119667,11 +119667,11 @@
               "market": "プライム",
               "industry": "空運業",
               "market_cap_oku": null,
-              "current_close": 4745.0,
+              "current_close": 4760.0,
               "returns": {
-                "1d": -0.02,
-                "1w": -0.32,
-                "1m": -0.23,
+                "1d": 0.32,
+                "1w": -0.08,
+                "1m": 0.11,
                 "6m": null
               },
               "history_path": "sector_data/series/92025.csv"
@@ -119768,11 +119768,11 @@
               "market": "プライム",
               "industry": "空運業",
               "market_cap_oku": null,
-              "current_close": 4745.0,
+              "current_close": 4760.0,
               "returns": {
-                "1d": -0.02,
-                "1w": -0.32,
-                "1m": -0.23,
+                "1d": 0.32,
+                "1w": -0.08,
+                "1m": 0.11,
                 "6m": null
               },
               "history_path": "sector_data/series/92025.csv"
