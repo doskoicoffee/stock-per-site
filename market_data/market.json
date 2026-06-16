@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16 02:46 JST",
+  "updated_at": "2026-06-16 22:26 JST",
   "days": 183,
   "series": [
     {
@@ -503,9 +503,9 @@
       "label": "日経225",
       "unit": "Index",
       "summary": {
-        "latest": 69317.5,
-        "change": 3297.46,
-        "change_pct": 4.995
+        "latest": 69404.5,
+        "change": 87.0,
+        "change_pct": 0.126
       },
       "data": [
         {
@@ -987,6 +987,10 @@
         {
           "date": "2026-06-15",
           "value": 69317.5
+        },
+        {
+          "date": "2026-06-16",
+          "value": 69404.5
         }
       ]
     },
@@ -995,9 +999,9 @@
       "label": "S&P500",
       "unit": "Index",
       "summary": {
-        "latest": 7431.46,
-        "change": 37.16,
-        "change_pct": 0.503
+        "latest": 7554.29,
+        "change": 122.83,
+        "change_pct": 1.653
       },
       "data": [
         {
@@ -1495,6 +1499,10 @@
         {
           "date": "2026-06-12",
           "value": 7431.46
+        },
+        {
+          "date": "2026-06-15",
+          "value": 7554.29
         }
       ]
     },
@@ -1503,9 +1511,9 @@
       "label": "NYダウ",
       "unit": "Index",
       "summary": {
-        "latest": 51202.26,
-        "change": 353.51,
-        "change_pct": 0.695
+        "latest": 51671.03,
+        "change": 468.77,
+        "change_pct": 0.916
       },
       "data": [
         {
@@ -2003,6 +2011,10 @@
         {
           "date": "2026-06-12",
           "value": 51202.26
+        },
+        {
+          "date": "2026-06-15",
+          "value": 51671.03
         }
       ]
     },
@@ -2011,9 +2023,9 @@
       "label": "NASDAQ",
       "unit": "Index",
       "summary": {
-        "latest": 25888.84,
-        "change": 79.18,
-        "change_pct": 0.307
+        "latest": 26683.94,
+        "change": 795.1,
+        "change_pct": 3.071
       },
       "data": [
         {
@@ -2511,6 +2523,10 @@
         {
           "date": "2026-06-12",
           "value": 25888.84
+        },
+        {
+          "date": "2026-06-15",
+          "value": 26683.94
         }
       ]
     },
@@ -3039,9 +3055,9 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 160.257,
-        "change": 0.127,
-        "change_pct": 0.079
+        "latest": 159.955,
+        "change": -0.175,
+        "change_pct": -0.109
       },
       "data": [
         {
@@ -3558,7 +3574,7 @@
         },
         {
           "date": "2026-06-15",
-          "value": 160.257
+          "value": 159.955
         }
       ]
     },
@@ -3567,9 +3583,9 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 185.365,
-        "change": 0.194,
-        "change_pct": 0.105
+        "latest": 185.998,
+        "change": 0.402,
+        "change_pct": 0.217
       },
       "data": [
         {
@@ -4083,6 +4099,14 @@
         {
           "date": "2026-06-12",
           "value": 185.365
+        },
+        {
+          "date": "2026-06-15",
+          "value": 185.596
+        },
+        {
+          "date": "2026-06-16",
+          "value": 185.998
         }
       ]
     },
@@ -4092,8 +4116,8 @@
       "unit": "USD per EUR",
       "summary": {
         "latest": 1.16,
-        "change": 0.003,
-        "change_pct": 0.239
+        "change": -0.0,
+        "change_pct": -0.03
       },
       "data": [
         {
@@ -4611,6 +4635,10 @@
         {
           "date": "2026-06-15",
           "value": 1.16
+        },
+        {
+          "date": "2026-06-16",
+          "value": 1.16
         }
       ]
     },
@@ -4619,9 +4647,9 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 80.58,
-        "change": -4.3,
-        "change_pct": -5.066
+        "latest": 76.76,
+        "change": -3.99,
+        "change_pct": -4.941
       },
       "data": [
         {
@@ -5122,7 +5150,11 @@
         },
         {
           "date": "2026-06-15",
-          "value": 80.58
+          "value": 80.75
+        },
+        {
+          "date": "2026-06-16",
+          "value": 76.76
         }
       ]
     },
@@ -5131,9 +5163,9 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4343.7,
-        "change": 128.7,
-        "change_pct": 3.053
+        "latest": 4362.4,
+        "change": 34.4,
+        "change_pct": 0.795
       },
       "data": [
         {
@@ -5634,7 +5666,11 @@
         },
         {
           "date": "2026-06-15",
-          "value": 4343.7
+          "value": 4328.0
+        },
+        {
+          "date": "2026-06-16",
+          "value": 4362.4
         }
       ]
     },
@@ -5643,9 +5679,9 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 70.03,
-        "change": 2.171,
-        "change_pct": 3.199
+        "latest": 70.515,
+        "change": 0.449,
+        "change_pct": 0.641
       },
       "data": [
         {
@@ -6146,7 +6182,11 @@
         },
         {
           "date": "2026-06-15",
-          "value": 70.03
+          "value": 70.066
+        },
+        {
+          "date": "2026-06-16",
+          "value": 70.515
         }
       ]
     }
@@ -6155,7 +6195,7 @@
     {
       "id": "TOPIX",
       "label": "TOPIX",
-      "reason": "stooq unavailable; using cached data (Unable to read URL: https://stooq.com/q/d/l/?s=%5ETPX&i=d&d1=20251214&d2=20260615\nResponse Text:\nb'<meta charset=utf-8><title>Stooq</title><center style=font-family:arial;margin-top:50px><p><a href=/><img src=//static.stooq.com/stooq.svg height=68></a><p style=font-size:x-large>The page you requested does not exist<br>or has been moved<p><small><a href=/>Main Page</a>')"
+      "reason": "stooq unavailable; using cached data (Unable to read URL: https://stooq.com/q/d/l/?s=%5ETPX&i=d&d1=20251215&d2=20260616\nResponse Text:\nb'<meta charset=utf-8><title>Stooq</title><center style=font-family:arial;margin-top:50px><p><a href=/><img src=//static.stooq.com/stooq.svg height=68></a><p style=font-size:x-large>The page you requested does not exist<br>or has been moved<p><small><a href=/>Main Page</a>')"
     },
     {
       "id": "NEWS",
@@ -6166,7 +6206,7 @@
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-06-16 02:46 JST",
+    "generated_at": "2026-06-16 22:26 JST",
     "error": null
   },
   "notes": {
