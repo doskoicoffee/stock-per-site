@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21 00:28 JST",
+  "updated_at": "2026-06-21 20:44 JST",
   "days": 183,
   "series": [
     {
@@ -509,10 +509,6 @@
       },
       "data": [
         {
-          "date": "2025-12-19",
-          "value": 49507.21
-        },
-        {
           "date": "2025-12-22",
           "value": 50402.39
         },
@@ -1000,10 +996,6 @@
         "change_pct": 1.085
       },
       "data": [
-        {
-          "date": "2025-12-19",
-          "value": 6834.5
-        },
         {
           "date": "2025-12-22",
           "value": 6878.49
@@ -1509,10 +1501,6 @@
       },
       "data": [
         {
-          "date": "2025-12-19",
-          "value": 48134.89
-        },
-        {
           "date": "2025-12-22",
           "value": 48362.68
         },
@@ -2012,10 +2000,6 @@
         "change_pct": 1.907
       },
       "data": [
-        {
-          "date": "2025-12-19",
-          "value": 23307.62
-        },
         {
           "date": "2025-12-22",
           "value": 23428.83
@@ -2520,10 +2504,6 @@
         "change_pct": 12.371
       },
       "data": [
-        {
-          "date": "2025-12-19",
-          "value": 14.91
-        },
         {
           "date": "2025-12-22",
           "value": 14.08
@@ -3037,10 +3017,6 @@
       },
       "data": [
         {
-          "date": "2025-12-19",
-          "value": 155.586
-        },
-        {
           "date": "2025-12-22",
           "value": 157.676
         },
@@ -3553,7 +3529,7 @@
           "value": 161.289
         },
         {
-          "date": "2026-06-20",
+          "date": "2026-06-21",
           "value": 161.275
         }
       ]
@@ -3568,10 +3544,6 @@
         "change_pct": 0.104
       },
       "data": [
-        {
-          "date": "2025-12-19",
-          "value": 182.425
-        },
         {
           "date": "2025-12-22",
           "value": 184.584
@@ -4097,10 +4069,6 @@
       },
       "data": [
         {
-          "date": "2025-12-19",
-          "value": 1.173
-        },
-        {
           "date": "2025-12-22",
           "value": 1.171
         },
@@ -4625,10 +4593,6 @@
       },
       "data": [
         {
-          "date": "2025-12-19",
-          "value": 56.66
-        },
-        {
           "date": "2025-12-22",
           "value": 58.01
         },
@@ -5136,10 +5100,6 @@
         "change_pct": -1.212
       },
       "data": [
-        {
-          "date": "2025-12-19",
-          "value": 4361.4
-        },
         {
           "date": "2025-12-22",
           "value": 4444.6
@@ -5649,10 +5609,6 @@
       },
       "data": [
         {
-          "date": "2025-12-19",
-          "value": 66.845
-        },
-        {
           "date": "2025-12-22",
           "value": 67.906
         },
@@ -6155,7 +6111,7 @@
     {
       "id": "TOPIX",
       "label": "TOPIX",
-      "reason": "stooq unavailable; using cached data (Unable to read URL: https://stooq.com/q/d/l/?s=%5ETPX&i=d&d1=20251219&d2=20260620\nResponse Text:\nb'<meta charset=utf-8><title>Stooq</title><center style=font-family:arial;margin-top:50px><p><a href=/><img src=//static.stooq.com/stooq.svg height=68></a><p style=font-size:x-large>The page you requested does not exist<br>or has been moved<p><small><a href=/>Main Page</a>')"
+      "reason": "stooq unavailable; using cached data (Unable to read URL: https://stooq.com/q/d/l/?s=%5ETPX&i=d&d1=20251220&d2=20260621\nResponse Text:\nb'<meta charset=utf-8><title>Stooq</title><center style=font-family:arial;margin-top:50px><p><a href=/><img src=//static.stooq.com/stooq.svg height=68></a><p style=font-size:x-large>The page you requested does not exist<br>or has been moved<p><small><a href=/>Main Page</a>')"
     },
     {
       "id": "NEWS",
@@ -6166,7 +6122,7 @@
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-06-21 00:28 JST",
+    "generated_at": "2026-06-21 20:44 JST",
     "error": null
   },
   "notes": {
