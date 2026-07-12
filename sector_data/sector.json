@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11 16:14",
+  "updated_at": "2026-07-12 13:46",
   "markets": [
     "all",
     "プライム",
@@ -2910,7 +2910,7 @@
           "returns": {
             "1w": 0.0,
             "1m": 0.0,
-            "6m": -0.08,
+            "6m": -0.54,
             "1d": 0.0
           },
           "stocks": [
@@ -2922,10 +2922,10 @@
               "market_cap_oku": 1078.5,
               "current_close": 719.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5135.csv"
             },
@@ -3012,10 +3012,10 @@
               "market_cap_oku": 12.1,
               "current_close": 1182.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5584.csv"
             },
@@ -3072,10 +3072,10 @@
               "market_cap_oku": 9.3,
               "current_close": 1700.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5573.csv"
             },
@@ -3102,10 +3102,10 @@
               "market_cap_oku": 8.5,
               "current_close": 4240.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5037.csv"
             },
@@ -3297,10 +3297,10 @@
               "market_cap_oku": 2.0,
               "current_close": 2240.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5251.csv"
             },
@@ -3312,10 +3312,10 @@
               "market_cap_oku": 1.8,
               "current_close": 412.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2452.csv"
             },
@@ -3327,10 +3327,10 @@
               "market_cap_oku": 1.3,
               "current_close": 447.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5130.csv"
             },
@@ -3371,8 +3371,8 @@
           "returns": {
             "1w": 2.25,
             "1m": 2.18,
-            "6m": 8.66,
-            "1d": 3.16
+            "6m": 8.67,
+            "1d": 3.17
           },
           "stocks": [
             {
@@ -4298,10 +4298,10 @@
               "market_cap_oku": 1078.5,
               "current_close": 719.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5135.csv"
             },
@@ -12293,10 +12293,10 @@
               "market_cap_oku": 12.1,
               "current_close": 1182.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5584.csv"
             },
@@ -12398,10 +12398,10 @@
               "market_cap_oku": 9.3,
               "current_close": 1700.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5573.csv"
             },
@@ -12458,10 +12458,10 @@
               "market_cap_oku": 8.5,
               "current_close": 4240.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5037.csv"
             },
@@ -12698,10 +12698,10 @@
               "market_cap_oku": 2.0,
               "current_close": 2240.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5251.csv"
             },
@@ -12713,10 +12713,10 @@
               "market_cap_oku": 1.8,
               "current_close": 412.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2452.csv"
             },
@@ -12728,10 +12728,10 @@
               "market_cap_oku": 1.3,
               "current_close": 447.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5130.csv"
             },
@@ -22182,10 +22182,10 @@
               "market_cap_oku": 112.0,
               "current_close": 560.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9149.csv"
             },
@@ -22197,10 +22197,10 @@
               "market_cap_oku": 51.8,
               "current_close": 4000.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9146.csv"
             },
@@ -22225,7 +22225,7 @@
           "market_cap": 240210.5,
           "returns": {
             "1w": 1.15,
-            "1m": 3.37,
+            "1m": 3.38,
             "6m": -1.32,
             "1d": -0.78
           },
@@ -22958,10 +22958,10 @@
               "market_cap_oku": 112.0,
               "current_close": 560.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9149.csv"
             },
@@ -23063,10 +23063,10 @@
               "market_cap_oku": 51.8,
               "current_close": 4000.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9146.csv"
             },
@@ -24019,7 +24019,7 @@
           "returns": {
             "1w": 0.0,
             "1m": 0.0,
-            "6m": -8.95,
+            "6m": -10.32,
             "1d": 0.0
           },
           "stocks": [
@@ -24091,10 +24091,10 @@
               "market_cap_oku": 24.5,
               "current_close": 1000.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9169.csv"
             },
@@ -24181,10 +24181,10 @@
               "market_cap_oku": 12.2,
               "current_close": 1200.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9226.csv"
             },
@@ -24211,10 +24211,10 @@
               "market_cap_oku": 11.3,
               "current_close": 700.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7364.csv"
             },
@@ -24346,10 +24346,10 @@
               "market_cap_oku": 5.3,
               "current_close": 2670.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9156.csv"
             },
@@ -24541,10 +24541,10 @@
               "market_cap_oku": null,
               "current_close": 3200.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/6174.csv"
             },
@@ -24571,10 +24571,10 @@
               "market_cap_oku": 0.0,
               "current_close": 650.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7098.csv"
             },
@@ -24586,10 +24586,10 @@
               "market_cap_oku": 0.0,
               "current_close": 1244.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7355.csv"
             }
@@ -31422,10 +31422,10 @@
               "market_cap_oku": 24.5,
               "current_close": 1000.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9169.csv"
             },
@@ -32637,10 +32637,10 @@
               "market_cap_oku": 12.2,
               "current_close": 1200.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9226.csv"
             },
@@ -32682,10 +32682,10 @@
               "market_cap_oku": 11.3,
               "current_close": 700.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7364.csv"
             },
@@ -32877,10 +32877,10 @@
               "market_cap_oku": 5.3,
               "current_close": 2670.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9156.csv"
             },
@@ -33177,10 +33177,10 @@
               "market_cap_oku": null,
               "current_close": 3200.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/6174.csv"
             },
@@ -33237,10 +33237,10 @@
               "market_cap_oku": 0.0,
               "current_close": 650.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7098.csv"
             },
@@ -33252,10 +33252,10 @@
               "market_cap_oku": 0.0,
               "current_close": 1244.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7355.csv"
             },
@@ -41581,10 +41581,10 @@
               "market_cap_oku": 12.4,
               "current_close": 2900.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/1445.csv"
             },
@@ -41611,10 +41611,10 @@
               "market_cap_oku": 8.2,
               "current_close": 2046.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5077.csv"
             },
@@ -41671,10 +41671,10 @@
               "market_cap_oku": null,
               "current_close": 174.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/1432.csv"
             },
@@ -41686,10 +41686,10 @@
               "market_cap_oku": 0.0,
               "current_close": 18530.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/1452.csv"
             },
@@ -41701,10 +41701,10 @@
               "market_cap_oku": 0.0,
               "current_close": 3500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5072.csv"
             }
@@ -43917,10 +43917,10 @@
               "market_cap_oku": 12.4,
               "current_close": 2900.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/1445.csv"
             },
@@ -43947,10 +43947,10 @@
               "market_cap_oku": 8.2,
               "current_close": 2046.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5077.csv"
             },
@@ -44007,10 +44007,10 @@
               "market_cap_oku": null,
               "current_close": 174.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/1432.csv"
             },
@@ -44022,10 +44022,10 @@
               "market_cap_oku": 0.0,
               "current_close": 18530.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/1452.csv"
             },
@@ -44067,10 +44067,10 @@
               "market_cap_oku": 0.0,
               "current_close": 3500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5072.csv"
             },
@@ -46800,7 +46800,7 @@
           "returns": {
             "1w": -0.71,
             "1m": 2.78,
-            "6m": 13.75,
+            "6m": 13.74,
             "1d": -2.25
           },
           "stocks": [
@@ -48642,10 +48642,10 @@
               "market_cap_oku": 436.8,
               "current_close": 1455.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.07,
-                "1m": 0.0,
-                "6m": 25.22
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/3546.csv"
             },
@@ -52296,8 +52296,8 @@
           "market_cap": 651796.3,
           "returns": {
             "1w": -0.78,
-            "1m": 2.99,
-            "6m": 14.39,
+            "1m": 3.0,
+            "6m": 14.38,
             "1d": -2.37
           },
           "stocks": [
@@ -53854,10 +53854,10 @@
               "market_cap_oku": 436.8,
               "current_close": 1455.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.07,
-                "1m": 0.0,
-                "6m": 25.22
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/3546.csv"
             },
@@ -56808,8 +56808,8 @@
           "market_cap": 712.9,
           "returns": {
             "1w": 0.0,
-            "1m": 1.7,
-            "6m": 40.66,
+            "1m": 2.17,
+            "6m": 51.89,
             "1d": 0.0
           },
           "stocks": [
@@ -56866,10 +56866,10 @@
               "market_cap_oku": 52.3,
               "current_close": 1500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2995.csv"
             },
@@ -56896,10 +56896,10 @@
               "market_cap_oku": 37.6,
               "current_close": 1274.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5525.csv"
             },
@@ -56941,10 +56941,10 @@
               "market_cap_oku": 25.2,
               "current_close": 11460.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2992.csv"
             },
@@ -56986,10 +56986,10 @@
               "market_cap_oku": 15.0,
               "current_close": 1500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5528.csv"
             },
@@ -57016,10 +57016,10 @@
               "market_cap_oku": 12.1,
               "current_close": 1210.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5531.csv"
             },
@@ -57076,10 +57076,10 @@
               "market_cap_oku": 7.3,
               "current_close": 1040.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2994.csv"
             },
@@ -57166,10 +57166,10 @@
               "market_cap_oku": 0.0,
               "current_close": 1600.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2985.csv"
             },
@@ -57181,10 +57181,10 @@
               "market_cap_oku": null,
               "current_close": 1500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/3483.csv"
             }
@@ -58797,10 +58797,10 @@
               "market_cap_oku": 52.3,
               "current_close": 1500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2995.csv"
             },
@@ -58962,10 +58962,10 @@
               "market_cap_oku": 37.6,
               "current_close": 1274.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5525.csv"
             },
@@ -59142,10 +59142,10 @@
               "market_cap_oku": 25.2,
               "current_close": 11460.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2992.csv"
             },
@@ -59292,10 +59292,10 @@
               "market_cap_oku": 15.0,
               "current_close": 1500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5528.csv"
             },
@@ -59322,10 +59322,10 @@
               "market_cap_oku": 12.1,
               "current_close": 1210.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5531.csv"
             },
@@ -59382,10 +59382,10 @@
               "market_cap_oku": 7.3,
               "current_close": 1040.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2994.csv"
             },
@@ -59487,10 +59487,10 @@
               "market_cap_oku": 0.0,
               "current_close": 1600.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/2985.csv"
             },
@@ -59502,10 +59502,10 @@
               "market_cap_oku": null,
               "current_close": 1500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/3483.csv"
             },
@@ -66064,8 +66064,8 @@
           "market_cap": 278.3,
           "returns": {
             "1w": 0.0,
-            "1m": -6.37,
-            "6m": -29.56,
+            "1m": 0.0,
+            "6m": -27.96,
             "1d": 0.0
           },
           "stocks": [
@@ -66122,10 +66122,10 @@
               "market_cap_oku": 19.5,
               "current_close": 1333.33,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": -66.67,
-                "6m": -66.67
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7132.csv"
             },
@@ -66182,10 +66182,10 @@
               "market_cap_oku": 10.2,
               "current_close": 430.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5886.csv"
             },
@@ -66242,10 +66242,10 @@
               "market_cap_oku": 5.1,
               "current_close": 1700.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5887.csv"
             },
@@ -66287,10 +66287,10 @@
               "market_cap_oku": 0.0,
               "current_close": 2100.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7690.csv"
             },
@@ -66302,10 +66302,10 @@
               "market_cap_oku": 0.0,
               "current_close": 105.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7693.csv"
             }
@@ -70468,10 +70468,10 @@
               "market_cap_oku": 19.5,
               "current_close": 1333.33,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": -66.67,
-                "6m": -66.67
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7132.csv"
             },
@@ -70648,10 +70648,10 @@
               "market_cap_oku": 10.2,
               "current_close": 430.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5886.csv"
             },
@@ -70738,10 +70738,10 @@
               "market_cap_oku": 5.1,
               "current_close": 1700.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/5887.csv"
             },
@@ -70873,10 +70873,10 @@
               "market_cap_oku": 0.0,
               "current_close": 2100.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7690.csv"
             },
@@ -70888,10 +70888,10 @@
               "market_cap_oku": 0.0,
               "current_close": 105.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7693.csv"
             },
@@ -87527,10 +87527,10 @@
               "market_cap_oku": 3.8,
               "current_close": 486.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/6168.csv"
             },
@@ -87628,10 +87628,10 @@
               "market_cap_oku": 3.8,
               "current_close": 486.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/6168.csv"
             }
@@ -102160,10 +102160,10 @@
               "market_cap_oku": 6.5,
               "current_close": 706.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/6527.csv"
             },
@@ -102175,10 +102175,10 @@
               "market_cap_oku": null,
               "current_close": 150.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/6695.csv"
             },
@@ -103700,7 +103700,7 @@
           "returns": {
             "1w": 0.0,
             "1m": 0.0,
-            "6m": -0.65,
+            "6m": -0.74,
             "1d": 0.0
           },
           "stocks": [
@@ -103742,10 +103742,10 @@
               "market_cap_oku": 6.5,
               "current_close": 706.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/6527.csv"
             },
@@ -103757,10 +103757,10 @@
               "market_cap_oku": null,
               "current_close": 150.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/6695.csv"
             }
@@ -106090,10 +106090,10 @@
               "market_cap_oku": 4.4,
               "current_close": 1160.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/3450.csv"
             },
@@ -106105,10 +106105,10 @@
               "market_cap_oku": 0.0,
               "current_close": 3500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/3448.csv"
             }
@@ -106544,10 +106544,10 @@
         "PRO Market": {
           "market_cap": 4.4,
           "returns": {
-            "1w": 0.0,
-            "1m": 0.0,
-            "6m": 0.0,
-            "1d": 0.0
+            "1w": null,
+            "1m": null,
+            "6m": null,
+            "1d": null
           },
           "stocks": [
             {
@@ -106558,10 +106558,10 @@
               "market_cap_oku": 4.4,
               "current_close": 1160.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/3450.csv"
             },
@@ -106573,10 +106573,10 @@
               "market_cap_oku": 0.0,
               "current_close": 3500.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/3448.csv"
             }
