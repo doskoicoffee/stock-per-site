@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24 23:16 JST",
+  "updated_at": "2026-07-25 19:25 JST",
   "days": 183,
   "series": [
     {
@@ -509,10 +509,6 @@
       },
       "data": [
         {
-          "date": "2026-01-22",
-          "value": 53688.89
-        },
-        {
           "date": "2026-01-23",
           "value": 53846.87
         },
@@ -1011,15 +1007,11 @@
       "label": "S&P500",
       "unit": "Index",
       "summary": {
-        "latest": 7408.3,
-        "change": -90.66,
-        "change_pct": -1.209
+        "latest": 7411.98,
+        "change": 3.68,
+        "change_pct": 0.05
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 6913.35
-        },
         {
           "date": "2026-01-23",
           "value": 6915.61
@@ -1519,6 +1511,10 @@
         {
           "date": "2026-07-23",
           "value": 7408.3
+        },
+        {
+          "date": "2026-07-24",
+          "value": 7411.98
         }
       ]
     },
@@ -1527,15 +1523,11 @@
       "label": "NYダウ",
       "unit": "Index",
       "summary": {
-        "latest": 51711.65,
-        "change": -506.93,
-        "change_pct": -0.971
+        "latest": 51947.25,
+        "change": 235.6,
+        "change_pct": 0.456
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 49384.01
-        },
         {
           "date": "2026-01-23",
           "value": 49098.71
@@ -2035,6 +2027,10 @@
         {
           "date": "2026-07-23",
           "value": 51711.65
+        },
+        {
+          "date": "2026-07-24",
+          "value": 51947.25
         }
       ]
     },
@@ -2043,15 +2039,11 @@
       "label": "NASDAQ",
       "unit": "Index",
       "summary": {
-        "latest": 25137.69,
-        "change": -553.21,
-        "change_pct": -2.153
+        "latest": 24975.82,
+        "change": -161.87,
+        "change_pct": -0.644
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 23436.02
-        },
         {
           "date": "2026-01-23",
           "value": 23501.24
@@ -2551,6 +2543,10 @@
         {
           "date": "2026-07-23",
           "value": 25137.69
+        },
+        {
+          "date": "2026-07-24",
+          "value": 24975.82
         }
       ]
     },
@@ -2564,10 +2560,6 @@
         "change_pct": 12.38
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 15.64
-        },
         {
           "date": "2026-01-23",
           "value": 16.09
@@ -3091,15 +3083,11 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 163.785,
-        "change": 0.704,
-        "change_pct": 0.432
+        "latest": 163.791,
+        "change": 0.71,
+        "change_pct": 0.435
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 158.456
-        },
         {
           "date": "2026-01-23",
           "value": 158.501
@@ -3622,7 +3610,7 @@
         },
         {
           "date": "2026-07-24",
-          "value": 163.785
+          "value": 163.791
         }
       ]
     },
@@ -3631,15 +3619,11 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 186.335,
-        "change": 0.236,
-        "change_pct": 0.127
+        "latest": 186.245,
+        "change": 0.146,
+        "change_pct": 0.078
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 184.96
-        },
         {
           "date": "2026-01-23",
           "value": 186.29
@@ -4162,7 +4146,7 @@
         },
         {
           "date": "2026-07-24",
-          "value": 186.335
+          "value": 186.245
         }
       ]
     },
@@ -4172,14 +4156,10 @@
       "unit": "USD per EUR",
       "summary": {
         "latest": 1.138,
-        "change": -0.003,
-        "change_pct": -0.274
+        "change": -0.004,
+        "change_pct": -0.32
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 1.167
-        },
         {
           "date": "2026-01-23",
           "value": 1.175
@@ -4711,15 +4691,11 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 90.08,
-        "change": -2.11,
-        "change_pct": -2.289
+        "latest": 89.31,
+        "change": -2.88,
+        "change_pct": -3.124
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 59.36
-        },
         {
           "date": "2026-01-23",
           "value": 61.07
@@ -5222,7 +5198,7 @@
         },
         {
           "date": "2026-07-24",
-          "value": 90.08
+          "value": 89.31
         }
       ]
     },
@@ -5231,15 +5207,11 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4060.6,
-        "change": 14.0,
-        "change_pct": 0.346
+        "latest": 4067.6,
+        "change": 21.0,
+        "change_pct": 0.519
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 4908.8
-        },
         {
           "date": "2026-01-23",
           "value": 4976.2
@@ -5742,7 +5714,7 @@
         },
         {
           "date": "2026-07-24",
-          "value": 4060.6
+          "value": 4067.6
         }
       ]
     },
@@ -5751,15 +5723,11 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 58.46,
-        "change": 0.662,
-        "change_pct": 1.145
+        "latest": 58.656,
+        "change": 0.858,
+        "change_pct": 1.484
       },
       "data": [
-        {
-          "date": "2026-01-22",
-          "value": 95.976
-        },
         {
           "date": "2026-01-23",
           "value": 100.925
@@ -6262,7 +6230,7 @@
         },
         {
           "date": "2026-07-24",
-          "value": 58.46
+          "value": 58.656
         }
       ]
     }
@@ -6282,7 +6250,7 @@
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-07-24 23:16 JST",
+    "generated_at": "2026-07-25 19:25 JST",
     "error": null
   },
   "notes": {
