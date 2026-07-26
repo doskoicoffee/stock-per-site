@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-25 14:44",
+  "updated_at": "2026-07-26 13:52",
   "markets": [
     "all",
     "プライム",
@@ -24019,7 +24019,7 @@
           "returns": {
             "1w": 0.0,
             "1m": 0.0,
-            "6m": -10.32,
+            "6m": -10.67,
             "1d": 0.0
           },
           "stocks": [
@@ -24197,9 +24197,9 @@
               "current_close": 1300.0,
               "returns": {
                 "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9334.csv"
             },
@@ -32728,9 +32728,9 @@
               "current_close": 1300.0,
               "returns": {
                 "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.0,
-                "6m": 0.0
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/9334.csv"
             },
@@ -110330,7 +110330,7 @@
           "market_cap": 727750.4,
           "returns": {
             "1w": -0.54,
-            "1m": 6.71,
+            "1m": 6.72,
             "6m": -14.92,
             "1d": -1.73
           },
@@ -111063,10 +111063,10 @@
               "market_cap_oku": 237.2,
               "current_close": 1103.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.18,
-                "1m": 0.0,
-                "6m": 2.41
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7317.csv"
             },
@@ -112301,9 +112301,9 @@
         "グロース": {
           "market_cap": 1269.7,
           "returns": {
-            "1w": -3.17,
-            "1m": -12.62,
-            "6m": 19.17,
+            "1w": -3.94,
+            "1m": -15.52,
+            "6m": 23.02,
             "1d": 0.0
           },
           "stocks": [
@@ -112360,10 +112360,10 @@
               "market_cap_oku": 237.2,
               "current_close": 1103.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.18,
-                "1m": 0.0,
-                "6m": 2.41
+                "1d": null,
+                "1w": null,
+                "1m": null,
+                "6m": null
               },
               "history_path": "sector_data/series/7317.csv"
             }
