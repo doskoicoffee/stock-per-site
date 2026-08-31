@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30 16:45",
+  "updated_at": "2026-08-31 19:19",
   "markets": [
     "all",
     "プライム",
@@ -2108,8 +2108,8 @@
               "market_cap_oku": 33.1,
               "current_close": 680.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": 0.0,
+                "1w": 0.0,
                 "1m": null,
                 "6m": null
               },
@@ -2371,10 +2371,10 @@
         "PRO Market": {
           "market_cap": 33.1,
           "returns": {
-            "1w": null,
+            "1w": 0.0,
             "1m": null,
             "6m": null,
-            "1d": null
+            "1d": 0.0
           },
           "stocks": [
             {
@@ -2385,8 +2385,8 @@
               "market_cap_oku": 33.1,
               "current_close": 680.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": 0.0,
+                "1w": 0.0,
                 "1m": null,
                 "6m": null
               },
@@ -11631,7 +11631,7 @@
               "market": "スタンダード",
               "industry": "情報・通信業",
               "market_cap_oku": 21.0,
-              "current_close": 1757.0,
+              "current_close": 1725.0,
               "returns": {
                 "1d": null,
                 "1w": null,
@@ -19243,7 +19243,7 @@
               "market": "スタンダード",
               "industry": "情報・通信業",
               "market_cap_oku": 21.0,
-              "current_close": 1757.0,
+              "current_close": 1725.0,
               "returns": {
                 "1d": null,
                 "1w": null,
@@ -30582,8 +30582,8 @@
               "market_cap_oku": 37.7,
               "current_close": 395.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": -0.75,
+                "1w": -0.5,
                 "1m": null,
                 "6m": null
               },
@@ -38344,8 +38344,8 @@
               "market_cap_oku": 37.7,
               "current_close": 395.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": -0.75,
+                "1w": -0.5,
                 "1m": null,
                 "6m": null
               },
@@ -57927,8 +57927,8 @@
               "market_cap_oku": 359.5,
               "current_close": 1270.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": 0.0,
+                "1w": 0.0,
                 "1m": null,
                 "6m": null
               },
@@ -59559,7 +59559,7 @@
         "スタンダード": {
           "market_cap": 10539.7,
           "returns": {
-            "1w": 0.13,
+            "1w": 0.12,
             "1m": 3.27,
             "6m": -3.51,
             "1d": -0.09
@@ -59678,8 +59678,8 @@
               "market_cap_oku": 359.5,
               "current_close": 1270.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": 0.0,
+                "1w": 0.0,
                 "1m": null,
                 "6m": null
               },
@@ -64912,7 +64912,7 @@
               "market": "スタンダード",
               "industry": "その他製品",
               "market_cap_oku": 9.4,
-              "current_close": 201.0,
+              "current_close": 185.0,
               "returns": {
                 "1d": null,
                 "1w": null,
@@ -65999,7 +65999,7 @@
               "market": "スタンダード",
               "industry": "その他製品",
               "market_cap_oku": 9.4,
-              "current_close": 201.0,
+              "current_close": 185.0,
               "returns": {
                 "1d": null,
                 "1w": null,
@@ -68023,8 +68023,8 @@
               "market_cap_oku": 356.5,
               "current_close": 1199.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": 0.0,
+                "1w": 8.7,
                 "1m": null,
                 "6m": null
               },
@@ -70601,7 +70601,7 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 16.8,
-              "current_close": 749.0,
+              "current_close": 748.0,
               "returns": {
                 "1d": null,
                 "1w": null,
@@ -72771,10 +72771,10 @@
         "スタンダード": {
           "market_cap": 29061.4,
           "returns": {
-            "1w": 4.53,
+            "1w": 4.58,
             "1m": 16.56,
             "6m": 7.72,
-            "1d": 2.32
+            "1d": 2.29
           },
           "stocks": [
             {
@@ -72965,8 +72965,8 @@
               "market_cap_oku": 356.5,
               "current_close": 1199.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": 0.0,
+                "1w": 8.7,
                 "1m": null,
                 "6m": null
               },
@@ -75048,7 +75048,7 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 16.8,
-              "current_close": 749.0,
+              "current_close": 748.0,
               "returns": {
                 "1d": null,
                 "1w": null,
@@ -76769,7 +76769,7 @@
         "all": {
           "market_cap": 614444.3,
           "returns": {
-            "1w": 0.45,
+            "1w": 0.44,
             "1m": 3.79,
             "6m": 3.72,
             "1d": -0.18
@@ -78973,8 +78973,8 @@
               "market_cap_oku": 124.7,
               "current_close": 2550.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": -1.81,
+                "1w": -5.17,
                 "1m": null,
                 "6m": null
               },
@@ -81636,10 +81636,10 @@
         "スタンダード": {
           "market_cap": 18713.4,
           "returns": {
-            "1w": 2.81,
+            "1w": 2.76,
             "1m": 8.29,
             "6m": -7.62,
-            "1d": -0.37
+            "1d": -0.38
           },
           "stocks": [
             {
@@ -82100,8 +82100,8 @@
               "market_cap_oku": 124.7,
               "current_close": 2550.0,
               "returns": {
-                "1d": null,
-                "1w": null,
+                "1d": -1.81,
+                "1w": -5.17,
                 "1m": null,
                 "6m": null
               },
@@ -103893,7 +103893,7 @@
             "1w": 0.35,
             "1m": 11.57,
             "6m": 16.46,
-            "1d": -0.53
+            "1d": -0.52
           },
           "stocks": [
             {
@@ -104369,7 +104369,7 @@
               "market_cap_oku": 92.7,
               "current_close": 1685.0,
               "returns": {
-                "1d": null,
+                "1d": 0.0,
                 "1w": null,
                 "1m": null,
                 "6m": null
@@ -104772,7 +104772,7 @@
               "market": "スタンダード",
               "industry": "金属製品",
               "market_cap_oku": 7.5,
-              "current_close": 780.0,
+              "current_close": 777.0,
               "returns": {
                 "1d": null,
                 "1w": null,
@@ -105670,7 +105670,7 @@
               "market_cap_oku": 92.7,
               "current_close": 1685.0,
               "returns": {
-                "1d": null,
+                "1d": 0.0,
                 "1w": null,
                 "1m": null,
                 "6m": null
@@ -106073,7 +106073,7 @@
               "market": "スタンダード",
               "industry": "金属製品",
               "market_cap_oku": 7.5,
-              "current_close": 780.0,
+              "current_close": 777.0,
               "returns": {
                 "1d": null,
                 "1w": null,
