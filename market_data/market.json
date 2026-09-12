@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12 21:36 JST",
+  "updated_at": "2026-09-13 01:26 JST",
   "days": 183,
   "series": [
     {
@@ -3623,9 +3623,9 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 178.142,
-        "change": -0.51,
-        "change_pct": -0.285
+        "latest": 177.25,
+        "change": -2.095,
+        "change_pct": -1.168
       },
       "data": [
         {
@@ -4150,7 +4150,11 @@
         },
         {
           "date": "2026-09-11",
-          "value": 178.142
+          "value": 179.345
+        },
+        {
+          "date": "2026-09-12",
+          "value": 177.25
         }
       ]
     },
@@ -4161,7 +4165,7 @@
       "summary": {
         "latest": 1.16,
         "change": -0.003,
-        "change_pct": -0.271
+        "change_pct": -0.283
       },
       "data": [
         {
@@ -6254,7 +6258,7 @@
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-09-12 21:36 JST",
+    "generated_at": "2026-09-13 01:26 JST",
     "error": null
   },
   "notes": {
