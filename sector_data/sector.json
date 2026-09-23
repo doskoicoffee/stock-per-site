@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22 16:56",
+  "updated_at": "2026-09-23 16:54",
   "markets": [
     "all",
     "プライム",
@@ -84309,7 +84309,7 @@
                 "1d": 0.01,
                 "1w": 0.01,
                 "1m": 0.01,
-                "6m": 13.42
+                "6m": null
               },
               "history_path": "sector_data/series/1909.csv"
             },
@@ -87485,7 +87485,7 @@
                 "1d": 0.01,
                 "1w": 0.01,
                 "1m": 0.01,
-                "6m": 13.42
+                "6m": null
               },
               "history_path": "sector_data/series/1909.csv"
             },
