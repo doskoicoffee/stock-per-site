@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28 02:06 JST",
+  "updated_at": "2026-09-29 02:19 JST",
   "days": 183,
   "series": [
     {
@@ -503,9 +503,9 @@
       "label": "日経225",
       "unit": "Index",
       "summary": {
-        "latest": 66364.2,
-        "change": 850.21,
-        "change_pct": 1.298
+        "latest": 65877.62,
+        "change": -486.58,
+        "change_pct": -0.733
       },
       "data": [
         {
@@ -991,6 +991,10 @@
         {
           "date": "2026-09-25",
           "value": 66364.2
+        },
+        {
+          "date": "2026-09-28",
+          "value": 65877.62
         }
       ]
     },
@@ -3051,9 +3055,9 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 157.185,
-        "change": -1.626,
-        "change_pct": -1.024
+        "latest": 157.257,
+        "change": -1.554,
+        "change_pct": -0.979
       },
       "data": [
         {
@@ -3577,8 +3581,8 @@
           "value": 158.811
         },
         {
-          "date": "2026-09-27",
-          "value": 157.185
+          "date": "2026-09-28",
+          "value": 157.257
         }
       ]
     },
@@ -3587,9 +3591,9 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 179.117,
-        "change": -1.012,
-        "change_pct": -0.562
+        "latest": 180.637,
+        "change": 0.508,
+        "change_pct": 0.282
       },
       "data": [
         {
@@ -4110,7 +4114,7 @@
         },
         {
           "date": "2026-09-25",
-          "value": 179.117
+          "value": 180.637
         }
       ]
     },
@@ -4119,9 +4123,9 @@
       "label": "ユーロ/米ドル",
       "unit": "USD per EUR",
       "summary": {
-        "latest": 1.14,
-        "change": 0.003,
-        "change_pct": 0.233
+        "latest": 1.138,
+        "change": 0.001,
+        "change_pct": 0.05
       },
       "data": [
         {
@@ -4645,8 +4649,8 @@
           "value": 1.137
         },
         {
-          "date": "2026-09-26",
-          "value": 1.14
+          "date": "2026-09-28",
+          "value": 1.138
         }
       ]
     },
@@ -4655,9 +4659,9 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 92.41,
-        "change": -2.2,
-        "change_pct": -2.325
+        "latest": 93.26,
+        "change": 0.85,
+        "change_pct": 0.92
       },
       "data": [
         {
@@ -5159,6 +5163,10 @@
         {
           "date": "2026-09-25",
           "value": 92.41
+        },
+        {
+          "date": "2026-09-28",
+          "value": 93.26
         }
       ]
     },
@@ -5167,9 +5175,9 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 4321.2,
-        "change": 23.2,
-        "change_pct": 0.54
+        "latest": 4160.0,
+        "change": -161.2,
+        "change_pct": -3.73
       },
       "data": [
         {
@@ -5671,6 +5679,10 @@
         {
           "date": "2026-09-25",
           "value": 4321.2
+        },
+        {
+          "date": "2026-09-28",
+          "value": 4160.0
         }
       ]
     },
@@ -5679,9 +5691,9 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 64.801,
-        "change": 1.344,
-        "change_pct": 2.118
+        "latest": 61.555,
+        "change": -2.69,
+        "change_pct": -4.187
       },
       "data": [
         {
@@ -6182,7 +6194,11 @@
         },
         {
           "date": "2026-09-25",
-          "value": 64.801
+          "value": 64.245
+        },
+        {
+          "date": "2026-09-28",
+          "value": 61.555
         }
       ]
     }
@@ -6202,7 +6218,7 @@
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-09-28 02:06 JST",
+    "generated_at": "2026-09-29 02:19 JST",
     "error": null
   },
   "notes": {
