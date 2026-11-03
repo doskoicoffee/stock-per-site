@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-04 01:50 JST",
+  "updated_at": "2026-11-04 04:52 JST",
   "days": 183,
   "series": [
     {
@@ -3095,9 +3095,9 @@
       "label": "米ドル/円",
       "unit": "JPY per USD",
       "summary": {
-        "latest": 158.522,
-        "change": 0.845,
-        "change_pct": 0.536
+        "latest": 158.726,
+        "change": 1.049,
+        "change_pct": 0.665
       },
       "data": [
         {
@@ -3626,7 +3626,7 @@
         },
         {
           "date": "2026-11-03",
-          "value": 158.522
+          "value": 158.726
         }
       ]
     },
@@ -3635,9 +3635,9 @@
       "label": "ユーロ/円",
       "unit": "JPY per EUR",
       "summary": {
-        "latest": 177.403,
-        "change": 1.485,
-        "change_pct": 0.844
+        "latest": 177.634,
+        "change": 1.716,
+        "change_pct": 0.975
       },
       "data": [
         {
@@ -4166,7 +4166,7 @@
         },
         {
           "date": "2026-11-03",
-          "value": 177.403
+          "value": 177.634
         }
       ]
     },
@@ -4715,9 +4715,9 @@
       "label": "WTI原油",
       "unit": "USD/barrel",
       "summary": {
-        "latest": 95.86,
-        "change": -0.6,
-        "change_pct": -0.622
+        "latest": 96.25,
+        "change": -0.21,
+        "change_pct": -0.218
       },
       "data": [
         {
@@ -5230,7 +5230,7 @@
         },
         {
           "date": "2026-11-03",
-          "value": 95.86
+          "value": 96.25
         }
       ]
     },
@@ -5239,9 +5239,9 @@
       "label": "金",
       "unit": "USD/oz",
       "summary": {
-        "latest": 3942.1,
-        "change": -27.5,
-        "change_pct": -0.693
+        "latest": 3933.7,
+        "change": -35.9,
+        "change_pct": -0.904
       },
       "data": [
         {
@@ -5754,7 +5754,7 @@
         },
         {
           "date": "2026-11-03",
-          "value": 3942.1
+          "value": 3933.7
         }
       ]
     },
@@ -5763,9 +5763,9 @@
       "label": "銀",
       "unit": "USD/oz",
       "summary": {
-        "latest": 49.805,
-        "change": -0.915,
-        "change_pct": -1.804
+        "latest": 49.58,
+        "change": -1.14,
+        "change_pct": -2.248
       },
       "data": [
         {
@@ -6278,7 +6278,7 @@
         },
         {
           "date": "2026-11-03",
-          "value": 49.805
+          "value": 49.58
         }
       ]
     }
@@ -6298,7 +6298,7 @@
   "news": [],
   "summary": {
     "text": null,
-    "generated_at": "2026-11-04 01:50 JST",
+    "generated_at": "2026-11-04 04:52 JST",
     "error": null
   },
   "notes": {
