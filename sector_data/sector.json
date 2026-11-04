@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03 19:52",
+  "updated_at": "2026-11-04 20:11",
   "markets": [
     "all",
     "プライム",
@@ -7896,12 +7896,12 @@
               "market": "スタンダード",
               "industry": "情報・通信業",
               "market_cap_oku": 91.1,
-              "current_close": 1595.0,
+              "current_close": 1568.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.93,
-                "1m": -4.26,
-                "6m": -10.14
+                "1d": -1.69,
+                "1w": -1.51,
+                "1m": -4.85,
+                "6m": -11.66
               },
               "history_path": "sector_data/series/4356.csv"
             },
@@ -9546,12 +9546,12 @@
               "market": "スタンダード",
               "industry": "情報・通信業",
               "market_cap_oku": 49.0,
-              "current_close": 1020.0,
+              "current_close": 1000.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.1,
-                "1m": -0.2,
-                "6m": -8.85
+                "1d": -1.96,
+                "1w": -1.86,
+                "1m": -2.44,
+                "6m": -10.31
               },
               "history_path": "sector_data/series/5571.csv"
             },
@@ -16742,9 +16742,9 @@
           "market_cap": 40120.4,
           "returns": {
             "1w": -2.63,
-            "1m": -1.08,
-            "6m": 7.97,
-            "1d": -0.98
+            "1m": -1.09,
+            "6m": 7.96,
+            "1d": -0.99
           },
           "stocks": [
             {
@@ -17698,12 +17698,12 @@
               "market": "スタンダード",
               "industry": "情報・通信業",
               "market_cap_oku": 91.1,
-              "current_close": 1595.0,
+              "current_close": 1568.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.93,
-                "1m": -4.26,
-                "6m": -10.14
+                "1d": -1.69,
+                "1w": -1.51,
+                "1m": -4.85,
+                "6m": -11.66
               },
               "history_path": "sector_data/series/4356.csv"
             },
@@ -18418,12 +18418,12 @@
               "market": "スタンダード",
               "industry": "情報・通信業",
               "market_cap_oku": 49.0,
-              "current_close": 1020.0,
+              "current_close": 1000.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.1,
-                "1m": -0.2,
-                "6m": -8.85
+                "1d": -1.96,
+                "1w": -1.86,
+                "1m": -2.44,
+                "6m": -10.31
               },
               "history_path": "sector_data/series/5571.csv"
             },
@@ -22227,7 +22227,7 @@
             "1w": -0.62,
             "1m": 5.43,
             "6m": 6.39,
-            "1d": 0.76
+            "1d": 0.77
           },
           "stocks": [
             {
@@ -23061,12 +23061,12 @@
               "market": "スタンダード",
               "industry": "陸運業",
               "market_cap_oku": 30.8,
-              "current_close": 2073.0,
+              "current_close": 2076.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.81,
-                "1m": -0.72,
-                "6m": -3.63
+                "1d": 0.14,
+                "1w": -0.67,
+                "1m": -0.57,
+                "6m": -3.49
               },
               "history_path": "sector_data/series/9012.csv"
             },
@@ -23983,12 +23983,12 @@
               "market": "スタンダード",
               "industry": "陸運業",
               "market_cap_oku": 30.8,
-              "current_close": 2073.0,
+              "current_close": 2076.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.81,
-                "1m": -0.72,
-                "6m": -3.63
+                "1d": 0.14,
+                "1w": -0.67,
+                "1m": -0.57,
+                "6m": -3.49
               },
               "history_path": "sector_data/series/9012.csv"
             },
@@ -27445,12 +27445,12 @@
               "market": "スタンダード",
               "industry": "サービス業",
               "market_cap_oku": 162.0,
-              "current_close": 1500.0,
+              "current_close": 1460.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -3.16,
-                "1m": -1.7,
-                "6m": -4.34
+                "1d": -2.67,
+                "1w": -5.75,
+                "1m": -2.86,
+                "6m": -8.18
               },
               "history_path": "sector_data/series/2152.csv"
             },
@@ -31450,12 +31450,12 @@
               "market": "グロース",
               "industry": "サービス業",
               "market_cap_oku": 24.0,
-              "current_close": 941.0,
+              "current_close": 933.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.43,
-                "1m": -0.32,
-                "6m": -1.67
+                "1d": -0.85,
+                "1w": 0.86,
+                "1m": -1.17,
+                "6m": -2.81
               },
               "history_path": "sector_data/series/7043.csv"
             },
@@ -31945,12 +31945,12 @@
               "market": "グロース",
               "industry": "サービス業",
               "market_cap_oku": 18.5,
-              "current_close": 668.0,
+              "current_close": 675.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -1.91,
-                "1m": -3.88,
-                "6m": -4.71
+                "1d": 1.05,
+                "1w": 0.3,
+                "1m": -3.02,
+                "6m": -20.68
               },
               "history_path": "sector_data/series/7031.csv"
             },
@@ -32095,12 +32095,12 @@
               "market": "グロース",
               "industry": "サービス業",
               "market_cap_oku": 17.8,
-              "current_close": 681.0,
+              "current_close": 675.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.15,
-                "1m": -1.59,
-                "6m": -19.98
+                "1d": -0.88,
+                "1w": -0.74,
+                "1m": -2.46,
+                "6m": -19.35
               },
               "history_path": "sector_data/series/7062.csv"
             },
@@ -32215,12 +32215,12 @@
               "market": "グロース",
               "industry": "サービス業",
               "market_cap_oku": 16.7,
-              "current_close": 1284.0,
+              "current_close": 1285.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 2.47,
-                "1m": 1.02,
-                "6m": -5.59
+                "1d": 0.08,
+                "1w": 2.55,
+                "1m": 1.1,
+                "6m": -5.86
               },
               "history_path": "sector_data/series/9214.csv"
             },
@@ -33326,7 +33326,7 @@
           "returns": {
             "1w": -1.41,
             "1m": -3.61,
-            "6m": 6.9,
+            "6m": 6.88,
             "1d": -2.05
           },
           "stocks": [
@@ -35421,12 +35421,12 @@
               "market": "グロース",
               "industry": "サービス業",
               "market_cap_oku": 24.0,
-              "current_close": 941.0,
+              "current_close": 933.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.43,
-                "1m": -0.32,
-                "6m": -1.67
+                "1d": -0.85,
+                "1w": 0.86,
+                "1m": -1.17,
+                "6m": -2.81
               },
               "history_path": "sector_data/series/7043.csv"
             },
@@ -35676,12 +35676,12 @@
               "market": "グロース",
               "industry": "サービス業",
               "market_cap_oku": 18.5,
-              "current_close": 668.0,
+              "current_close": 675.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -1.91,
-                "1m": -3.88,
-                "6m": -4.71
+                "1d": 1.05,
+                "1w": 0.3,
+                "1m": -3.02,
+                "6m": -20.68
               },
               "history_path": "sector_data/series/7031.csv"
             },
@@ -35811,12 +35811,12 @@
               "market": "グロース",
               "industry": "サービス業",
               "market_cap_oku": 17.8,
-              "current_close": 681.0,
+              "current_close": 675.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.15,
-                "1m": -1.59,
-                "6m": -19.98
+                "1d": -0.88,
+                "1w": -0.74,
+                "1m": -2.46,
+                "6m": -19.35
               },
               "history_path": "sector_data/series/7062.csv"
             },
@@ -35931,12 +35931,12 @@
               "market": "グロース",
               "industry": "サービス業",
               "market_cap_oku": 16.7,
-              "current_close": 1284.0,
+              "current_close": 1285.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 2.47,
-                "1m": 1.02,
-                "6m": -5.59
+                "1d": 0.08,
+                "1w": 2.55,
+                "1m": 1.1,
+                "6m": -5.86
               },
               "history_path": "sector_data/series/9214.csv"
             },
@@ -36275,10 +36275,10 @@
         "スタンダード": {
           "market_cap": 22200.2,
           "returns": {
-            "1w": -1.1,
-            "1m": -2.1,
-            "6m": 4.79,
-            "1d": -0.45
+            "1w": -1.12,
+            "1m": -2.11,
+            "6m": 4.76,
+            "1d": -0.47
           },
           "stocks": [
             {
@@ -36857,12 +36857,12 @@
               "market": "スタンダード",
               "industry": "サービス業",
               "market_cap_oku": 162.0,
-              "current_close": 1500.0,
+              "current_close": 1460.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -3.16,
-                "1m": -1.7,
-                "6m": -4.34
+                "1d": -2.67,
+                "1w": -5.75,
+                "1m": -2.86,
+                "6m": -8.18
               },
               "history_path": "sector_data/series/2152.csv"
             },
@@ -43150,12 +43150,12 @@
               "market": "スタンダード",
               "industry": "建設業",
               "market_cap_oku": 147.6,
-              "current_close": 4495.0,
+              "current_close": 4425.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": -4.26,
-                "6m": -6.74
+                "1d": -1.56,
+                "1w": -1.56,
+                "1m": -5.75,
+                "6m": -13.24
               },
               "history_path": "sector_data/series/5078.csv"
             },
@@ -44210,10 +44210,10 @@
         "スタンダード": {
           "market_cap": 16073.2,
           "returns": {
-            "1w": -1.4,
-            "1m": -6.0,
-            "6m": -7.88,
-            "1d": -0.54
+            "1w": -1.42,
+            "1m": -6.01,
+            "6m": -7.94,
+            "1d": -0.56
           },
           "stocks": [
             {
@@ -44582,12 +44582,12 @@
               "market": "スタンダード",
               "industry": "建設業",
               "market_cap_oku": 147.6,
-              "current_close": 4495.0,
+              "current_close": 4425.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": -4.26,
-                "6m": -6.74
+                "1d": -1.56,
+                "1w": -1.56,
+                "1m": -5.75,
+                "6m": -13.24
               },
               "history_path": "sector_data/series/5078.csv"
             },
@@ -51970,12 +51970,12 @@
               "market": "プライム",
               "industry": "小売業",
               "market_cap_oku": null,
-              "current_close": 4885.0,
+              "current_close": 4875.0,
               "returns": {
-                "1d": -0.31,
-                "1w": -0.31,
-                "1m": -0.1,
-                "6m": -1.57
+                "1d": -0.2,
+                "1w": -0.1,
+                "1m": -0.37,
+                "6m": -2.01
               },
               "history_path": "sector_data/series/75505.csv"
             },
@@ -54257,12 +54257,12 @@
               "market": "プライム",
               "industry": "小売業",
               "market_cap_oku": null,
-              "current_close": 4885.0,
+              "current_close": 4875.0,
               "returns": {
-                "1d": -0.31,
-                "1w": -0.31,
-                "1m": -0.1,
-                "6m": -1.57
+                "1d": -0.2,
+                "1w": -0.1,
+                "1m": -0.37,
+                "6m": -2.01
               },
               "history_path": "sector_data/series/75505.csv"
             }
@@ -64822,12 +64822,12 @@
               "market": "グロース",
               "industry": "その他製品",
               "market_cap_oku": 15.2,
-              "current_close": 1036.0,
+              "current_close": 1035.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.1,
-                "1m": -2.81,
-                "6m": -18.75
+                "1d": -0.1,
+                "1w": -0.58,
+                "1m": -2.45,
+                "6m": -15.16
               },
               "history_path": "sector_data/series/168A.csv"
             },
@@ -65001,9 +65001,9 @@
         "グロース": {
           "market_cap": 4511.5,
           "returns": {
-            "1w": 1.98,
+            "1w": 1.97,
             "1m": 1.55,
-            "6m": 49.33,
+            "6m": 49.34,
             "1d": 1.31
           },
           "stocks": [
@@ -65088,12 +65088,12 @@
               "market": "グロース",
               "industry": "その他製品",
               "market_cap_oku": 15.2,
-              "current_close": 1036.0,
+              "current_close": 1035.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.1,
-                "1m": -2.81,
-                "6m": -18.75
+                "1d": -0.1,
+                "1w": -0.58,
+                "1m": -2.45,
+                "6m": -15.16
               },
               "history_path": "sector_data/series/168A.csv"
             }
@@ -67976,12 +67976,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 352.4,
-              "current_close": 2298.0,
+              "current_close": 2295.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -1.12,
-                "1m": 1.91,
-                "6m": 0.39
+                "1d": -0.13,
+                "1w": -0.65,
+                "1m": -0.22,
+                "6m": 10.76
               },
               "history_path": "sector_data/series/8139.csv"
             },
@@ -69101,12 +69101,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 109.4,
-              "current_close": 6740.0,
+              "current_close": 6940.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -1.61,
-                "1m": -7.29,
-                "6m": 15.21
+                "1d": 2.97,
+                "1w": 1.31,
+                "1m": -4.54,
+                "6m": 18.63
               },
               "history_path": "sector_data/series/7565.csv"
             },
@@ -69551,12 +69551,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 72.2,
-              "current_close": 2513.0,
+              "current_close": 2512.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -3.35,
-                "1m": -6.82,
-                "6m": -0.28
+                "1d": -0.04,
+                "1w": -4.49,
+                "1m": -10.29,
+                "6m": -0.32
               },
               "history_path": "sector_data/series/7677.csv"
             },
@@ -69806,12 +69806,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 51.0,
-              "current_close": 3090.0,
+              "current_close": 2981.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -2.06,
-                "1m": -1.75,
-                "6m": -6.51
+                "1d": -3.53,
+                "1w": -5.66,
+                "1m": -7.71,
+                "6m": -8.98
               },
               "history_path": "sector_data/series/5283.csv"
             },
@@ -69821,12 +69821,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 50.7,
-              "current_close": 980.0,
+              "current_close": 968.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.31,
-                "1m": 1.55,
-                "6m": 8.65
+                "1d": -1.22,
+                "1w": -1.53,
+                "1m": 0.31,
+                "6m": 8.16
               },
               "history_path": "sector_data/series/2795.csv"
             },
@@ -70091,12 +70091,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 39.6,
-              "current_close": 4400.0,
+              "current_close": 4395.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 1.38,
-                "6m": 1.73
+                "1d": -0.11,
+                "1w": -0.11,
+                "1m": 1.03,
+                "6m": 1.27
               },
               "history_path": "sector_data/series/7446.csv"
             },
@@ -72772,8 +72772,8 @@
           "market_cap": 26328.7,
           "returns": {
             "1w": -2.18,
-            "1m": -7.32,
-            "6m": 2.88,
+            "1m": -7.37,
+            "6m": 3.03,
             "1d": -0.58
           },
           "stocks": [
@@ -72933,12 +72933,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 352.4,
-              "current_close": 2298.0,
+              "current_close": 2295.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -1.12,
-                "1m": 1.91,
-                "6m": 0.39
+                "1d": -0.13,
+                "1w": -0.65,
+                "1m": -0.22,
+                "6m": 10.76
               },
               "history_path": "sector_data/series/8139.csv"
             },
@@ -73713,12 +73713,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 109.4,
-              "current_close": 6740.0,
+              "current_close": 6940.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -1.61,
-                "1m": -7.29,
-                "6m": 15.21
+                "1d": 2.97,
+                "1w": 1.31,
+                "1m": -4.54,
+                "6m": 18.63
               },
               "history_path": "sector_data/series/7565.csv"
             },
@@ -74163,12 +74163,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 72.2,
-              "current_close": 2513.0,
+              "current_close": 2512.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -3.35,
-                "1m": -6.82,
-                "6m": -0.28
+                "1d": -0.04,
+                "1w": -4.49,
+                "1m": -10.29,
+                "6m": -0.32
               },
               "history_path": "sector_data/series/7677.csv"
             },
@@ -74403,12 +74403,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 51.0,
-              "current_close": 3090.0,
+              "current_close": 2981.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -2.06,
-                "1m": -1.75,
-                "6m": -6.51
+                "1d": -3.53,
+                "1w": -5.66,
+                "1m": -7.71,
+                "6m": -8.98
               },
               "history_path": "sector_data/series/5283.csv"
             },
@@ -74418,12 +74418,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 50.7,
-              "current_close": 980.0,
+              "current_close": 968.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.31,
-                "1m": 1.55,
-                "6m": 8.65
+                "1d": -1.22,
+                "1w": -1.53,
+                "1m": 0.31,
+                "6m": 8.16
               },
               "history_path": "sector_data/series/2795.csv"
             },
@@ -74658,12 +74658,12 @@
               "market": "スタンダード",
               "industry": "卸売業",
               "market_cap_oku": 39.6,
-              "current_close": 4400.0,
+              "current_close": 4395.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 1.38,
-                "6m": 1.73
+                "1d": -0.11,
+                "1w": -0.11,
+                "1m": 1.03,
+                "6m": 1.27
               },
               "history_path": "sector_data/series/7446.csv"
             },
@@ -75911,12 +75911,12 @@
               "market": "グロース",
               "industry": "その他金融業",
               "market_cap_oku": 30.8,
-              "current_close": 934.0,
+              "current_close": 932.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.11,
-                "1m": -0.53,
-                "6m": -7.98
+                "1d": -0.21,
+                "1w": -0.21,
+                "1m": -0.85,
+                "6m": -9.34
               },
               "history_path": "sector_data/series/7345.csv"
             },
@@ -76030,10 +76030,10 @@
         "グロース": {
           "market_cap": 215.9,
           "returns": {
-            "1w": -2.64,
-            "1m": -7.46,
-            "6m": -14.32,
-            "1d": -1.75
+            "1w": -2.65,
+            "1m": -7.51,
+            "6m": -14.52,
+            "1d": -1.78
           },
           "stocks": [
             {
@@ -76072,12 +76072,12 @@
               "market": "グロース",
               "industry": "その他金融業",
               "market_cap_oku": 30.8,
-              "current_close": 934.0,
+              "current_close": 932.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -0.11,
-                "1m": -0.53,
-                "6m": -7.98
+                "1d": -0.21,
+                "1w": -0.21,
+                "1m": -0.85,
+                "6m": -9.34
               },
               "history_path": "sector_data/series/7345.csv"
             },
@@ -82882,10 +82882,10 @@
         "スタンダード": {
           "market_cap": 18825.7,
           "returns": {
-            "1w": 0.05,
-            "1m": -12.63,
+            "1w": 0.04,
+            "1m": -12.64,
             "6m": 3.94,
-            "1d": 0.13
+            "1d": 0.12
           },
           "stocks": [
             {
@@ -83629,12 +83629,12 @@
               "market": "スタンダード",
               "industry": "機械",
               "market_cap_oku": 95.6,
-              "current_close": 1426.0,
+              "current_close": 1409.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.56,
-                "1m": -2.46,
-                "6m": 6.34
+                "1d": -1.19,
+                "1w": -0.77,
+                "1m": -4.6,
+                "6m": 5.23
               },
               "history_path": "sector_data/series/6497.csv"
             },
@@ -86775,12 +86775,12 @@
               "market": "スタンダード",
               "industry": "機械",
               "market_cap_oku": 95.6,
-              "current_close": 1426.0,
+              "current_close": 1409.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.56,
-                "1m": -2.46,
-                "6m": 6.34
+                "1d": -1.19,
+                "1w": -0.77,
+                "1m": -4.6,
+                "6m": 5.23
               },
               "history_path": "sector_data/series/6497.csv"
             },
@@ -91785,12 +91785,12 @@
               "market": "スタンダード",
               "industry": "食料品",
               "market_cap_oku": 159.1,
-              "current_close": 1501.0,
+              "current_close": 1472.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": -1.05,
-                "6m": 2.53
+                "1d": -1.93,
+                "1w": -2.84,
+                "1m": -1.87,
+                "6m": 0.48
               },
               "history_path": "sector_data/series/2903.csv"
             },
@@ -92339,10 +92339,10 @@
         "スタンダード": {
           "market_cap": 13137.9,
           "returns": {
-            "1w": -0.39,
+            "1w": -0.43,
             "1m": 0.1,
-            "6m": 15.62,
-            "1d": 0.06
+            "6m": 15.6,
+            "1d": 0.04
           },
           "stocks": [
             {
@@ -92696,12 +92696,12 @@
               "market": "スタンダード",
               "industry": "食料品",
               "market_cap_oku": 159.1,
-              "current_close": 1501.0,
+              "current_close": 1472.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": -1.05,
-                "6m": 2.53
+                "1d": -1.93,
+                "1w": -2.84,
+                "1m": -1.87,
+                "6m": 0.48
               },
               "history_path": "sector_data/series/2903.csv"
             },
@@ -103890,10 +103890,10 @@
         "スタンダード": {
           "market_cap": 7445.5,
           "returns": {
-            "1w": -3.46,
-            "1m": -9.7,
-            "6m": -1.82,
-            "1d": -0.52
+            "1w": -3.41,
+            "1m": -9.66,
+            "6m": -1.76,
+            "1d": -0.5
           },
           "stocks": [
             {
@@ -104142,12 +104142,12 @@
               "market": "スタンダード",
               "industry": "金属製品",
               "market_cap_oku": 122.3,
-              "current_close": 4360.0,
+              "current_close": 4425.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -1.36,
-                "1m": 0.46,
-                "6m": -5.63
+                "1d": 1.49,
+                "1w": 1.61,
+                "1m": 3.03,
+                "6m": -2.21
               },
               "history_path": "sector_data/series/5958.csv"
             },
@@ -104697,12 +104697,12 @@
               "market": "スタンダード",
               "industry": "金属製品",
               "market_cap_oku": 22.4,
-              "current_close": 1200.0,
+              "current_close": 1191.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": -0.25,
-                "6m": -0.25
+                "1d": -0.75,
+                "1w": -0.75,
+                "1m": -1.0,
+                "6m": -1.0
               },
               "history_path": "sector_data/series/5969.csv"
             },
@@ -104787,8 +104787,8 @@
           "market_cap": 61812.6,
           "returns": {
             "1w": -0.34,
-            "1m": -6.95,
-            "6m": 8.51,
+            "1m": -6.94,
+            "6m": 8.52,
             "1d": -0.71
           },
           "stocks": [
@@ -105443,12 +105443,12 @@
               "market": "スタンダード",
               "industry": "金属製品",
               "market_cap_oku": 122.3,
-              "current_close": 4360.0,
+              "current_close": 4425.0,
               "returns": {
-                "1d": 0.0,
-                "1w": -1.36,
-                "1m": 0.46,
-                "6m": -5.63
+                "1d": 1.49,
+                "1w": 1.61,
+                "1m": 3.03,
+                "6m": -2.21
               },
               "history_path": "sector_data/series/5958.csv"
             },
@@ -105998,12 +105998,12 @@
               "market": "スタンダード",
               "industry": "金属製品",
               "market_cap_oku": 22.4,
-              "current_close": 1200.0,
+              "current_close": 1191.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": -0.25,
-                "6m": -0.25
+                "1d": -0.75,
+                "1w": -0.75,
+                "1m": -1.0,
+                "6m": -1.0
               },
               "history_path": "sector_data/series/5969.csv"
             },
@@ -119667,12 +119667,12 @@
               "market": "プライム",
               "industry": "空運業",
               "market_cap_oku": null,
-              "current_close": 4730.0,
+              "current_close": 4717.0,
               "returns": {
-                "1d": 0.19,
-                "1w": 0.08,
-                "1m": 0.0,
-                "6m": -1.46
+                "1d": -0.27,
+                "1w": -0.34,
+                "1m": -0.27,
+                "6m": -1.54
               },
               "history_path": "sector_data/series/92025.csv"
             }
@@ -119768,12 +119768,12 @@
               "market": "プライム",
               "industry": "空運業",
               "market_cap_oku": null,
-              "current_close": 4730.0,
+              "current_close": 4717.0,
               "returns": {
-                "1d": 0.19,
-                "1w": 0.08,
-                "1m": 0.0,
-                "6m": -1.46
+                "1d": -0.27,
+                "1w": -0.34,
+                "1m": -0.27,
+                "6m": -1.54
               },
               "history_path": "sector_data/series/92025.csv"
             }
