@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07 19:10",
+  "updated_at": "2026-11-08 18:16",
   "markets": [
     "all",
     "プライム",
@@ -6383,9 +6383,9 @@
               "market_cap_oku": 180.5,
               "current_close": 5160.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.19,
+                "1d": null,
+                "1w": null,
+                "1m": null,
                 "6m": null
               },
               "history_path": "sector_data/series/9691.csv"
@@ -16741,10 +16741,10 @@
         "スタンダード": {
           "market_cap": 38768.6,
           "returns": {
-            "1w": -1.72,
-            "1m": -3.54,
+            "1w": -1.73,
+            "1m": -3.55,
             "6m": 8.49,
-            "1d": -4.44
+            "1d": -4.47
           },
           "stocks": [
             {
@@ -17070,9 +17070,9 @@
               "market_cap_oku": 180.5,
               "current_close": 5160.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.0,
-                "1m": 0.19,
+                "1d": null,
+                "1w": null,
+                "1m": null,
                 "6m": null
               },
               "history_path": "sector_data/series/9691.csv"
@@ -68803,9 +68803,9 @@
               "market_cap_oku": 146.3,
               "current_close": 2192.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.05,
-                "1m": 0.18,
+                "1d": null,
+                "1w": null,
+                "1m": null,
                 "6m": null
               },
               "history_path": "sector_data/series/7490.csv"
@@ -72771,10 +72771,10 @@
         "スタンダード": {
           "market_cap": 24880.8,
           "returns": {
-            "1w": -5.47,
-            "1m": -9.69,
+            "1w": -5.5,
+            "1m": -9.75,
             "6m": -0.8,
-            "1d": -3.78
+            "1d": -3.8
           },
           "stocks": [
             {
@@ -73415,9 +73415,9 @@
               "market_cap_oku": 146.3,
               "current_close": 2192.0,
               "returns": {
-                "1d": 0.0,
-                "1w": 0.05,
-                "1m": 0.18,
+                "1d": null,
+                "1w": null,
+                "1m": null,
                 "6m": null
               },
               "history_path": "sector_data/series/7490.csv"
@@ -76001,11 +76001,11 @@
               "market": "スタンダード",
               "industry": "その他金融業",
               "market_cap_oku": 0.0,
-              "current_close": 861195520.0,
+              "current_close": 255.0,
               "returns": {
-                "1d": -0.39,
-                "1w": 0.0,
-                "1m": 0.39,
+                "1d": null,
+                "1w": null,
+                "1m": null,
                 "6m": null
               },
               "history_path": "sector_data/series/7183.csv"
@@ -76308,11 +76308,11 @@
               "market": "スタンダード",
               "industry": "その他金融業",
               "market_cap_oku": 0.0,
-              "current_close": 861195520.0,
+              "current_close": 255.0,
               "returns": {
-                "1d": -0.39,
-                "1w": 0.0,
-                "1m": 0.39,
+                "1d": null,
+                "1w": null,
+                "1m": null,
                 "6m": null
               },
               "history_path": "sector_data/series/7183.csv"
