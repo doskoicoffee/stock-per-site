@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09 22:39",
+  "updated_at": "2026-11-10 20:05",
   "markets": [
     "all",
     "プライム",
@@ -51970,12 +51970,12 @@
               "market": "プライム",
               "industry": "小売業",
               "market_cap_oku": null,
-              "current_close": 4888.0,
+              "current_close": 4892.0,
               "returns": {
-                "1d": 0.27,
-                "1w": -0.24,
-                "1m": -0.37,
-                "6m": -1.65
+                "1d": 0.08,
+                "1w": 0.14,
+                "1m": -0.16,
+                "6m": -2.1
               },
               "history_path": "sector_data/series/75505.csv"
             },
@@ -54257,12 +54257,12 @@
               "market": "プライム",
               "industry": "小売業",
               "market_cap_oku": null,
-              "current_close": 4888.0,
+              "current_close": 4892.0,
               "returns": {
-                "1d": 0.27,
-                "1w": -0.24,
-                "1m": -0.37,
-                "6m": -1.65
+                "1d": 0.08,
+                "1w": 0.14,
+                "1m": -0.16,
+                "6m": -2.1
               },
               "history_path": "sector_data/series/75505.csv"
             }
@@ -67726,7 +67726,7 @@
                 "1d": 0.0,
                 "1w": 0.26,
                 "1m": 0.0,
-                "6m": -0.38
+                "6m": null
               },
               "history_path": "sector_data/series/8141.csv"
             },
@@ -72267,7 +72267,7 @@
                 "1d": 0.0,
                 "1w": 0.26,
                 "1m": 0.0,
-                "6m": -0.38
+                "6m": null
               },
               "history_path": "sector_data/series/8141.csv"
             },
@@ -119667,12 +119667,12 @@
               "market": "プライム",
               "industry": "空運業",
               "market_cap_oku": null,
-              "current_close": 4703.0,
+              "current_close": 4715.0,
               "returns": {
-                "1d": -0.34,
-                "1w": -0.38,
-                "1m": -0.36,
-                "6m": -1.49
+                "1d": 0.26,
+                "1w": -0.32,
+                "1m": -0.32,
+                "6m": -1.24
               },
               "history_path": "sector_data/series/92025.csv"
             }
@@ -119768,12 +119768,12 @@
               "market": "プライム",
               "industry": "空運業",
               "market_cap_oku": null,
-              "current_close": 4703.0,
+              "current_close": 4715.0,
               "returns": {
-                "1d": -0.34,
-                "1w": -0.38,
-                "1m": -0.36,
-                "6m": -1.49
+                "1d": 0.26,
+                "1w": -0.32,
+                "1m": -0.32,
+                "6m": -1.24
               },
               "history_path": "sector_data/series/92025.csv"
             }
